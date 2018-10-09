@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Suppress",
+  "description": "A rule from the catalog",
+  "type": "object",
+  "properties": {
+    "acctNumber": {
+      "description": "Account Number",
+      "type": "string"
+    },
+    "messageType": {
+      "description": "messageType",
+      "type": "string"
+    }
+    },
+    "required": [
+      "acctNumber",
+      "messageType"
+    ]
+  
+}

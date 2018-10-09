@@ -1,0 +1,611 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Suppress",
+  "description": "A rule from the catalog",
+  "type": "object",
+  "properties": {
+    "acctID": {
+      "description": "Account Id",
+      "type": "string"
+    },
+    "acctInfo": {
+      "description": "Account Info",
+      "type": "object",
+      "properties": {
+        "chAccAgeInd": {
+          "description": "chAccAgeInd",
+          "type": "string"
+        },
+        "chAccChangeInd": {
+          "description": "chAccChangeInd",
+          "type": "string"
+        },
+        "chAccDate": {
+          "description": "chAccDate",
+          "type": "string"
+        },
+        "chAccPwChange": {
+          "description": "chAccPwChange",
+          "type": "string"
+        },
+        "chAccPwChangeInd": {
+          "description": "chAccPwChangeInd",
+          "type": "string"
+        },
+        "nbPurchaseAccount": {
+          "description": "nbPurchaseAccount",
+          "type": "string"
+        },
+        "paymentAccAge": {
+          "description": "paymentAccAge",
+          "type": "string"
+        },
+        "paymentAccInd": {
+          "description": "paymentAccInd",
+          "type": "string"
+        },
+        "provisionAttemptsDay": {
+          "description": "provisionAttemptsDay",
+          "type": "string"
+        },
+        "shipAddressUsage": {
+          "description": "shipAddressUsage",
+          "type": "string"
+        },
+        "shipAddressUsageInd": {
+          "description": "shipAddressUsageInd",
+          "type": "string"
+        },
+        "shipNameIndicator": {
+          "description": "shipNameIndicator",
+          "type": "string"
+        },
+        "suspiciousAccActivity": {
+          "description": "suspiciousAccActivity",
+          "type": "string"
+        },
+        "txnActivityDay": {
+          "description": "txnActivityDay",
+          "type": "string"
+        },
+        "txnActivityYear": {
+          "description": "txnActivityYear",
+          "type": "string"
+        }
+      },
+      "uniqueItems": true,
+      "minItems": 1,
+      "required": [
+        "chAccAgeInd",
+        "txnActivityYear",
+        "txnActivityDay",
+        "suspiciousAccActivity",
+        "shipNameIndicator",
+        "shipAddressUsageInd"
+      ]
+    },
+    "acctNumber": {
+      "description": "Account Number",
+      "type": "string"
+    },
+    "acctType": {
+      "description": "Account Type",
+      "type": "string"
+    },
+    "addrMatch": {
+      "description": "Address Match",
+      "type": "string"
+    },
+    "billAddrCity": {
+      "description": "billAddrCity",
+      "type": "string"
+    },
+    "billAddrCountry": {
+      "description": "billAddrCountry",
+      "type": "string"
+    },
+    "billAddrLine1": {
+      "description": "billAddrLine1",
+      "type": "string"
+    },
+    "billAddrLine2": {
+      "description": "billAddrLine2",
+      "type": "string"
+    },
+    "billAddrLine3": {
+      "description": "billAddrLine3",
+      "type": "string"
+    },
+    "billAddrPostCode": {
+      "description": "billAddrPostCode",
+      "type": "string"
+    },
+    "billAddrState": {
+      "description": "billAddrState",
+      "type": "string"
+    },
+    "browserAcceptHeader": {
+      "description": "browserAcceptHeader",
+      "type": "string"
+    },
+    "browserColorDepth": {
+      "description": "browserColorDepth",
+      "type": "string"
+    },
+    "browserIP": {
+      "description": "browserIP",
+      "type": "string"
+    },
+    "browserJavaEnabled": {
+      "description": "browserJavaEnabled",
+      "type": "boolean"
+    },
+    "browserLanguage": {
+      "description": "browserLanguage",
+      "type": "string"
+    },
+    "browserScreenHeight": {
+      "description": "browserScreenHeight",
+      "type": "string"
+    },
+    "browserScreenWidth": {
+      "description": "browserScreenWidth",
+      "type": "string"
+    },
+    "browserTZ": {
+      "description": "browserTZ",
+      "type": "string"
+    },
+    "browserUserAgent": {
+      "description": "browserUserAgent",
+      "type": "string"
+    },
+    "cardExpiryDate": {
+      "description": "cardExpiryDate",
+      "type": "string"
+    },
+    "cardholderName": {
+      "description": "cardholderName",
+      "type": "string"
+    },
+    "deviceChannel": {
+      "description": "deviceChannel",
+      "type": "string"
+    },
+    "email": {
+      "description": "email",
+      "type": "string"
+    },
+    "homePhone": {
+      "description": "cardholderName",
+      "type": "object",
+      "properties": {
+        "cc": {
+          "description": "cc",
+          "type": "string"
+        },
+        "subscriber": {
+          "description": "subscriber",
+          "type": "string"
+        }
+      },
+      "required": [
+        "cc",
+        "subscriber"
+      ]
+    },
+    "messageCategory": {
+      "description": "messageCategory",
+      "type": "string"
+    },
+    "messageType": {
+      "description": "messageType",
+      "type": "string"
+    },
+    "messageVersion": {
+      "description": "messageVersion",
+      "type": "string"
+    },
+    "mobilePhone": {
+      "description": "mobilePhone",
+      "type": "object",
+      "properties": {
+        "cc": {
+          "description": "cc",
+          "type": "string"
+        },
+        "subscriber": {
+          "description": "subscriber",
+          "type": "string"
+        }
+      },
+      "required": [
+        "cc",
+        "subscriber"
+      ]
+    },
+    "notificationURL": {
+      "description": "notificationURL",
+      "type": "string"
+    },
+    "purchaseAmount": {
+      "description": "purchaseAmount",
+      "type": "string"
+    },
+    "purchaseCurrency": {
+      "description": "purchaseCurrency",
+      "type": "string"
+    },
+    "purchaseDate": {
+      "description": "purchaseDate",
+      "type": "string"
+    },
+    "purchaseExponent": {
+      "description": "purchaseExponent",
+      "type": "string"
+    },
+    "recurringExpiry": {
+      "description": "recurringExpiry",
+      "type": "string"
+    },
+    "recurringFrequency": {
+      "description": "recurringFrequency",
+      "type": "string"
+    },
+    "shipAddrCity": {
+      "description": "shipAddrCity",
+      "type": "string"
+    },
+    "shipAddrCountry": {
+      "description": "shipAddrCountry",
+      "type": "string"
+    },
+    "shipAddrLine1": {
+      "description": "shipAddrLine1",
+      "type": "string"
+    },
+    "shipAddrLine2": {
+      "description": "shipAddrLine2",
+      "type": "string"
+    },
+    "shipAddrLine3": {
+      "description": "shipAddrLine3",
+      "type": "string"
+    },
+    "shipAddrPostCode": {
+      "description": "shipAddrPostCode",
+      "type": "string"
+    },
+    "shipAddrState": {
+      "description": "shipAddrState",
+      "type": "string"
+    },
+    "threeDSCompInd": {
+      "description": "threeDSCompInd",
+      "type": "string"
+    },
+    "workPhone": {
+      "description": "workPhone",
+      "type": "object",
+      "properties": {
+        "cc": {
+          "description": "cc",
+          "type": "string"
+        },
+        "subscriber": {
+          "description": "subscriber",
+          "type": "string"
+        }
+      },
+      "required": [
+        "cc",
+        "subscriber"
+      ]
+    },
+    "threeDSRequestorAuthenticationInd": {
+      "description": "threeDSRequestorAuthenticationInd",
+      "type": "string"
+    },
+    "threeDSRequestorAuthenticationInfo": {
+      "description": "threeDSRequestorAuthenticationInfo",
+      "type": "object",
+      "properties": {
+        "threeDSReqAuthData": {
+          "description": "threeDSReqAuthData",
+          "type": "string"
+        },
+        "threeDSReqAuthMethod": {
+          "description": "threeDSReqAuthMethod",
+          "type": "string"
+        },
+        "threeDSReqAuthTimestamp": {
+          "description": "threeDSReqAuthTimestamp",
+          "type": "string"
+        }
+      },
+      "required": [
+        "threeDSReqAuthData",
+        "threeDSReqAuthMethod",
+        "threeDSReqAuthTimestamp"
+      ]
+    },
+    "threeDSRequestorChallengeInd": {
+      "description": "threeDSRequestorChallengeInd",
+      "type": "string"
+    },
+    "threeDSRequestorID": {
+      "description": "threeDSRequestorID",
+      "type": "string"
+    },
+    "threeDSServerTransID": {
+      "description": "threeDSServerTransID",
+      "type": "string"
+    },
+    "threeDSRequestorName": {
+      "description": "threeDSRequestorName",
+      "type": "string"
+    },
+    "threeDSRequestorPriorAuthenticationInfo": {
+      "description": "threeDSRequestorPriorAuthenticationInfo",
+      "type": "object",
+      "properties": {
+        "threeDSReqPriorAuthData": {
+          "description": "threeDSReqPriorAuthData",
+          "type": "string"
+        },
+        "threeDSReqPriorAuthMethod": {
+          "description": "threeDSReqPriorAuthMethod",
+          "type": "string"
+        },
+        "threeDSReqPriorAuthTimestamp": {
+          "description": "threeDSReqPriorAuthTimestamp",
+          "type": "string"
+        },
+        "threeDSReqPriorRef": {
+          "description": "threeDSReqPriorRef",
+          "type": "string"
+        }
+      },
+      "required": [
+        "threeDSReqPriorAuthData",
+        "threeDSReqPriorAuthMethod",
+        "threeDSReqPriorAuthTimestamp",
+        "threeDSReqPriorRef"
+      ]
+    },
+    "threeDSRequestorURL": {
+      "description": "threeDSRequestorURL",
+      "type": "string"
+    },
+    "threeDSServerRefNumber": {
+      "description": "threeDSServerRefNumber",
+      "type": "string"
+    },
+    "threeDSServerOperatorID": {
+      "description": "threeDSServerOperatorID",
+      "type": "string"
+    },
+    "threeDSServerURL": {
+      "description": "threeDSServerURL",
+      "type": "string"
+    },
+    "threeRIInd": {
+      "description": "threeRIInd",
+      "type": "string"
+    },
+    "acquirerBIN": {
+      "description": "acquirerBIN",
+      "type": "string"
+    },
+    "acquirerMerchantID": {
+      "description": "acquirerMerchantID",
+      "type": "string"
+    },
+    "broadInfo": {
+      "description": "broadInfo",
+      "type": "object"
+    },
+    "deviceInfo": {
+      "description": "deviceInfo",
+      "type": "object"
+    }
+  },
+  "deviceRenderOptions": {
+    "description": "deviceRenderOptions",
+    "type": "object",
+    "properties": {
+      "sdkInterface": {
+        "description": "sdkInterface",
+        "type": "string"
+      },
+      "sdkUiType": {
+        "description": "sdkUiType",
+        "type": "array",
+        "items": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "string"
+          },
+          {
+            "type": "string"
+          },
+          {
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "required": [
+      "sdkInterface",
+      "sdkUiType"
+    ]
+  },
+  "dsReferenceNumber": {
+    "description": "dsReferenceNumber",
+    "type": "string"
+  },
+  "dsTransID": {
+    "description": "dsTransID",
+    "type": "string"
+  },
+  "dsURL": {
+    "description": "dsURL",
+    "type": "string"
+  },
+  "payTokenInd": {
+    "description": "payTokenInd",
+    "type": "boolean"
+  },
+  "purchaseInstalData": {
+    "description": "purchaseInstalData",
+    "type": "string"
+  },
+  "mcc": {
+    "description": "mcc",
+    "type": "string"
+  },
+  "merchantCountryCode": {
+    "description": "merchantCountryCode",
+    "type": "string"
+  },
+  "merchantName": {
+    "description": "merchantName",
+    "type": "string"
+  },
+  "merchantRiskIndicator": {
+    "description": "merchantRiskIndicator",
+    "type": "object",
+    "properties": {
+      "deliveryEmailAddress": {
+        "description": "deliveryEmailAddress",
+        "type": "string"
+      },
+      "deliveryTimeframe": {
+        "description": "deliveryTimeframe",
+        "type": "string"
+      },
+      "giftCardAmount": {
+        "description": "giftCardAmount",
+        "type": "string"
+      },
+      "giftCardCount": {
+        "description": "giftCardCount",
+        "type": "string"
+      },
+      "giftCardCurr": {
+        "description": "giftCardCurr",
+        "type": "string"
+      },
+      "preOrderDate": {
+        "description": "preOrderDate",
+        "type": "string"
+      },
+      "preOrderPurchaseInd": {
+        "description": "preOrderPurchaseInd",
+        "type": "string"
+      },
+      "reorderItemsInd": {
+        "description": "reorderItemsInd",
+        "type": "string"
+      },
+      "shipIndicator": {
+        "description": "shipIndicator",
+        "type": "string"
+      }
+    },
+    "required": [
+      "deliveryEmailAddress",
+      "deliveryTimeframe",
+      "giftCardAmount",
+      "giftCardCount",
+      "giftCardCurr",
+      "preOrderDate",
+      "preOrderPurchaseInd",
+      "reorderItemsInd",
+      "shipIndicator"
+    ],
+    "messageExtension": [
+      {
+        "criticalityIndicator": {
+          "description": "criticalityIndicator",
+          "type": "boolean"
+        },
+        "data": {
+          "description": "data",
+          "type": "object"
+        },
+        "id": {
+          "description": "id",
+          "type": "string"
+        },
+        "name": {
+          "description": "name",
+          "type": "string"
+        }
+      }
+    ]
+  },
+  "sdkAppID": {
+    "description": "sdkAppID",
+    "type": "string"
+  },
+  "sdkEncData": {
+    "description": "sdkEncData",
+    "type": "object"
+  },
+  "sdkEphemPubKey": {
+    "description": "sdkEphemPubKey",
+    "type": "object"
+  },
+  "sdkMaxTimeout": {
+    "description": "sdkMaxTimeout",
+    "type": "string"
+  },
+  "sdkReferenceNumber": {
+    "description": "sdkReferenceNumber",
+    "type": "string"
+  },
+  "sdkTransID": {
+    "description": "sdkTransID",
+    "type": "string"
+  },
+  "transType": {
+    "description": "transType",
+    "type": "string"
+  },
+  "required": [
+    "threeDSServerTransID",
+    "threeDSCompInd",
+    "threeDSRequestorAuthenticationInd",
+    "shipAddrState",
+    "acctID",
+    "threeDSRequestorID",
+    "threeDSRequestorURL",
+    "threeDSRequestorName",
+    "threeDSServerRefNumber",
+    "threeDSServerURL",
+    "browserAcceptHeader",
+    "browserJavaEnabled",
+    "browserLanguage",
+    "browserScreenHeight",
+    "browserColorDepth",
+    "browserScreenWidth",
+    "browserTZ",
+    "browserUserAgent",
+    "deviceRenderOptions",
+    "threeRIInd",
+    "acctNumber",
+    "acctType",
+    "messageCategory",
+    "messageType",
+    "messageVersion",
+    "notificationURL",
+    "sdkAppID",
+    "sdkEphemPubKey",
+    "sdkMaxTimeout",
+    "sdkReferenceNumber",
+    "sdkTransID"
+  ]
+}

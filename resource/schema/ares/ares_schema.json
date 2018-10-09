@@ -1,0 +1,53 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "Suppress",
+    "description": "A rule from the catalog",
+    "type": "object",
+    "properties": {
+    	"acsOperatorID":{
+		    "description":"acsOperatorID",
+			"type": "string"
+		},
+		"acsReferenceNumber":{
+		    "description":"acsReferenceNumber",
+			"type": "string"
+		},
+		"acsTransID":{
+		    "description":"acsTransID",
+			"type": "string"
+		},
+		"authenticationValue":{
+		    "description":"authenticationValue",
+			"type": "string"
+		},
+		"dsReferenceNumber":{
+		    "description":"dsReferenceNumber",
+			"type": "string"
+		},
+		"dsTransID":{
+		    "description":"dsTransID",
+			"type": "string"
+		},
+		"eci":{
+		    "description":"eci",
+			"type": "string"
+		},
+		"messageType":{
+		    "description":"messageType",
+			"type": "string"
+		},
+		"messageVersion":{
+		    "description":"messageVersion",
+			"type": "string"
+		},
+		"threeDSServerTransID":{
+		    "description":"threeDSServerTransID",
+			"type": "string"
+		},
+		"transStatus":{
+		    "description":"transStatus",
+			"type": "string"
+		}
+		
+    }
+}

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="TestSuite" parallel="false" verbose="10">
+<parameter name="TDSExcelFile" value="data/3DS.xlsx" />
+	 
+	     <test name="3DSMETHODURL Call Scenatios">
+ 	     <parameter name="ExcelSheetVerify" value="3DSMETHODURL_TESTDATA" />
+ 	     <parameter name="ReportTitle" value="3DSAutomation" />
+ 	     <parameter name="SchemaFile" value="preAreq_schema.json" />
+ 	     <!--  parameter name="TestCaseID" value="API Name" /-->
+		<classes>
+			<class name="com.ca.tds.main.PreAReq_TC" />
+		</classes>
+	</test>  
+ 	     <test name="AReq API Test Scenatios">
+ 	     <parameter name="ExcelSheetVerify" value="AREQ_TESTDATA" />
+ 	     <parameter name="ReportTitle" value="3DSAutomation" />
+ 	      <parameter name="SchemaFile" value="areq_schema.json" />
+ 	     <!--  parameter name="TestCaseID" value="API Name"/-->
+		<classes>
+			<class name="com.ca.tds.main.StartAutomationSuite" />
+		</classes>
+	</test>  
+	
+</suite>
