@@ -295,8 +295,9 @@ public class ReadExcel {
 			cellValueAsString = cell.getStringCellValue();
 			break;
 		case Cell.CELL_TYPE_FORMULA:
-			value = (int) cell.getNumericCellValue();
-			cellValueAsString = value + "";
+			/*value = (int) cell.getNumericCellValue();
+			cellValueAsString = value + "";*/
+			cellValueAsString = cell.getStringCellValue();
 			break;
 
 		case Cell.CELL_TYPE_BLANK:

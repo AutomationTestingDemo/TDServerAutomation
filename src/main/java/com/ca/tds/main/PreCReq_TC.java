@@ -13,7 +13,7 @@ import com.ca.tds.utilityfiles.CommonUtil;
 import com.relevantcodes.extentreports.LogStatus;
 
 import ca.com.tds.restapi.PostHttpRequest;
-public class PreAReq_TC extends BaseClassTDS {
+public class PreCReq_TC extends BaseClassTDS {
 	
 	private String previousTest = "TestCaseName";
 	@Test(dataProvider = "DataProviderPreAreq")
@@ -34,7 +34,7 @@ public class PreAReq_TC extends BaseClassTDS {
 			//JsonUtility.Validate(jsonRequest,jsonSchemaPath);
 			System.out.println("Required repalced Json is ***:\n" + jsonRequest);
 			PostHttpRequest sendHttpReq = new PostHttpRequest();
-			apiResponse=sendHttpReq.httpPost(jsonRequest,caPropMap.get("TDSMethodURL"));
+			apiResponse=sendHttpReq.httpPost(jsonRequest,caPropMap.get("ResultRequestAPI"));
 //		System.out.println("Trasaction id is ::::"+APIResponse.getString("threeDSServerTransID"));
 //		System.out.println("Message is ::::"+APIResponse.getString("messageType"));
 			//threeDSServerTransIDList=new ArrayList<String>();
@@ -55,7 +55,7 @@ public class PreAReq_TC extends BaseClassTDS {
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-			Assert.fail("ARes Validation Failed.<br>"+apiResponse);
+			Assert.fail("CRes Validation Failed.<br>"+apiResponse);
 		}
 	}
 

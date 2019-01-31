@@ -31,8 +31,7 @@ public class PostHttpRequest {
 			Response response = given().authentication().preemptive().basic("", "").spec(requestSpec).when().post(APIUrl);
 			 JSONResponseBody = new JSONObject(response.body().asString());
 
-			System.out.println(JSONResponseBody);
-			System.out.println("Https response code is: "+response.getStatusCode());
+			System.out.println("API Response is: "+JSONResponseBody);
 			Assert.assertEquals(response.getStatusCode(),200);
 			// Fetching the desired value of a parameter
 			//String result = JSONResponseBody.getString("errorCode");
