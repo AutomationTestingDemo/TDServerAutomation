@@ -10,7 +10,7 @@
 		<!-- parameter name="SchemaFile" value="preAreq_schema.json" / -->
 		<!-- parameter name="TestCaseID" value="API Name" / -->
 		<classes>
-			<class name="com.ca.tds.main.PreAReq_TC" />
+			<class name="com.ca.tds.main.TDSPreAReq_TC" />
 		</classes>
 	</test>
 	<test name="AReq API for Browser Test Scenatios">

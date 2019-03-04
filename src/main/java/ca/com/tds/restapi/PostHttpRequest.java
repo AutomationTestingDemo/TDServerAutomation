@@ -14,7 +14,7 @@ public class PostHttpRequest {
 	// @Test
 	public JSONObject httpPost(String reqStr,String APIUrl) throws JSONException, InterruptedException {
 		// Building request using requestSpecBuilder
-		JSONObject JSONResponseBody=null;
+		JSONObject jSONResponseBody=null;
 		try {
 			RequestSpecBuilder builder = new RequestSpecBuilder();
 			// Setting API's body
@@ -29,17 +29,17 @@ public class PostHttpRequest {
 			// credentials- basic("","")
 			System.out.println("API URL is: "+APIUrl);
 			Response response = given().authentication().preemptive().basic("", "").spec(requestSpec).when().post(APIUrl);
-			 JSONResponseBody = new JSONObject(response.body().asString());
+			jSONResponseBody = new JSONObject(response.body().asString());
 
-			System.out.println("API Response is: "+JSONResponseBody);
+			System.out.println("API Response is: "+jSONResponseBody);
 			Assert.assertEquals(response.getStatusCode(),200);
 			// Fetching the desired value of a parameter
 			//String result = JSONResponseBody.getString("errorCode");
-			return JSONResponseBody;
+			return jSONResponseBody;
 		} catch (Exception e) {
 			//e.printStackTrace();
-			System.out.println("3DS server is not repsonding at this moment");
+			System.out.println("3DS server is not responding at this moment");
 		}
-		return JSONResponseBody;
+		return jSONResponseBody;
 	}
 }

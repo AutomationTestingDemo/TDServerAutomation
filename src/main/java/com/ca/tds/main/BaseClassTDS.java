@@ -4,10 +4,10 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.sql.SQLException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -15,11 +15,15 @@ import java.util.Map;
 import java.util.Properties;
 
 import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+import org.testng.Assert;
 import org.testng.ITestContext;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
+import org.testng.asserts.SoftAssert;
 
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
@@ -27,50 +31,32 @@ import com.relevantcodes.extentreports.LogStatus;
 
 public class BaseClassTDS {
 
-	public static ExtentReports extent;
+	protected static ExtentReports extent;
 	public static ExtentTest parentTest = null;
 	protected static Map<String, String> caPropMap = null;
-	// public static ExtentTest childtest = null;
 	protected static boolean startchild = false;
-	private static boolean ifProperlyInitialised = false;
-	public String apiresponse = null;
+	private String apiresponse = null;
 
-	public static String strTestCaseName = null;
-	public static int testNumber = 1;
-	long testStartTime = 0;
-	public static List<String> threeDSServerTransIDList = new ArrayList<String>();
-	public static int INSTACTIONLOOPCOUNT = 0;
+	protected static String strTestCaseName = null;
+	protected static int testNumber = 1;
+	protected static List<String> threeDSServerTransIDList = new ArrayList<String>();
 
-	public static int TRANSACTIONLOOPCOUNT = 0;
+	protected static int TRANSACTIONLOOPCOUNT = 0;
 	public static JSONArray aResArr = new JSONArray();
 
 	@BeforeSuite
 	public void beforeSuite(ITestContext testContext) {
-		System.out.println("Before suite in TestSuiteBaseEx");
 		DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
 		Date date = new Date();
-		System.out.println("BeforeSuite Current Date and Time =" + dateFormat.format(date));
+		System.out.println("==========+++++++++Execution Started at : "+dateFormat.format(date)+"+++++++++==========");
 		try {
 			initialiseAdminProperties();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		// initialiseMerchantProperties();
 		initialiseReport(testContext);
-		/*
-		 * launchAdminBrowser(testContext); launchMerchantBrowser(testContext);
-		 * launchMasterAdminBrowser(testContext);
-		 */
-		// System.out.println("in before suite initialiseReport ");
 
 	}
-
-//	@BeforeClass
-//	public void setup(){
-//		
-//		System.out.println("Before Class SetUp");
-//		
-//	}
 
 	@AfterSuite
 	public void endSuite() {
@@ -79,15 +65,13 @@ public class BaseClassTDS {
 
 	public void initialiseReport(ITestContext testContext) {
 		if (extent == null) {
-			Date dNow = new Date();
-			SimpleDateFormat ft = new SimpleDateFormat("yyyy-MM-dd hh-mm-ss");
-//            String dest = System.getProperty("user.dir") +"\\TestReports\\3DSAutomationTestReport"+ft.format(dNow)+".html";
+
 			String dest = System.getProperty("user.dir") + "\\TestReports\\3DSAutomationTestReport.html";
-			System.out.println("Report file destination is " + dest);
+			System.out.println("Report file location : " + dest);
 			extent = new ExtentReports(dest, true);
-			System.out.println("extent is" + extent);
 			extent.config().documentTitle(getPropertyValue("ReportTitle", testContext, null));
 			APIAutomationCommonPage.extent = extent; // initializing the object inpage
+			
 		}
 	}
 
@@ -126,26 +110,15 @@ public class BaseClassTDS {
 	}
 
 	@AfterMethod
-	public void afterMethodProcessing(ITestResult testResult) throws IOException, SQLException {
+	public void afterMethodProcessing(ITestResult testResult){
 		String message = "Test Passed";
 		LogStatus status = LogStatus.PASS;
 		try {
-			// System.out.println("testResult.getStatus()" + testResult.getStatus());
+
 			if (testResult.getStatus() == ITestResult.FAILURE) {
-				// System.out.println("calling take screen shot in CaptureScreen method in
-				// failure case");
-				// if(merchantDriver!=null)
-				// takeScreenShot(extent, parentTest, strTestCaseName, "Error Captured",
-				// LogStatus.FAIL);
+				
 				parentTest.log(LogStatus.ERROR, "response json", apiresponse);
 
-				// takeScreenShot(merchantDriver, extent, parentTest,strTestCaseName, "Error
-				// Captured", LogStatus.FAIL);
-				// if(adminDriver!=null)
-				// takeScreenShot(extent, parentTest,strTestCaseName, "Error Captured",
-				// LogStatus.FAIL);
-				// takeScreenShot(adminDriver, extent, parentTest,strTestCaseName, "Error
-				// Captured", LogStatus.FAIL);
 				status = LogStatus.FAIL;
 				Throwable objThrow = testResult.getThrowable();
 				if (objThrow != null)
@@ -158,17 +131,8 @@ public class BaseClassTDS {
 		} catch (Exception e) {
 			System.out.println(this.getClass().getSimpleName() + " error while getting screen shots ");
 		} finally {
-//        	Markup msg;
-//        	if(status == LogStatus.PASS) {
-//        		msg= MarkupHelper.createLabel(message.toString(), ExtentColor.GREEN);
-//        	}
-//        	else if(status == LogStatus.FAIL) {
-//        		msg= MarkupHelper.createLabel(message, ExtentColor.RED);
-//        	}
 
 			parentTest.log(status, message);
-			// parentTest.appendChild(childtest);
-			// System.out.println("adding parent test to report");
 			try {
 				extent.endTest(parentTest);
 			} catch (Exception e) {
@@ -177,7 +141,6 @@ public class BaseClassTDS {
 				System.out.println("rama exception>>>" + e.getMessage());
 			}
 			extent.flush();
-			// childtest = null;
 			startchild = false;
 
 		}
@@ -186,19 +149,10 @@ public class BaseClassTDS {
 	private void initialiseAdminProperties() throws IOException {
 		try {
 			String workDirAbsPath = System.getProperty("user.dir");
-			System.out.println("workDirAbsPath" + workDirAbsPath);
-			// String testSuitesDir = workDirAbsPath + File.separator + "test-suites";
-			String confingDir = workDirAbsPath + File.separator + "config";
-			System.out.println("Config LOcation [" + confingDir + "]");
-			String configFile = confingDir + File.separator + "3DSProperties.properties";
-			// String deviceConfig = workDirAbsPath + File.separator + "test-suites" +
-			// File.separator +"ca-acs-client.properties";
-
-			// Object configFile = inputFilesDir + File.separator +
-			// "ca-acs-client.properties";
-			// System.out.println("Using configuration properties file from " + configFile);
-			// System.out.println("input files path" + testSuitesDir);
-			// System.out.println("deviceConfig files path" + deviceConfig);
+			System.out.println("Work directory absolute path : " + workDirAbsPath);
+			String configDir = workDirAbsPath + File.separator + "config";
+			System.out.println("Config Location [" + configDir + "]");
+			String configFile = configDir + File.separator + "3DSProperties.properties";
 
 			Properties properties = new Properties();
 			FileInputStream fis = new FileInputStream(configFile);
@@ -208,14 +162,45 @@ public class BaseClassTDS {
 			for (String name : properties.stringPropertyNames())
 				caPropMap.put(name, properties.getProperty(name));
 
-			ifProperlyInitialised = true;
 
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
-			ifProperlyInitialised = false;
 		} catch (IOException e) {
 			e.printStackTrace();
-			ifProperlyInitialised = false;
+		}
+	}
+	
+	public void threeDSFieldAssert(JSONObject apiResponse, Map<String,String> testCaseData, 
+			String fieldName,SoftAssert sa, Object dbData) {
+		
+		try {
+			String fromResponse = null;
+			String testDataColumnName = "Expected-"+fieldName;
+			String fromTestCaseConfig =  testCaseData.get(testDataColumnName);
+			
+			if(fromTestCaseConfig.equalsIgnoreCase("NA"))
+				return;
+			else if(fromTestCaseConfig.equalsIgnoreCase("G")) {
+				fromResponse = apiResponse.getString(fieldName);
+				parentTest.log(LogStatus.INFO, fieldName+":&nbsp;"+fromResponse+", &emsp; DB data:&nbsp;"+dbData);
+				sa.assertNotNull(fromResponse);
+				if(dbData == null){
+					Assert.fail("DB table columns not updated properly, "+testDataColumnName+":&nbsp;"+fromResponse+", &emsp; DB data:&nbsp;"+dbData);
+				}
+				sa.assertEquals(fromResponse, dbData);
+			}
+			else {
+				fromResponse = apiResponse.getString(fieldName);
+				String[] fromTestCaseConfigArr = fromTestCaseConfig.split(",");
+				if(fromTestCaseConfigArr.length > 1){
+					sa.assertTrue(Arrays.asList(fromTestCaseConfigArr).contains(fromResponse));
+				}else{
+					parentTest.log(LogStatus.INFO, testDataColumnName+":&nbsp;"+fromTestCaseConfig+", &emsp;Actual:&nbsp;"+fromResponse);
+					sa.assertEquals(fromResponse,fromTestCaseConfig);
+				}
+			}
+		} catch (JSONException e) {
+			e.printStackTrace();
 		}
 	}
 }

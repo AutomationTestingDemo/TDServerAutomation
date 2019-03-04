@@ -28,7 +28,7 @@ public class StartAutomationSuiteCReq extends BaseClassTDS {
 			throws JSONException, InterruptedException {
 		JSONObject apiResponse=null;
 		try {
-		int loopcount=INSTACTIONLOOPCOUNT;
+		int loopcount=TRANSACTIONLOOPCOUNT;
 
 		//String jsonSchemaPath=".//resource/schema/areq/areq_schema.json";
 		extentTestInit(testCaseData);
@@ -43,7 +43,7 @@ public class StartAutomationSuiteCReq extends BaseClassTDS {
 			while(loopcount<=threeDSServerTransIDList.size())
 			{
 				jsonRequest=jsonRequest.replace(replaceTag, threeDSServerTransIDList.get(loopcount));
-				INSTACTIONLOOPCOUNT++;
+				TRANSACTIONLOOPCOUNT++;
 				break;
 			}
 		}

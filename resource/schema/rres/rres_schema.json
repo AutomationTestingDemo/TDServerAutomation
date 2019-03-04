@@ -4,34 +4,10 @@
     "description": "A rule from the catalog",
     "type": "object",
     "properties": {
-        "acsOperatorID":{
-            "description":"acsOperatorID",
-            "type": "string",
-            "maxLength":32,
-              "minLength":1
-        },
-        "acsReferenceNumber":{
-            "description":"acsReferenceNumber",
-            "type": "string",
-            "maxLength":32,
-              "minLength":1
-        },
         "acsTransID":{
             "description":"acsTransID",
             "type": "string",
             "maxLength":36,
-              "minLength":1
-        },
-        "authenticationValue":{
-            "description":"authenticationValue",
-            "type": "string",
-            "maxLength":28,
-              "minLength":1
-        },
-        "dsReferenceNumber":{
-            "description":"dsReferenceNumber",
-            "type": "string",
-            "maxLength":32,
               "minLength":1
         },
         "dsTransID":{
@@ -40,8 +16,8 @@
             "maxLength":36,
               "minLength":1
         },
-        "eci":{
-            "description":"eci",
+        "resultsStatus":{
+            "description":"resultsStatus",
             "type": "string",
             "maxLength":2,
               "minLength":1
@@ -63,14 +39,8 @@
             "type": "string",
             "maxLength":36,
               "minLength":1
-        },
-        "transStatus":{
-            "description":"transStatus",
-            "type": "string",
-            "maxLength":1,
-              "minLength":1
         }
         
     },
-    "required": ["acsReferenceNumber", "acsTransID", "authenticationValue", "dsReferenceNumber", "dsTransID", "messageType", "messageVersion", "threeDSServerTransID", "transStatus"]
+    "required": ["acsTransID", "dsTransID", "resultsStatus", "messageType", "messageVersion", "threeDSServerTransID"]
 }

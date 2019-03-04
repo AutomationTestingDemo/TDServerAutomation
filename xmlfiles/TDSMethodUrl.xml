@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="TestSuite" parallel="false" verbose="10">
+	<parameter name="TDSExcelFile" value="data/3DS.xlsx" />
+
+	<test name="3DSMETHODURL Call for Browser Pre AReq flow" preserve-order="true" parallel="none">
+		<parameter name="ExcelSheetVerify" value="BRW_3DSMURL_CALL" />
+		<parameter name="ReportTitle" value="3DSAutomationReportOfBrowser" />
+		<classes>
+			<class name="com.ca.tds.main.TDSMethodURL_TC"/>
+		</classes>
+	</test>
+	
+	  <test name="AReq API for Browser Test Scenatios">
+		<parameter name="ExcelSheetVerify" value="BRW_AREQ" />
+		<parameter name="SchemaFile" value="areq_schema.json" />
+		<classes>
+			<class name="com.ca.tds.main.TDSPreAreq_TC" />
+		</classes>
+	</test>  
+
+</suite>

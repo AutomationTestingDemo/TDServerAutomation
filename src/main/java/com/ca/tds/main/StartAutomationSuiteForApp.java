@@ -30,7 +30,7 @@ public class StartAutomationSuiteForApp extends BaseClassTDS {
 //		baseClass.initialiseReport(testContext);
 		JSONObject apiResponse=null;
 		try {
-		int loopcount=INSTACTIONLOOPCOUNT;
+		int loopcount=TRANSACTIONLOOPCOUNT;
 
 		//String jsonSchemaPath=".//resource/schema/areq/areq_schema.json";
 		extentTestInit(testCaseData);
@@ -45,7 +45,7 @@ public class StartAutomationSuiteForApp extends BaseClassTDS {
 			while(loopcount<=threeDSServerTransIDList.size())
 			{
 				jsonRequest=jsonRequest.replace(replaceTag, threeDSServerTransIDList.get(loopcount));
-				INSTACTIONLOOPCOUNT++;
+				TRANSACTIONLOOPCOUNT++;
 				break;
 			}
 		}
