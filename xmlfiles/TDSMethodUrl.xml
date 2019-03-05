@@ -12,12 +12,12 @@
 		</classes>
 	</test>
 	
-	  <test name="AReq API for Browser Test Scenatios">
+	  <!-- <test name="AReq API for Browser Test Scenatios">
 		<parameter name="ExcelSheetVerify" value="BRW_AREQ" />
 		<parameter name="SchemaFile" value="areq_schema.json" />
 		<classes>
 			<class name="com.ca.tds.main.TDSPreAreq_TC" />
 		</classes>
-	</test>  
+	</test>  --> 
 
 </suite>

@@ -2,6 +2,14 @@ package ca.com.tds.restapi;
 
 import static com.jayway.restassured.RestAssured.given;
 
+import java.io.IOException;
+
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.methods.CloseableHttpResponse;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.StringEntity;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClients;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.testng.Assert;
@@ -19,9 +27,9 @@ public class PostHttpRequest {
 			RequestSpecBuilder builder = new RequestSpecBuilder();
 			// Setting API's body
 			builder.setBody(reqStr);
-
+			
 			// Setting content type as application/json or application/xml
-			builder.setContentType("application/json;");
+			builder.setContentType("application/json;charset=UTF-8");
 
 			RequestSpecification requestSpec = builder.build();
 
@@ -41,5 +49,25 @@ public class PostHttpRequest {
 			System.out.println("3DS server is not responding at this moment");
 		}
 		return jSONResponseBody;
+	}
+	
+	public static void whenPostJsonUsingHttpClient_thenCorrect() 
+	  throws ClientProtocolException, IOException {
+	    CloseableHttpClient client = HttpClients.createDefault();
+	    HttpPost httpPost = new HttpPost("http://10.131.137.250:9608");
+	 
+	    String json = "{\"caMerchantID\":null,\"acctNumber\":\"4000500060000008\",\"messageType\":\"ThreeDSMethodURLReq\",\"callerTxnRefID\":\"341b7153-da86-4543-860f-2ba47f0168a5\"}";
+	    StringEntity entity = new StringEntity(json);
+	    httpPost.setEntity(entity);
+	    httpPost.setHeader("Accept", "application/json;");
+	    httpPost.setHeader("Content-type", "application/json;charset=UTF-8");
+	 
+	    CloseableHttpResponse response = client.execute(httpPost);
+	    System.out.println("response : "+response);
+	    client.close();
+	}
+	
+	public static void main(String[] args) throws ClientProtocolException, IOException{
+		whenPostJsonUsingHttpClient_thenCorrect();
 	}
 }
