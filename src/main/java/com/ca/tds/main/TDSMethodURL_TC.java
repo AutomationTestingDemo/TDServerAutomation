@@ -1,5 +1,6 @@
 package com.ca.tds.main;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -35,19 +36,31 @@ public class TDSMethodURL_TC extends BaseClassTDS {
 				
 			Map<String, String> apiTestdata = testScenarioData.get("Pre-Areq Request");
 			String jsonRequest = apiTestdata.get("Request Json");
-			JSONObject jsonObject = new JSONObject(jsonRequest);
 			
+			
+			List<String> keysToRemove = new ArrayList<>();
+			for (Map.Entry<String, String> entry  : testCaseData.entrySet()) {
+				
+				if(entry.getValue().equalsIgnoreCase("#REMOVE#"))			
+					keysToRemove.add(entry.getKey().replaceAll("#", ""));
+				else			
+					jsonRequest = jsonRequest.replaceAll(entry.getKey(), entry.getValue());
+			}
+			
+			JSONObject jsonObject = new JSONObject(jsonRequest);
+			for (String key : keysToRemove){
+				jsonObject.remove(key);
+			}
 			for (Map.Entry<String, String> entry  : testCaseData.entrySet()) {
 				
 				String key = entry.getKey().replaceAll("#", "");
 				String value = entry.getValue();
 				if(jsonObject.has(key) && value.equalsIgnoreCase("null")){
 					jsonObject.put(key, JSONObject.NULL);
-				}else if(jsonObject.has(key)){
-					jsonObject.put(key, value);
 				}
 				
 			}
+			
 			
 			System.out.println("TDSMethodURL Request :\n" + jsonObject.toString());
 			PostHttpRequest sendHttpReq = new PostHttpRequest();

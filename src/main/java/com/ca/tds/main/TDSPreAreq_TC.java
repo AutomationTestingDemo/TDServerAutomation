@@ -39,7 +39,6 @@ public class TDSPreAreq_TC extends BaseClassTDS {
 					"TEST SCENARIOS", "API Name");
 			Map<String, String> apiTestdata = testScenarioData.get("BRW_AReq_API");
 			String jsonRequest = apiTestdata.get("Request Json");
-			JSONObject reqJson = new JSONObject(jsonRequest);
 			
 			String replaceTag = "#threeDSServerTransID#";
 			if (!threeDSServerTransIDList.isEmpty()) {
@@ -51,16 +50,22 @@ public class TDSPreAreq_TC extends BaseClassTDS {
 			}
 			
 			List<String> keysToRemove = new ArrayList<>();
+			for (Map.Entry<String, String> entry  : testCaseData.entrySet()) {
+				
+				if(entry.getValue().equalsIgnoreCase("#REMOVE#"))			
+					keysToRemove.add(entry.getKey().replaceAll("#", ""));
+				else			
+					jsonRequest = jsonRequest.replaceAll(entry.getKey(), entry.getValue());
+			}
+			
+			
+			JSONObject reqJson = new JSONObject(jsonRequest);
 			for (Map.Entry<String, String> entry : testCaseData.entrySet()) {
 
 				String key = entry.getKey().replaceAll("#", "");
 				String value = entry.getValue();
-				if (value.equalsIgnoreCase("#REMOVE#")){
-					keysToRemove.add(key);
-				}else if(reqJson.has(key) && value.equalsIgnoreCase("null")){
+				if(reqJson.has(key) && value.equalsIgnoreCase("null")){
 					reqJson.put(key, JSONObject.NULL);
-				}else if(reqJson.has(key)){
-					reqJson.put(key, value);
 				}
 				
 			}

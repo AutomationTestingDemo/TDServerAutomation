@@ -41,33 +41,35 @@ public class TDSRReq_TC extends BaseClassTDS {
 				"TEST SCENARIOS", "API Name");	
 		Map<String, String> apiTestdata = testScenarioData.get("Result Request API");
 		String jsonRequest = apiTestdata.get("Request Json");
-		JSONObject reqJson = new JSONObject(jsonRequest);
 
 		List<String> keysToRemove = new ArrayList<>();
-				
+		for (Map.Entry<String, String> entry  : testCaseData.entrySet()) {
+			
+			if(entry.getValue().equalsIgnoreCase("#REMOVE#"))			
+				keysToRemove.add(entry.getKey().replaceAll("#", ""));
+			else			
+				jsonRequest = jsonRequest.replaceAll(entry.getKey(), entry.getValue());
+		}
+		
+		
+		JSONObject reqJson = new JSONObject(jsonRequest);
 		for (Map.Entry<String, String> entry : testCaseData.entrySet()) {
 
 			String key = entry.getKey().replaceAll("#", "");
 			String value = entry.getValue();
-			if (value.equalsIgnoreCase("#REMOVE#")){
-				keysToRemove.add(key);
-			}else if(reqJson.has(key) && value.equalsIgnoreCase("null")){
+			if(reqJson.has(key) && value.equalsIgnoreCase("null")){
 				reqJson.put(key, JSONObject.NULL);
-			}else if(reqJson.has(key)){
-				reqJson.put(key, value);
 			}
 			
 		}
 
-		System.out.println("Keys removed from AReq request : " + keysToRemove);
+
+		System.out.println("Keys removed from RReq request : " + keysToRemove);
 
 		for (String key : keysToRemove){
 			reqJson.remove(key);
 		}
-		
-		for(String key : keysToRemove)
-			reqJson.remove(key);
-		System.out.println("RReq before adding data from ARes "+reqJson);
+		System.out.println("RReq before adding data from RRes "+reqJson);
 	
 		JSONObject aResJSON = aResArr.getJSONObject(loopcount);
 		Iterator<String> iterAres = aResJSON.keys();
