@@ -8,26 +8,34 @@ import java.sql.Statement;
 
 public class DBConnection {
 	
-	public static Connection getConnection(){  
+	static AppParams appParams;
+	
+	public static Connection getConnection(){
+		
+		if(appParams == null){
+			InitializeApplicationParams initializeApplicationParams = new InitializeApplicationParams();
+			initializeApplicationParams.initializeAppParams();
+			appParams = initializeApplicationParams.getAppParams();
+		}
+		
 		try{  
 		//step1 load the driver class  
-		Class.forName("com.edb.Driver");  
-		  
+		Class.forName("com.edb.Driver");    
 		//step2 create  the connection object  
-		Connection con = DriverManager.getConnection(  
-		"jdbc:edb://manyo02-I19632:5444/postgres?user=ms_user","enterprisedb","dost1234");  
-		  
-		return con; 
+		return DriverManager.getConnection(  
+		"jdbc:edb://"+appParams.getDBHost()+":5444/"+appParams.getDBService()+"",appParams.getDBUser(),appParams.getDBPassword());
+		/*return DriverManager.getConnection(  
+				"jdbc:oracle:thin:@10.131.136.47:1521:orcl","ds_user","dost1234"); */
 		  
 		}catch(Exception e){ 
 			e.printStackTrace();
 		}
 		return null;  
 		  
-		}   
+		}    
 	
 	public static void main(String[] a) throws SQLException{
-		queryTable();
+		
 	}
 	
 	public static void queryTable() throws SQLException{

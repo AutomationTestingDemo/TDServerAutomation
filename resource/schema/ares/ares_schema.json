@@ -28,6 +28,12 @@
             "maxLength":28,
               "minLength":1
         },
+        "callerTxnRefID":{
+            "description":"callerTxnRefID",
+            "type": "string",
+            "maxLength":36,
+              "minLength":1
+        },
         "dsReferenceNumber":{
             "description":"dsReferenceNumber",
             "type": "string",

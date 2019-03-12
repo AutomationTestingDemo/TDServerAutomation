@@ -4,12 +4,14 @@ import static com.jayway.restassured.RestAssured.given;
 
 import java.io.IOException;
 
+import org.apache.http.HttpEntity;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
+import org.apache.http.util.EntityUtils;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.testng.Assert;
@@ -20,7 +22,7 @@ import com.jayway.restassured.specification.RequestSpecification;
 
 public class PostHttpRequest {
 	// @Test
-	public JSONObject httpPost(String reqStr,String APIUrl) throws JSONException, InterruptedException {
+	public JSONObject httpPostBuilder(String reqStr,String APIUrl) throws JSONException, InterruptedException {
 		// Building request using requestSpecBuilder
 		JSONObject jSONResponseBody=null;
 		try {
@@ -51,23 +53,31 @@ public class PostHttpRequest {
 		return jSONResponseBody;
 	}
 	
-	public static void whenPostJsonUsingHttpClient_thenCorrect() 
+	public JSONObject httpPost(String reqStr,String APIUrl)
 	  throws ClientProtocolException, IOException {
+		JSONObject jSONResponseBody=null;
+		
+		System.out.println("API URL is: "+APIUrl);
 	    CloseableHttpClient client = HttpClients.createDefault();
-	    HttpPost httpPost = new HttpPost("http://10.131.137.250:9608");
+	    HttpPost httpPost = new HttpPost(APIUrl);
 	 
-	    String json = "{\"caMerchantID\":null,\"acctNumber\":\"4000500060000008\",\"messageType\":\"ThreeDSMethodURLReq\",\"callerTxnRefID\":\"341b7153-da86-4543-860f-2ba47f0168a5\"}";
-	    StringEntity entity = new StringEntity(json);
+	   // String json = "{\"caMerchantID\":\"CA_EU\",\"acctNumber\":\"4000500060000008\",\"messageType\":\"ThreeDSMethodURLReq\",\"callerTxnRefID\":\"341b7153-da86-4543-860f-2ba47f0168a5\"}";
+	    StringEntity entity = new StringEntity(reqStr);
 	    httpPost.setEntity(entity);
-	    httpPost.setHeader("Accept", "application/json;");
+	    //httpPost.setHeader("Accept", "application/json;");
 	    httpPost.setHeader("Content-type", "application/json;charset=UTF-8");
 	 
 	    CloseableHttpResponse response = client.execute(httpPost);
-	    System.out.println("response : "+response);
+	    HttpEntity resentity = response.getEntity();
+	    String responseString = EntityUtils.toString(resentity, "UTF-8");
+	    System.out.println("API Response is: "+responseString);
+	    jSONResponseBody = new JSONObject(responseString);
+	   
 	    client.close();
+	    return jSONResponseBody;
 	}
 	
 	public static void main(String[] args) throws ClientProtocolException, IOException{
-		whenPostJsonUsingHttpClient_thenCorrect();
+		
 	}
 }

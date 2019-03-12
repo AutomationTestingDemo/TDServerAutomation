@@ -37,7 +37,6 @@ public class TDSMethodURL_TC extends BaseClassTDS {
 			Map<String, String> apiTestdata = testScenarioData.get("Pre-Areq Request");
 			String jsonRequest = apiTestdata.get("Request Json");
 			
-			
 			List<String> keysToRemove = new ArrayList<>();
 			for (Map.Entry<String, String> entry  : testCaseData.entrySet()) {
 				
@@ -61,7 +60,6 @@ public class TDSMethodURL_TC extends BaseClassTDS {
 				
 			}
 			
-			
 			System.out.println("TDSMethodURL Request :\n" + jsonObject.toString());
 			PostHttpRequest sendHttpReq = new PostHttpRequest();
 			apiResponse=sendHttpReq.httpPost(jsonObject.toString(), caPropMap.get("TDSMethodURL"));
@@ -71,22 +69,34 @@ public class TDSMethodURL_TC extends BaseClassTDS {
 			}
 			JsonUtility.validate(apiResponse.toString(), "resource/schema/ares/preAres_schema.json");
 			threeDSServerTransIDList.add(apiResponse.getString("threeDSServerTransID"));
-			TDSDao tDSDao = new TDSDao();
-			List<HashMap<String,Object>> tdsMethodListFromDB = tDSDao.getAuthLogDataByTDSTransID(apiResponse.getString("threeDSServerTransID"));
-			if(tdsMethodListFromDB == null || tdsMethodListFromDB.isEmpty()){
-				Assert.fail("Three DS method URL API threeDSServerTransID not found in DB tables");
-			}else if(tdsMethodListFromDB.size() > 1){
-				Assert.fail("Three DS method URL API more than 1 threeDSServerTransID found in DB tables");
-			}
-			HashMap<String, Object> tdsMethodDBData = tdsMethodListFromDB.get(0);
+			
 			//needs to change this when 3ds does insertion into tables properly
 			
 			SoftAssert sa =new SoftAssert();
-			//threeDSFieldAssert(apiResponse, testCaseData, "messageType", sa, null);
-			//threeDSFieldAssert(apiResponse, testCaseData, "threeDSServerTransID", sa, tdsMethodDBData.get("THREEDSSERVERTRANSID"));
-			//threeDSFieldAssert(apiResponse, testCaseData, "callerTxnRefID", sa, tdsMethodDBData.get("CALLERTXNREFID"));
-			threeDSFieldAssert(apiResponse, testCaseData, "messageVersion", sa, tdsMethodDBData.get("MESSAGEVERSION"));
-			threeDSFieldAssert(apiResponse, testCaseData, "threeDSMethodURL", sa, tdsMethodDBData.get("ACSURL"));
+			String validateDBParams = appParams.getValidateDBParams();
+			if(validateDBParams != null && "Y".equalsIgnoreCase(validateDBParams)){
+				
+				TDSDao tDSDao = new TDSDao();
+				List<HashMap<String,Object>> tdsMethodListFromDB = tDSDao.getAuthLogDataByTDSTransID(apiResponse.getString("threeDSServerTransID"));
+				if(tdsMethodListFromDB == null || tdsMethodListFromDB.isEmpty()){
+					Assert.fail("Three DS method URL API threeDSServerTransID not found in DB tables");
+				}else if(tdsMethodListFromDB.size() > 1){
+					Assert.fail("Three DS method URL API more than 1 threeDSServerTransID found in DB tables");
+				}
+				HashMap<String, Object> tdsMethodDBData = tdsMethodListFromDB.get(0);
+				
+				threeDSFieldAssert(apiResponse, testCaseData, "messageType", sa, null);
+				threeDSFieldAssert(apiResponse, testCaseData, "threeDSServerTransID", sa, tdsMethodDBData.get("THREEDSSERVERTRANSID"));
+				threeDSFieldAssert(apiResponse, testCaseData, "callerTxnRefID", sa, tdsMethodDBData.get("CALLERTXNREFID"));
+				threeDSFieldAssert(apiResponse, testCaseData, "messageVersion", sa, tdsMethodDBData.get("MESSAGEVERSION"));
+				threeDSFieldAssert(apiResponse, testCaseData, "threeDSMethodURL", sa, tdsMethodDBData.get("ACSURL"));
+			}else{
+				threeDSFieldAssert(apiResponse, testCaseData, "messageType", sa);
+				threeDSFieldAssert(apiResponse, testCaseData, "threeDSServerTransID", sa);
+				threeDSFieldAssert(apiResponse, testCaseData, "callerTxnRefID", sa);
+				threeDSFieldAssert(apiResponse, testCaseData, "messageVersion", sa);
+				threeDSFieldAssert(apiResponse, testCaseData, "threeDSMethodURL", sa);
+			}
 			sa.assertAll();
 		}catch(ValidationException ve){
 			Assert.fail("Three DS method URL API response data validation failed.<br>"+ve.getErrorMessage()+"<br> api response : "+apiResponse);

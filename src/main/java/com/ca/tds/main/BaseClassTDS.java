@@ -25,6 +25,8 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.asserts.SoftAssert;
 
+import com.ca.tds.utilityfiles.AppParams;
+import com.ca.tds.utilityfiles.InitializeApplicationParams;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
@@ -36,6 +38,7 @@ public class BaseClassTDS {
 	protected static Map<String, String> caPropMap = null;
 	protected static boolean startchild = false;
 	private String apiresponse = null;
+	static AppParams appParams;
 
 	protected static String strTestCaseName = null;
 	protected static int testNumber = 1;
@@ -51,6 +54,7 @@ public class BaseClassTDS {
 		System.out.println("==========+++++++++Execution Started at : "+dateFormat.format(date)+"+++++++++==========");
 		try {
 			initialiseAdminProperties();
+			initializeApplicationParams();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -63,6 +67,11 @@ public class BaseClassTDS {
 		System.out.println("====+++++Execution Completed Kindly verify the Reports for the summary +++++=======");
 	}
 
+	public void initializeApplicationParams(){
+		InitializeApplicationParams initializeApplicationParams = new InitializeApplicationParams();
+		initializeApplicationParams.initializeAppParams();
+		appParams = initializeApplicationParams.getAppParams();
+	}
 	public void initialiseReport(ITestContext testContext) {
 		if (extent == null) {
 
@@ -202,5 +211,40 @@ public class BaseClassTDS {
 		} catch (JSONException e) {
 			e.printStackTrace();
 		}
+	}
+	
+	public void threeDSFieldAssert(JSONObject apiResponse, Map<String,String> testCaseData, 
+			String fieldName,SoftAssert sa) {
+		
+		try {
+			String fromResponse = null;
+			String testDataColumnName = "Expected-"+fieldName;
+			String fromTestCaseConfig =  testCaseData.get(testDataColumnName);
+			
+			if(fromTestCaseConfig.equalsIgnoreCase("NA"))
+				return;
+			else if(fromTestCaseConfig.equalsIgnoreCase("G")) {
+				fromResponse = apiResponse.getString(fieldName);
+				parentTest.log(LogStatus.INFO, fieldName+":&nbsp;"+fromResponse);
+				sa.assertNotNull(fromResponse);
+			}
+			else {
+				fromResponse = apiResponse.getString(fieldName);
+				String[] fromTestCaseConfigArr = fromTestCaseConfig.split(",");
+				if(fromTestCaseConfigArr.length > 1){
+					sa.assertTrue(Arrays.asList(fromTestCaseConfigArr).contains(fromResponse));
+				}else{
+					parentTest.log(LogStatus.INFO, testDataColumnName+":&nbsp;"+fromTestCaseConfig+", &emsp;Actual:&nbsp;"+fromResponse);
+					sa.assertEquals(fromResponse,fromTestCaseConfig);
+				}
+			}
+		} catch (JSONException e) {
+			e.printStackTrace();
+		}
+	}
+
+
+	public AppParams getAppParams() {
+		return appParams;
 	}
 }
