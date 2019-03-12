@@ -17,6 +17,7 @@ import org.testng.asserts.SoftAssert;
 import com.ca.tds.dao.TDSDao;
 import com.ca.tds.utilityfiles.CommonUtil;
 import com.ca.tds.utilityfiles.JsonUtility;
+import com.relevantcodes.extentreports.LogStatus;
 
 import ca.com.tds.restapi.PostHttpRequest;
 
@@ -67,8 +68,23 @@ public class TDSMethodURL_TC extends BaseClassTDS {
 				Assert.fail("3DS server is not responding at this moment");
 				return;
 			}
-			JsonUtility.validate(apiResponse.toString(), "resource/schema/ares/preAres_schema.json");
-			threeDSServerTransIDList.add(apiResponse.getString("threeDSServerTransID"));
+			if("P".equalsIgnoreCase(testCaseData.get("Test Case type")) && "Erro".equalsIgnoreCase(apiResponse.getString("messageType"))){
+				Assert.fail("errorComponent: "+apiResponse.getString("errorComponent")+", errorCode: "+apiResponse.getString("errorComponent")+", errorDescription:"+apiResponse.getString("errorDescription"));
+				parentTest.log(LogStatus.FAIL, "errorComponent: "+apiResponse.getString("errorComponent")+", errorCode: "+apiResponse.getString("errorComponent")+", errorDescription:"+apiResponse.getString("errorDescription"));
+				return;
+			}else if("N".equalsIgnoreCase(testCaseData.get("Test Case type")) && !"Erro".equalsIgnoreCase(apiResponse.getString("messageType"))){
+				Assert.fail("Expected to Fail");
+				parentTest.log(LogStatus.FAIL, "Expected to Fail");
+				return;
+			}else if("P".equalsIgnoreCase(testCaseData.get("Test Case type"))){
+				JsonUtility.validate(apiResponse.toString(), "resource/schema/ares/preAres_schema.json");
+				threeDSServerTransIDList.add(apiResponse.getString("threeDSServerTransID"));
+			}else{
+				JsonUtility.validate(apiResponse.toString(), "resource/schema/ares/preAres_schema_n.json");
+				threeDSServerTransIDList.add(apiResponse.getString("threeDSServerTransID"));
+			}
+			
+			
 			
 			//needs to change this when 3ds does insertion into tables properly
 			
@@ -99,7 +115,7 @@ public class TDSMethodURL_TC extends BaseClassTDS {
 			}
 			sa.assertAll();
 		}catch(ValidationException ve){
-			Assert.fail("Three DS method URL API response data validation failed.<br>"+ve.getErrorMessage()+"<br> api response : "+apiResponse);
+			Assert.fail("Three DS method URL API response schema validation failed.<br>"+ve.getErrorMessage()+"<br> api response : "+apiResponse);
 		}catch (Exception e) {
 			e.printStackTrace();
 			Assert.fail("Three DS method URL API data validation failed.<br>"+e.getMessage()+"<br> api response : "+apiResponse);
@@ -117,9 +133,9 @@ public class TDSMethodURL_TC extends BaseClassTDS {
 	}
 	
 	protected void extentTestInit(Map<String, String> testCaseData) {
-		String extentTestCase = testCaseData.get("TestCaseName");
-		System.out.println("Test case name : " + extentTestCase);
 		
+		String extentTestCase = "TC" + testCaseData.get("TestCaseID") + testCaseData.get("TestCaseName");
+		System.out.println("Inside extentTestInit strTestCase: " + extentTestCase);
 		if ((previousTest != null) && !(previousTest.equalsIgnoreCase(extentTestCase))) {
 			testNumber = 1;
 		}
@@ -128,7 +144,6 @@ public class TDSMethodURL_TC extends BaseClassTDS {
 		APIAutomationCommonPage.parentTest = parentTest;
 		previousTest = extentTestCase;
 
-
-    }
+	}
 
 }
