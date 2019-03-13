@@ -68,7 +68,6 @@ public class TDSMethodURL_TC extends BaseClassTDS {
 				Assert.fail("3DS server is not responding at this moment");
 				return;
 			}
-			
 			if("P".equalsIgnoreCase(testCaseData.get("Test Case type")) && "Erro".equalsIgnoreCase(apiResponse.getString("messageType"))){
 				Assert.fail("errorComponent: "+apiResponse.getString("errorComponent")+", errorCode: "+apiResponse.getString("errorComponent")+", errorDescription:"+apiResponse.getString("errorDescription"));
 				parentTest.log(LogStatus.FAIL, "errorComponent: "+apiResponse.getString("errorComponent")+", errorCode: "+apiResponse.getString("errorComponent")+", errorDescription:"+apiResponse.getString("errorDescription"));
@@ -117,7 +116,7 @@ public class TDSMethodURL_TC extends BaseClassTDS {
 			}
 			sa.assertAll();
 		}catch(ValidationException ve){
-			Assert.fail("Three DS method URL API response data validation failed.<br>"+ve.getErrorMessage()+"<br> api response : "+apiResponse);
+			Assert.fail("Three DS method URL API response schema validation failed.<br>"+ve.getErrorMessage()+"<br> api response : "+apiResponse);
 		}catch (Exception e) {
 			e.printStackTrace();
 			Assert.fail("Three DS method URL API data validation failed.<br>"+e.getMessage()+"<br> api response : "+apiResponse);
@@ -135,9 +134,9 @@ public class TDSMethodURL_TC extends BaseClassTDS {
 	}
 	
 	protected void extentTestInit(Map<String, String> testCaseData) {
-		String extentTestCase = testCaseData.get("TestCaseName");
-		System.out.println("Test case name : " + extentTestCase);
 		
+		String extentTestCase = "TC" + testCaseData.get("TestCaseID") + testCaseData.get("TestCaseName");
+		System.out.println("Inside extentTestInit strTestCase: " + extentTestCase);
 		if ((previousTest != null) && !(previousTest.equalsIgnoreCase(extentTestCase))) {
 			testNumber = 1;
 		}
@@ -146,7 +145,6 @@ public class TDSMethodURL_TC extends BaseClassTDS {
 		APIAutomationCommonPage.parentTest = parentTest;
 		previousTest = extentTestCase;
 
-
-    }
+	}
 
 }
