@@ -17,6 +17,7 @@ import org.testng.asserts.SoftAssert;
 import com.ca.tds.dao.TDSDao;
 import com.ca.tds.utilityfiles.CommonUtil;
 import com.ca.tds.utilityfiles.JsonUtility;
+import com.relevantcodes.extentreports.LogStatus;
 
 import ca.com.tds.restapi.PostHttpRequest;
 
@@ -67,8 +68,22 @@ public class TDSMethodURL_TC extends BaseClassTDS {
 				Assert.fail("3DS server is not responding at this moment");
 				return;
 			}
-			JsonUtility.validate(apiResponse.toString(), "resource/schema/ares/preAres_schema.json");
-			threeDSServerTransIDList.add(apiResponse.getString("threeDSServerTransID"));
+			
+			if("P".equalsIgnoreCase(testCaseData.get("Test Case type")) && "Erro".equalsIgnoreCase(apiResponse.getString("messageType"))){
+				Assert.fail("errorComponent: "+apiResponse.getString("errorComponent")+", errorCode: "+apiResponse.getString("errorComponent")+", errorDescription:"+apiResponse.getString("errorDescription"));
+				parentTest.log(LogStatus.FAIL, "errorComponent: "+apiResponse.getString("errorComponent")+", errorCode: "+apiResponse.getString("errorComponent")+", errorDescription:"+apiResponse.getString("errorDescription"));
+				return;
+			}else if("N".equalsIgnoreCase(testCaseData.get("Test Case type")) && !"Erro".equalsIgnoreCase(apiResponse.getString("messageType"))){
+				Assert.fail("Expected to Fail");
+				parentTest.log(LogStatus.FAIL, "Expected to Fail");
+				return;
+			}else if("P".equalsIgnoreCase(testCaseData.get("Test Case type"))){
+				JsonUtility.validate(apiResponse.toString(), "resource/schema/ares/preAres_schema.json");
+				threeDSServerTransIDList.add(apiResponse.getString("threeDSServerTransID"));
+			}else{
+				JsonUtility.validate(apiResponse.toString(), "resource/schema/ares/preAres_schema_n.json");
+				threeDSServerTransIDList.add(apiResponse.getString("threeDSServerTransID"));
+			}
 			
 			//needs to change this when 3ds does insertion into tables properly
 			
@@ -85,17 +100,20 @@ public class TDSMethodURL_TC extends BaseClassTDS {
 				}
 				HashMap<String, Object> tdsMethodDBData = tdsMethodListFromDB.get(0);
 				
-				threeDSFieldAssert(apiResponse, testCaseData, "messageType", sa, null);
+				threeDSFieldAssert(apiResponse, testCaseData, "messageType", sa);
 				threeDSFieldAssert(apiResponse, testCaseData, "threeDSServerTransID", sa, tdsMethodDBData.get("THREEDSSERVERTRANSID"));
 				threeDSFieldAssert(apiResponse, testCaseData, "callerTxnRefID", sa, tdsMethodDBData.get("CALLERTXNREFID"));
 				threeDSFieldAssert(apiResponse, testCaseData, "messageVersion", sa, tdsMethodDBData.get("MESSAGEVERSION"));
 				threeDSFieldAssert(apiResponse, testCaseData, "threeDSMethodURL", sa, tdsMethodDBData.get("ACSURL"));
+				
 			}else{
+				
 				threeDSFieldAssert(apiResponse, testCaseData, "messageType", sa);
 				threeDSFieldAssert(apiResponse, testCaseData, "threeDSServerTransID", sa);
 				threeDSFieldAssert(apiResponse, testCaseData, "callerTxnRefID", sa);
 				threeDSFieldAssert(apiResponse, testCaseData, "messageVersion", sa);
 				threeDSFieldAssert(apiResponse, testCaseData, "threeDSMethodURL", sa);
+				
 			}
 			sa.assertAll();
 		}catch(ValidationException ve){

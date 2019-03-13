@@ -56,7 +56,7 @@
             "description":"messageType",
             "type": "string",
             "maxLength":4,
-              "minLength":1
+              "minLength":4
         },
         "messageVersion":{
             "description":"messageVersion",
@@ -78,5 +78,5 @@
         }
         
     },
-    "required": ["acsReferenceNumber", "acsTransID", "authenticationValue", "dsReferenceNumber", "dsTransID", "messageType", "messageVersion", "threeDSServerTransID", "transStatus"]
+    "required": ["acsReferenceNumber", "acsTransID", "dsReferenceNumber", "dsTransID", "messageType", "messageVersion", "threeDSServerTransID", "transStatus"]
 }

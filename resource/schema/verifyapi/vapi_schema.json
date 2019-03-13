@@ -1,0 +1,74 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"title": "Suppress",
+	"description": "A rule from the catalog",
+	"type": "object",
+	"properties": {
+		"threeDSServerTransID": {
+			"description": "threeDSServerTransID",
+			"type": "string",
+			"maxLength": 36,
+			"minLength": 36
+		},
+		"callerTxnRefID": {
+			"description": "callerTxnRefID",
+			"type": "string",
+			"maxLength": 36,
+			"minLength": 1
+		},
+		"eci": {
+			"description": "eci",
+			"type": "string",
+			"maxLength": 2,
+			"minLength": 2
+		},
+		"authenticationValue": {
+			"description": "authenticationValue",
+			"type": "string",
+			"maxLength": 28,
+			"minLength": 28
+		},
+		"transStatus": {
+			"description": "transStatus",
+			"type": "string",
+			"maxLength": 1,
+			"minLength": 1
+		},
+		"transStatusReason": {
+			"description": "transStatusReason",
+			"type": "string",
+			"maxLength": 2,
+			"minLength": 2
+		},
+		"challengeCancel": {
+			"description": "challengeCancel",
+			"type": "string",
+			"maxLength": 2,
+			"minLength": 2
+		},
+		"interactionCounter": {
+			"description": "interactionCounter",
+			"type": "string",
+			"maxLength": 2,
+			"minLength": 2
+		},
+		"messageType": {
+			"description": "messageType",
+			"type": "string",
+			"maxLength": 4,
+			"minLength": 4
+		},
+		"XID": {
+			"description": "XID",
+			"type": "string",
+			"maxLength": 36,
+			"minLength": 0
+		}
+	},
+	"required": ["threeDSServerTransID",
+	"authenticationValue",
+	"transStatus",
+	"interactionCounter",
+	"messageType",
+	"XID"]
+}

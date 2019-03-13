@@ -93,7 +93,7 @@ public class TDSPreAreq_TC extends BaseClassTDS {
 				Assert.fail("errorComponent: "+apiResponse.getString("errorComponent")+", errorCode: "+apiResponse.getString("errorComponent")+", errorDescription:"+apiResponse.getString("errorDescription"));
 				parentTest.log(LogStatus.FAIL, "errorComponent: "+apiResponse.getString("errorComponent")+", errorCode: "+apiResponse.getString("errorComponent")+", errorDescription:"+apiResponse.getString("errorDescription"));
 				return;
-			}else if("N".equalsIgnoreCase(testCaseData.get("Test Case type")) && "ARes".equalsIgnoreCase(apiResponse.getString("messageType"))){
+			}else if("N".equalsIgnoreCase(testCaseData.get("Test Case type")) && !"Erro".equalsIgnoreCase(apiResponse.getString("messageType"))){
 				Assert.fail("Expected to Fail");
 				parentTest.log(LogStatus.FAIL, "Expected to Fail");
 				return;
@@ -111,10 +111,13 @@ public class TDSPreAreq_TC extends BaseClassTDS {
 			
 			SoftAssert sa = new SoftAssert();
 			String validateDBParams = appParams.getValidateDBParams();
-			if(validateDBParams != null && "Y".equalsIgnoreCase(validateDBParams)){
+			if(validateDBParams != null && "Y".equalsIgnoreCase(validateDBParams) && "P".equalsIgnoreCase(testCaseData.get("Test Case type"))){
+				
+				List<HashMap<String,Object>> tdsMethodListFromDB = null;
 			
 				TDSDao tDSDao = new TDSDao();
-				List<HashMap<String,Object>> tdsMethodListFromDB = tDSDao.getAuthLogDataByTDSTransID(threeDSServerTransIDList.get(loopcount));
+				tdsMethodListFromDB = tDSDao.getAuthLogDataByTDSTransID(threeDSServerTransIDList.get(loopcount));
+				
 				if(tdsMethodListFromDB == null || tdsMethodListFromDB.isEmpty()){
 					Assert.fail("Pre AReq API threeDSServerTransID not found in DB tables");
 					parentTest.log(LogStatus.FAIL, "Pre AReq API threeDSServerTransID not found in DB tables");
@@ -148,7 +151,32 @@ public class TDSPreAreq_TC extends BaseClassTDS {
 				threeDSFieldAssert(apiResponse, testCaseData, "errorComponent", sa, null);
 				threeDSFieldAssert(apiResponse, testCaseData, "errorDescription", sa, null);
 				threeDSFieldAssert(apiResponse, testCaseData, "errorDetail", sa, null);
-			}else{
+			}else if(validateDBParams != null && "Y".equalsIgnoreCase(validateDBParams) && "N".equalsIgnoreCase(testCaseData.get("Test Case type"))){
+				
+				List<HashMap<String,Object>> tdsMethodListFromDB = null;
+			
+				TDSDao tDSDao = new TDSDao();
+				tdsMethodListFromDB = tDSDao.getErrorLogDataByTDSTransID(threeDSServerTransIDList.get(loopcount));
+				
+				if(tdsMethodListFromDB == null || tdsMethodListFromDB.isEmpty()){
+					Assert.fail("Pre AReq API threeDSServerTransID not found in DB tables");
+					parentTest.log(LogStatus.FAIL, "Pre AReq API threeDSServerTransID not found in DB tables");
+				}else if(tdsMethodListFromDB.size() > 1){
+					Assert.fail("Pre AReq API more than 1 threeDSServerTransID found in DB tables");
+					parentTest.log(LogStatus.FAIL, "Pre AReq API more than 1 threeDSServerTransID found in DB tables");
+				}
+				
+				HashMap<String, Object> tdsMethodDBData = tdsMethodListFromDB.get(0);
+				
+				threeDSFieldAssert(apiResponse, testCaseData, "threeDSServerTransID", sa, tdsMethodDBData.get("THREEDSSERVERTRANSID"));
+				threeDSFieldAssert(apiResponse, testCaseData, "errorCode", sa, tdsMethodDBData.get("ERRORCODE"));
+				threeDSFieldAssert(apiResponse, testCaseData, "errorComponent", sa, tdsMethodDBData.get("ERRORCOMPONENT"));
+				threeDSFieldAssert(apiResponse, testCaseData, "errorDescription", sa, null);
+				threeDSFieldAssert(apiResponse, testCaseData, "errorMessageType", sa, tdsMethodDBData.get("ERRORMESSAGETYPE"));
+				threeDSFieldAssert(apiResponse, testCaseData, "errorDetail", sa, tdsMethodDBData.get("ERRORDETAIL"));
+				
+			}else if("P".equalsIgnoreCase(testCaseData.get("Test Case type"))){
+				
 				threeDSFieldAssert(apiResponse, testCaseData, "messageType", sa);
 				threeDSFieldAssert(apiResponse, testCaseData, "threeDSServerTransID", sa);
 				threeDSFieldAssert(apiResponse, testCaseData, "dsTransID", sa);
@@ -158,7 +186,7 @@ public class TDSPreAreq_TC extends BaseClassTDS {
 				threeDSFieldAssert(apiResponse, testCaseData, "callerTxnRefID", sa);
 				threeDSFieldAssert(apiResponse, testCaseData, "dsReferenceNumber", sa);
 				threeDSFieldAssert(apiResponse, testCaseData, "acsReferenceNumber", sa);
-				
+			
 				threeDSFieldAssert(apiResponse, testCaseData, "transStatus", sa);
 				threeDSFieldAssert(apiResponse, testCaseData, "acsChallengeMandated", sa);
 				threeDSFieldAssert(apiResponse, testCaseData, "acsOperatorID", sa);
@@ -168,6 +196,9 @@ public class TDSPreAreq_TC extends BaseClassTDS {
 				threeDSFieldAssert(apiResponse, testCaseData, "transStatusReason", sa);
 				threeDSFieldAssert(apiResponse, testCaseData, "creq", sa);
 				threeDSFieldAssert(apiResponse, testCaseData, "cardholderInfo", sa);
+				
+			}else{
+				threeDSFieldAssert(apiResponse, testCaseData, "threeDSServerTransID", sa);
 				threeDSFieldAssert(apiResponse, testCaseData, "errorCode", sa);
 				threeDSFieldAssert(apiResponse, testCaseData, "errorComponent", sa);
 				threeDSFieldAssert(apiResponse, testCaseData, "errorDescription", sa);
@@ -176,7 +207,7 @@ public class TDSPreAreq_TC extends BaseClassTDS {
 			sa.assertAll();
 
 		}catch(ValidationException ve){
-			Assert.fail("ARes response data validation failed.<br>"+ve.getErrorMessage()+"<br> api response : "+apiResponse);
+			Assert.fail("ARes response json schema validation failed.<br>"+ve.getErrorMessage()+"<br> api response : "+apiResponse);
 		} catch (Exception e) {
 			e.printStackTrace();
 			Assert.fail("Browser Flow:: ARes Validation Failed." + apiResponse);
