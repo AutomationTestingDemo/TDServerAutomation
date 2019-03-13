@@ -8,37 +8,37 @@
             "description":"acsTransID",
             "type": "string",
             "maxLength":36,
-              "minLength":1
+            "minLength":36
         },
         "dsTransID":{
             "description":"dsTransID",
             "type": "string",
             "maxLength":36,
-              "minLength":1
+            "minLength":36
         },
         "resultsStatus":{
             "description":"resultsStatus",
             "type": "string",
             "maxLength":2,
-              "minLength":1
+            "minLength":2
         },
         "messageType":{
             "description":"messageType",
             "type": "string",
             "maxLength":4,
-              "minLength":1
+             "minLength":4
         },
         "messageVersion":{
             "description":"messageVersion",
             "type": "string",
             "maxLength":8,
-              "minLength":5
+             "minLength":5
         },
         "threeDSServerTransID":{
             "description":"threeDSServerTransID",
             "type": "string",
             "maxLength":36,
-              "minLength":1
+             "minLength":36
         }
         
     },

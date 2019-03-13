@@ -84,8 +84,6 @@ public class TDSMethodURL_TC extends BaseClassTDS {
 				threeDSServerTransIDList.add(apiResponse.getString("threeDSServerTransID"));
 			}
 			
-			
-			
 			//needs to change this when 3ds does insertion into tables properly
 			
 			SoftAssert sa =new SoftAssert();
@@ -101,17 +99,20 @@ public class TDSMethodURL_TC extends BaseClassTDS {
 				}
 				HashMap<String, Object> tdsMethodDBData = tdsMethodListFromDB.get(0);
 				
-				threeDSFieldAssert(apiResponse, testCaseData, "messageType", sa, null);
+				threeDSFieldAssert(apiResponse, testCaseData, "messageType", sa);
 				threeDSFieldAssert(apiResponse, testCaseData, "threeDSServerTransID", sa, tdsMethodDBData.get("THREEDSSERVERTRANSID"));
 				threeDSFieldAssert(apiResponse, testCaseData, "callerTxnRefID", sa, tdsMethodDBData.get("CALLERTXNREFID"));
 				threeDSFieldAssert(apiResponse, testCaseData, "messageVersion", sa, tdsMethodDBData.get("MESSAGEVERSION"));
 				threeDSFieldAssert(apiResponse, testCaseData, "threeDSMethodURL", sa, tdsMethodDBData.get("ACSURL"));
+				
 			}else{
+				
 				threeDSFieldAssert(apiResponse, testCaseData, "messageType", sa);
 				threeDSFieldAssert(apiResponse, testCaseData, "threeDSServerTransID", sa);
 				threeDSFieldAssert(apiResponse, testCaseData, "callerTxnRefID", sa);
 				threeDSFieldAssert(apiResponse, testCaseData, "messageVersion", sa);
 				threeDSFieldAssert(apiResponse, testCaseData, "threeDSMethodURL", sa);
+				
 			}
 			sa.assertAll();
 		}catch(ValidationException ve){

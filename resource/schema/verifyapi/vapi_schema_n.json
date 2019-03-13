@@ -1,0 +1,53 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "Suppress",
+    "description": "A rule from the catalog",
+    "type": "object",
+    "properties": {
+        "errorComponent":{
+            "description":"errorComponent",
+            "type": "string",
+            "maxLength":1,
+              "minLength":1
+        },
+        "errorDescription":{
+            "description":"errorDescription",
+            "type": "string",
+            "maxLength":2048,
+              "minLength":1
+        },
+        "errorCode":{
+            "description":"errorCode",
+            "type": "string",
+            "maxLength":3,
+              "minLength":1
+        },
+        "errorDetail":{
+            "description":"errorDetail",
+            "type": "string",
+            "maxLength":2048,
+              "minLength":1
+        },
+        "errorMessageType":{
+            "description":"errorMessageType",
+            "type": "string",
+            "maxLength":4,
+              "minLength":1
+        },
+        "messageVersion":{
+            "description":"messageVersion",
+            "type": "string",
+            "maxLength":8,
+              "minLength":5
+        },
+        "messageType":{
+            "description":"messageType",
+            "type": "string",
+            "maxLength":4,
+              "minLength":1
+        }
+        
+    }
+    ,
+    "required": ["errorComponent","errorCode","errorDescription","errorDetail","errorMessageType","messageVersion","messageType"]
+}

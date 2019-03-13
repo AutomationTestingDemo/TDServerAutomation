@@ -22,7 +22,7 @@ import com.relevantcodes.extentreports.LogStatus;
 
 import ca.com.tds.restapi.PostHttpRequest;
 
-public class TDSRReq_TC extends BaseClassTDS {
+public class TDSVerifyAPI_TC extends BaseClassTDS {
 
 	private String previousTest = "TestCaseName";
 	private static int loopcount=0;
@@ -33,7 +33,7 @@ public class TDSRReq_TC extends BaseClassTDS {
 			throws JSONException, InterruptedException {
 		
 		if(aResArr == null || aResArr.length() == 0){
-			System.out.println("============No challenges request to test RReq================");
+			System.out.println("============ No challenges request to test Verify API ================");
 			return;
 		}
 	
@@ -44,7 +44,7 @@ public class TDSRReq_TC extends BaseClassTDS {
 		CommonUtil cu = new CommonUtil();
 		Map<String, Map<String, String>> testScenarioData = cu.getInputDataFromExcel(testContext, "TDSExcelFile",
 				"TEST SCENARIOS", "API Name");	
-		Map<String, String> apiTestdata = testScenarioData.get("Result Request API");
+		Map<String, String> apiTestdata = testScenarioData.get("Verify Request API");
 		String jsonRequest = apiTestdata.get("Request Json");
 
 		List<String> keysToRemove = new ArrayList<>();
@@ -68,13 +68,11 @@ public class TDSRReq_TC extends BaseClassTDS {
 			
 		}
 
-
-		System.out.println("Keys removed from RReq request : " + keysToRemove);
+		System.out.println("Keys removed from Verify API request : " + keysToRemove);
 
 		for (String key : keysToRemove){
 			reqJson.remove(key);
 		}
-		System.out.println("RReq before adding data from RRes "+reqJson);
 		
 		JSONObject aResJSON = aResArr.getJSONObject(loopcount);
 		Iterator<String> iterAres = aResJSON.keys();
@@ -87,11 +85,11 @@ public class TDSRReq_TC extends BaseClassTDS {
 		loopcount++;
 		jsonRequest = reqJson.toString();
 		System.out.println("================================================================");
-		System.out.println("RReq Json Request ***:\n" + jsonRequest);
+		System.out.println("Verify API Json Request ***:\n" + jsonRequest);
 		System.out.println("================================================================");
 		
 		PostHttpRequest sendHttpReq = new PostHttpRequest();
-		apiResponse=sendHttpReq.httpPost(jsonRequest,caPropMap.get("ResultRequestAPI"));
+		apiResponse=sendHttpReq.httpPost(jsonRequest,caPropMap.get("TDSVerifyAPIURL"));
 		if(apiResponse == null){
 			Assert.fail("3DS server is not responding at this moment");
 			parentTest.log(LogStatus.FAIL, "3DS server is not responding at this moment");
@@ -106,9 +104,9 @@ public class TDSRReq_TC extends BaseClassTDS {
 			parentTest.log(LogStatus.FAIL, "Expected to Fail");
 			return;
 		}else if("P".equalsIgnoreCase(testCaseData.get("Test Case type"))){
-			JsonUtility.validate(apiResponse.toString(), "resource/schema/rres/rres_schema.json");
+			JsonUtility.validate(apiResponse.toString(), "resource/schema/verifyapi/vapi_schema.json");
 		}else{
-			JsonUtility.validate(apiResponse.toString(), "resource/schema/rres/rres_schema_n.json");
+			JsonUtility.validate(apiResponse.toString(), "resource/schema/verifyapi/vapi_schema_n.json");
 		}
 		
 		SoftAssert sa =new SoftAssert();
@@ -118,11 +116,11 @@ public class TDSRReq_TC extends BaseClassTDS {
 			TDSDao tDSDao = new TDSDao();
 			List<HashMap<String,Object>> tdsMethodListFromDB = tDSDao.getAuthLogDataByTDSTransID(threeDSServerTransIDList.get(loopcount));
 			if(tdsMethodListFromDB == null || tdsMethodListFromDB.isEmpty()){
-				Assert.fail("RReq API threeDSServerTransID not found in DB tables");
-				parentTest.log(LogStatus.FAIL, "RReq API threeDSServerTransID not found in DB tables");
+				Assert.fail("Verify API threeDSServerTransID not found in DB tables");
+				parentTest.log(LogStatus.FAIL, "Verify API threeDSServerTransID not found in DB tables");
 			}else if(tdsMethodListFromDB.size() > 1){
-				Assert.fail("RReq API more than 1 threeDSServerTransID found in DB tables");
-				parentTest.log(LogStatus.FAIL, "RReq API more than 1 threeDSServerTransID found in DB tables");
+				Assert.fail("Verify API more than 1 threeDSServerTransID found in DB tables");
+				parentTest.log(LogStatus.FAIL, "Verify API more than 1 threeDSServerTransID found in DB tables");
 			}
 			
 			HashMap<String, Object> tdsMethodDBData = tdsMethodListFromDB.get(0);
@@ -176,11 +174,11 @@ public class TDSRReq_TC extends BaseClassTDS {
 		sa.assertAll();
 			
 		}catch(ValidationException ve){
-			Assert.fail("RRes response data validation failed.<br>"+ve.getErrorMessage()+"<br> api response : "+apiResponse);
+			Assert.fail("Verify API response data validation failed.<br>"+ve.getErrorMessage()+"<br> api response : "+apiResponse);
 		} 
 		catch(Exception e) {
 		e.printStackTrace();	
-		Assert.fail("Browser Flow:: RRes Validation Failed."+apiResponse);
+		Assert.fail("Browser Flow:: Verify API Validation Failed."+apiResponse);
 		}
 	}
 

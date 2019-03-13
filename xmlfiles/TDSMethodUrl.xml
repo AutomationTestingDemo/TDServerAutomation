@@ -12,12 +12,28 @@
 		</classes>
 	</test>
 	
-	  <!-- <test name="AReq API for Browser Test Scenatios">
-		<parameter name="ExcelSheetVerify" value="BRW_AREQ" />
-		<parameter name="SchemaFile" value="areq_schema.json" />
+	    <test name="AReq API for Browser Test Scenatios">
+			<parameter name="ExcelSheetVerify" value="BRW_AREQ" />
+			<parameter name="SchemaFile" value="areq_schema.json" />
+			<classes>
+				<class name="com.ca.tds.main.TDSPreAreq_TC" />
+			</classes>
+	  </test>   
+	  
+	  <test name="RReq API for Browser Test Scenarios">
+		<parameter name="ExcelSheetVerify" value="RREQ_TESTDATA" />
+		<parameter name="SchemaFile" value="rreq_schema.json" />
 		<classes>
-			<class name="com.ca.tds.main.TDSPreAreq_TC" />
+			<class name="com.ca.tds.main.TDSRReq_TC" />
 		</classes>
-	</test>  --> 
+	</test>
+	
+	<test name="Verify API for Browser Test Scenarios">
+		<parameter name="ExcelSheetVerify" value="VERIFY_TESTDATA" />
+		<parameter name="SchemaFile" value="rreq_schema.json" />
+		<classes>
+			<class name="com.ca.tds.main.TDSVerifyAPI_TC" />
+		</classes>
+	</test> 
 
 </suite>
