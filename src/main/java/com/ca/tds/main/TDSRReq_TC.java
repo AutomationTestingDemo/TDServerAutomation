@@ -46,6 +46,15 @@ public class TDSRReq_TC extends BaseClassTDS {
 				"TEST SCENARIOS", "API Name");	
 		Map<String, String> apiTestdata = testScenarioData.get("Result Request API");
 		String jsonRequest = apiTestdata.get("Request Json");
+		
+		if (!threeDSServerTransIDList.isEmpty()) {
+			String replaceTag = "#threeDSServerTransID#";
+			while (loopcount < threeDSServerTransIDList.size()) {
+				jsonRequest = jsonRequest.replace(replaceTag, threeDSServerTransIDList.get(loopcount));
+				TRANSACTIONLOOPCOUNT++;
+				break;
+			}
+		}
 
 		List<String> keysToRemove = new ArrayList<>();
 		for (Map.Entry<String, String> entry  : testCaseData.entrySet()) {
@@ -74,7 +83,6 @@ public class TDSRReq_TC extends BaseClassTDS {
 		for (String key : keysToRemove){
 			reqJson.remove(key);
 		}
-		System.out.println("RReq before adding data from RRes "+reqJson);
 		
 		JSONObject aResJSON = aResArr.getJSONObject(loopcount);
 		Iterator<String> iterAres = aResJSON.keys();

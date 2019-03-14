@@ -46,6 +46,16 @@ public class TDSVerifyAPI_TC extends BaseClassTDS {
 				"TEST SCENARIOS", "API Name");	
 		Map<String, String> apiTestdata = testScenarioData.get("Verify Request API");
 		String jsonRequest = apiTestdata.get("Request Json");
+		
+		
+		if (!threeDSServerTransIDList.isEmpty()) {
+			String replaceTag = "#threeDSServerTransID#";
+			while (loopcount < threeDSServerTransIDList.size()) {
+				jsonRequest = jsonRequest.replace(replaceTag, threeDSServerTransIDList.get(loopcount));
+				TRANSACTIONLOOPCOUNT++;
+				break;
+			}
+		}
 
 		List<String> keysToRemove = new ArrayList<>();
 		for (Map.Entry<String, String> entry  : testCaseData.entrySet()) {
@@ -127,10 +137,16 @@ public class TDSVerifyAPI_TC extends BaseClassTDS {
 			
 			threeDSFieldAssert(apiResponse, testCaseData, "messageType",sa);
 			threeDSFieldAssert(apiResponse, testCaseData, "threeDSServerTransID", sa, tdsMethodDBData.get("THREEDSSERVERTRANSID"));
-			threeDSFieldAssert(apiResponse, testCaseData, "dsTransID",sa, tdsMethodDBData.get("DSTRANSID"));
-			threeDSFieldAssert(apiResponse, testCaseData, "acsTransID",sa, tdsMethodDBData.get("ACSTRANSID"));
-			threeDSFieldAssert(apiResponse, testCaseData, "messageVersion", sa, tdsMethodDBData.get("MESSAGEVERSION"));
+			threeDSFieldAssert(apiResponse, testCaseData, "callerTxnRefID", sa, tdsMethodDBData.get("CALLERTXNREFID"));
+			threeDSFieldAssert(apiResponse, testCaseData, "eci", sa, tdsMethodDBData.get("ECI"));
+			threeDSFieldAssert(apiResponse, testCaseData, "authenticationValue", sa, tdsMethodDBData.get("AUTHENTICATIONVALUE"));
+			threeDSFieldAssert(apiResponse, testCaseData, "transStatus", sa, tdsMethodDBData.get("TRANSSTATUSRREQ"));
+			if("N".equalsIgnoreCase(apiResponse.getString("transStatus")) || "U".equalsIgnoreCase(apiResponse.getString("transStatus")) || "R".equalsIgnoreCase(apiResponse.getString("transStatus"))){
+				threeDSFieldAssert(apiResponse, testCaseData, "transStatusReason", sa, tdsMethodDBData.get("TRANSSTATUSREASON"));
+			}
+			
 			threeDSFieldAssert(apiResponse, testCaseData, "resultsStatus", sa, tdsMethodDBData.get("RESULTSSTATUS"));
+			threeDSFieldAssert(apiResponse, testCaseData, "interactionCounter", sa, tdsMethodDBData.get("INTERACTIONCOUNTER"));
 		
 		}else if(validateDBParams != null && "Y".equalsIgnoreCase(validateDBParams) && "N".equalsIgnoreCase(testCaseData.get("Test Case type"))){
 			
@@ -159,10 +175,17 @@ public class TDSVerifyAPI_TC extends BaseClassTDS {
 		}else if("P".equalsIgnoreCase(testCaseData.get("Test Case type"))){
 			threeDSFieldAssert(apiResponse, testCaseData, "messageType",sa);
 			threeDSFieldAssert(apiResponse, testCaseData, "threeDSServerTransID", sa);
-			threeDSFieldAssert(apiResponse, testCaseData, "dsTransID",sa);
-			threeDSFieldAssert(apiResponse, testCaseData, "acsTransID",sa);
-			threeDSFieldAssert(apiResponse, testCaseData, "messageVersion", sa);
+			threeDSFieldAssert(apiResponse, testCaseData, "callerTxnRefID", sa);
+		    threeDSFieldAssert(apiResponse, testCaseData, "eci", sa);
+			threeDSFieldAssert(apiResponse, testCaseData, "authenticationValue", sa);
+			threeDSFieldAssert(apiResponse, testCaseData, "transStatus", sa);
+			
+			if("N".equalsIgnoreCase(apiResponse.getString("transStatus")) || "U".equalsIgnoreCase(apiResponse.getString("transStatus")) || "R".equalsIgnoreCase(apiResponse.getString("transStatus"))){
+				threeDSFieldAssert(apiResponse, testCaseData, "transStatusReason", sa);
+			}
+			
 			threeDSFieldAssert(apiResponse, testCaseData, "resultsStatus", sa);
+			threeDSFieldAssert(apiResponse, testCaseData, "interactionCounter", sa);
 		}else{
 			threeDSFieldAssert(apiResponse, testCaseData, "threeDSServerTransID", sa);
 			threeDSFieldAssert(apiResponse, testCaseData, "errorCode", sa);

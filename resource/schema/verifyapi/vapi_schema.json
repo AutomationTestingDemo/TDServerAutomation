@@ -34,6 +34,12 @@
 			"maxLength": 1,
 			"minLength": 1
 		},
+		"resultStatus": {
+			"description": "resultStatus",
+			"type": "string",
+			"maxLength": 2,
+			"minLength": 2
+		},
 		"transStatusReason": {
 			"description": "transStatusReason",
 			"type": "string",
@@ -57,18 +63,11 @@
 			"type": "string",
 			"maxLength": 4,
 			"minLength": 4
-		},
-		"XID": {
-			"description": "XID",
-			"type": "string",
-			"maxLength": 36,
-			"minLength": 0
 		}
 	},
 	"required": ["threeDSServerTransID",
 	"authenticationValue",
 	"transStatus",
 	"interactionCounter",
-	"messageType",
-	"XID"]
+	"messageType"]
 }
