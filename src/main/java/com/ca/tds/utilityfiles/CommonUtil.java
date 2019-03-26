@@ -11,7 +11,8 @@ import java.util.Map;
 
 import org.testng.ITestContext;
 
-public class CommonUtil {	
+public class CommonUtil {
+	
 	public Object[][] getInputData(ITestContext testContext,
 			String strRingBufferFile, String strRingBufferSheet) {
 		String fileName = null, sheetName = null, testCaseIdKey = null;
@@ -55,7 +56,7 @@ public class CommonUtil {
 		Object m[][] = new Object[sizeOfMap][];
 		for (int i = 0; i < sizeOfMap; i++) {
 			m[i] = new Object[1];
-			m[i][0] = mom.get(keyIterator.next());
+			m[i][0] = keyIterator.next();
 		}
 		return m;
 	}
@@ -71,11 +72,11 @@ public class CommonUtil {
 			String strfileName = testContext.getCurrentXmlTest().getParameter(
 					strRingBufferFile);
 			sheetName = strRingBufferSheet;
-			testCaseIdKey=testCaseIDkey;
+			testCaseIdKey = testCaseIDkey;
 			String dataProviderPath = testContext.getCurrentXmlTest().getParameter(
 					"DataProviderPath");
 			if(dataProviderPath!=null){
-				fileName=dataProviderPath+strfileName;
+				fileName = dataProviderPath+strfileName;
 			}
 			else{
 				fileName=strfileName;
@@ -152,6 +153,7 @@ public class CommonUtil {
 	}
 	
 	public static List<HashMap<String,Object>> convertResultSetToList(ResultSet rs) throws SQLException {
+		
 	    ResultSetMetaData md = rs.getMetaData();
 	    int columns = md.getColumnCount();
 	    List<HashMap<String,Object>> list = new ArrayList<HashMap<String,Object>>();
@@ -165,6 +167,7 @@ public class CommonUtil {
 	    }
 
 	    return list;
+	    
 	}
 	
 }

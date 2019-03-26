@@ -32,6 +32,25 @@ public class TDSDao {
 		
 	}
 	
+public List<HashMap<String,Object>> getPResFromDB() throws SQLException{
+		
+		Connection con = null;
+		try{
+		con = DBConnection.getConnection();
+		Statement stmt = con.createStatement();  
+		  
+		//step4 execute query  
+		ResultSet rs = stmt.executeQuery("select * from MTDCARDRANGEDATA where action='A'");
+		return CommonUtil.convertResultSetToList(rs);
+		}finally{
+			if(con != null){
+				con.close();
+			}
+		}
+		
+		
+	}
+	
 public List<HashMap<String,Object>> getErrorLogDataByTDSTransID(String transID) throws SQLException{
 		
 		Connection con = null;

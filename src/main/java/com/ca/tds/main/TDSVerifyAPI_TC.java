@@ -27,7 +27,6 @@ public class TDSVerifyAPI_TC extends BaseClassTDS {
 	private String previousTest = "TestCaseName";
 	private static int loopcount=0;
 
-
 	@Test(dataProvider = "DataProvider3dsTestData")
 	public void testArequestAPI(ITestContext testContext, Map<String, String> testCaseData)
 			throws JSONException, InterruptedException {
