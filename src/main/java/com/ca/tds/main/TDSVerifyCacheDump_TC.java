@@ -31,10 +31,9 @@ public class TDSVerifyCacheDump_TC extends BaseClassTDS{
 		reqJson.put("messageType", "MCRq");
 		reqJson.put("dumpFlag", "N");
 		
-		
 		String jsonRequest = reqJson.toString();
 		System.out.println("================================================================");
-		System.out.println("Verify Cache Json Request ***:\n" + jsonRequest);
+		System.out.println("Verify Cache Json Request *** : \n" + jsonRequest);
 		System.out.println("================================================================");
 		try {
 			PostHttpRequest sendHttpReq = new PostHttpRequest();

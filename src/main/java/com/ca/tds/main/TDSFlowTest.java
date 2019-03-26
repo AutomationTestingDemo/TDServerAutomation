@@ -35,11 +35,12 @@ public class TDSFlowTest extends BaseClassTDS{
     public void brwTDSMethodTest() {
 	JSONObject apiResponse=null;
 	try {
-		
-		if(!testScenarioData.containsKey("BRW_3DSMURL_CALL")){
-			testScenarioData.put("BRW_3DSMURL_CALL", new CommonUtil().getInputDataFromExcel(testContext, "TDSExcelFile", "BRW_3DSMURL_CALL", null));
+		String testFileName = testContext.getCurrentXmlTest().getParameter(
+				"TDSMethodURL");
+		if(!testScenarioData.containsKey(testFileName)){
+			testScenarioData.put("BRW_3DSMURL_CALL", new CommonUtil().getInputDataFromExcel(testContext, "TDSExcelFile", testFileName, null));
 		}
-		Map<String, String> testCaseData = testScenarioData.get("BRW_3DSMURL_CALL").get(testCaseID);
+		Map<String, String> testCaseData = testScenarioData.get(testFileName).get(testCaseID);
 		extentTestInit(testCaseID, testCaseData.get("TestCaseName"));
 		Map<String, String> apiTestdata = testScenarioData.get("TEST SCENARIOS").get("Pre-Areq Request");
 		String jsonRequest = apiTestdata.get("Request Json");
@@ -89,14 +90,15 @@ public class TDSFlowTest extends BaseClassTDS{
     @Test(priority = 1)
     public void brwPreAreq() {
 
-
+    	
 		JSONObject apiResponse = null;
 		try {
-			
-			if(!testScenarioData.containsKey("BRW_AREQ")){
-				testScenarioData.put("BRW_AREQ", new CommonUtil().getInputDataFromExcel(testContext, "TDSExcelFile", "BRW_AREQ", null));
+			String testFileName = testContext.getCurrentXmlTest().getParameter(
+					"PreAreq");
+			if(!testScenarioData.containsKey(testFileName)){
+				testScenarioData.put(testFileName, new CommonUtil().getInputDataFromExcel(testContext, "TDSExcelFile", testFileName, null));
 			}
-			Map<String, String> testCaseData = testScenarioData.get("BRW_AREQ").get(testCaseID);
+			Map<String, String> testCaseData = testScenarioData.get(testFileName).get(testCaseID);
 			extentTestInit(testCaseID, testCaseData.get("TestCaseName"));
 			Map<String, String> apiTestdata = testScenarioData.get("TEST SCENARIOS").get("BRW_AReq_API");
 			String jsonRequest = apiTestdata.get("Request Json");
@@ -162,11 +164,12 @@ public class TDSFlowTest extends BaseClassTDS{
 	
 		JSONObject apiResponse=null;
 		try {
-
-		if(!testScenarioData.containsKey("RREQ_TESTDATA")){
-			testScenarioData.put("RREQ_TESTDATA", new CommonUtil().getInputDataFromExcel(testContext, "TDSExcelFile", "RREQ_TESTDATA", null));
+			String testFileName = testContext.getCurrentXmlTest().getParameter(
+					"RReq");	
+		if(!testScenarioData.containsKey(testFileName)){
+			testScenarioData.put(testFileName, new CommonUtil().getInputDataFromExcel(testContext, "TDSExcelFile", testFileName, null));
 		}
-		Map<String, String> testCaseData = testScenarioData.get("RREQ_TESTDATA").get(testCaseID);
+		Map<String, String> testCaseData = testScenarioData.get(testFileName).get(testCaseID);
 		extentTestInit(testCaseID, testCaseData.get("TestCaseName"));
 		Map<String, String> apiTestdata = testScenarioData.get("TEST SCENARIOS").get("Result Request API");
 		String jsonRequest = apiTestdata.get("Request Json");
@@ -262,11 +265,12 @@ public class TDSFlowTest extends BaseClassTDS{
 	
 		JSONObject apiResponse=null;
 		try {
-
-		if(!testScenarioData.containsKey("VERIFY_TESTDATA")){
-			testScenarioData.put("VERIFY_TESTDATA", new CommonUtil().getInputDataFromExcel(testContext, "TDSExcelFile", "VERIFY_TESTDATA", null));
+			String testFileName = testContext.getCurrentXmlTest().getParameter(
+					"VerifyAPI");
+		if(!testScenarioData.containsKey(testFileName)){
+			testScenarioData.put(testFileName, new CommonUtil().getInputDataFromExcel(testContext, "TDSExcelFile", testFileName, null));
 		}
-		Map<String, String> testCaseData = testScenarioData.get("VERIFY_TESTDATA").get(testCaseID);
+		Map<String, String> testCaseData = testScenarioData.get(testFileName).get(testCaseID);
 		extentTestInit(testCaseID, testCaseData.get("TestCaseName"));
 		Map<String, String> apiTestdata = testScenarioData.get("TEST SCENARIOS").get("Verify Request API");
 		String jsonRequest = apiTestdata.get("Request Json");

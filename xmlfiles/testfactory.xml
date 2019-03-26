@@ -4,11 +4,31 @@
 <suite name="TestSuite" parallel="false" verbose="10">
 	<parameter name="TDSExcelFile" value="data/3DS.xlsx" />
 
-	<test name="3DSMETHODURL Call for Browser Pre AReq flow" preserve-order="true" parallel="none">
-		<parameter name="ExcelSheetVerify" value="BRW_3DSMURL_CALL" />
+	<test name="Browser Challenge flow" preserve-order="true" parallel="none">
+		<parameter name="TDSMethodURL" value="CRREQ_3DSMURL_CALL" />
+		<parameter name="PreAreq" value="CRREQ_TESTDATA" />
+		<parameter name="RReq" value="RREQ_TESTDATA" />
+		<parameter name="VerifyAPI" value="VERIFY_TESTDATA" />
 		<parameter name="ReportTitle" value="3DSAutomationReportOfBrowser" />
 		<classes>
 			<class name="com.ca.tds.main.TDSFactory"/>
+		</classes>
+	</test>
+	
+	<test name="Browser AReq flow" preserve-order="true" parallel="none">
+		<parameter name="TDSMethodURL" value="BRW_3DSMURL_CALL" />
+		<parameter name="PreAreq" value="BRW_AREQ" />
+		<parameter name="ReportTitle" value="3DSAutomationReportOfBrowser" />
+		<classes>
+			<class name="com.ca.tds.main.TDSFactory"/>
+		</classes>
+	</test>
+
+	<test name="3DSMETHODURL Call" preserve-order="true" parallel="none">
+		<parameter name="ExcelSheetVerify" value="BRW_3DSMURL_CALL" />
+		<parameter name="ReportTitle" value="3DSAutomationReportOfBrowser" />
+		<classes>
+			<class name="com.ca.tds.main.TDSMethodURL_TC"/>
 		</classes>
 	</test>
 
