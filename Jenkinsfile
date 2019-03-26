@@ -5,7 +5,6 @@ pipeline{
 		environment {
 			mvnHome=tool name: 'mvn3', type: 'maven'
 			mvnCmd="${mvnHome}/bin/mvn"
-			gitOpenshiftBranch = sh(returnStdout: true, script: 'echo pipeline_mra_${GIT_BRANCH#*/}')
 		}
 		stages{	 
 			stage('Automation mvn build'){
@@ -28,19 +27,7 @@ pipeline{
 				}
 				 sh label: '', script: 'docker isl-dsdc.ca.com:5000/ms-automation-service/mra-${GIT_BRANCH#*/}-automation-service:latest'
 			 } 
-		 }
-		stage('Automation trigger openshift deployment'){
-			steps{
-				withCredentials([usernamePassword(credentialsId: 'GIT', passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
-				 dir('openshift'){
-					git branch: gitOpenshiftBranch, credentialsId: 'GIT', url: 'https://github.gwd.broadcom.net/dockcpdev/preview-app.git' 
-					sh label: '', script: 'echo "$(date)" >> deploy'
-					sh label: '', script: 'git commit -a -m "$(date)"'
-					sh label: '', script: 'git push https://$GIT_USERNAME:$(echo -n $GIT_PASSWORD | od -A n -t x1 | sed "s/ /%/g")@github.gwd.broadcom.net/dockcpdev/preview-app.git'
-				 }
-				}
-			     } 
-         		}	
+		 }	
 	}								 
    post{
 		always {
