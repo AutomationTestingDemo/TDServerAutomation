@@ -1,37 +1,39 @@
 package com.ca.tds.remote;
 
-import com.jcraft.jsch.*;
-import java.io.*;
+import java.io.InputStream;
+import java.util.Properties;
+
+import com.jcraft.jsch.Channel;
+import com.jcraft.jsch.ChannelExec;
+import com.jcraft.jsch.JSch;
+import com.jcraft.jsch.Session;
  
 public class RemoteClient{
   public static void main(String[] arg){
+	  	String host = "rasra04-I11626";
+		String user = "root";
+		String password = "interOP@11626";
+		String command = "cd /opt/RS;source env-remote-service.sh;export LD_LIBRARY_PATH=/opt/arcot/lib;./java-app-run.sh start";
+		
     try{
+    	Properties config = new Properties();
+		config.put("StrictHostKeyChecking", "no");
+		config.put("PreferredAuthentications","publickey,keyboard-interactive,password");
       JSch jsch=new JSch();  
- 
-      String host=null;
-      if(arg.length>0){
-        host=arg[0];
-      }
-      else{
-        host="root@rasra04-I11626"; // enter username and ipaddress for machine you need to connect
-      }
-      String user=host.substring(0, host.indexOf('@'));
-      host=host.substring(host.indexOf('@')+1);
- 
       Session session=jsch.getSession(user, host, 22);
      
       // username and password will be given via UserInfo interface.
-      UserInfo ui = new MyUserInfo();
-      session.setUserInfo(ui);
+      session.setPassword(password);
+	  session.setConfig(config);
       session.connect();
- 
-      String command1 = "cd /opt/RS;source env-remote-service.sh;export LD_LIBRARY_PATH=/opt/arcot/lib;./java-app-run.sh start"; // enter any command you need to execute
- 
+      
+      System.out.println("Connected...");
+      
       Channel channel=session.openChannel("exec");
-      ((ChannelExec)channel).setCommand(command1);
+      ((ChannelExec)channel).setCommand(command);
  
       
-      channel.setInputStream(null);
+      //channel.setInputStream(null);
  
       ((ChannelExec)channel).setErrStream(System.err);
  
@@ -60,25 +62,4 @@ public class RemoteClient{
     }
   }
  
-  public static class MyUserInfo implements UserInfo{
-    public String getPassword(){ return passwd; }
-    public boolean promptYesNo(String str){
-        str = "Yes";
-        return true;}
-   
-    String passwd;
- 
-    public String getPassphrase(){ return null; }
-    
-    public boolean promptPassphrase(String message){ return true; }
-    
-    public boolean promptPassword(String message){
-        passwd="interOP@11626"; // enter the password for the machine you want to connect.
-        return true;
-    }
-    public void showMessage(String message){
-    
-    }
-  
-    }
-  }
+}

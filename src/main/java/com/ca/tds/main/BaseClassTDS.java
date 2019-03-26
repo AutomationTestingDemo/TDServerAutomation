@@ -324,10 +324,7 @@ public class BaseClassTDS {
 			threeDSFieldAssert(apiResponse, testCaseData, "transStatusReason", sa, tdsMethodDBData.get("TRANSSTATUSREASON"));
 			threeDSFieldAssert(apiResponse, testCaseData, "creq", sa, null);
 			threeDSFieldAssert(apiResponse, testCaseData, "cardholderInfo", sa, null);
-			threeDSFieldAssert(apiResponse, testCaseData, "errorCode", sa, null);
-			threeDSFieldAssert(apiResponse, testCaseData, "errorComponent", sa, null);
-			threeDSFieldAssert(apiResponse, testCaseData, "errorDescription", sa, null);
-			threeDSFieldAssert(apiResponse, testCaseData, "errorDetail", sa, null);
+			
 		}else if(validateDBParams != null && "Y".equalsIgnoreCase(validateDBParams) && "N".equalsIgnoreCase(testCaseData.get("Test Case type"))){
 			
 			List<HashMap<String,Object>> tdsMethodListFromDB = null;

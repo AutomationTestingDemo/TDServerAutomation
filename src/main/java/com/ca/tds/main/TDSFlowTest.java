@@ -135,7 +135,7 @@ public class TDSFlowTest extends BaseClassTDS{
 			
 			
 			
-			if("C".equalsIgnoreCase(apiResponse.getString("transStatus"))){
+			if(apiResponse.has("transStatus") && "C".equalsIgnoreCase(apiResponse.getString("transStatus"))){
 				aResMap.put(testCaseID, apiResponse);
 			}
 			
