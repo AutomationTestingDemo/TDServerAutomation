@@ -5,9 +5,7 @@ pipeline{
 		environment {
 			mvnHome=tool name: 'mvn3', type: 'maven'
 			mvnCmd="${mvnHome}/bin/mvn"
-			gitBranch = sh(returnStdout: true, script: 'echo ${GIT_BRANCH#*/}')
 			gitOpenshiftBranch = sh(returnStdout: true, script: 'echo pipeline_mra_${GIT_BRANCH#*/}')
-			gitCommit=sh(returnStdout: true, script: 'echo ${GIT_COMMIT}')
 		}
 		stages{	 
 			stage('Automation mvn build'){
@@ -18,8 +16,8 @@ pipeline{
 		}
 		stage('Automation docker image build and tag'){
 			 steps{	
-				 sh label: '', script: 'docker build -t mra-${GIT_BRANCH#*/}-service docker/'
-				 sh label: '', script: 'docker tag mra-${GIT_BRANCH#*/}-service isl-dsdc.ca.com:5000/ms-remote-service/mra-${GIT_BRANCH#*/}-remote-service:latest'
+				 sh label: '', script: 'docker build -t mra-automation-${GIT_BRANCH#*/}-service docker/'
+				 sh label: '', script: 'docker tag mra-automation-${GIT_BRANCH#*/}-service isl-dsdc.ca.com:5000/ms-automation-service/mra-${GIT_BRANCH#*/}-automation-service:latest'
 				 
 			 }
 		}
@@ -28,7 +26,7 @@ pipeline{
 				 withCredentials([string(credentialsId: 'ca-password', variable: 'caDocker')]) {
 				   sh label: '', script: "docker login http://isl-dsdc.ca.com:5000 -u kumaj08 -p ${caDocker}"
 				}
-				 sh label: '', script: 'docker push isl-dsdc.ca.com:5000/ms-remote-service/mra-${GIT_BRANCH#*/}-remote-service:latest'
+				 sh label: '', script: 'docker isl-dsdc.ca.com:5000/ms-automation-service/mra-${GIT_BRANCH#*/}-automation-service:latest'
 			 } 
 		 }
 		stage('Automation trigger openshift deployment'){
