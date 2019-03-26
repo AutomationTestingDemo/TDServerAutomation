@@ -25,7 +25,7 @@ pipeline{
 				 withCredentials([string(credentialsId: 'ca-password', variable: 'caDocker')]) {
 				   sh label: '', script: "docker login http://isl-dsdc.ca.com:5000 -u kumaj08 -p ${caDocker}"
 				}
-				 sh label: '', script: 'docker isl-dsdc.ca.com:5000/ms-automation-service/mra-${GIT_BRANCH#*/}-automation-service:latest'
+				 sh label: '', script: 'docker push isl-dsdc.ca.com:5000/ms-automation-service/mra-${GIT_BRANCH#*/}-automation-service:latest'
 			 } 
 		 }	
 	}								 
