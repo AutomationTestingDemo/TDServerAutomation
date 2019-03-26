@@ -1,5 +1,7 @@
 package com.ca.tds.main;
 
+import java.util.Map;
+
 import org.testng.ITestContext;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Factory;
@@ -11,8 +13,8 @@ public class TDSFactory {
 	static ITestContext testContxt;
 	
 	@Factory(dataProvider="dp")
-    public Object[] createInstances(String testCaseID) {
-        return new Object[] {new TDSFlowTest(testContxt, testCaseID)};
+    public Object[] createInstances(Map<String, String> testCaseData) {
+        return new Object[] {new TDSFlowTest(testContxt, testCaseData.get("TestCaseID"))};
     }
      
     @DataProvider(name="dp", parallel = true)

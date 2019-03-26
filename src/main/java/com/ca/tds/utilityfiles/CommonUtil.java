@@ -56,7 +56,7 @@ public class CommonUtil {
 		Object m[][] = new Object[sizeOfMap][];
 		for (int i = 0; i < sizeOfMap; i++) {
 			m[i] = new Object[1];
-			m[i][0] = keyIterator.next();
+			m[i][0] = mom.get(keyIterator.next());
 		}
 		return m;
 	}

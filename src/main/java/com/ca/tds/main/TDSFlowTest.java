@@ -38,7 +38,7 @@ public class TDSFlowTest extends BaseClassTDS{
 		String testFileName = testContext.getCurrentXmlTest().getParameter(
 				"TDSMethodURL");
 		if(!testScenarioData.containsKey(testFileName)){
-			testScenarioData.put("BRW_3DSMURL_CALL", new CommonUtil().getInputDataFromExcel(testContext, "TDSExcelFile", testFileName, null));
+			testScenarioData.put(testFileName, new CommonUtil().getInputDataFromExcel(testContext, "TDSExcelFile", testFileName, null));
 		}
 		Map<String, String> testCaseData = testScenarioData.get(testFileName).get(testCaseID);
 		extentTestInit(testCaseID, testCaseData.get("TestCaseName"));
