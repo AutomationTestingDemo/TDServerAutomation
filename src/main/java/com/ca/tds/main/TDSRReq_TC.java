@@ -124,7 +124,7 @@ public class TDSRReq_TC extends BaseClassTDS {
 		if(validateDBParams != null && "Y".equalsIgnoreCase(validateDBParams) && "P".equalsIgnoreCase(testCaseData.get("Test Case type"))){
 		
 			TDSDao tDSDao = new TDSDao();
-			List<HashMap<String,Object>> tdsMethodListFromDB = tDSDao.getAuthLogDataByTDSTransID(threeDSServerTransIDList.get(loopcount));
+			List<HashMap<String,Object>> tdsMethodListFromDB = tDSDao.getAuthLogDataByTDSTransID(threeDSServerTransIDList.get(loopcount), caPropMap);
 			if(tdsMethodListFromDB == null || tdsMethodListFromDB.isEmpty()){
 				Assert.fail("RReq API threeDSServerTransID not found in DB tables");
 				parentTest.log(LogStatus.FAIL, "RReq API threeDSServerTransID not found in DB tables");
@@ -147,7 +147,7 @@ public class TDSRReq_TC extends BaseClassTDS {
 			List<HashMap<String,Object>> tdsMethodListFromDB = null;
 			
 			TDSDao tDSDao = new TDSDao();
-			tdsMethodListFromDB = tDSDao.getErrorLogDataByTDSTransID(threeDSServerTransIDList.get(loopcount));
+			tdsMethodListFromDB = tDSDao.getErrorLogDataByTDSTransID(threeDSServerTransIDList.get(loopcount), caPropMap);
 			
 			if(tdsMethodListFromDB == null || tdsMethodListFromDB.isEmpty()){
 				Assert.fail("RReq API threeDSServerTransID not found in DB tables");

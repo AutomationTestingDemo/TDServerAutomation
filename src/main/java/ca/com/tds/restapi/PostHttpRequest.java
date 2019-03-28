@@ -59,7 +59,7 @@ public class PostHttpRequest {
 		
 		System.out.println("API URL is: "+APIUrl);
 	    CloseableHttpClient client = HttpClients.createDefault();
-	    HttpPost httpPost = new HttpPost(APIUrl);
+	    HttpPost httpPost = new HttpPost(APIUrl.trim());
 	 
 	   // String json = "{\"caMerchantID\":\"CA_EU\",\"acctNumber\":\"4000500060000008\",\"messageType\":\"ThreeDSMethodURLReq\",\"callerTxnRefID\":\"341b7153-da86-4543-860f-2ba47f0168a5\"}";
 	    StringEntity entity = new StringEntity(reqStr);

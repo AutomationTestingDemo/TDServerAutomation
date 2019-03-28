@@ -37,10 +37,10 @@ public class TDSVerifyCacheDump_TC extends BaseClassTDS{
 		System.out.println("================================================================");
 		try {
 			PostHttpRequest sendHttpReq = new PostHttpRequest();
-			apiResponse = sendHttpReq.httpPost(jsonRequest,caPropMap.get("TDSVerifyCacheURL"));
+			apiResponse = sendHttpReq.httpPost(jsonRequest, caPropMap.get("TDSVerifyCacheURL"));
 			JSONArray cardRangeArr = apiResponse.getJSONArray("cardRangeData");
 			TDSDao tDSDao = new TDSDao();
-			List<HashMap<String,Object>> tdsPResDataFromDB = tDSDao.getPResFromDB();
+			List<HashMap<String,Object>> tdsPResDataFromDB = tDSDao.getPResFromDB(caPropMap);
 			tdsPResDataFromDB = validateCardRangesFromMetaRange(tdsPResDataFromDB);
 			if(tdsPResDataFromDB == null || tdsPResDataFromDB.isEmpty()){		
 				parentTest.log(LogStatus.INFO, "Verify Cache API, No card ranges found in DB tables");

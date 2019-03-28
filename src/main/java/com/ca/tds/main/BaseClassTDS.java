@@ -40,7 +40,7 @@ public class BaseClassTDS {
 	public static ExtentTest parentTest = null;
 	protected static Map<String, String> caPropMap = null;
 	protected static boolean startchild = false;
-	private String apiresponse = null;
+	protected String apiresponse = null;
 	static AppParams appParams;
 	static Map<String, Map<String, Map<String, String>>> testScenarioData = new HashMap<String, Map<String, Map<String, String>>>();
 
@@ -65,6 +65,7 @@ public class BaseClassTDS {
 			e.printStackTrace();
 		}
 		CommonUtil cu = new CommonUtil();
+		System.out.println("before");
 		testScenarioData.put("TEST SCENARIOS", cu.getInputDataFromExcel(testContext, "TDSExcelFile",
 				"TEST SCENARIOS", "API Name"));
 		initialiseReport(testContext);
@@ -82,6 +83,7 @@ public class BaseClassTDS {
 		appParams = initializeApplicationParams.getAppParams();
 	}
 	public void initialiseReport(ITestContext testContext) {
+		System.out.println("TESTTTTTT");
 		if (extent == null) {
 
 			String dest = System.getProperty("user.dir") + "\\TestReports\\3DSAutomationTestReport.html";
@@ -151,6 +153,7 @@ public class BaseClassTDS {
 		} finally {
 
 			parentTest.log(status, message);
+			System.out.println("ACTIVE THREAD COUNTS : "+java.lang.Thread.activeCount());
 			try {
 				extent.endTest(parentTest);
 			} catch (Exception e) {
@@ -179,7 +182,6 @@ public class BaseClassTDS {
 			caPropMap = new HashMap<>();
 			for (String name : properties.stringPropertyNames())
 				caPropMap.put(name, properties.getProperty(name));
-
 
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
@@ -262,7 +264,7 @@ public class BaseClassTDS {
 		if(validateDBParams != null && "Y".equalsIgnoreCase(validateDBParams)){
 			
 			TDSDao tDSDao = new TDSDao();
-			List<HashMap<String,Object>> tdsMethodListFromDB = tDSDao.getAuthLogDataByTDSTransID(apiResponse.getString("threeDSServerTransID"));
+			List<HashMap<String,Object>> tdsMethodListFromDB = tDSDao.getAuthLogDataByTDSTransID(apiResponse.getString("threeDSServerTransID"), caPropMap);
 			if(tdsMethodListFromDB == null || tdsMethodListFromDB.isEmpty()){
 				Assert.fail("Three DS method URL API threeDSServerTransID not found in DB tables");
 			}else if(tdsMethodListFromDB.size() > 1){
@@ -293,7 +295,7 @@ public class BaseClassTDS {
 			List<HashMap<String,Object>> tdsMethodListFromDB = null;
 		
 			TDSDao tDSDao = new TDSDao();
-			tdsMethodListFromDB = tDSDao.getAuthLogDataByTDSTransID(threeDSServerTransIDMap.get(testCaseData.get("TestCaseID")));
+			tdsMethodListFromDB = tDSDao.getAuthLogDataByTDSTransID(threeDSServerTransIDMap.get(testCaseData.get("TestCaseID")), caPropMap);
 			
 			if(tdsMethodListFromDB == null || tdsMethodListFromDB.isEmpty()){
 				Assert.fail("Pre AReq API threeDSServerTransID not found in DB tables");
@@ -330,7 +332,7 @@ public class BaseClassTDS {
 			List<HashMap<String,Object>> tdsMethodListFromDB = null;
 		
 			TDSDao tDSDao = new TDSDao();
-			tdsMethodListFromDB = tDSDao.getErrorLogDataByTDSTransID(threeDSServerTransIDMap.get(testCaseData.get("TestCaseID")));
+			tdsMethodListFromDB = tDSDao.getErrorLogDataByTDSTransID(threeDSServerTransIDMap.get(testCaseData.get("TestCaseID")), caPropMap);
 			
 			if(tdsMethodListFromDB == null || tdsMethodListFromDB.isEmpty()){
 				Assert.fail("Pre AReq API threeDSServerTransID not found in DB tables");
@@ -384,7 +386,7 @@ public class BaseClassTDS {
 		if(validateDBParams != null && "Y".equalsIgnoreCase(validateDBParams) && "P".equalsIgnoreCase(testCaseData.get("Test Case type"))){
 		
 			TDSDao tDSDao = new TDSDao();
-			List<HashMap<String,Object>> tdsMethodListFromDB = tDSDao.getAuthLogDataByTDSTransID(threeDSServerTransIDMap.get(testCaseData.get("TestCaseID")));
+			List<HashMap<String,Object>> tdsMethodListFromDB = tDSDao.getAuthLogDataByTDSTransID(threeDSServerTransIDMap.get(testCaseData.get("TestCaseID")), caPropMap);
 			if(tdsMethodListFromDB == null || tdsMethodListFromDB.isEmpty()){
 				Assert.fail("RReq API threeDSServerTransID not found in DB tables");
 				parentTest.log(LogStatus.FAIL, "RReq API threeDSServerTransID not found in DB tables");
@@ -407,7 +409,7 @@ public class BaseClassTDS {
 			List<HashMap<String,Object>> tdsMethodListFromDB = null;
 			
 			TDSDao tDSDao = new TDSDao();
-			tdsMethodListFromDB = tDSDao.getErrorLogDataByTDSTransID(threeDSServerTransIDMap.get(testCaseData.get("TestCaseID")));
+			tdsMethodListFromDB = tDSDao.getErrorLogDataByTDSTransID(threeDSServerTransIDMap.get(testCaseData.get("TestCaseID")), caPropMap);
 			
 			if(tdsMethodListFromDB == null || tdsMethodListFromDB.isEmpty()){
 				Assert.fail("RReq API threeDSServerTransID not found in DB tables");
@@ -448,7 +450,7 @@ public class BaseClassTDS {
 		if(validateDBParams != null && "Y".equalsIgnoreCase(validateDBParams) && "P".equalsIgnoreCase(testCaseData.get("Test Case type"))){
 		
 			TDSDao tDSDao = new TDSDao();
-			List<HashMap<String,Object>> tdsMethodListFromDB = tDSDao.getAuthLogDataByTDSTransID(threeDSServerTransIDMap.get(testCaseData.get("TestCaseID")));
+			List<HashMap<String,Object>> tdsMethodListFromDB = tDSDao.getAuthLogDataByTDSTransID(threeDSServerTransIDMap.get(testCaseData.get("TestCaseID")), caPropMap);
 			if(tdsMethodListFromDB == null || tdsMethodListFromDB.isEmpty()){
 				Assert.fail("Verify API threeDSServerTransID not found in DB tables");
 				parentTest.log(LogStatus.FAIL, "Verify API threeDSServerTransID not found in DB tables");
@@ -477,7 +479,7 @@ public class BaseClassTDS {
 			List<HashMap<String,Object>> tdsMethodListFromDB = null;
 			
 			TDSDao tDSDao = new TDSDao();
-			tdsMethodListFromDB = tDSDao.getErrorLogDataByTDSTransID(threeDSServerTransIDMap.get(testCaseData.get("TestCaseID")));
+			tdsMethodListFromDB = tDSDao.getErrorLogDataByTDSTransID(threeDSServerTransIDMap.get(testCaseData.get("TestCaseID")), caPropMap);
 			
 			if(tdsMethodListFromDB == null || tdsMethodListFromDB.isEmpty()){
 				Assert.fail("RReq API threeDSServerTransID not found in DB tables");

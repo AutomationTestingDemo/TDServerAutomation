@@ -332,6 +332,8 @@ public class ReadExcel {
 	 */
 	public Map<String, Map<String, String>> getTestAllData(String filename,
 			String sheetName, String testCaseIdKeyName) throws ExcelException {
+		
+		
 
 		if (testCaseIdKeyName == null || testCaseIdKeyName.length() < 1)
 			testCaseIdKeyName = testCaseIdKey;
@@ -351,9 +353,11 @@ public class ReadExcel {
 			try {
 				workbook = new XSSFWorkbook(file);
 			} catch (IOException e) {
+				e.printStackTrace();
 				throw new ExcelException("io exception:" + e.getMessage());
 			}
 		} catch (FileNotFoundException e) {
+			e.printStackTrace();
 			throw new ExcelException("file not found exception:"
 					+ e.getMessage());
 		}
@@ -427,6 +431,7 @@ public class ReadExcel {
 			mapOfmap.put(testkeys, outputMap);
 
 		}
+		
 		return mapOfmap;
 	}
 	

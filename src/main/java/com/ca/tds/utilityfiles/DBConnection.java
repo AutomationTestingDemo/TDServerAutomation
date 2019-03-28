@@ -5,25 +5,18 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.Map;
 
 public class DBConnection {
 	
-	static AppParams appParams;
-	
-	public static Connection getConnection(){
-		
-		if(appParams == null){
-			InitializeApplicationParams initializeApplicationParams = new InitializeApplicationParams();
-			initializeApplicationParams.initializeAppParams();
-			appParams = initializeApplicationParams.getAppParams();
-		}
+	public static Connection getConnection(Map<String, String> caPropMap){
 		
 		try{  
 		//step1 load the driver class  
 		Class.forName("com.edb.Driver");    
 		//step2 create  the connection object  
 		return DriverManager.getConnection(  
-		"jdbc:edb://"+appParams.getDBHost()+":5444/"+appParams.getDBService()+"",appParams.getDBUser(),appParams.getDBPassword());
+		"jdbc:edb://"+caPropMap.get("DB_HOST")+":5444/"+caPropMap.get("DB_SERVICE")+"",caPropMap.get("DB_USER"),caPropMap.get("DB_PWD"));
 		/*return DriverManager.getConnection(  
 				"jdbc:oracle:thin:@10.131.136.47:1521:orcl","ds_user","dost1234"); */
 		  
@@ -38,11 +31,11 @@ public class DBConnection {
 		
 	}
 	
-	public static void queryTable() throws SQLException{
+	public static void queryTable(Map<String, String> caPropMap) throws SQLException{
 
 		Connection con = null;
 		try{
-		con = getConnection();
+		con = getConnection(caPropMap);
 		Statement stmt=con.createStatement();  
 		  
 		//step4 execute query  

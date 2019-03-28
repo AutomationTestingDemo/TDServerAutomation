@@ -35,13 +35,15 @@ public class TDSFlowTest extends BaseClassTDS{
     public void brwTDSMethodTest() {
 	JSONObject apiResponse=null;
 	try {
+		System.out.println("test started");
 		String testFileName = testContext.getCurrentXmlTest().getParameter(
 				"TDSMethodURL");
 		if(!testScenarioData.containsKey(testFileName)){
 			testScenarioData.put(testFileName, new CommonUtil().getInputDataFromExcel(testContext, "TDSExcelFile", testFileName, null));
 		}
+		
 		Map<String, String> testCaseData = testScenarioData.get(testFileName).get(testCaseID);
-		extentTestInit(testCaseID, testCaseData.get("TestCaseName"));
+		extentTestInit(testCaseID, testCaseData.get("TestCaseName"), "TDSMethodURL");
 		Map<String, String> apiTestdata = testScenarioData.get("TEST SCENARIOS").get("Pre-Areq Request");
 		String jsonRequest = apiTestdata.get("Request Json");
 		
@@ -58,6 +60,7 @@ public class TDSFlowTest extends BaseClassTDS{
 			Assert.fail("3DS server is not responding at this moment");
 			return;
 		}
+		apiresponse = apiResponse.toString();
 		if("P".equalsIgnoreCase(testCaseData.get("Test Case type")) && "Erro".equalsIgnoreCase(apiResponse.getString("messageType"))){
 			Assert.fail("errorComponent: "+apiResponse.getString("errorComponent")+", errorCode: "+apiResponse.getString("errorComponent")+", errorDescription:"+apiResponse.getString("errorDescription"));
 			parentTest.log(LogStatus.FAIL, "errorComponent: "+apiResponse.getString("errorComponent")+", errorCode: "+apiResponse.getString("errorComponent")+", errorDescription:"+apiResponse.getString("errorDescription"));
@@ -75,7 +78,7 @@ public class TDSFlowTest extends BaseClassTDS{
 		}
 		
 		SoftAssert sa =new SoftAssert();
-		String validateDBParams = appParams.getValidateDBParams();
+		String validateDBParams = caPropMap.get("validateDBParams");
 		assertTDSMethodRes(testCaseData, apiResponse, sa, validateDBParams);
 		sa.assertAll();
 	}catch(ValidationException ve){
@@ -99,7 +102,7 @@ public class TDSFlowTest extends BaseClassTDS{
 				testScenarioData.put(testFileName, new CommonUtil().getInputDataFromExcel(testContext, "TDSExcelFile", testFileName, null));
 			}
 			Map<String, String> testCaseData = testScenarioData.get(testFileName).get(testCaseID);
-			extentTestInit(testCaseID, testCaseData.get("TestCaseName"));
+			extentTestInit(testCaseID, testCaseData.get("TestCaseName"), "PreAReq");
 			Map<String, String> apiTestdata = testScenarioData.get("TEST SCENARIOS").get("BRW_AReq_API");
 			String jsonRequest = apiTestdata.get("Request Json");
 			
@@ -115,12 +118,13 @@ public class TDSFlowTest extends BaseClassTDS{
 			System.out.println("================================================================");
 
 			PostHttpRequest sendHttpReq = new PostHttpRequest();
-			apiResponse = sendHttpReq.httpPost(jsonRequest, caPropMap.get("ArequestAPIURL"));
+			apiResponse = sendHttpReq.httpPost(jsonRequest, caPropMap.get("ArequestAPIURL"));			
 			if(apiResponse == null){
 				Assert.fail("3DS server is not responding at this moment");
 				parentTest.log(LogStatus.FAIL, "3DS server is not responding at this moment");
 				return;
 			}
+			apiresponse = apiResponse.toString();
 			if("P".equalsIgnoreCase(testCaseData.get("Test Case type")) && "Erro".equalsIgnoreCase(apiResponse.getString("messageType"))){
 				Assert.fail("errorComponent: "+apiResponse.getString("errorComponent")+", errorCode: "+apiResponse.getString("errorComponent")+", errorDescription:"+apiResponse.getString("errorDescription"));
 				parentTest.log(LogStatus.FAIL, "errorComponent: "+apiResponse.getString("errorComponent")+", errorCode: "+apiResponse.getString("errorComponent")+", errorDescription:"+apiResponse.getString("errorDescription"));
@@ -142,7 +146,7 @@ public class TDSFlowTest extends BaseClassTDS{
 			}
 			
 			SoftAssert sa = new SoftAssert();
-			String validateDBParams = appParams.getValidateDBParams();
+			String validateDBParams = caPropMap.get("validateDBParams");
 			assertAres(testCaseData, apiResponse, sa, validateDBParams);
 			sa.assertAll();
 
@@ -170,7 +174,7 @@ public class TDSFlowTest extends BaseClassTDS{
 			testScenarioData.put(testFileName, new CommonUtil().getInputDataFromExcel(testContext, "TDSExcelFile", testFileName, null));
 		}
 		Map<String, String> testCaseData = testScenarioData.get(testFileName).get(testCaseID);
-		extentTestInit(testCaseID, testCaseData.get("TestCaseName"));
+		extentTestInit(testCaseID, testCaseData.get("TestCaseName"),"RReq");
 		Map<String, String> apiTestdata = testScenarioData.get("TEST SCENARIOS").get("Result Request API");
 		String jsonRequest = apiTestdata.get("Request Json");
 		
@@ -221,12 +225,13 @@ public class TDSFlowTest extends BaseClassTDS{
 		System.out.println("================================================================");
 		
 		PostHttpRequest sendHttpReq = new PostHttpRequest();
-		apiResponse=sendHttpReq.httpPost(jsonRequest,caPropMap.get("ResultRequestAPI"));
+		apiResponse=sendHttpReq.httpPost(jsonRequest, caPropMap.get("ResultRequestAPI"));
 		if(apiResponse == null){
 			Assert.fail("3DS server is not responding at this moment");
 			parentTest.log(LogStatus.FAIL, "3DS server is not responding at this moment");
 			return;
 		}
+		apiresponse = apiResponse.toString();
 		if("P".equalsIgnoreCase(testCaseData.get("Test Case type")) && "Erro".equalsIgnoreCase(apiResponse.getString("messageType"))){
 			Assert.fail("errorComponent: "+apiResponse.getString("errorComponent")+", errorCode: "+apiResponse.getString("errorComponent")+", errorDescription:"+apiResponse.getString("errorDescription"));
 			parentTest.log(LogStatus.FAIL, "errorComponent: "+apiResponse.getString("errorComponent")+", errorCode: "+apiResponse.getString("errorComponent")+", errorDescription:"+apiResponse.getString("errorDescription"));
@@ -242,7 +247,7 @@ public class TDSFlowTest extends BaseClassTDS{
 		}
 		
 		SoftAssert sa =new SoftAssert();
-		String validateDBParams = appParams.getValidateDBParams();
+		String validateDBParams = caPropMap.get("validateDBParams");
 		assertRRes(testCaseData, apiResponse, sa, validateDBParams);
 		sa.assertAll();
 			
@@ -271,7 +276,7 @@ public class TDSFlowTest extends BaseClassTDS{
 			testScenarioData.put(testFileName, new CommonUtil().getInputDataFromExcel(testContext, "TDSExcelFile", testFileName, null));
 		}
 		Map<String, String> testCaseData = testScenarioData.get(testFileName).get(testCaseID);
-		extentTestInit(testCaseID, testCaseData.get("TestCaseName"));
+		extentTestInit(testCaseID, testCaseData.get("TestCaseName"), "VerifyAPI");
 		Map<String, String> apiTestdata = testScenarioData.get("TEST SCENARIOS").get("Verify Request API");
 		String jsonRequest = apiTestdata.get("Request Json");
 		
@@ -322,12 +327,13 @@ public class TDSFlowTest extends BaseClassTDS{
 		System.out.println("================================================================");
 		
 		PostHttpRequest sendHttpReq = new PostHttpRequest();
-		apiResponse=sendHttpReq.httpPost(jsonRequest,caPropMap.get("TDSVerifyAPIURL"));
+		apiResponse=sendHttpReq.httpPost(jsonRequest, caPropMap.get("TDSVerifyAPIURL"));
 		if(apiResponse == null){
 			Assert.fail("3DS server is not responding at this moment");
 			parentTest.log(LogStatus.FAIL, "3DS server is not responding at this moment");
 			return;
 		}
+		apiresponse = apiResponse.toString();
 		if("P".equalsIgnoreCase(testCaseData.get("Test Case type")) && "Erro".equalsIgnoreCase(apiResponse.getString("messageType"))){
 			Assert.fail("errorComponent: "+apiResponse.getString("errorComponent")+", errorCode: "+apiResponse.getString("errorComponent")+", errorDescription:"+apiResponse.getString("errorDescription"));
 			parentTest.log(LogStatus.FAIL, "errorComponent: "+apiResponse.getString("errorComponent")+", errorCode: "+apiResponse.getString("errorComponent")+", errorDescription:"+apiResponse.getString("errorDescription"));
@@ -343,7 +349,7 @@ public class TDSFlowTest extends BaseClassTDS{
 		}
 		
 		SoftAssert sa =new SoftAssert();
-		String validateDBParams = appParams.getValidateDBParams();
+		String validateDBParams = caPropMap.get("validateDBParams");
 		assertVerifyAPIResponse(apiResponse, testCaseData, sa, validateDBParams);
 		sa.assertAll();
 			
@@ -358,9 +364,9 @@ public class TDSFlowTest extends BaseClassTDS{
 
 	
     
-    protected void extentTestInit(String testCaseID, String testCaseName) {
+    protected void extentTestInit(String testCaseID, String testCaseName, String apiName) {
 		
-		String extentTestCase = "TC" + testCaseID + testCaseName;
+		String extentTestCase = "TC" + testCaseID+apiName+testCaseName;
 		System.out.println("Inside extentTestInit strTestCase: " + extentTestCase);
 		if ((previousTest != null) && !(previousTest.equalsIgnoreCase(extentTestCase))) {
 			testNumber = 1;

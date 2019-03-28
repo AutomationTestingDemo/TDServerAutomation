@@ -6,6 +6,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import com.ca.tds.utilityfiles.CommonUtil;
 import com.ca.tds.utilityfiles.DBConnection;
@@ -13,11 +14,11 @@ import com.ca.tds.utilityfiles.DBConnection;
 public class TDSDao {
 	
 	
-	public List<HashMap<String,Object>> getAuthLogDataByTDSTransID(String transID) throws SQLException{
+	public List<HashMap<String,Object>> getAuthLogDataByTDSTransID(String transID, Map<String, String> caPropMap) throws SQLException{
 		
 		Connection con = null;
 		try{
-		con = DBConnection.getConnection();
+		con = DBConnection.getConnection(caPropMap);
 		Statement stmt = con.createStatement();  
 		  
 		//step4 execute query  
@@ -32,11 +33,11 @@ public class TDSDao {
 		
 	}
 	
-public List<HashMap<String,Object>> getPResFromDB() throws SQLException{
+public List<HashMap<String,Object>> getPResFromDB(Map<String, String> caPropMap) throws SQLException{
 		
 		Connection con = null;
 		try{
-		con = DBConnection.getConnection();
+		con = DBConnection.getConnection(caPropMap);
 		Statement stmt = con.createStatement();  
 		  
 		//step4 execute query  
@@ -51,11 +52,11 @@ public List<HashMap<String,Object>> getPResFromDB() throws SQLException{
 		
 	}
 	
-public List<HashMap<String,Object>> getErrorLogDataByTDSTransID(String transID) throws SQLException{
+public List<HashMap<String,Object>> getErrorLogDataByTDSTransID(String transID, Map<String, String> caPropMap) throws SQLException{
 		
 		Connection con = null;
 		try{
-		con = DBConnection.getConnection();
+		con = DBConnection.getConnection(caPropMap);
 		Statement stmt = con.createStatement();  
 		  
 		//step4 execute query  

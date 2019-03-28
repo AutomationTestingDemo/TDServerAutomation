@@ -47,7 +47,11 @@ public class CommonUtil {
 			System.out.println("Current Sheet Name in Common Util->"+sheetName);
 			mom = re.getTestAllData(fileName,
 					sheetName, testCaseIdKey);
+			if(mom == null || mom.isEmpty()){
+				System.out.println("No test cases to run");
+			}
 		} catch (ExcelException e) {
+			System.out.println(e);
 			e.printStackTrace();
 		}
 		int sizeOfMap = mom.size();
