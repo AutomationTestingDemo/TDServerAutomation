@@ -9,8 +9,7 @@ pipeline{
 		stages{	 
 			stage('Automation mvn build'){
 			  steps{
-				sh label: '', script: "${mvnCmd} -e clean install dependency:copy-dependencies -Dmaven.test.skip=true -Dv=${env.BUILD_NUMBER}" 
-				sh label: '', script: 'cp target/*.jar docker/'
+				sh label: '', script: "${mvnCmd}clean test -DsuitFile=xmlfiles/testfactory.xml" 
 				}									
 		}
 	}								 
