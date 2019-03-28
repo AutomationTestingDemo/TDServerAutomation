@@ -9,7 +9,7 @@ pipeline{
 		stages{	 
 			stage('Automation mvn build'){
 			  steps{
-				sh label: '', script: "${mvnCmd}clean test -DsuitFile=xmlfiles/testfactory.xml" 
+				sh label: '', script: "${mvnCmd} clean test -DsuitFile=xmlfiles/testfactory.xml" 
 				}									
 		}
 	}								 
