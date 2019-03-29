@@ -15,9 +15,7 @@ pipeline{
 				sh label: '', script: "${mvnCmd} clean test -DsuitFile=xmlfiles/testfactory.xml -U" 
 				}									
 		}
-	}
-	stages{	 
-			stage('Automation Publish report to httpd'){
+		stage('Automation Publish report to httpd'){
 			  steps{
 				sh label: '', script: "mv *.html /var/www/html/preview/" 
 				}									
