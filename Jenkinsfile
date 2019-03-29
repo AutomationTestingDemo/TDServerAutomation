@@ -15,13 +15,14 @@ pipeline{
 				sh label: '', script: "${mvnCmd} clean test -DsuitFile=xmlfiles/testfactory.xml -U" 
 				}									
 		}
-		stage('Automation Publish report to httpd'){
-			  steps{
-				sh label: '', script: "mv *.html /var/www/html/preview/" 
-				}									
-		}
 	}
 	post{
+	  always {
+            echo 'Automation Publish report to httpd'
+            sh label: '', script: "mv *.html /var/www/html/preview/"
+			echo 'Deleting the workspace'
+			deleteDir()
+	  }
 	  success{
 		echo 'Build success'
 		sendEmailNotification()
