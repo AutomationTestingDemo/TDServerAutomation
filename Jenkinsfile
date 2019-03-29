@@ -14,11 +14,6 @@ pipeline{
 				sh label: '', script: "${mvnCmd} clean test -DsuitFile=xmlfiles/testfactory.xml" 
 				}									
 		}
-		stage('Publish HTML Report'){
-			  steps{
-				publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, includes: '**/*.html', keepAll: true, reportDir: '', reportFiles: '3DSAutomationTestReport.html', reportName: 'HTML Report', reportTitles: '']) 
-				}									
-		}
 	}								 
 post{
 		always{
