@@ -16,6 +16,13 @@ pipeline{
 				}									
 		}
 	}
+	stages{	 
+			stage('Automation Publish report to httpd'){
+			  steps{
+				sh label: '', script: "mv *.html /var/www/html/preview/" 
+				}									
+		}
+	}
 	post{
 	  success{
 		echo 'Build success'
