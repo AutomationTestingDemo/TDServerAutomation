@@ -17,7 +17,7 @@ pipeline{
 		}
 		stage('Automation Publish report to httpd'){
 			  steps{
-				sh label: '', script: "mv *.html /var/www/html/preview/" 
+				sh label: '', script: "sudo mv *.html /var/www/html/preview/" 
 				}									
 		}
 	}
