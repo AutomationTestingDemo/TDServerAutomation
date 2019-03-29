@@ -17,7 +17,7 @@ pipeline{
 		}
 		stage('Automation Publish report to httpd'){
 			  steps{
-				sh label: '', script: "sudo mv *.html /var/www/html/preview/" 
+				sh label: '', script: "mv *.html /var/www/html/preview/" 
 				}									
 		}
 	}
@@ -43,5 +43,5 @@ def sendEmailNotification(){
 	<p style="padding-right: 50px;">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<b><i>${BUILD_LOG_REGEX, regex="^Results", linesBefore=0, linesAfter=3, maxMatches=1, showTruncatedLines=false}</i></b>.</p>
 	<p style="padding-right: 50px;">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<b><i><strong>Git Branch</strong></p>	
 	--<br/>
-	''',  to: Mailto , subject:gitBranch+' - Automation Test Report - Build # $BUILD_NUMBER'
+	''',  to: Mailto , subject:gitBranch+'- [$BUILD_STATUS]- Automation Test Report - Build # $BUILD_NUMBER'
 }
