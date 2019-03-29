@@ -15,12 +15,23 @@ pipeline{
 				sh label: '', script: "${mvnCmd} clean test -DsuitFile=xmlfiles/testfactory.xml -U" 
 				}									
 		}
-	}								 
+	}
 	post{
-		always{
-		  sendEmailNotification()		    
-		}		
-    }
+	  always {
+		echo 'Deleting the workspace'
+		deleteDir()
+		}
+	  success{
+		echo 'Build success'
+		sendEmailNotification()
+		sh label: '', script: "exit 0"
+	  }
+	  failure{
+		echo 'Build failed'
+		sendEmailNotification()
+		sh label: '', script: "exit 1"
+	  }
+	}
  }
 def sendEmailNotification(){
 	emailext mimeType: 'text/html',	
