@@ -4,7 +4,8 @@ pipeline{
 	}
 	environment {
 		mvnHome = tool name: 'mvn3', type: 'maven'
-		mvnCmd = "${mvnHome}/bin/mvn"	
+		mvnCmd = "${mvnHome}/bin/mvn"
+		httpdUrl = 'http://kumaj08-i20572:81/preview/3DSAutomationTestReport.html'
 		httpdServer = "http://kumaj08-i20572:81/preview/3DSAutomationTestReport.html"
 		Mailto = 'ajeyakumar.hulivanaboregowda@broadcom.com'			
 		gitBranch = sh(returnStdout: true, script: 'echo ${GIT_BRANCH#*/}')			
@@ -40,8 +41,9 @@ def sendEmailNotification(){
 	body: '''Hi All,
 	<p><strong><u>Automation Summary</u></strong></p>	
 	<p style="padding-right: 5px;">&emsp;&emsp;&emsp;<strong>Git Branch</strong> :'''+ gitBranch +'''</p>
+	<p style="padding-right: 5px;">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<strong>Webserver URL :</strong>  <u>'''+ httpdUrl +'''</u>.</p>
 	<p style="padding-right: 50px;">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<b><i>${BUILD_LOG_REGEX, regex="^API URL", linesBefore=0, linesAfter=0, maxMatches=1, showTruncatedLines=false}</i></b>.</p>
 	<p style="padding-right: 50px;">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<b><i>${BUILD_LOG_REGEX, regex="^Results", linesBefore=0, linesAfter=3, maxMatches=1, showTruncatedLines=false}</i></b>.</p>	
 	--<br/>
-	''',  to: Mailto , subject:gitBranch+' - Automation Test Report - Build # $BUILD_NUMBER'
+	''',  to: Mailto , subject:gitBranch+' - Automation Summary - Build # $BUILD_NUMBER'
 }
