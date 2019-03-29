@@ -17,10 +17,6 @@ pipeline{
 		}
 	}
 	post{
-	  always {
-		echo 'Deleting the workspace'
-		deleteDir()
-		}
 	  success{
 		echo 'Build success'
 		sendEmailNotification()
