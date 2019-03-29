@@ -37,10 +37,10 @@ pipeline{
 def sendEmailNotification(){
 	emailext mimeType: 'text/html',	
 	body: '''Hi All,
-	<p><strong><u>Below is the Automation Summary</u></strong></p>	
+	<p><strong><u>Automation Summary</u></strong></p>	
 	<p style="padding-right: 5px;">&emsp;&emsp;&emsp;<strong>Git Branch</strong> :'''+ gitBranch +'''</p>
 	<p style="padding-right: 50px;">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<b><i>${BUILD_LOG_REGEX, regex="^API URL", linesBefore=0, linesAfter=0, maxMatches=1, showTruncatedLines=false}</i></b>.</p>
-	<p style="padding-right: 50px;">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<b><i>${BUILD_LOG_REGEX, regex="^Results", linesBefore=0, linesAfter=3, maxMatches=1, showTruncatedLines=false}</i></b>.</p>
+	<p style="padding-right: 50px;">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<b><i>${BUILD_LOG_REGEX, regex="^Results", linesBefore=0, linesAfter=3, maxMatches=1, showTruncatedLines=false}</i></b>.</p>	
 	--<br/>
-	''',  to: Mailto , subject:gitBranch+'- [$BUILD_STATUS]- Automation Test Report - Build # $BUILD_NUMBER'
+	''',  to: Mailto , subject:gitBranch+' - Automation Test Report - Build # $BUILD_NUMBER'
 }
