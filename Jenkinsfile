@@ -7,7 +7,7 @@ pipeline{
 		mvnCmd = "${mvnHome}/bin/mvn"
 		httpdUrl = 'http://kumaj08-i20572:81/preview/3DSAutomationTestReport.html'
 		httpdServer = "http://kumaj08-i20572:81/preview/3DSAutomationTestReport.html"
-		Mailto = 'ajeyakumar.hulivanaboregowda@broadcom.com'			
+		Mailto = 'payment-security-team-mra.pdl@broadcom.com'			
 		gitBranch = sh(returnStdout: true, script: 'echo ${GIT_BRANCH#*/}')			
 	}
 	stages{	 
