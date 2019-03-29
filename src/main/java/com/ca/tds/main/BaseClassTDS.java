@@ -65,7 +65,6 @@ public class BaseClassTDS {
 			e.printStackTrace();
 		}
 		CommonUtil cu = new CommonUtil();
-		System.out.println("before");
 		testScenarioData.put("TEST SCENARIOS", cu.getInputDataFromExcel(testContext, "TDSExcelFile",
 				"TEST SCENARIOS", "API Name"));
 		initialiseReport(testContext);
@@ -83,10 +82,10 @@ public class BaseClassTDS {
 		appParams = initializeApplicationParams.getAppParams();
 	}
 	public void initialiseReport(ITestContext testContext) {
-		System.out.println("TESTTTTTT");
+
 		if (extent == null) {
 
-			String dest = System.getProperty("user.dir") + "\\TestReports\\3DSAutomationTestReport.html";
+			String dest = "3DSAutomationTestReport.html";
 			System.out.println("Report file location : " + dest);
 			extent = new ExtentReports(dest, true);
 			extent.config().documentTitle(getPropertyValue("ReportTitle", testContext, null));
@@ -147,12 +146,12 @@ public class BaseClassTDS {
 					message = null;
 
 			}
-
 		} catch (Exception e) {
 			System.out.println(this.getClass().getSimpleName() + " error while getting screen shots ");
 		} finally {
-
-			parentTest.log(status, message);
+			if (testResult.getStatus() != ITestResult.SKIP) {				
+				parentTest.log(status, message);
+			}
 			System.out.println("ACTIVE THREAD COUNTS : "+java.lang.Thread.activeCount());
 			try {
 				extent.endTest(parentTest);

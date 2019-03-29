@@ -9,6 +9,7 @@ import org.everit.json.schema.ValidationException;
 import org.json.JSONObject;
 import org.testng.Assert;
 import org.testng.ITestContext;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
@@ -18,7 +19,10 @@ import com.ca.tds.utilityfiles.JsonUtility;
 import com.relevantcodes.extentreports.LogStatus;
 
 import ca.com.tds.restapi.PostHttpRequest;
+import nl.javadude.assumeng.Assumption;
+import nl.javadude.assumeng.AssumptionListener;
 
+@Listeners(AssumptionListener.class)
 public class TDSFlowTest extends BaseClassTDS{
 	
 	private String previousTest = "TestCaseName";
@@ -58,17 +62,17 @@ public class TDSFlowTest extends BaseClassTDS{
 		
 		if(apiResponse == null){
 			Assert.fail("3DS server is not responding at this moment");
-			return;
 		}
 		apiresponse = apiResponse.toString();
 		if("P".equalsIgnoreCase(testCaseData.get("Test Case type")) && "Erro".equalsIgnoreCase(apiResponse.getString("messageType"))){
-			Assert.fail("errorComponent: "+apiResponse.getString("errorComponent")+", errorCode: "+apiResponse.getString("errorComponent")+", errorDescription:"+apiResponse.getString("errorDescription"));
+			
 			parentTest.log(LogStatus.FAIL, "errorComponent: "+apiResponse.getString("errorComponent")+", errorCode: "+apiResponse.getString("errorComponent")+", errorDescription:"+apiResponse.getString("errorDescription"));
-			return;
+			Assert.fail("errorComponent: "+apiResponse.getString("errorComponent")+", errorCode: "+apiResponse.getString("errorComponent")+", errorDescription:"+apiResponse.getString("errorDescription"));
+			
 		}else if("N".equalsIgnoreCase(testCaseData.get("Test Case type")) && !"Erro".equalsIgnoreCase(apiResponse.getString("messageType"))){
-			Assert.fail("Expected to Fail");
 			parentTest.log(LogStatus.FAIL, "Expected to Fail");
-			return;
+			Assert.fail("Expected to Fail");
+			
 		}else if("P".equalsIgnoreCase(testCaseData.get("Test Case type"))){
 			JsonUtility.validate(apiResponse.toString(), "resource/schema/ares/preAres_schema.json");
 			threeDSServerTransIDMap.put(testCaseID, apiResponse.getString("threeDSServerTransID"));
@@ -120,19 +124,20 @@ public class TDSFlowTest extends BaseClassTDS{
 			PostHttpRequest sendHttpReq = new PostHttpRequest();
 			apiResponse = sendHttpReq.httpPost(jsonRequest, caPropMap.get("ArequestAPIURL"));			
 			if(apiResponse == null){
-				Assert.fail("3DS server is not responding at this moment");
+				
 				parentTest.log(LogStatus.FAIL, "3DS server is not responding at this moment");
-				return;
+				Assert.fail("3DS server is not responding at this moment");
+				
 			}
 			apiresponse = apiResponse.toString();
 			if("P".equalsIgnoreCase(testCaseData.get("Test Case type")) && "Erro".equalsIgnoreCase(apiResponse.getString("messageType"))){
-				Assert.fail("errorComponent: "+apiResponse.getString("errorComponent")+", errorCode: "+apiResponse.getString("errorComponent")+", errorDescription:"+apiResponse.getString("errorDescription"));
 				parentTest.log(LogStatus.FAIL, "errorComponent: "+apiResponse.getString("errorComponent")+", errorCode: "+apiResponse.getString("errorComponent")+", errorDescription:"+apiResponse.getString("errorDescription"));
-				return;
+				Assert.fail("errorComponent: "+apiResponse.getString("errorComponent")+", errorCode: "+apiResponse.getString("errorComponent")+", errorDescription:"+apiResponse.getString("errorDescription"));				
+	
 			}else if("N".equalsIgnoreCase(testCaseData.get("Test Case type")) && !"Erro".equalsIgnoreCase(apiResponse.getString("messageType"))){
-				Assert.fail("Expected to Fail");
 				parentTest.log(LogStatus.FAIL, "Expected to Fail");
-				return;
+				Assert.fail("Expected to Fail");				
+				
 			}else if("P".equalsIgnoreCase(testCaseData.get("Test Case type"))){
 				JsonUtility.validate(apiResponse.toString(), "resource/schema/ares/ares_schema.json");
 			}else{
@@ -159,12 +164,8 @@ public class TDSFlowTest extends BaseClassTDS{
     }
      
     @Test(priority = 2)
+    @Assumption(methods = {"checkChallenge"})
     public void rReqTest() {
-		
-		if(aResMap == null || !aResMap.has(testCaseID)){
-			System.out.println("============ No challenges from downstream to test RReq for test case id : "+testCaseID+" ================");
-			return;
-		}
 	
 		JSONObject apiResponse=null;
 		try {
@@ -227,18 +228,21 @@ public class TDSFlowTest extends BaseClassTDS{
 		PostHttpRequest sendHttpReq = new PostHttpRequest();
 		apiResponse=sendHttpReq.httpPost(jsonRequest, caPropMap.get("ResultRequestAPI"));
 		if(apiResponse == null){
-			Assert.fail("3DS server is not responding at this moment");
 			parentTest.log(LogStatus.FAIL, "3DS server is not responding at this moment");
+			Assert.fail("3DS server is not responding at this moment");
+			
 			return;
 		}
 		apiresponse = apiResponse.toString();
 		if("P".equalsIgnoreCase(testCaseData.get("Test Case type")) && "Erro".equalsIgnoreCase(apiResponse.getString("messageType"))){
-			Assert.fail("errorComponent: "+apiResponse.getString("errorComponent")+", errorCode: "+apiResponse.getString("errorComponent")+", errorDescription:"+apiResponse.getString("errorDescription"));
 			parentTest.log(LogStatus.FAIL, "errorComponent: "+apiResponse.getString("errorComponent")+", errorCode: "+apiResponse.getString("errorComponent")+", errorDescription:"+apiResponse.getString("errorDescription"));
+			Assert.fail("errorComponent: "+apiResponse.getString("errorComponent")+", errorCode: "+apiResponse.getString("errorComponent")+", errorDescription:"+apiResponse.getString("errorDescription"));
+			
 			return;
 		}else if("N".equalsIgnoreCase(testCaseData.get("Test Case type")) && !"Erro".equalsIgnoreCase(apiResponse.getString("messageType"))){
-			Assert.fail("Expected to Fail");
 			parentTest.log(LogStatus.FAIL, "Expected to Fail");
+			Assert.fail("Expected to Fail");
+			
 			return;
 		}else if("P".equalsIgnoreCase(testCaseData.get("Test Case type"))){
 			JsonUtility.validate(apiResponse.toString(), "resource/schema/rres/rres_schema.json");
@@ -261,12 +265,8 @@ public class TDSFlowTest extends BaseClassTDS{
 	}
 
     @Test(priority = 3)
+    @Assumption(methods = {"checkChallenge"})
     public void verifyAPI() {
-		
-    	if(aResMap == null || !aResMap.has(testCaseID)){
-			System.out.println("============ No challenges request to test Verify API for test case id : "+testCaseID+" ================");
-			return;
-		}
 	
 		JSONObject apiResponse=null;
 		try {
@@ -329,19 +329,19 @@ public class TDSFlowTest extends BaseClassTDS{
 		PostHttpRequest sendHttpReq = new PostHttpRequest();
 		apiResponse=sendHttpReq.httpPost(jsonRequest, caPropMap.get("TDSVerifyAPIURL"));
 		if(apiResponse == null){
-			Assert.fail("3DS server is not responding at this moment");
 			parentTest.log(LogStatus.FAIL, "3DS server is not responding at this moment");
-			return;
+			Assert.fail("3DS server is not responding at this moment");
+			
 		}
 		apiresponse = apiResponse.toString();
 		if("P".equalsIgnoreCase(testCaseData.get("Test Case type")) && "Erro".equalsIgnoreCase(apiResponse.getString("messageType"))){
-			Assert.fail("errorComponent: "+apiResponse.getString("errorComponent")+", errorCode: "+apiResponse.getString("errorComponent")+", errorDescription:"+apiResponse.getString("errorDescription"));
 			parentTest.log(LogStatus.FAIL, "errorComponent: "+apiResponse.getString("errorComponent")+", errorCode: "+apiResponse.getString("errorComponent")+", errorDescription:"+apiResponse.getString("errorDescription"));
-			return;
+			Assert.fail("errorComponent: "+apiResponse.getString("errorComponent")+", errorCode: "+apiResponse.getString("errorComponent")+", errorDescription:"+apiResponse.getString("errorDescription"));
+			
 		}else if("N".equalsIgnoreCase(testCaseData.get("Test Case type")) && !"Erro".equalsIgnoreCase(apiResponse.getString("messageType"))){
-			Assert.fail("Expected to Fail");
 			parentTest.log(LogStatus.FAIL, "Expected to Fail");
-			return;
+			Assert.fail("Expected to Fail");
+			
 		}else if("P".equalsIgnoreCase(testCaseData.get("Test Case type"))){
 			JsonUtility.validate(apiResponse.toString(), "resource/schema/verifyapi/vapi_schema.json");
 		}else{
@@ -377,5 +377,14 @@ public class TDSFlowTest extends BaseClassTDS{
 		previousTest = extentTestCase;
 
 	}
+    
+    public boolean checkChallenge(){
+    	
+    	if(aResMap == null || !aResMap.has(testCaseID)){
+			System.out.println("============ No challenges from downstream to test RReq for test case id : "+testCaseID+" ================");
+			return false;
+		}
+    	return true;
+    }
 
 }

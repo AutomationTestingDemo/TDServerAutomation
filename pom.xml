@@ -91,6 +91,15 @@
 			<artifactId>jdbc18</artifactId>
 			<version>42.2.5.1</version>
 		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/nl.javadude.assumeng/assumeng -->
+<dependency>
+    <groupId>nl.javadude.assumeng</groupId>
+    <artifactId>assumeng</artifactId>
+    <version>1.2.4</version>
+    <scope>test</scope>
+</dependency>
+		
 
 	</dependencies>
 
