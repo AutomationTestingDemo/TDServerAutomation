@@ -39,7 +39,7 @@ pipeline{
 def sendEmailNotification(){
 	emailext mimeType: 'text/html',	
 	body: '''Hi All,
-	<p><strong><u>Automation Summary</u></strong></p>	
+	<p><strong><u>Automation Summary</u></strong></p>
 	<p style="padding-right: 5px;">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<strong>Git Branch : '''+ gitBranch.trim() +'''</strong></p>
 	<p style="padding-right: 5px;">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<strong>Automation Test Report :</strong><u> http://kumaj08-i20572:81/'''+ gitBranch.trim() +'''/3DSAutomationTestReport.html</u>.</p>
 	<p style="padding-right: 50px;">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<b><i>${BUILD_LOG_REGEX, regex="^API URL", linesBefore=0, linesAfter=0, maxMatches=1, showTruncatedLines=false}</i></b>.</p>	
