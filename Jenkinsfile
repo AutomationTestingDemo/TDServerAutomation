@@ -42,7 +42,7 @@ def sendEmailNotification(){
 	body: '''Hi All,
 	<p><strong><u>Automation Summary</u></strong></p>	
 	<p style="padding-right: 5px;">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<strong>Git Branch : '''+ gitBranch +'''</strong></p>
-	<p style="padding-right: 5px;">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<strong>Automation Test Report :</strong><u>"http://kumaj08-i20572:81/'''+ gitBranch +'''/3DSAutomationTestReport.html"</u>.</p>
+	<p style="padding-right: 5px;">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<strong>Automation Test Report :</strong>"<u>http://kumaj08-i20572:81/'''+ gitBranch +'''/3DSAutomationTestReport.html</u>".</p>
 	<p style="padding-right: 50px;">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<b><i>${BUILD_LOG_REGEX, regex="^API URL", linesBefore=0, linesAfter=0, maxMatches=1, showTruncatedLines=false}</i></b>.</p>	
 	--<br/>
 	<strong>Following is the last 50 lines of the log</strong>.<br/>
