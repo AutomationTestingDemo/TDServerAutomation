@@ -35,7 +35,8 @@ import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
 public class BaseClassTDS {
-
+	
+	protected boolean hexEncode = false;
 	protected static ExtentReports extent;
 	public static ExtentTest parentTest = null;
 	protected static Map<String, String> caPropMap = null;
@@ -260,7 +261,7 @@ public class BaseClassTDS {
 	
 	public void assertTDSMethodRes(Map<String, String> testCaseData, JSONObject apiResponse, SoftAssert sa,
 			String validateDBParams) throws SQLException {
-		if(validateDBParams != null && "Y".equalsIgnoreCase(validateDBParams)){
+		if(validateDBParams != null && "Y".equalsIgnoreCase(validateDBParams) && "P".equalsIgnoreCase(testCaseData.get("Test Case type"))){
 			
 			TDSDao tDSDao = new TDSDao();
 			List<HashMap<String,Object>> tdsMethodListFromDB = tDSDao.getAuthLogDataByTDSTransID(apiResponse.getString("threeDSServerTransID"), caPropMap);
@@ -276,13 +277,44 @@ public class BaseClassTDS {
 			threeDSFieldAssert(apiResponse, testCaseData, "messageVersion", sa, tdsMethodDBData.get("MESSAGEVERSION"));
 			threeDSFieldAssert(apiResponse, testCaseData, "threeDSMethodURL", sa, tdsMethodDBData.get("ACSURL"));
 			
-		}else{
+		}else if(validateDBParams != null && "Y".equalsIgnoreCase(validateDBParams) && "N".equalsIgnoreCase(testCaseData.get("Test Case type"))){
 			
+			List<HashMap<String,Object>> tdsMethodListFromDB = null;
+		
+			TDSDao tDSDao = new TDSDao();
+			tdsMethodListFromDB = tDSDao.getErrorLogDataByTDSTransID(apiResponse.getString("threeDSServerTransID"), caPropMap);
+			
+			if(tdsMethodListFromDB == null || tdsMethodListFromDB.isEmpty()){
+				Assert.fail("Three DS method URL API threeDSServerTransID not found in DB tables");
+				parentTest.log(LogStatus.FAIL, "Three DS method URL API threeDSServerTransID not found in DB tables");
+			}else if(tdsMethodListFromDB.size() > 1){
+				Assert.fail("Three DS method URL API more than 1 threeDSServerTransID found in DB tables");
+				parentTest.log(LogStatus.FAIL, "Pre AReq API more than 1 threeDSServerTransID found in DB tables");
+			}
+			
+			HashMap<String, Object> tdsMethodDBData = tdsMethodListFromDB.get(0);
+			
+			threeDSFieldAssert(apiResponse, testCaseData, "threeDSServerTransID", sa, tdsMethodDBData.get("THREEDSSERVERTRANSID"));
+			threeDSFieldAssert(apiResponse, testCaseData, "errorCode", sa, tdsMethodDBData.get("ERRORCODE"));
+			threeDSFieldAssert(apiResponse, testCaseData, "errorComponent", sa, tdsMethodDBData.get("ERRORCOMPONENT"));
+			threeDSFieldAssert(apiResponse, testCaseData, "errorDescription", sa, null);
+			threeDSFieldAssert(apiResponse, testCaseData, "errorMessageType", sa, tdsMethodDBData.get("ERRORMESSAGETYPE"));
+			threeDSFieldAssert(apiResponse, testCaseData, "errorDetail", sa, tdsMethodDBData.get("ERRORDETAIL"));
+			
+		}else if("P".equalsIgnoreCase(testCaseData.get("Test Case type"))){
 			threeDSFieldAssert(apiResponse, testCaseData, "messageType", sa);
 			threeDSFieldAssert(apiResponse, testCaseData, "threeDSServerTransID", sa);
 			threeDSFieldAssert(apiResponse, testCaseData, "callerTxnRefID", sa);
 			threeDSFieldAssert(apiResponse, testCaseData, "messageVersion", sa);
 			threeDSFieldAssert(apiResponse, testCaseData, "threeDSMethodURL", sa);
+		}
+		else{
+			
+			threeDSFieldAssert(apiResponse, testCaseData, "threeDSServerTransID", sa);
+			threeDSFieldAssert(apiResponse, testCaseData, "errorCode", sa);
+			threeDSFieldAssert(apiResponse, testCaseData, "errorComponent", sa);
+			threeDSFieldAssert(apiResponse, testCaseData, "errorDescription", sa);
+			threeDSFieldAssert(apiResponse, testCaseData, "errorDetail", sa);
 			
 		}
 	}
@@ -321,7 +353,7 @@ public class BaseClassTDS {
 			threeDSFieldAssert(apiResponse, testCaseData, "acsOperatorID", sa, tdsMethodDBData.get("ECI"));
 			threeDSFieldAssert(apiResponse, testCaseData, "acsURL", sa, tdsMethodDBData.get("ACSURL"));
 			threeDSFieldAssert(apiResponse, testCaseData, "authenticationType", sa, tdsMethodDBData.get("AUTHENTICATIONTYPE"));
-			threeDSFieldAssert(apiResponse, testCaseData, "authenticationValue", sa, tdsMethodDBData.get("AUTHENTICATIONVALUE"));
+			threeDSFieldAssert(apiResponse, testCaseData, "authenticationValue", sa, hexEncode?hexEncode(tdsMethodDBData.get("AUTHENTICATIONVALUE")):tdsMethodDBData.get("AUTHENTICATIONVALUE"));
 			threeDSFieldAssert(apiResponse, testCaseData, "transStatusReason", sa, tdsMethodDBData.get("TRANSSTATUSREASON"));
 			threeDSFieldAssert(apiResponse, testCaseData, "creq", sa, null);
 			threeDSFieldAssert(apiResponse, testCaseData, "cardholderInfo", sa, null);
@@ -464,7 +496,7 @@ public class BaseClassTDS {
 			threeDSFieldAssert(apiResponse, testCaseData, "threeDSServerTransID", sa, tdsMethodDBData.get("THREEDSSERVERTRANSID"));
 			threeDSFieldAssert(apiResponse, testCaseData, "callerTxnRefID", sa, tdsMethodDBData.get("CALLERTXNREFID"));
 			threeDSFieldAssert(apiResponse, testCaseData, "eci", sa, tdsMethodDBData.get("ECI"));
-			threeDSFieldAssert(apiResponse, testCaseData, "authenticationValue", sa, tdsMethodDBData.get("AUTHENTICATIONVALUE"));
+			threeDSFieldAssert(apiResponse, testCaseData, "authenticationValue", sa, hexEncode?hexEncode(tdsMethodDBData.get("AUTHENTICATIONVALUE")):tdsMethodDBData.get("AUTHENTICATIONVALUE"));
 			threeDSFieldAssert(apiResponse, testCaseData, "transStatus", sa, tdsMethodDBData.get("TRANSSTATUSRREQ"));
 			if("N".equalsIgnoreCase(apiResponse.getString("transStatus")) || "U".equalsIgnoreCase(apiResponse.getString("transStatus")) || "R".equalsIgnoreCase(apiResponse.getString("transStatus"))){
 				threeDSFieldAssert(apiResponse, testCaseData, "transStatusReason", sa, tdsMethodDBData.get("TRANSSTATUSREASON"));
@@ -519,6 +551,11 @@ public class BaseClassTDS {
 			threeDSFieldAssert(apiResponse, testCaseData, "errorMessageType", sa);
 			threeDSFieldAssert(apiResponse, testCaseData, "errorDetail", sa);
 		}
+	}
+	
+	private String hexEncode(Object data){
+		byte[] bytes = data.toString().getBytes();
+		return javax.xml.bind.DatatypeConverter.printHexBinary(bytes);
 	}
 
 }

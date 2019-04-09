@@ -39,7 +39,7 @@ public class TDSFlowTest extends BaseClassTDS{
     public void brwTDSMethodTest() {
 	JSONObject apiResponse=null;
 	try {
-		System.out.println("test started");
+	
 		String testFileName = testContext.getCurrentXmlTest().getParameter(
 				"TDSMethodURL");
 		if(!testScenarioData.containsKey(testFileName)){
@@ -52,7 +52,9 @@ public class TDSFlowTest extends BaseClassTDS{
 		String jsonRequest = apiTestdata.get("Request Json");
 		
 		jsonRequest = AssertionUtility.prepareRequest(testCaseData, jsonRequest);
-		
+		if(AssertionUtility.hexEncodingNeeded(testCaseData.get("#acctNumber#"))){
+			hexEncode = true;
+		}
 		System.out.println("================================================================");
 		System.out.println("TDS MethodURL Json Request ***:\n" + jsonRequest);
 		System.out.println("================================================================");
