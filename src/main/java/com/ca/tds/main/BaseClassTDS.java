@@ -266,9 +266,9 @@ public class BaseClassTDS {
 			TDSDao tDSDao = new TDSDao();
 			List<HashMap<String,Object>> tdsMethodListFromDB = tDSDao.getAuthLogDataByTDSTransID(apiResponse.getString("threeDSServerTransID"), caPropMap);
 			if(tdsMethodListFromDB == null || tdsMethodListFromDB.isEmpty()){
-				Assert.fail("Three DS method URL API threeDSServerTransID not found in DB tables");
+				Assert.fail("Three DS method URL API threeDSServerTransID not found in MTDAUTHLOG table");
 			}else if(tdsMethodListFromDB.size() > 1){
-				Assert.fail("Three DS method URL API more than 1 threeDSServerTransID found in DB tables");
+				Assert.fail("Three DS method URL API more than 1 threeDSServerTransID found in MTDAUTHLOG table");
 			}
 			HashMap<String, Object> tdsMethodDBData = tdsMethodListFromDB.get(0);
 			threeDSFieldAssert(apiResponse, testCaseData, "messageType", sa);
@@ -285,11 +285,11 @@ public class BaseClassTDS {
 			tdsMethodListFromDB = tDSDao.getErrorLogDataByTDSTransID(apiResponse.getString("threeDSServerTransID"), caPropMap);
 			
 			if(tdsMethodListFromDB == null || tdsMethodListFromDB.isEmpty()){
-				Assert.fail("Three DS method URL API threeDSServerTransID not found in DB tables");
-				parentTest.log(LogStatus.FAIL, "Three DS method URL API threeDSServerTransID not found in DB tables");
+				Assert.fail("Three DS method URL API threeDSServerTransID not found in MTDERRORMSG table");
+				//parentTest.log(LogStatus.FAIL, "Three DS method URL API threeDSServerTransID not found in MTDERRORMSG table");
 			}else if(tdsMethodListFromDB.size() > 1){
-				Assert.fail("Three DS method URL API more than 1 threeDSServerTransID found in DB tables");
-				parentTest.log(LogStatus.FAIL, "Pre AReq API more than 1 threeDSServerTransID found in DB tables");
+				Assert.fail("Three DS method URL API more than 1 threeDSServerTransID found in MTDERRORMSG table");
+				//parentTest.log(LogStatus.FAIL, "Pre AReq API more than 1 threeDSServerTransID found in MTDERRORMSG table");
 			}
 			
 			HashMap<String, Object> tdsMethodDBData = tdsMethodListFromDB.get(0);
@@ -329,11 +329,11 @@ public class BaseClassTDS {
 			tdsMethodListFromDB = tDSDao.getAuthLogDataByTDSTransID(threeDSServerTransIDMap.get(testCaseData.get("TestCaseID")), caPropMap);
 			
 			if(tdsMethodListFromDB == null || tdsMethodListFromDB.isEmpty()){
-				Assert.fail("Pre AReq API threeDSServerTransID not found in DB tables");
-				parentTest.log(LogStatus.FAIL, "Pre AReq API threeDSServerTransID not found in DB tables");
+				Assert.fail("Pre AReq API threeDSServerTransID not found in MTDAUTHLOG table");
+				//parentTest.log(LogStatus.FAIL, "Pre AReq API threeDSServerTransID not found in MTDAUTHLOG table");
 			}else if(tdsMethodListFromDB.size() > 1){
-				Assert.fail("Pre AReq API more than 1 threeDSServerTransID found in DB tables");
-				parentTest.log(LogStatus.FAIL, "Pre AReq API more than 1 threeDSServerTransID found in DB tables");
+				Assert.fail("Pre AReq API more than 1 threeDSServerTransID found in MTDAUTHLOG table");
+				//parentTest.log(LogStatus.FAIL, "Pre AReq API more than 1 threeDSServerTransID found in MTDAUTHLOG table");
 			}
 			
 			HashMap<String, Object> tdsMethodDBData = tdsMethodListFromDB.get(0);
@@ -366,11 +366,11 @@ public class BaseClassTDS {
 			tdsMethodListFromDB = tDSDao.getErrorLogDataByTDSTransID(threeDSServerTransIDMap.get(testCaseData.get("TestCaseID")), caPropMap);
 			
 			if(tdsMethodListFromDB == null || tdsMethodListFromDB.isEmpty()){
-				Assert.fail("Pre AReq API threeDSServerTransID not found in DB tables");
-				parentTest.log(LogStatus.FAIL, "Pre AReq API threeDSServerTransID not found in DB tables");
+				Assert.fail("Pre AReq API threeDSServerTransID not found in MTDERRORMSG table");
+				//parentTest.log(LogStatus.FAIL, "Pre AReq API threeDSServerTransID not found in MTDERRORMSG table");
 			}else if(tdsMethodListFromDB.size() > 1){
-				Assert.fail("Pre AReq API more than 1 threeDSServerTransID found in DB tables");
-				parentTest.log(LogStatus.FAIL, "Pre AReq API more than 1 threeDSServerTransID found in DB tables");
+				Assert.fail("Pre AReq API more than 1 threeDSServerTransID found in MTDERRORMSG table");
+				//parentTest.log(LogStatus.FAIL, "Pre AReq API more than 1 threeDSServerTransID found in MTDERRORMSG table");
 			}
 			
 			HashMap<String, Object> tdsMethodDBData = tdsMethodListFromDB.get(0);
@@ -419,11 +419,11 @@ public class BaseClassTDS {
 			TDSDao tDSDao = new TDSDao();
 			List<HashMap<String,Object>> tdsMethodListFromDB = tDSDao.getAuthLogDataByTDSTransID(threeDSServerTransIDMap.get(testCaseData.get("TestCaseID")), caPropMap);
 			if(tdsMethodListFromDB == null || tdsMethodListFromDB.isEmpty()){
-				Assert.fail("RReq API threeDSServerTransID not found in DB tables");
-				parentTest.log(LogStatus.FAIL, "RReq API threeDSServerTransID not found in DB tables");
+				Assert.fail("RReq API threeDSServerTransID not found in MTDAUTHLOG table");
+				//parentTest.log(LogStatus.FAIL, "RReq API threeDSServerTransID not found in MTDAUTHLOG table");
 			}else if(tdsMethodListFromDB.size() > 1){
-				Assert.fail("RReq API more than 1 threeDSServerTransID found in DB tables");
-				parentTest.log(LogStatus.FAIL, "RReq API more than 1 threeDSServerTransID found in DB tables");
+				Assert.fail("RReq API more than 1 threeDSServerTransID found in MTDAUTHLOG table");
+				//parentTest.log(LogStatus.FAIL, "RReq API more than 1 threeDSServerTransID found in MTDAUTHLOG table");
 			}
 			
 			HashMap<String, Object> tdsMethodDBData = tdsMethodListFromDB.get(0);
@@ -443,11 +443,11 @@ public class BaseClassTDS {
 			tdsMethodListFromDB = tDSDao.getErrorLogDataByTDSTransID(threeDSServerTransIDMap.get(testCaseData.get("TestCaseID")), caPropMap);
 			
 			if(tdsMethodListFromDB == null || tdsMethodListFromDB.isEmpty()){
-				Assert.fail("RReq API threeDSServerTransID not found in DB tables");
-				parentTest.log(LogStatus.FAIL, "RReq API threeDSServerTransID not found in DB tables");
+				Assert.fail("RReq API threeDSServerTransID not found in MTDERRORMSG table");
+				//parentTest.log(LogStatus.FAIL, "RReq API threeDSServerTransID not found in MTDERRORMSG table");
 			}else if(tdsMethodListFromDB.size() > 1){
-				Assert.fail("RReq API more than 1 threeDSServerTransID found in DB tables");
-				parentTest.log(LogStatus.FAIL, "RReq API more than 1 threeDSServerTransID found in DB tables");
+				Assert.fail("RReq API more than 1 threeDSServerTransID found in MTDERRORMSG table");
+				//parentTest.log(LogStatus.FAIL, "RReq API more than 1 threeDSServerTransID found in MTDERRORMSG table");
 			}
 			
 			HashMap<String, Object> tdsMethodDBData = tdsMethodListFromDB.get(0);
@@ -483,11 +483,11 @@ public class BaseClassTDS {
 			TDSDao tDSDao = new TDSDao();
 			List<HashMap<String,Object>> tdsMethodListFromDB = tDSDao.getAuthLogDataByTDSTransID(threeDSServerTransIDMap.get(testCaseData.get("TestCaseID")), caPropMap);
 			if(tdsMethodListFromDB == null || tdsMethodListFromDB.isEmpty()){
-				Assert.fail("Verify API threeDSServerTransID not found in DB tables");
-				parentTest.log(LogStatus.FAIL, "Verify API threeDSServerTransID not found in DB tables");
+				Assert.fail("Verify API threeDSServerTransID not found in MTDAUTHLOG table");
+				//parentTest.log(LogStatus.FAIL, "Verify API threeDSServerTransID not found in MTDAUTHLOG table");
 			}else if(tdsMethodListFromDB.size() > 1){
-				Assert.fail("Verify API more than 1 threeDSServerTransID found in DB tables");
-				parentTest.log(LogStatus.FAIL, "Verify API more than 1 threeDSServerTransID found in DB tables");
+				Assert.fail("Verify API more than 1 threeDSServerTransID found in MTDAUTHLOG table");
+				//parentTest.log(LogStatus.FAIL, "Verify API more than 1 threeDSServerTransID found in MTDAUTHLOG table");
 			}
 			
 			HashMap<String, Object> tdsMethodDBData = tdsMethodListFromDB.get(0);
@@ -513,11 +513,11 @@ public class BaseClassTDS {
 			tdsMethodListFromDB = tDSDao.getErrorLogDataByTDSTransID(threeDSServerTransIDMap.get(testCaseData.get("TestCaseID")), caPropMap);
 			
 			if(tdsMethodListFromDB == null || tdsMethodListFromDB.isEmpty()){
-				Assert.fail("RReq API threeDSServerTransID not found in DB tables");
-				parentTest.log(LogStatus.FAIL, "RReq API threeDSServerTransID not found in DB tables");
+				Assert.fail("RReq API threeDSServerTransID not found in MTDERRORMSG table");
+				//parentTest.log(LogStatus.FAIL, "RReq API threeDSServerTransID not found in MTDERRORMSG table");
 			}else if(tdsMethodListFromDB.size() > 1){
-				Assert.fail("RReq API more than 1 threeDSServerTransID found in DB tables");
-				parentTest.log(LogStatus.FAIL, "RReq API more than 1 threeDSServerTransID found in DB tables");
+				Assert.fail("RReq API more than 1 threeDSServerTransID found in MTDERRORMSG table");
+				//parentTest.log(LogStatus.FAIL, "RReq API more than 1 threeDSServerTransID found in MTDERRORMSG table");
 			}
 			
 			HashMap<String, Object> tdsMethodDBData = tdsMethodListFromDB.get(0);
