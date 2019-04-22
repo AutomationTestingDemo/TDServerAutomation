@@ -43,20 +43,20 @@
         "callerTxnRefID":{
             "description":"callerTxnRefID",
             "type": "string",
-            "maxLength":256,
-              "minLength":1
+            "maxLength":36,
+              "minLength":0
         },
         "threeDSServerTransID":{
             "description":"threeDSServerTransID",
             "type": "string",
             "maxLength":36,
-              "minLength":1
+              "minLength":36
         },
         "messageType":{
             "description":"messageType",
             "type": "string",
             "maxLength":4,
-              "minLength":1
+              "minLength":4
         }
         
     }

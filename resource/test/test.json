@@ -1,9 +1,0 @@
-[
-  
-	{"test_case_id":"1","test_case_name":"Test_AReq1","areq_path":"resource/areq/areq.json","areq_schema_path":"resource/schema/areq/areq_schema.json","ares_schema_path":"resource/schema/ares/ares_schema.json", "scenario":"p", "req_type":"areq"},
-	{"test_case_id":"2","test_case_name":"Test_AReq2","areq_path":"resource/areq/areq1.json","areq_schema_path":"resource/schema/areq/areq_schema.json","ares_schema_path":"resource/schema/ares/ares_schema.json", "scenario":"p", "req_type":"areq"},
-	{"test_case_id":"3","test_case_name":"Test_AReq3","areq_path":"resource/areq/areq2.json","areq_schema_path":"resource/schema/areq/areq_schema.json","ares_schema_path":"resource/schema/ares/ares_schema.json", "scenario":"p", "req_type":"areq"},
-	{"test_case_id":"4","test_case_name":"Test_AReq4","areq_path":"resource/areq/areq3.json","areq_schema_path":"resource/schema/areq/areq_schema.json","ares_schema_path":"resource/schema/ares/ares_schema.json", "scenario":"p", "req_type":"areq"},
-	{"test_case_id":"5","test_case_name":"Test_AReq5","areq_path":"resource/areq/areq4.json","areq_schema_path":"resource/schema/areq/areq_schema.json","ares_schema_path":"resource/schema/ares/ares_schema.json", "scenario":"p", "req_type":"areq"},
-	{"test_case_id":"6","test_case_name":"Test_AReq6","areq_path":"resource/areq/areq5.json","areq_schema_path":"resource/schema/areq/areq_schema.json","ares_schema_path":"resource/schema/ares/ares_schema.json", "scenario":"p", "req_type":"areq"}
-]

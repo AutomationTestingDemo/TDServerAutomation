@@ -20,7 +20,7 @@
             "description":"errorCode",
             "type": "string",
             "maxLength":3,
-              "minLength":1
+              "minLength":3
         },
         "errorDetail":{
             "description":"errorDetail",
@@ -32,7 +32,7 @@
             "description":"errorMessageType",
             "type": "string",
             "maxLength":4,
-              "minLength":1
+              "minLength":4
         },
         "messageVersion":{
             "description":"messageVersion",
@@ -44,7 +44,7 @@
             "description":"messageType",
             "type": "string",
             "maxLength":4,
-              "minLength":1
+              "minLength":4
         }
         
     }

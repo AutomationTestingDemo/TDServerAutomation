@@ -24,20 +24,21 @@
     "callerTxnRefID": {
       "description": "Caller Transaction Ref ID",
       "type": "string",
-      "maxLength":30,
-      "minLength":5
+      "maxLength":36,
+      "minLength":0
     },
     "threeDSServerTransID": {
       "description": "TDS Server Trans ID",
-      "type": "string"
+      "type": "string",
+        "maxLength":36,
+      "minLength":36
     }
     
     },
     "required": [
       "acctNumber",
       "messageType",
-      "caMerchantID",
-      "callerTxnRefID"
+      "caMerchantID"
     ]
   
 }
