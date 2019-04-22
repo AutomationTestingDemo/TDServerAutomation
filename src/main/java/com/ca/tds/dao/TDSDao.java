@@ -71,4 +71,25 @@ public List<HashMap<String,Object>> getErrorLogDataByTDSTransID(String transID, 
 		
 	}
 
+public String getMTDConfig(String key, Map<String, String> caPropMap) throws SQLException{
+	
+	Connection con = null;
+	try{
+	con = DBConnection.getConnection(caPropMap);
+	Statement stmt = con.createStatement();  
+	  
+	//step4 execute query  
+	ResultSet rs = stmt.executeQuery("select paramvalue from mtdconfig where paramname='"+key+"'");
+	if(rs.next())
+		return rs.getString("paramvalue");
+	else
+		return null;
+	}finally{
+		if(con != null){
+			con.close();
+		}
+	}
+		
+}
+
 }

@@ -1,5 +1,16 @@
 package com.ca.tds.utilityfiles;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.sql.SQLException;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Properties;
+
+import com.ca.tds.dao.TDSDao;
+
 public class AppParams {
 	
 	private String dbHost;
@@ -17,6 +28,40 @@ public class AppParams {
 	private String tDSVerifyCacheURL;
 	
 	private String tdsMetaRanges;
+	private static Map<String, String> caPropMap = null;
+	private static String enableDecryption;
+	private static boolean paramsInitialized = false;
+	
+	public static void initialiseAdminProperties() throws IOException {
+		try {
+			if(!paramsInitialized){
+				String workDirAbsPath = System.getProperty("user.dir");
+				System.out.println("Work directory absolute path : " + workDirAbsPath);
+				String configDir = workDirAbsPath + File.separator + "config";
+				System.out.println("Config Location [" + configDir + "]");
+				String configFile = configDir + File.separator + "3DSProperties.properties";
+	
+				Properties properties = new Properties();
+				FileInputStream fis = new FileInputStream(configFile);
+				properties.load(fis);
+				fis.close();
+				caPropMap = new HashMap<>();
+				for (String name : properties.stringPropertyNames())
+					caPropMap.put(name, properties.getProperty(name));
+				
+				TDSDao tDSDao = new TDSDao();
+	    		enableDecryption = tDSDao.getMTDConfig("EnableDecryption", AppParams.getCaPropMap());
+	    		paramsInitialized = true;
+			}
+
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
 	
 	public void initialize(){
 		
@@ -139,6 +184,14 @@ public class AppParams {
 
 	public String gettDSVerifyAPIURL() {
 		return tDSVerifyAPIURL;
+	}
+
+	public static Map<String, String> getCaPropMap() {
+		return caPropMap;
+	}
+
+	public static String getEnableDecryption() {
+		return enableDecryption;
 	}
 
 }

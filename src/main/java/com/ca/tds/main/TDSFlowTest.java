@@ -1,6 +1,7 @@
 package com.ca.tds.main;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
@@ -13,6 +14,7 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
+import com.ca.tds.dao.TDSDao;
 import com.ca.tds.utilityfiles.AssertionUtility;
 import com.ca.tds.utilityfiles.CommonUtil;
 import com.ca.tds.utilityfiles.JsonUtility;
@@ -29,10 +31,12 @@ public class TDSFlowTest extends BaseClassTDS{
 	
 	ITestContext testContext;
 	String testCaseID;
+	String enableEncryption;
 	
-	public TDSFlowTest(ITestContext testContext, String testCaseID){
+	public TDSFlowTest(ITestContext testContext, String testCaseID, String enableEncryption){
 		this.testContext = testContext;
 		this.testCaseID = testCaseID;
+		this.enableEncryption = enableEncryption;
 	}
 	
 	@Test(priority = 0)
@@ -43,7 +47,10 @@ public class TDSFlowTest extends BaseClassTDS{
 		String testFileName = testContext.getCurrentXmlTest().getParameter(
 				"TDSMethodURL");
 		if(!testScenarioData.containsKey(testFileName)){
-			testScenarioData.put(testFileName, new CommonUtil().getInputDataFromExcel(testContext, "TDSExcelFile", testFileName, null));
+			if(enableEncryption != null && "true".equalsIgnoreCase(enableEncryption))
+				testScenarioData.put(testFileName, new CommonUtil().getInputDataFromExcel(testContext, "TDSExcelFileE", testFileName, null));
+			else
+				testScenarioData.put(testFileName, new CommonUtil().getInputDataFromExcel(testContext, "TDSExcelFileC", testFileName, null));
 		}
 		
 		Map<String, String> testCaseData = testScenarioData.get(testFileName).get(testCaseID);
@@ -105,7 +112,10 @@ public class TDSFlowTest extends BaseClassTDS{
 			String testFileName = testContext.getCurrentXmlTest().getParameter(
 					"PreAreq");
 			if(!testScenarioData.containsKey(testFileName)){
-				testScenarioData.put(testFileName, new CommonUtil().getInputDataFromExcel(testContext, "TDSExcelFile", testFileName, null));
+				if(enableEncryption != null && "true".equalsIgnoreCase(enableEncryption))
+					testScenarioData.put(testFileName, new CommonUtil().getInputDataFromExcel(testContext, "TDSExcelFileE", testFileName, null));
+				else
+					testScenarioData.put(testFileName, new CommonUtil().getInputDataFromExcel(testContext, "TDSExcelFileC", testFileName, null));
 			}
 			Map<String, String> testCaseData = testScenarioData.get(testFileName).get(testCaseID);
 			extentTestInit(testCaseID, testCaseData.get("TestCaseName"), "PreAReq");
@@ -146,16 +156,21 @@ public class TDSFlowTest extends BaseClassTDS{
 				JsonUtility.validate(apiResponse.toString(), "resource/schema/ares/ares_schema_n.json");
 			}
 			
-			
-			
-			if(apiResponse.has("transStatus") && "C".equalsIgnoreCase(apiResponse.getString("transStatus"))){
-				aResMap.put(testCaseID, apiResponse);
-			}
+			/*if(hexEncode){
+				String dsTransID = apiResponse.getString("dsTransID");
+				dsTransID = dsTransID.replaceAll("-", "");
+				dsTransID = "02010000"+dsTransID;
+				apiResponse.put("dsTransID", dsTransID);
+			}*/
 			
 			SoftAssert sa = new SoftAssert();
 			String validateDBParams = caPropMap.get("validateDBParams");
 			assertAres(testCaseData, apiResponse, sa, validateDBParams);
 			sa.assertAll();
+			
+			if(apiResponse.has("transStatus") && "C".equalsIgnoreCase(apiResponse.getString("transStatus"))){
+				aResMap.put(testCaseID, apiResponse);
+			}
 
 		}catch(ValidationException ve){
 			Assert.fail("ARes response json schema validation failed.<br>"+ve.getErrorMessage()+"<br> api response : "+apiResponse);
@@ -166,15 +181,19 @@ public class TDSFlowTest extends BaseClassTDS{
     }
      
     @Test(priority = 2)
-    @Assumption(methods = {"checkChallenge"})
+    @Assumption(methods = {"rReqRequired"})
     public void rReqTest() {
 	
 		JSONObject apiResponse=null;
 		try {
-			String testFileName = testContext.getCurrentXmlTest().getParameter(
-					"RReq");	
+		String testFileName = testContext.getCurrentXmlTest().getParameter(
+					"RReq");
+		
 		if(!testScenarioData.containsKey(testFileName)){
-			testScenarioData.put(testFileName, new CommonUtil().getInputDataFromExcel(testContext, "TDSExcelFile", testFileName, null));
+			if(enableEncryption != null && "true".equalsIgnoreCase(enableEncryption))
+				testScenarioData.put(testFileName, new CommonUtil().getInputDataFromExcel(testContext, "TDSExcelFileE", testFileName, null));
+			else
+				testScenarioData.put(testFileName, new CommonUtil().getInputDataFromExcel(testContext, "TDSExcelFileC", testFileName, null));
 		}
 		Map<String, String> testCaseData = testScenarioData.get(testFileName).get(testCaseID);
 		extentTestInit(testCaseID, testCaseData.get("TestCaseName"),"RReq");
@@ -221,7 +240,12 @@ public class TDSFlowTest extends BaseClassTDS{
 				reqJson.put(replaceTag, aResJSON.getString(replaceTag));
 			}
 		}
-		
+		TDSDao tDSDao = new TDSDao();
+		List<HashMap<String,Object>> tdsMethodListFromDB = tDSDao.getAuthLogDataByTDSTransID(threeDSServerTransIDMap.get(testCaseData.get("TestCaseID")), caPropMap);
+		HashMap<String, Object> tdsMethodDBData = tdsMethodListFromDB.get(0);
+		reqJson.put("dsTransID", tdsMethodDBData.get("DSTRANSID"));
+		reqJson.put("acsTransID", tdsMethodDBData.get("ACSTRANSID"));
+		reqJson.put("threeDSServerTransID", tdsMethodDBData.get("THREEDSSERVERTRANSID"));
 		jsonRequest = reqJson.toString();
 		System.out.println("================================================================");
 		System.out.println("RReq Json Request ***:\n" + jsonRequest);
@@ -231,20 +255,17 @@ public class TDSFlowTest extends BaseClassTDS{
 		apiResponse=sendHttpReq.httpPost(jsonRequest, caPropMap.get("ResultRequestAPI"));
 		if(apiResponse == null){
 			parentTest.log(LogStatus.FAIL, "3DS server is not responding at this moment");
-			Assert.fail("3DS server is not responding at this moment");
-			
+			Assert.fail("3DS server is not responding at this moment");	
 			return;
 		}
 		apiresponse = apiResponse.toString();
 		if("P".equalsIgnoreCase(testCaseData.get("Test Case type")) && "Erro".equalsIgnoreCase(apiResponse.getString("messageType"))){
 			parentTest.log(LogStatus.FAIL, "errorComponent: "+apiResponse.getString("errorComponent")+", errorCode: "+apiResponse.getString("errorComponent")+", errorDescription:"+apiResponse.getString("errorDescription"));
-			Assert.fail("errorComponent: "+apiResponse.getString("errorComponent")+", errorCode: "+apiResponse.getString("errorComponent")+", errorDescription:"+apiResponse.getString("errorDescription"));
-			
+			Assert.fail("errorComponent: "+apiResponse.getString("errorComponent")+", errorCode: "+apiResponse.getString("errorComponent")+", errorDescription:"+apiResponse.getString("errorDescription"));		
 			return;
 		}else if("N".equalsIgnoreCase(testCaseData.get("Test Case type")) && !"Erro".equalsIgnoreCase(apiResponse.getString("messageType"))){
 			parentTest.log(LogStatus.FAIL, "Expected to Fail");
-			Assert.fail("Expected to Fail");
-			
+			Assert.fail("Expected to Fail");			
 			return;
 		}else if("P".equalsIgnoreCase(testCaseData.get("Test Case type"))){
 			JsonUtility.validate(apiResponse.toString(), "resource/schema/rres/rres_schema.json");
@@ -267,7 +288,7 @@ public class TDSFlowTest extends BaseClassTDS{
 	}
 
     @Test(priority = 3)
-    @Assumption(methods = {"checkChallenge"})
+    @Assumption(methods = {"verifyApiRequired"})
     public void verifyAPI() {
 	
 		JSONObject apiResponse=null;
@@ -275,7 +296,10 @@ public class TDSFlowTest extends BaseClassTDS{
 			String testFileName = testContext.getCurrentXmlTest().getParameter(
 					"VerifyAPI");
 		if(!testScenarioData.containsKey(testFileName)){
-			testScenarioData.put(testFileName, new CommonUtil().getInputDataFromExcel(testContext, "TDSExcelFile", testFileName, null));
+			if(enableEncryption != null && "true".equalsIgnoreCase(enableEncryption))
+				testScenarioData.put(testFileName, new CommonUtil().getInputDataFromExcel(testContext, "TDSExcelFileE", testFileName, null));
+			else
+				testScenarioData.put(testFileName, new CommonUtil().getInputDataFromExcel(testContext, "TDSExcelFileC", testFileName, null));
 		}
 		Map<String, String> testCaseData = testScenarioData.get(testFileName).get(testCaseID);
 		extentTestInit(testCaseID, testCaseData.get("TestCaseName"), "VerifyAPI");
@@ -380,10 +404,31 @@ public class TDSFlowTest extends BaseClassTDS{
 
 	}
     
-    public boolean checkChallenge(){
+    public boolean rReqRequired(){
     	
     	if(aResMap == null || !aResMap.has(testCaseID)){
 			System.out.println("============ No challenges from downstream to test RReq for test case id : "+testCaseID+" ================");
+			return false;
+		}
+    	String testFileName = testContext.getCurrentXmlTest().getParameter(
+				"RReq");
+		if(testFileName == null){
+			System.out.println("============ No RReq file configured in xml to test RReq for test case id : "+testCaseID+" ================");
+			return false;
+		}
+    	return true;
+    }
+    
+    public boolean verifyApiRequired(){
+    	
+    	if(aResMap == null || !aResMap.has(testCaseID)){
+			System.out.println("============ No challenges from downstream to test RReq for test case id : "+testCaseID+" ================");
+			return false;
+		}
+    	String testFileName = testContext.getCurrentXmlTest().getParameter(
+				"VerifyAPI");
+		if(testFileName == null){
+			System.out.println("============ No Verify file configured in xml to test Verify API for test case id : "+testCaseID+" ================");
 			return false;
 		}
     	return true;

@@ -1,8 +1,5 @@
 package com.ca.tds.main;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.text.DateFormat;
@@ -13,7 +10,6 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Properties;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -24,6 +20,7 @@ import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.BeforeTest;
 import org.testng.asserts.SoftAssert;
 
 import com.ca.tds.dao.TDSDao;
@@ -34,12 +31,14 @@ import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
+
+
 public class BaseClassTDS {
 	
 	protected boolean hexEncode = false;
 	protected static ExtentReports extent;
 	public static ExtentTest parentTest = null;
-	protected static Map<String, String> caPropMap = null;
+	
 	protected static boolean startchild = false;
 	protected String apiresponse = null;
 	static AppParams appParams;
@@ -53,6 +52,8 @@ public class BaseClassTDS {
 	protected static int TRANSACTIONLOOPCOUNT = 0;
 	public static JSONObject aResMap = new JSONObject();
 	public static JSONArray aResArr = new JSONArray();
+	
+	protected static Map<String, String> caPropMap = null;
 
 	@BeforeSuite
 	public void beforeSuite(ITestContext testContext) {
@@ -60,20 +61,32 @@ public class BaseClassTDS {
 		Date date = new Date();
 		System.out.println("==========+++++++++Execution Started at : "+dateFormat.format(date)+"+++++++++==========");
 		try {
-			initialiseAdminProperties();
+			AppParams.initialiseAdminProperties();
 			initializeApplicationParams();
+			caPropMap = AppParams.getCaPropMap();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 		CommonUtil cu = new CommonUtil();
-		testScenarioData.put("TEST SCENARIOS", cu.getInputDataFromExcel(testContext, "TDSExcelFile",
+		String enableEncryption = AppParams.getEnableDecryption();
+		if(enableEncryption != null && "true".equalsIgnoreCase(enableEncryption))
+			testScenarioData.put("TEST SCENARIOS", cu.getInputDataFromExcel(testContext, "TDSExcelFileE",
 				"TEST SCENARIOS", "API Name"));
+		else
+			testScenarioData.put("TEST SCENARIOS", cu.getInputDataFromExcel(testContext, "TDSExcelFileC",
+					"TEST SCENARIOS", "API Name"));
 		initialiseReport(testContext);
 
 	}
 
+	@BeforeTest
+	public void beforeClass(){
+		System.out.println("==== Before Test =======");
+		threeDSServerTransIDMap.clear();
+	}
+	
 	@AfterSuite
-	public void endSuite() {
+	public void endSuite() {		
 		System.out.println("====+++++Execution Completed Kindly verify the Reports for the summary +++++=======");
 	}
 
@@ -121,14 +134,6 @@ public class BaseClassTDS {
 		return null;
 	}
 
-	public String getAdminPropertyValue(String parameterName) {
-		if (parameterName != null && caPropMap.containsKey(parameterName))
-			return caPropMap.get(parameterName);
-		else
-			System.out.println(parameterName + " : no such property exists");
-		return null;
-	}
-
 	@AfterMethod
 	public void afterMethodProcessing(ITestResult testResult){
 		String message = "Test Passed";
@@ -167,27 +172,12 @@ public class BaseClassTDS {
 		}
 	}
 
-	private void initialiseAdminProperties() throws IOException {
-		try {
-			String workDirAbsPath = System.getProperty("user.dir");
-			System.out.println("Work directory absolute path : " + workDirAbsPath);
-			String configDir = workDirAbsPath + File.separator + "config";
-			System.out.println("Config Location [" + configDir + "]");
-			String configFile = configDir + File.separator + "3DSProperties.properties";
-
-			Properties properties = new Properties();
-			FileInputStream fis = new FileInputStream(configFile);
-			properties.load(fis);
-			fis.close();
-			caPropMap = new HashMap<>();
-			for (String name : properties.stringPropertyNames())
-				caPropMap.put(name, properties.getProperty(name));
-
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+	public String getAdminPropertyValue(String parameterName) {
+		if (parameterName != null && caPropMap.containsKey(parameterName))
+			return caPropMap.get(parameterName);
+		else
+			System.out.println(parameterName + " : no such property exists");
+		return null;
 	}
 	
 	public void threeDSFieldAssert(JSONObject apiResponse, Map<String,String> testCaseData, 
@@ -340,7 +330,12 @@ public class BaseClassTDS {
 			
 			threeDSFieldAssert(apiResponse, testCaseData, "messageType", sa, null);
 			threeDSFieldAssert(apiResponse, testCaseData, "threeDSServerTransID", sa, tdsMethodDBData.get("THREEDSSERVERTRANSID"));
-			threeDSFieldAssert(apiResponse, testCaseData, "dsTransID", sa, tdsMethodDBData.get("DSTRANSID"));
+			String dsTransID = tdsMethodDBData.get("DSTRANSID").toString();
+			if(hexEncode){			
+				dsTransID = dsTransID.replaceAll("-", "");
+				dsTransID = "02010000"+dsTransID;
+			}
+			threeDSFieldAssert(apiResponse, testCaseData, "dsTransID", sa, dsTransID);
 			threeDSFieldAssert(apiResponse, testCaseData, "acsTransID", sa, tdsMethodDBData.get("ACSTRANSID"));
 			threeDSFieldAssert(apiResponse, testCaseData, "eci", sa, tdsMethodDBData.get("ECI"));
 			threeDSFieldAssert(apiResponse, testCaseData, "messageVersion", sa, tdsMethodDBData.get("MESSAGEVERSION"));
