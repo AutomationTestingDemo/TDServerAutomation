@@ -8,49 +8,49 @@
             "description":"acsOperatorID",
             "type": "string",
             "maxLength":32,
-              "minLength":1
+              "minLength":15
         },
         "acsReferenceNumber":{
             "description":"acsReferenceNumber",
             "type": "string",
             "maxLength":32,
-              "minLength":1
+              "minLength":15
         },
         "acsTransID":{
             "description":"acsTransID",
             "type": "string",
             "maxLength":36,
-              "minLength":1
+              "minLength":36
         },
         "authenticationValue":{
             "description":"authenticationValue",
             "type": "string",
-            "maxLength":28,
-              "minLength":1
+            "maxLength":41,
+              "minLength":28
         },
         "callerTxnRefID":{
             "description":"callerTxnRefID",
             "type": "string",
             "maxLength":36,
-              "minLength":1
+              "minLength":0
         },
         "dsReferenceNumber":{
             "description":"dsReferenceNumber",
             "type": "string",
             "maxLength":32,
-              "minLength":1
+              "minLength":17
         },
         "dsTransID":{
             "description":"dsTransID",
             "type": "string",
-            "maxLength":36,
-              "minLength":1
+            "maxLength":40,
+              "minLength":36
         },
         "eci":{
             "description":"eci",
             "type": "string",
             "maxLength":2,
-              "minLength":1
+              "minLength":2
         },
         "messageType":{
             "description":"messageType",
@@ -68,7 +68,7 @@
             "description":"threeDSServerTransID",
             "type": "string",
             "maxLength":36,
-              "minLength":1
+              "minLength":36
         },
         "transStatus":{
             "description":"transStatus",

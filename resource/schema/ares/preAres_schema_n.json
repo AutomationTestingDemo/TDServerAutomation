@@ -20,7 +20,7 @@
             "description":"errorCode",
             "type": "string",
             "maxLength":3,
-              "minLength":1
+              "minLength":3
         },
         "errorDetail":{
             "description":"errorDetail",
@@ -32,7 +32,7 @@
             "description":"errorMessageType",
             "type": "string",
             "maxLength":19,
-              "minLength":1
+              "minLength":4
         },
         "messageVersion":{
             "description":"messageVersion",
@@ -43,20 +43,20 @@
         "callerTxnRefID":{
             "description":"callerTxnRefID",
             "type": "string",
-            "maxLength":256,
-              "minLength":1
+            "maxLength":36,
+              "minLength":0
         },
         "threeDSServerTransID":{
             "description":"threeDSServerTransID",
             "type": "string",
             "maxLength":36,
-              "minLength":1
+              "minLength":36
         },
         "messageType":{
             "description":"messageType",
             "type": "string",
             "maxLength":4,
-              "minLength":1
+              "minLength":4
         }
         
     }

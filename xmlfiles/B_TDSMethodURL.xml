@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="TestSuite" verbose="1" parallel="instances" group-by-instances="true">
+	<parameter name="TDSExcelFileC" value="data/3DS_ClearCardTestData.xlsx" />
+	<parameter name="TDSExcelFileE" value="data/3DS_EncryptedCardTestData.xlsx" />
+
+	<test name="VISA::Clear Card::Browser::TDSMethodURL flow" preserve-order="true" >
+		<parameter name="ExcelSheetVerify" value="1_AMURL" />
+		<parameter name="TDSMethodURL" value="1_AMURL" />
+		<parameter name="ReportTitle" value="3DSAutomationReportOfBrowser" />
+		<classes>
+			<class name="com.ca.tds.main.TDSMethodURL_TC"/>
+		</classes>
+	</test>
+	 <test name="AMEX::Clear Card::Browser::TDSMethodURL flow" preserve-order="true" >
+		<parameter name="ExcelSheetVerify" value="1_MMURL" />
+		<parameter name="TDSMethodURL" value="1_MMURL" />
+		<parameter name="ReportTitle" value="3DSAutomationReportOfBrowser" />
+		<classes>
+			<class name="com.ca.tds.main.TDSMethodURL_TC"/>
+		</classes>
+	</test>
+	
+	<test name="MasterCard::Clear Card::Browser::TDSMethodURL flow" preserve-order="true" >
+		<parameter name="ExcelSheetVerify" value="1_VMURL" />
+		<parameter name="TDSMethodURL" value="1_VMURL" />
+		<parameter name="ReportTitle" value="3DSAutomationReportOfBrowser" />
+		<classes>
+			<class name="com.ca.tds.main.TDSMethodURL_TC"/>
+		</classes>
+	</test> 
+</suite>

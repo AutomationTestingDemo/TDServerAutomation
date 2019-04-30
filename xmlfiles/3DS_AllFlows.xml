@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="TestSuite" verbose="1" parallel="instances" group-by-instances="true">
+	<parameter name="TDSExcelFileC" value="data/3DS_ClearCardTestData.xlsx" />
+	<parameter name="TDSExcelFileE" value="data/3DS_EncryptedCardTestData.xlsx" />
+	
+		<test name="VISA::Clear Card::Browser::TDSMethodURL flow" preserve-order="true" >
+		<parameter name="ExcelSheetVerify" value="1_AMURL" />
+		<parameter name="TDSMethodURL" value="1_AMURL" />
+		<parameter name="ReportTitle" value="3DSAutomationReportOfBrowser" />
+		<classes>
+			<class name="com.ca.tds.main.TDSMethodURL_TC"/>
+		</classes>
+	</test>
+	 <test name="AMEX::Clear Card::Browser::TDSMethodURL flow" preserve-order="true" >
+		<parameter name="ExcelSheetVerify" value="1_MMURL" />
+		<parameter name="TDSMethodURL" value="1_MMURL" />
+		<parameter name="ReportTitle" value="3DSAutomationReportOfBrowser" />
+		<classes>
+			<class name="com.ca.tds.main.TDSMethodURL_TC"/>
+		</classes>
+	</test>
+	
+	<test name="MasterCard::Clear Card::Browser::TDSMethodURL flow" preserve-order="true" >
+		<parameter name="ExcelSheetVerify" value="1_VMURL" />
+		<parameter name="TDSMethodURL" value="1_VMURL" />
+		<parameter name="ReportTitle" value="3DSAutomationReportOfBrowser" />
+		<classes>
+			<class name="com.ca.tds.main.TDSMethodURL_TC"/>
+		</classes>
+	</test> 
+
+	<test name="VISA::Clear Card::Browser::AReq flow" preserve-order="true" >
+		<parameter name="ExcelSheetVerify" value="2_AMURL" />
+		<parameter name="TDSMethodURL" value="2_AMURL" />
+		<parameter name="PreAreq" value="2_AAREQ" />
+		<parameter name="ReportTitle" value="3DSAutomationReportOfBrowser" />
+		<classes>
+			<class name="com.ca.tds.main.TDSFactory"/>
+		</classes>
+	</test>
+	<test name="AMEX::Clear Card::Browser::AReq flow" preserve-order="true" >
+		<parameter name="ExcelSheetVerify" value="2_MMURL" />
+		<parameter name="TDSMethodURL" value="2_MMURL" />
+		<parameter name="PreAreq" value="2_MAREQ" />
+		<parameter name="ReportTitle" value="3DSAutomationReportOfBrowser" />
+		<classes>
+			<class name="com.ca.tds.main.TDSFactory"/>
+		</classes>
+	</test>
+	
+	<test name="MasterCard::Clear Card::Browser::AReq flow" preserve-order="true" >
+		<parameter name="ExcelSheetVerify" value="2_VMURL" />
+		<parameter name="TDSMethodURL" value="2_VMURL" />
+		<parameter name="PreAreq" value="2_VAREQ" />
+		<parameter name="ReportTitle" value="3DSAutomationReportOfBrowser" />
+		<classes>
+			<class name="com.ca.tds.main.TDSFactory"/>
+		</classes>
+	</test>
+	
+	<test name="AMEX::Clear Card::Browser::RReq flow" preserve-order="true" >
+		<parameter name="ExcelSheetVerify" value="3_AMURL_R" />
+		<parameter name="TDSMethodURL" value="3_AMURL_R" />
+		<parameter name="PreAreq" value="3_AAREQ_R" />
+		<parameter name="RReq" value="3_RREQ"/>
+		<parameter name="ReportTitle" value="3DSAutomationReportOfBrowser" />
+		<classes>
+			<class name="com.ca.tds.main.TDSFactory"/>
+		</classes>
+	</test>
+	
+	<test name="MASTER::Clear Card::Browser::RReq flow" preserve-order="true" >
+		<parameter name="ExcelSheetVerify" value="3_MMURL_R" />
+		<parameter name="TDSMethodURL" value="3_MMURL_R" />
+		<parameter name="PreAreq" value="3_MAREQ_R" />
+		<parameter name="RReq" value="3_RREQ"/>
+		<parameter name="ReportTitle" value="3DSAutomationReportOfBrowser" />
+		<classes>
+			<class name="com.ca.tds.main.TDSFactory"/>
+		</classes>
+	</test>
+	
+	<test name="VISA::Clear Card::Browser::RReq flow" preserve-order="true" >
+		<parameter name="ExcelSheetVerify" value="3_VMURL_R" />
+		<parameter name="TDSMethodURL" value="3_VMURL_R" />
+		<parameter name="PreAreq" value="3_VAREQ_R" />
+		<parameter name="RReq" value="3_RREQ"/>
+		<parameter name="ReportTitle" value="3DSAutomationReportOfBrowser" />
+		<classes>
+			<class name="com.ca.tds.main.TDSFactory"/>
+		</classes>
+	</test>
+	
+		<test name="AMEX::Clear Card::Browser::Verify flow" preserve-order="true" >
+		<parameter name="ExcelSheetVerify" value="4_AMURL_V" />
+		<parameter name="TDSMethodURL" value="4_AMURL_V" />
+		<parameter name="PreAreq" value="4_AAREQ_V" />
+		<parameter name="RReq" value="4_RREQ"/>
+		<parameter name="VerifyAPI" value="4_VERIFY" />
+		<parameter name="ReportTitle" value="3DSAutomationReportOfBrowser" />
+		<classes>
+			<class name="com.ca.tds.main.TDSFactory"/>
+		</classes>
+	</test>
+	
+	<test name="MASTER::Clear Card::Browser::Verify flow" preserve-order="true" >
+		<parameter name="ExcelSheetVerify" value="4_MMURL_V" />
+		<parameter name="TDSMethodURL" value="4_MMURL_V" />
+		<parameter name="PreAreq" value="4_MAREQ_V" />
+		<parameter name="RReq" value="4_RREQ"/>
+		<parameter name="VerifyAPI" value="4_VERIFY" />
+		<parameter name="ReportTitle" value="3DSAutomationReportOfBrowser" />
+		<classes>
+			<class name="com.ca.tds.main.TDSFactory"/>
+		</classes>
+	</test>
+	
+	<test name="VISA::Clear Card::Browser::Verify flow" preserve-order="true" >
+		<parameter name="ExcelSheetVerify" value="4_VMURL_V" />
+		<parameter name="TDSMethodURL" value="4_VMURL_V" />
+		<parameter name="PreAreq" value="4_VAREQ_V" />
+		<parameter name="RReq" value="4_RREQ"/>
+		<parameter name="VerifyAPI" value="4_VERIFY" />
+		<parameter name="ReportTitle" value="3DSAutomationReportOfBrowser" />
+		<classes>
+			<class name="com.ca.tds.main.TDSFactory"/>
+		</classes>
+	</test>
+	
+</suite>

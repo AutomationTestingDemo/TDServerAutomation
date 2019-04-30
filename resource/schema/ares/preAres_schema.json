@@ -25,11 +25,13 @@
       "description": "Caller Transaction Ref ID",
       "type": "string",
       "maxLength":40,
-      "minLength":5
+      "minLength":0
     },
     "threeDSServerTransID": {
       "description": "TDS Server Trans ID",
-      "type": "string"
+      "type": "string",
+      "maxLength":36,
+      "minLength":36
     }
     
     },
@@ -37,7 +39,6 @@
       "messageType",
       "threeDSMethodURL",
       "messageVersion",
-      "callerTxnRefID",
       "threeDSServerTransID"
     ]
   

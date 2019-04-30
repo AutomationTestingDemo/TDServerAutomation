@@ -39,5 +39,12 @@ public class AssertionUtility {
 		jsonRequest = reqJson.toString();
 		return jsonRequest;
 	}
+	
+	public static boolean hexEncodingNeeded(String acctNumber){
+		if(acctNumber != null && acctNumber.startsWith("3")){
+			return true;
+		}
+		return false;
+	}
 
 }

@@ -25,7 +25,7 @@
 		"authenticationValue": {
 			"description": "authenticationValue",
 			"type": "string",
-			"maxLength": 28,
+			"maxLength": 40,
 			"minLength": 28
 		},
 		"transStatus": {
