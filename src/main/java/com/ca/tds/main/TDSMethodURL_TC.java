@@ -9,6 +9,8 @@ import org.testng.ITestContext;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
+
+import com.ca.tds.utilityfiles.AppParams;
 import com.ca.tds.utilityfiles.AssertionUtility;
 import com.ca.tds.utilityfiles.CommonUtil;
 import com.ca.tds.utilityfiles.JsonUtility;
@@ -27,9 +29,15 @@ public class TDSMethodURL_TC extends BaseClassTDS {
 
 			extentTestInit(testCaseData);
 			CommonUtil cu = new CommonUtil();
-			Map<String, Map<String, String>> testScenarioData = cu.getInputDataFromExcel(testContext, "TDSExcelFile",
+			String enableEncryption = AppParams.getEnableDecryption();
+			Map<String, Map<String, String>> testScenarioData= null;
+			if(enableEncryption != null && "true".equalsIgnoreCase(enableEncryption)){
+				testScenarioData = cu.getInputDataFromExcel(testContext, "TDSExcelFileE",
 					"TEST SCENARIOS", "API Name");
-			
+			}else{
+				testScenarioData = cu.getInputDataFromExcel(testContext, "TDSExcelFileC",
+						"TEST SCENARIOS", "API Name");
+			}
 			Map<String, String> apiTestdata = testScenarioData.get("Pre-Areq Request");
 			String jsonRequest = apiTestdata.get("Request Json");
 			
@@ -77,7 +85,12 @@ public class TDSMethodURL_TC extends BaseClassTDS {
 	@DataProvider
 	public Object[][] DataProviderTDSMethodURL(ITestContext testContext) {
 		try {
-			return new CommonUtil().getInputData(testContext, "TDSExcelFile", "ExcelSheetVerify");
+			String enableEncryption = AppParams.getEnableDecryption();
+			if(enableEncryption != null && "true".equalsIgnoreCase(enableEncryption)){
+				return new CommonUtil().getInputData(testContext, "TDSExcelFileE", "ExcelSheetVerify");
+			}else{
+				return new CommonUtil().getInputData(testContext, "TDSExcelFileC", "ExcelSheetVerify");
+			}
 		} catch (Exception e) {
 			System.out.println("Error while reading data from excel sheet");
 		}
