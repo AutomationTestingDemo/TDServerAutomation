@@ -287,7 +287,7 @@ public class BaseClassTDS {
 			threeDSFieldAssert(apiResponse, testCaseData, "threeDSServerTransID", sa, tdsMethodDBData.get("THREEDSSERVERTRANSID"));
 			threeDSFieldAssert(apiResponse, testCaseData, "errorCode", sa, tdsMethodDBData.get("ERRORCODE"));
 			threeDSFieldAssert(apiResponse, testCaseData, "errorComponent", sa, tdsMethodDBData.get("ERRORCOMPONENT"));
-			threeDSFieldAssert(apiResponse, testCaseData, "errorDescription", sa, null);
+			threeDSFieldAssert(apiResponse, testCaseData, "errorDescription", sa, tdsMethodDBData.get("ERRORDESCRIPTION"));
 			threeDSFieldAssert(apiResponse, testCaseData, "errorMessageType", sa, tdsMethodDBData.get("ERRORMESSAGETYPE"));
 			threeDSFieldAssert(apiResponse, testCaseData, "errorDetail", sa, tdsMethodDBData.get("ERRORDETAIL"));
 			
@@ -373,7 +373,7 @@ public class BaseClassTDS {
 			threeDSFieldAssert(apiResponse, testCaseData, "threeDSServerTransID", sa, tdsMethodDBData.get("THREEDSSERVERTRANSID"));
 			threeDSFieldAssert(apiResponse, testCaseData, "errorCode", sa, tdsMethodDBData.get("ERRORCODE"));
 			threeDSFieldAssert(apiResponse, testCaseData, "errorComponent", sa, tdsMethodDBData.get("ERRORCOMPONENT"));
-			threeDSFieldAssert(apiResponse, testCaseData, "errorDescription", sa, null);
+			threeDSFieldAssert(apiResponse, testCaseData, "errorDescription", sa, tdsMethodDBData.get("ERRORDESCRIPTION"));
 			threeDSFieldAssert(apiResponse, testCaseData, "errorMessageType", sa, tdsMethodDBData.get("ERRORMESSAGETYPE"));
 			threeDSFieldAssert(apiResponse, testCaseData, "errorDetail", sa, tdsMethodDBData.get("ERRORDETAIL"));
 			
@@ -450,7 +450,7 @@ public class BaseClassTDS {
 			threeDSFieldAssert(apiResponse, testCaseData, "threeDSServerTransID", sa, tdsMethodDBData.get("THREEDSSERVERTRANSID"));
 			threeDSFieldAssert(apiResponse, testCaseData, "errorCode", sa, tdsMethodDBData.get("ERRORCODE"));
 			threeDSFieldAssert(apiResponse, testCaseData, "errorComponent", sa, tdsMethodDBData.get("ERRORCOMPONENT"));
-			threeDSFieldAssert(apiResponse, testCaseData, "errorDescription", sa);
+			threeDSFieldAssert(apiResponse, testCaseData, "errorDescription", sa, tdsMethodDBData.get("ERRORDESCRIPTION"));
 			threeDSFieldAssert(apiResponse, testCaseData, "errorMessageType", sa, tdsMethodDBData.get("ERRORMESSAGETYPE"));
 			threeDSFieldAssert(apiResponse, testCaseData, "errorDetail", sa, tdsMethodDBData.get("ERRORDETAIL"));
 			
@@ -520,7 +520,7 @@ public class BaseClassTDS {
 			threeDSFieldAssert(apiResponse, testCaseData, "threeDSServerTransID", sa, tdsMethodDBData.get("THREEDSSERVERTRANSID"));
 			threeDSFieldAssert(apiResponse, testCaseData, "errorCode", sa, tdsMethodDBData.get("ERRORCODE"));
 			threeDSFieldAssert(apiResponse, testCaseData, "errorComponent", sa, tdsMethodDBData.get("ERRORCOMPONENT"));
-			threeDSFieldAssert(apiResponse, testCaseData, "errorDescription", sa);
+			threeDSFieldAssert(apiResponse, testCaseData, "errorDescription", sa, tdsMethodDBData.get("ERRORDESCRIPTION"));
 			threeDSFieldAssert(apiResponse, testCaseData, "errorMessageType", sa, tdsMethodDBData.get("ERRORMESSAGETYPE"));
 			threeDSFieldAssert(apiResponse, testCaseData, "errorDetail", sa, tdsMethodDBData.get("ERRORDETAIL"));
 			
