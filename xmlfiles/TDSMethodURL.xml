@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="TDSMethodURLTestSuite" verbose="1" parallel="instances" group-by-instances="true">
+
+           <!--Based on EnableDecryption parameter in mtdconfig table of 3DSS DB one of the below excel file is picked  -->
+           
+	<parameter name="TDSExcelFileC" value="data/3DS_ClearCardTestData.xlsx" />
+	<parameter name="TDSExcelFileE" value="data/3DS_EncryptedCardTestData.xlsx" />
+
+
+          <!-- This Test is to perform the threedsMethodurl call for AMEX  -->
+          <!-- ExcelSheetVerify refers to the sheet name in the TestData workbook  -->
+          <!-- ReportTitle refers to the report name it is saved in TestResultReport folder  -->
+          <!-- class name refers to the class called to test the threedsMethodurl API-->
+         
+	<test name="AMEX ::Clear Card::Browser::TDSMethodURL flow" preserve-order="true" >
+		<parameter name="ExcelSheetVerify" value="1_AMURL" />
+		<parameter name="ReportTitle" value="3DSAutomationReportOfBrowser" />
+		<classes>
+			<class name="com.ca.tds.main.TDSMethodURL_TC"/>
+		</classes>
+	</test>
+	
+	      <!-- This Test is to perform the threedsMethodurl call for MasterCard  -->
+          <!-- ExcelSheetVerify refers to the sheet name in the TestData workbook  -->
+          <!-- ReportTitle refers to the report name it is saved in TestResultReport folder  -->
+          <!-- class name refers to the class called to test the threedsMethodurl API-->
+          
+	 <test name="MasterCard ::Clear Card::Browser::TDSMethodURL flow" preserve-order="true">
+		<parameter name="ExcelSheetVerify" value="1_MMURL" />
+		<parameter name="ReportTitle" value="3DSAutomationReportOfBrowser" />
+		<classes>
+			<class name="com.ca.tds.main.TDSMethodURL_TC"/>
+		</classes>
+	</test>
+	
+	
+	      <!-- This Test is to perform the threedsMethodurl call for VISA  -->
+	      <!-- ExcelSheetVerify refers to the sheet name in the TestData workbook  -->
+          <!-- ReportTitle refers to the report name it is saved in TestResultReport folder  -->
+          <!-- class name refers to the class called to test the threedsMethodurl API-->
+          
+	<!-- <test name="VISA ::Clear Card::Browser::TDSMethodURL flow" preserve-order="true">
+		<parameter name="ExcelSheetVerify" value="1_VMURL" />
+		<parameter name="ReportTitle" value="3DSAutomationReportOfBrowser" />
+		<classes>
+			<class name="com.ca.tds.main.TDSMethodURL_TC"/>
+		</classes>
+	</test>  -->
+		
+</suite>

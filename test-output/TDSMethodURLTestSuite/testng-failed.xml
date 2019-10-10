@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [TDSMethodURLTestSuite]" parallel="instances">
+  <parameter name="TDSExcelFileE" value="data/3DS_EncryptedCardTestData.xlsx"/>
+  <parameter name="TDSExcelFileC" value="data/3DS_ClearCardTestData.xlsx"/>
+  <test thread-count="5" name="AMEX ::Clear Card::Browser::TDSMethodURL flow(failed)" parallel="instances">
+    <parameter name="ReportTitle" value="3DSAutomationReportOfBrowser"/>
+    <parameter name="ExcelSheetVerify" value="1_AMURL"/>
+    <classes>
+      <class name="com.ca.tds.main.TDSMethodURL_TC">
+        <methods>
+          <include name="AfterTestClass"/>
+          <include name="BeforeClass"/>
+          <include name="AfterClass"/>
+          <include name="testArequestAPI" invocation-numbers="9 10 11 17 18 19 20 21"/>
+          <include name="beforeSuite"/>
+          <include name="afterMethodProcessing"/>
+          <include name="endSuite"/>
+          <include name="beforeTestClass"/>
+        </methods>
+      </class> <!-- com.ca.tds.main.TDSMethodURL_TC -->
+    </classes>
+  </test> <!-- AMEX ::Clear Card::Browser::TDSMethodURL flow(failed) -->
+  <test thread-count="5" name="MasterCard ::Clear Card::Browser::TDSMethodURL flow(failed)" parallel="instances">
+    <parameter name="ReportTitle" value="3DSAutomationReportOfBrowser"/>
+    <parameter name="ExcelSheetVerify" value="1_MMURL"/>
+    <classes>
+      <class name="com.ca.tds.main.TDSMethodURL_TC">
+        <methods>
+          <include name="AfterTestClass"/>
+          <include name="BeforeClass"/>
+          <include name="AfterClass"/>
+          <include name="testArequestAPI" invocation-numbers="9 10 11 17 18 19 20 21"/>
+          <include name="beforeSuite"/>
+          <include name="afterMethodProcessing"/>
+          <include name="endSuite"/>
+          <include name="beforeTestClass"/>
+        </methods>
+      </class> <!-- com.ca.tds.main.TDSMethodURL_TC -->
+    </classes>
+  </test> <!-- MasterCard ::Clear Card::Browser::TDSMethodURL flow(failed) -->
+</suite> <!-- Failed suite [TDSMethodURLTestSuite] -->

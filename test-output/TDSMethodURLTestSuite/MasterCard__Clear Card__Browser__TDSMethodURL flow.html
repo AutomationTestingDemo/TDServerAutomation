@@ -1,0 +1,470 @@
+<html>
+<head>
+<title>TestNG:  MasterCard::Clear Card::Browser::TDSMethodURL flow</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>MasterCard::Clear Card::Browser::TDSMethodURL flow</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>9/13/0</td>
+</tr><tr>
+<td>Started on:</td><td>Mon Sep 16 22:55:32 IST 2019</td>
+</tr>
+<tr><td>Total time:</td><td>49 seconds (49500 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.ca.tds.main.TDSMethodURL_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSMethodURL_TC<br>Parameters: org.testng.TestRunner@e1f7c49, {TestCaseID=_V004, TestCaseName=TDSMethodURL_Null_AccounttNumber, SanityFlag=Y, Test Case type=N, Expected-callerTxnRefID=NA, Expected-messageType=Erro, Expected-messageVersion=2.1.0, Expected-threeDSMethodURL=NA, Expected-errorCode=302, Expected-errorComponent=S, Expected-errorDescription=G, Expected-errorDetail=G, Expected-threeDSServerTransID=NA, #acctNumber#=, #caMerchantID#=CA_EU, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #messageType#=ThreeDSMethodURLReq}</td>
+<td><div><pre>java.lang.AssertionError: Three DS method URL API response schema validation failed.&lt;br&gt;required key [threeDSServerTransID] not found&lt;br&gt; api response : {&quot;errorComponent&quot;:&quot;S&quot;,&quot;errorDescription&quot;:&quot;CA Merchant Server:: Data could not be decrypted by the receiving system due to technical or other reason&quot;,&quot;messageType&quot;:&quot;Erro&quot;,&quot;errorCode&quot;:&quot;302&quot;,&quot;errorDetail&quot;:&quot;Data Decryption Failure. &quot;,&quot;errorMessageType&quot;:&quot;ThreeDSMethodURLReq&quot;,&quot;messageVersion&quot;:&quot;2.1.0&quot;}
+	at com.ca.tds.main.TDSMethodURL_TC.testArequestAPI(TDSMethodURL_TC.java:84)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1949601816", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1949601816'><pre>java.lang.AssertionError: Three DS method URL API response schema validation failed.&lt;br&gt;required key [threeDSServerTransID] not found&lt;br&gt; api response : {&quot;errorComponent&quot;:&quot;S&quot;,&quot;errorDescription&quot;:&quot;CA Merchant Server:: Data could not be decrypted by the receiving system due to technical or other reason&quot;,&quot;messageType&quot;:&quot;Erro&quot;,&quot;errorCode&quot;:&quot;302&quot;,&quot;errorDetail&quot;:&quot;Data Decryption Failure. &quot;,&quot;errorMessageType&quot;:&quot;ThreeDSMethodURLReq&quot;,&quot;messageVersion&quot;:&quot;2.1.0&quot;}
+	at org.testng.Assert.fail(Assert.java:96)
+	at com.ca.tds.main.TDSMethodURL_TC.testArequestAPI(TDSMethodURL_TC.java:84)
+	at sun.reflect.GeneratedMethodAccessor28.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</pre></div></td>
+<td>2</td>
+<td>com.ca.tds.main.TDSMethodURL_TC@2038ae61</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSMethodURL_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSMethodURL_TC<br>Parameters: org.testng.TestRunner@e1f7c49, {TestCaseID=_V005, TestCaseName=TDSMethodURL_CallWith_InvalidAccountNumber, SanityFlag=Y, Test Case type=N, Expected-callerTxnRefID=NA, Expected-messageType=Erro, Expected-messageVersion=2.1.0, Expected-threeDSMethodURL=NA, Expected-errorCode=302, Expected-errorComponent=S, Expected-errorDescription=G, Expected-errorDetail=G, Expected-threeDSServerTransID=NA, #acctNumber#=bfDrzRKgOf8696zaVFVu9R7dNP9TAzNnW2ZQLn+pK6MuTFY4v02p0JmmW6Y7CgVup4bcSbK+RhW3EiuXzHMFXjzOr5Rxuc/KGSJG17R2206vIWE4EsTIpW47R9zaGGRQpIfaw9r7CzAj7uQLTcvzY9bNCtBiDh2BJC+WrEiH88ndawVsXE8CNyCg8HyRQ7fwbRBwKXXOaQWkRX/gYa53mG3ZxJD2c2VtoynZLyDH6ekRft1JkzsXXe2Ru4cCHcSuYf74EhJISIiDfqpXFIf5EmY5sihUdHC5+ggPgQc6zVqeVktebKQTTZbOoq5pDmAlnMJtfOfex7o20BD4/PedKQ==, #caMerchantID#=CA_EU, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #messageType#=ThreeDSMethodURLReq}</td>
+<td><div><pre>java.lang.AssertionError: Three DS method URL API response schema validation failed.&lt;br&gt;required key [threeDSServerTransID] not found&lt;br&gt; api response : {&quot;errorComponent&quot;:&quot;S&quot;,&quot;errorDescription&quot;:&quot;CA Merchant Server:: Data could not be decrypted by the receiving system due to technical or other reason&quot;,&quot;messageType&quot;:&quot;Erro&quot;,&quot;errorCode&quot;:&quot;302&quot;,&quot;errorDetail&quot;:&quot;Data Decryption Failure. &quot;,&quot;errorMessageType&quot;:&quot;ThreeDSMethodURLReq&quot;,&quot;messageVersion&quot;:&quot;2.1.0&quot;}
+	at com.ca.tds.main.TDSMethodURL_TC.testArequestAPI(TDSMethodURL_TC.java:84)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace232356520", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace232356520'><pre>java.lang.AssertionError: Three DS method URL API response schema validation failed.&lt;br&gt;required key [threeDSServerTransID] not found&lt;br&gt; api response : {&quot;errorComponent&quot;:&quot;S&quot;,&quot;errorDescription&quot;:&quot;CA Merchant Server:: Data could not be decrypted by the receiving system due to technical or other reason&quot;,&quot;messageType&quot;:&quot;Erro&quot;,&quot;errorCode&quot;:&quot;302&quot;,&quot;errorDetail&quot;:&quot;Data Decryption Failure. &quot;,&quot;errorMessageType&quot;:&quot;ThreeDSMethodURLReq&quot;,&quot;messageVersion&quot;:&quot;2.1.0&quot;}
+	at org.testng.Assert.fail(Assert.java:96)
+	at com.ca.tds.main.TDSMethodURL_TC.testArequestAPI(TDSMethodURL_TC.java:84)
+	at sun.reflect.GeneratedMethodAccessor28.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</pre></div></td>
+<td>1</td>
+<td>com.ca.tds.main.TDSMethodURL_TC@2038ae61</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSMethodURL_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSMethodURL_TC<br>Parameters: org.testng.TestRunner@e1f7c49, {TestCaseID=_V006, TestCaseName=TDSMethodURL_CallWith_AccountNumberLengthMoreThan36Chars, SanityFlag=Y, Test Case type=N, Expected-callerTxnRefID=NA, Expected-messageType=Erro, Expected-messageVersion=2.1.0, Expected-threeDSMethodURL=NA, Expected-errorCode=302, Expected-errorComponent=S, Expected-errorDescription=G, Expected-errorDetail=G, Expected-threeDSServerTransID=NA, #acctNumber#=s0y5t3xK9f8xCT5tV341CwlHy3c8zoKBNoJ7wGYHcFowMaXkl/VdVyf63L80iQQQ/RZd5j47ho+PLbhAz0wjdA+xcAErSu6y34fI9Z4zZ0HNOdT6zMQN8O6iWc/ebsBKixM0KSP3ywKqnZAS4cgyCQxxo8sVhY31jGmUXYNFAPcpbATFCvf0ywIcb7vLX/leqSlPdOiJoaOSlM8wb1cZ2ZzNCRrOWcJf95rRPC3X0oRPxSisC8sTmDVy7NQQ9gPmT7QwORC2TKNqLGgN5Xnc4pnuq3GKRcOQljbOhGdzj8XuVPKvEgYg+02Wc+EAmQU/ZdY1ogPqWKKwJrKewXaqYA==, #caMerchantID#=CA_EU, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #messageType#=ThreeDSMethodURLReq}</td>
+<td><div><pre>java.lang.AssertionError: Three DS method URL API response schema validation failed.&lt;br&gt;required key [threeDSServerTransID] not found&lt;br&gt; api response : {&quot;errorComponent&quot;:&quot;S&quot;,&quot;errorDescription&quot;:&quot;CA Merchant Server:: Data could not be decrypted by the receiving system due to technical or other reason&quot;,&quot;messageType&quot;:&quot;Erro&quot;,&quot;errorCode&quot;:&quot;302&quot;,&quot;errorDetail&quot;:&quot;Data Decryption Failure. &quot;,&quot;errorMessageType&quot;:&quot;ThreeDSMethodURLReq&quot;,&quot;messageVersion&quot;:&quot;2.1.0&quot;}
+	at com.ca.tds.main.TDSMethodURL_TC.testArequestAPI(TDSMethodURL_TC.java:84)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace232319119", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace232319119'><pre>java.lang.AssertionError: Three DS method URL API response schema validation failed.&lt;br&gt;required key [threeDSServerTransID] not found&lt;br&gt; api response : {&quot;errorComponent&quot;:&quot;S&quot;,&quot;errorDescription&quot;:&quot;CA Merchant Server:: Data could not be decrypted by the receiving system due to technical or other reason&quot;,&quot;messageType&quot;:&quot;Erro&quot;,&quot;errorCode&quot;:&quot;302&quot;,&quot;errorDetail&quot;:&quot;Data Decryption Failure. &quot;,&quot;errorMessageType&quot;:&quot;ThreeDSMethodURLReq&quot;,&quot;messageVersion&quot;:&quot;2.1.0&quot;}
+	at org.testng.Assert.fail(Assert.java:96)
+	at com.ca.tds.main.TDSMethodURL_TC.testArequestAPI(TDSMethodURL_TC.java:84)
+	at sun.reflect.GeneratedMethodAccessor28.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</pre></div></td>
+<td>1</td>
+<td>com.ca.tds.main.TDSMethodURL_TC@2038ae61</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSMethodURL_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSMethodURL_TC<br>Parameters: org.testng.TestRunner@e1f7c49, {TestCaseID=_V007, TestCaseName=TDSMethodURL_CallWith_AlphabetsInAccountNumber(O instead of '0'), SanityFlag=Y, Test Case type=N, Expected-callerTxnRefID=NA, Expected-messageType=Erro, Expected-messageVersion=2.1.0, Expected-threeDSMethodURL=NA, Expected-errorCode=302, Expected-errorComponent=S, Expected-errorDescription=G, Expected-errorDetail=G, Expected-threeDSServerTransID=NA, #acctNumber#=4000420086002OO5, #caMerchantID#=CA_EU, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #messageType#=ThreeDSMethodURLReq}</td>
+<td><div><pre>java.lang.AssertionError: Three DS method URL API response schema validation failed.&lt;br&gt;required key [threeDSServerTransID] not found&lt;br&gt; api response : {&quot;errorComponent&quot;:&quot;S&quot;,&quot;errorDescription&quot;:&quot;CA Merchant Server:: Data could not be decrypted by the receiving system due to technical or other reason&quot;,&quot;messageType&quot;:&quot;Erro&quot;,&quot;errorCode&quot;:&quot;302&quot;,&quot;errorDetail&quot;:&quot;Data Decryption Failure. &quot;,&quot;errorMessageType&quot;:&quot;ThreeDSMethodURLReq&quot;,&quot;messageVersion&quot;:&quot;2.1.0&quot;}
+	at com.ca.tds.main.TDSMethodURL_TC.testArequestAPI(TDSMethodURL_TC.java:84)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1549055830", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1549055830'><pre>java.lang.AssertionError: Three DS method URL API response schema validation failed.&lt;br&gt;required key [threeDSServerTransID] not found&lt;br&gt; api response : {&quot;errorComponent&quot;:&quot;S&quot;,&quot;errorDescription&quot;:&quot;CA Merchant Server:: Data could not be decrypted by the receiving system due to technical or other reason&quot;,&quot;messageType&quot;:&quot;Erro&quot;,&quot;errorCode&quot;:&quot;302&quot;,&quot;errorDetail&quot;:&quot;Data Decryption Failure. &quot;,&quot;errorMessageType&quot;:&quot;ThreeDSMethodURLReq&quot;,&quot;messageVersion&quot;:&quot;2.1.0&quot;}
+	at org.testng.Assert.fail(Assert.java:96)
+	at com.ca.tds.main.TDSMethodURL_TC.testArequestAPI(TDSMethodURL_TC.java:84)
+	at sun.reflect.GeneratedMethodAccessor28.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</pre></div></td>
+<td>2</td>
+<td>com.ca.tds.main.TDSMethodURL_TC@2038ae61</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSMethodURL_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSMethodURL_TC<br>Parameters: org.testng.TestRunner@e1f7c49, {TestCaseID=_V008, TestCaseName=TDSMethodURL_RemovalOfAccountNumberFromTheRequestPayload, SanityFlag=Y, Test Case type=N, Expected-callerTxnRefID=NA, Expected-messageType=Erro, Expected-messageVersion=2.1.0, Expected-threeDSMethodURL=NA, Expected-errorCode=302, Expected-errorComponent=S, Expected-errorDescription=G, Expected-errorDetail=G, Expected-threeDSServerTransID=NA, #acctNumber#=#REMOVE#, #caMerchantID#=CA_EU, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #messageType#=ThreeDSMethodURLReq}</td>
+<td><div><pre>java.lang.AssertionError: Three DS method URL API response schema validation failed.&lt;br&gt;required key [threeDSServerTransID] not found&lt;br&gt; api response : {&quot;errorComponent&quot;:&quot;S&quot;,&quot;errorDescription&quot;:&quot;CA Merchant Server:: Data could not be decrypted by the receiving system due to technical or other reason&quot;,&quot;messageType&quot;:&quot;Erro&quot;,&quot;errorCode&quot;:&quot;302&quot;,&quot;errorDetail&quot;:&quot;Data Decryption Failure. &quot;,&quot;errorMessageType&quot;:&quot;ThreeDSMethodURLReq&quot;,&quot;messageVersion&quot;:&quot;2.1.0&quot;}
+	at com.ca.tds.main.TDSMethodURL_TC.testArequestAPI(TDSMethodURL_TC.java:84)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace276523612", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace276523612'><pre>java.lang.AssertionError: Three DS method URL API response schema validation failed.&lt;br&gt;required key [threeDSServerTransID] not found&lt;br&gt; api response : {&quot;errorComponent&quot;:&quot;S&quot;,&quot;errorDescription&quot;:&quot;CA Merchant Server:: Data could not be decrypted by the receiving system due to technical or other reason&quot;,&quot;messageType&quot;:&quot;Erro&quot;,&quot;errorCode&quot;:&quot;302&quot;,&quot;errorDetail&quot;:&quot;Data Decryption Failure. &quot;,&quot;errorMessageType&quot;:&quot;ThreeDSMethodURLReq&quot;,&quot;messageVersion&quot;:&quot;2.1.0&quot;}
+	at org.testng.Assert.fail(Assert.java:96)
+	at com.ca.tds.main.TDSMethodURL_TC.testArequestAPI(TDSMethodURL_TC.java:84)
+	at sun.reflect.GeneratedMethodAccessor28.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</pre></div></td>
+<td>1</td>
+<td>com.ca.tds.main.TDSMethodURL_TC@2038ae61</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSMethodURL_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSMethodURL_TC<br>Parameters: org.testng.TestRunner@e1f7c49, {TestCaseID=_V010, TestCaseName=TDSMethodURL_Null_CAMerchantID, SanityFlag=Y, Test Case type=N, Expected-callerTxnRefID=NA, Expected-messageType=Erro, Expected-messageVersion=2.1.0, Expected-threeDSMethodURL=NA, Expected-errorCode=203, Expected-errorComponent=S, Expected-errorDescription=G, Expected-errorDetail=caMerchantID, Expected-threeDSServerTransID=NA, #acctNumber#=7baLwVsvt5uXuVG0qvgpAlTuab3zxrLi4etiUy5qvntg+ADqJPeZCKy/69Ww7/9ITmT9ah7PemYJQGLSkzCNfWKW+6fdJEo5IKNULs4lD8i0Dxqx8dezuPGAzBmSQKLvmX2iKhJcADPBn838rQtBo5B0eph6lhmDiOh8PDWwA/NOk7o7ujiqoTAiaTTM0QDWo52n3YI2P7KfE8qQUR9MSYmVXdFgJ9qZ1uWqGdOtXXYX9zRnvuvE+TH5qG1BvUiUgdwQEz/AZDfB3EdGDLS70QBcD+a0JEgDXd8Uw2xfocQXFKB+orVj0eiFt+fnqdfXedWSX8bbko809DaeyeEriA==, #caMerchantID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #messageType#=ThreeDSMethodURLReq}</td>
+<td><div><pre>java.lang.AssertionError: Three DS method URL API response schema validation failed.&lt;br&gt;required key [threeDSServerTransID] not found&lt;br&gt; api response : {&quot;errorComponent&quot;:&quot;S&quot;,&quot;errorDescription&quot;:&quot;CA Merchant Server:: Access Denied, Invalid End Point. Acquirer or Merchant not participating &quot;,&quot;messageType&quot;:&quot;Erro&quot;,&quot;errorCode&quot;:&quot;303&quot;,&quot;errorDetail&quot;:&quot;Access Denied, Invalid End Point&quot;,&quot;errorMessageType&quot;:&quot;ThreeDSMethodURLReq&quot;,&quot;messageVersion&quot;:&quot;2.1.0&quot;}
+	at com.ca.tds.main.TDSMethodURL_TC.testArequestAPI(TDSMethodURL_TC.java:84)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace429251959", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace429251959'><pre>java.lang.AssertionError: Three DS method URL API response schema validation failed.&lt;br&gt;required key [threeDSServerTransID] not found&lt;br&gt; api response : {&quot;errorComponent&quot;:&quot;S&quot;,&quot;errorDescription&quot;:&quot;CA Merchant Server:: Access Denied, Invalid End Point. Acquirer or Merchant not participating &quot;,&quot;messageType&quot;:&quot;Erro&quot;,&quot;errorCode&quot;:&quot;303&quot;,&quot;errorDetail&quot;:&quot;Access Denied, Invalid End Point&quot;,&quot;errorMessageType&quot;:&quot;ThreeDSMethodURLReq&quot;,&quot;messageVersion&quot;:&quot;2.1.0&quot;}
+	at org.testng.Assert.fail(Assert.java:96)
+	at com.ca.tds.main.TDSMethodURL_TC.testArequestAPI(TDSMethodURL_TC.java:84)
+	at sun.reflect.GeneratedMethodAccessor28.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</pre></div></td>
+<td>2</td>
+<td>com.ca.tds.main.TDSMethodURL_TC@2038ae61</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSMethodURL_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSMethodURL_TC<br>Parameters: org.testng.TestRunner@e1f7c49, {TestCaseID=_V011, TestCaseName=TDSMethodURL_CallWith_InvalidCAMerchantID, SanityFlag=Y, Test Case type=N, Expected-callerTxnRefID=NA, Expected-messageType=Erro, Expected-messageVersion=2.1.0, Expected-threeDSMethodURL=NA, Expected-errorCode=203, Expected-errorComponent=S, Expected-errorDescription=G, Expected-errorDetail=caMerchantID, Expected-threeDSServerTransID=NA, #acctNumber#=7baLwVsvt5uXuVG0qvgpAlTuab3zxrLi4etiUy5qvntg+ADqJPeZCKy/69Ww7/9ITmT9ah7PemYJQGLSkzCNfWKW+6fdJEo5IKNULs4lD8i0Dxqx8dezuPGAzBmSQKLvmX2iKhJcADPBn838rQtBo5B0eph6lhmDiOh8PDWwA/NOk7o7ujiqoTAiaTTM0QDWo52n3YI2P7KfE8qQUR9MSYmVXdFgJ9qZ1uWqGdOtXXYX9zRnvuvE+TH5qG1BvUiUgdwQEz/AZDfB3EdGDLS70QBcD+a0JEgDXd8Uw2xfocQXFKB+orVj0eiFt+fnqdfXedWSX8bbko809DaeyeEriA==, #caMerchantID#=AMAZON_EU#AMAZON_EU+%AMAZON_EU^!`*AMAZON_EU//AMAZON_EU()000000000000000000000000000000000000000000000000000000000000{}[]{][][][][][][][][]AMAZON_EU&&AMAZON_EU==AMAZON_EU~`!@#%^&*()_+=-;[]{}?;:|<>.,';//AMAZON_EU\AMAZON_EU\1234567890123AMAZON_EU, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #messageType#=ThreeDSMethodURLReq}</td>
+<td><div><pre>java.lang.AssertionError: Three DS method URL API response schema validation failed.&lt;br&gt;required key [threeDSServerTransID] not found&lt;br&gt; api response : {&quot;errorComponent&quot;:&quot;S&quot;,&quot;errorDescription&quot;:&quot;CA Merchant Server:: Access Denied, Invalid End Point. Acquirer or Merchant not participating &quot;,&quot;messageType&quot;:&quot;Erro&quot;,&quot;errorCode&quot;:&quot;303&quot;,&quot;errorDetail&quot;:&quot;Access Denied, Invalid End Point&quot;,&quot;errorMessageType&quot;:&quot;ThreeDSMethodURLReq&quot;,&quot;messageVersion&quot;:&quot;2.1.0&quot;}
+	at com.ca.tds.main.TDSMethodURL_TC.testArequestAPI(TDSMethodURL_TC.java:84)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace63433437", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace63433437'><pre>java.lang.AssertionError: Three DS method URL API response schema validation failed.&lt;br&gt;required key [threeDSServerTransID] not found&lt;br&gt; api response : {&quot;errorComponent&quot;:&quot;S&quot;,&quot;errorDescription&quot;:&quot;CA Merchant Server:: Access Denied, Invalid End Point. Acquirer or Merchant not participating &quot;,&quot;messageType&quot;:&quot;Erro&quot;,&quot;errorCode&quot;:&quot;303&quot;,&quot;errorDetail&quot;:&quot;Access Denied, Invalid End Point&quot;,&quot;errorMessageType&quot;:&quot;ThreeDSMethodURLReq&quot;,&quot;messageVersion&quot;:&quot;2.1.0&quot;}
+	at org.testng.Assert.fail(Assert.java:96)
+	at com.ca.tds.main.TDSMethodURL_TC.testArequestAPI(TDSMethodURL_TC.java:84)
+	at sun.reflect.GeneratedMethodAccessor28.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</pre></div></td>
+<td>5</td>
+<td>com.ca.tds.main.TDSMethodURL_TC@2038ae61</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSMethodURL_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSMethodURL_TC<br>Parameters: org.testng.TestRunner@e1f7c49, {TestCaseID=_V012, TestCaseName=TDSMethodURL_CallWith_CAMerchantIDLengthMoreThan20000Chars, SanityFlag=Y, Test Case type=N, Expected-callerTxnRefID=NA, Expected-messageType=Erro, Expected-messageVersion=2.1.0, Expected-threeDSMethodURL=NA, Expected-errorCode=203, Expected-errorComponent=S, Expected-errorDescription=G, Expected-errorDetail=caMerchantID, Expected-threeDSServerTransID=NA, #acctNumber#=7baLwVsvt5uXuVG0qvgpAlTuab3zxrLi4etiUy5qvntg+ADqJPeZCKy/69Ww7/9ITmT9ah7PemYJQGLSkzCNfWKW+6fdJEo5IKNULs4lD8i0Dxqx8dezuPGAzBmSQKLvmX2iKhJcADPBn838rQtBo5B0eph6lhmDiOh8PDWwA/NOk7o7ujiqoTAiaTTM0QDWo52n3YI2P7KfE8qQUR9MSYmVXdFgJ9qZ1uWqGdOtXXYX9zRnvuvE+TH5qG1BvUiUgdwQEz/AZDfB3EdGDLS70QBcD+a0JEgDXd8Uw2xfocQXFKB+orVj0eiFt+fnqdfXedWSX8bbko809DaeyeEriA==, #caMerchantID#=400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200864000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054004000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200554000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020050020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200864000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054004000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200554000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020050020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200864000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054004000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200554000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020050020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200864000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054004000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200554000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020050020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200864000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054004000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200554000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020050020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200864000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054004000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200554000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020050020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200864000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054004000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200554000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020050020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200864000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054004000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200554000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020050020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200864000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054004000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086001222222220042008600200540004200860020054000420086002005400042008600200504200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020000420086002005400042008600200540004200860020054000420086002005042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200540004200860020054000420086002005400042008600200, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #messageType#=ThreeDSMethodURLReq}</td>
+<td><div><pre>java.lang.AssertionError: Three DS method URL API response schema validation failed.&lt;br&gt;required key [threeDSServerTransID] not found&lt;br&gt; api response : {&quot;errorComponent&quot;:&quot;S&quot;,&quot;errorDescription&quot;:&quot;CA Merchant Server:: Access Denied, Invalid End Point. Acquirer or Merchant not participating &quot;,&quot;messageType&quot;:&quot;Erro&quot;,&quot;errorCode&quot;:&quot;303&quot;,&quot;errorDetail&quot;:&quot;Access Denied, Invalid End Point&quot;,&quot;errorMessageType&quot;:&quot;ThreeDSMethodURLReq&quot;,&quot;messageVersion&quot;:&quot;2.1.0&quot;}
+	at com.ca.tds.main.TDSMethodURL_TC.testArequestAPI(TDSMethodURL_TC.java:84)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1254381710", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1254381710'><pre>java.lang.AssertionError: Three DS method URL API response schema validation failed.&lt;br&gt;required key [threeDSServerTransID] not found&lt;br&gt; api response : {&quot;errorComponent&quot;:&quot;S&quot;,&quot;errorDescription&quot;:&quot;CA Merchant Server:: Access Denied, Invalid End Point. Acquirer or Merchant not participating &quot;,&quot;messageType&quot;:&quot;Erro&quot;,&quot;errorCode&quot;:&quot;303&quot;,&quot;errorDetail&quot;:&quot;Access Denied, Invalid End Point&quot;,&quot;errorMessageType&quot;:&quot;ThreeDSMethodURLReq&quot;,&quot;messageVersion&quot;:&quot;2.1.0&quot;}
+	at org.testng.Assert.fail(Assert.java:96)
+	at com.ca.tds.main.TDSMethodURL_TC.testArequestAPI(TDSMethodURL_TC.java:84)
+	at sun.reflect.GeneratedMethodAccessor28.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</pre></div></td>
+<td>1</td>
+<td>com.ca.tds.main.TDSMethodURL_TC@2038ae61</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSMethodURL_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSMethodURL_TC<br>Parameters: org.testng.TestRunner@e1f7c49, {TestCaseID=_V018, TestCaseName=TDSMethodURL_RemovalOfCAMerchantIDFromTheRequestPayload, SanityFlag=Y, Test Case type=N, Expected-callerTxnRefID=NA, Expected-messageType=Erro, Expected-messageVersion=2.1.0, Expected-threeDSMethodURL=NA, Expected-errorCode=201, Expected-errorComponent=S, Expected-errorDescription=G, Expected-errorDetail=caMerchantID, Expected-threeDSServerTransID=G, #acctNumber#=7baLwVsvt5uXuVG0qvgpAlTuab3zxrLi4etiUy5qvntg+ADqJPeZCKy/69Ww7/9ITmT9ah7PemYJQGLSkzCNfWKW+6fdJEo5IKNULs4lD8i0Dxqx8dezuPGAzBmSQKLvmX2iKhJcADPBn838rQtBo5B0eph6lhmDiOh8PDWwA/NOk7o7ujiqoTAiaTTM0QDWo52n3YI2P7KfE8qQUR9MSYmVXdFgJ9qZ1uWqGdOtXXYX9zRnvuvE+TH5qG1BvUiUgdwQEz/AZDfB3EdGDLS70QBcD+a0JEgDXd8Uw2xfocQXFKB+orVj0eiFt+fnqdfXedWSX8bbko809DaeyeEriA==, #caMerchantID#=#REMOVE#, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #messageType#=ThreeDSMethodURLReq}</td>
+<td><div><pre>java.lang.AssertionError: Three DS method URL API response schema validation failed.&lt;br&gt;required key [threeDSServerTransID] not found&lt;br&gt; api response : {&quot;errorComponent&quot;:&quot;S&quot;,&quot;errorDescription&quot;:&quot;CA Merchant Server:: Access Denied, Invalid End Point. Acquirer or Merchant not participating &quot;,&quot;messageType&quot;:&quot;Erro&quot;,&quot;errorCode&quot;:&quot;303&quot;,&quot;errorDetail&quot;:&quot;Access Denied, Invalid End Point&quot;,&quot;errorMessageType&quot;:&quot;ThreeDSMethodURLReq&quot;,&quot;messageVersion&quot;:&quot;2.1.0&quot;}
+	at com.ca.tds.main.TDSMethodURL_TC.testArequestAPI(TDSMethodURL_TC.java:84)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1968834332", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1968834332'><pre>java.lang.AssertionError: Three DS method URL API response schema validation failed.&lt;br&gt;required key [threeDSServerTransID] not found&lt;br&gt; api response : {&quot;errorComponent&quot;:&quot;S&quot;,&quot;errorDescription&quot;:&quot;CA Merchant Server:: Access Denied, Invalid End Point. Acquirer or Merchant not participating &quot;,&quot;messageType&quot;:&quot;Erro&quot;,&quot;errorCode&quot;:&quot;303&quot;,&quot;errorDetail&quot;:&quot;Access Denied, Invalid End Point&quot;,&quot;errorMessageType&quot;:&quot;ThreeDSMethodURLReq&quot;,&quot;messageVersion&quot;:&quot;2.1.0&quot;}
+	at org.testng.Assert.fail(Assert.java:96)
+	at com.ca.tds.main.TDSMethodURL_TC.testArequestAPI(TDSMethodURL_TC.java:84)
+	at sun.reflect.GeneratedMethodAccessor28.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</pre></div></td>
+<td>2</td>
+<td>com.ca.tds.main.TDSMethodURL_TC@2038ae61</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSMethodURL_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSMethodURL_TC<br>Parameters: org.testng.TestRunner@e1f7c49, {TestCaseID=_V019, TestCaseName=TDSMethodURL_Null_MessageType, SanityFlag=Y, Test Case type=N, Expected-callerTxnRefID=NA, Expected-messageType=Erro, Expected-messageVersion=2.1.0, Expected-threeDSMethodURL=NA, Expected-errorCode=203, Expected-errorComponent=S, Expected-errorDescription=G, Expected-errorDetail=messageType, Expected-threeDSServerTransID=G, #acctNumber#=7baLwVsvt5uXuVG0qvgpAlTuab3zxrLi4etiUy5qvntg+ADqJPeZCKy/69Ww7/9ITmT9ah7PemYJQGLSkzCNfWKW+6fdJEo5IKNULs4lD8i0Dxqx8dezuPGAzBmSQKLvmX2iKhJcADPBn838rQtBo5B0eph6lhmDiOh8PDWwA/NOk7o7ujiqoTAiaTTM0QDWo52n3YI2P7KfE8qQUR9MSYmVXdFgJ9qZ1uWqGdOtXXYX9zRnvuvE+TH5qG1BvUiUgdwQEz/AZDfB3EdGDLS70QBcD+a0JEgDXd8Uw2xfocQXFKB+orVj0eiFt+fnqdfXedWSX8bbko809DaeyeEriA==, #caMerchantID#=CA_EU, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #messageType#=}</td>
+<td><div><pre>java.lang.AssertionError: Three DS method URL API response schema validation failed.&lt;br&gt;2 schema violations found&lt;br&gt; api response : {&quot;errorComponent&quot;:&quot;S&quot;,&quot;errorDescription&quot;:&quot;Invalid messageType field or messageType field missing&quot;,&quot;messageType&quot;:&quot;Erro&quot;,&quot;errorCode&quot;:&quot;101&quot;,&quot;errorDetail&quot;:&quot;Invalid messageType field or messageType field missing&quot;,&quot;messageVersion&quot;:&quot;2.1.0&quot;}
+	at com.ca.tds.main.TDSMethodURL_TC.testArequestAPI(TDSMethodURL_TC.java:84)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1205236318", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1205236318'><pre>java.lang.AssertionError: Three DS method URL API response schema validation failed.&lt;br&gt;2 schema violations found&lt;br&gt; api response : {&quot;errorComponent&quot;:&quot;S&quot;,&quot;errorDescription&quot;:&quot;Invalid messageType field or messageType field missing&quot;,&quot;messageType&quot;:&quot;Erro&quot;,&quot;errorCode&quot;:&quot;101&quot;,&quot;errorDetail&quot;:&quot;Invalid messageType field or messageType field missing&quot;,&quot;messageVersion&quot;:&quot;2.1.0&quot;}
+	at org.testng.Assert.fail(Assert.java:96)
+	at com.ca.tds.main.TDSMethodURL_TC.testArequestAPI(TDSMethodURL_TC.java:84)
+	at sun.reflect.GeneratedMethodAccessor28.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</pre></div></td>
+<td>1</td>
+<td>com.ca.tds.main.TDSMethodURL_TC@2038ae61</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSMethodURL_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSMethodURL_TC<br>Parameters: org.testng.TestRunner@e1f7c49, {TestCaseID=_V020, TestCaseName=TDSMethodURL_CallWith_InvalidMessageType, SanityFlag=Y, Test Case type=N, Expected-callerTxnRefID=NA, Expected-messageType=Erro, Expected-messageVersion=2.1.0, Expected-threeDSMethodURL=NA, Expected-errorCode=203, Expected-errorComponent=S, Expected-errorDescription=G, Expected-errorDetail=messageType, Expected-threeDSServerTransID=G, #acctNumber#=7baLwVsvt5uXuVG0qvgpAlTuab3zxrLi4etiUy5qvntg+ADqJPeZCKy/69Ww7/9ITmT9ah7PemYJQGLSkzCNfWKW+6fdJEo5IKNULs4lD8i0Dxqx8dezuPGAzBmSQKLvmX2iKhJcADPBn838rQtBo5B0eph6lhmDiOh8PDWwA/NOk7o7ujiqoTAiaTTM0QDWo52n3YI2P7KfE8qQUR9MSYmVXdFgJ9qZ1uWqGdOtXXYX9zRnvuvE+TH5qG1BvUiUgdwQEz/AZDfB3EdGDLS70QBcD+a0JEgDXd8Uw2xfocQXFKB+orVj0eiFt+fnqdfXedWSX8bbko809DaeyeEriA==, #caMerchantID#=CA_EU, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #messageType#=areq}</td>
+<td><div><pre>java.lang.AssertionError: Three DS method URL API response schema validation failed.&lt;br&gt;2 schema violations found&lt;br&gt; api response : {&quot;errorComponent&quot;:&quot;S&quot;,&quot;errorDescription&quot;:&quot;Invalid messageType field or messageType field missing&quot;,&quot;messageType&quot;:&quot;Erro&quot;,&quot;errorCode&quot;:&quot;101&quot;,&quot;errorDetail&quot;:&quot;Invalid messageType field or messageType field missing&quot;,&quot;messageVersion&quot;:&quot;2.1.0&quot;}
+	at com.ca.tds.main.TDSMethodURL_TC.testArequestAPI(TDSMethodURL_TC.java:84)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1850702772", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1850702772'><pre>java.lang.AssertionError: Three DS method URL API response schema validation failed.&lt;br&gt;2 schema violations found&lt;br&gt; api response : {&quot;errorComponent&quot;:&quot;S&quot;,&quot;errorDescription&quot;:&quot;Invalid messageType field or messageType field missing&quot;,&quot;messageType&quot;:&quot;Erro&quot;,&quot;errorCode&quot;:&quot;101&quot;,&quot;errorDetail&quot;:&quot;Invalid messageType field or messageType field missing&quot;,&quot;messageVersion&quot;:&quot;2.1.0&quot;}
+	at org.testng.Assert.fail(Assert.java:96)
+	at com.ca.tds.main.TDSMethodURL_TC.testArequestAPI(TDSMethodURL_TC.java:84)
+	at sun.reflect.GeneratedMethodAccessor28.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</pre></div></td>
+<td>1</td>
+<td>com.ca.tds.main.TDSMethodURL_TC@2038ae61</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSMethodURL_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSMethodURL_TC<br>Parameters: org.testng.TestRunner@e1f7c49, {TestCaseID=_V021, TestCaseName=TDSMethodURL_CallWith_MessageTypeLengthMoreThan20Chars, SanityFlag=Y, Test Case type=N, Expected-callerTxnRefID=NA, Expected-messageType=Erro, Expected-messageVersion=2.1.0, Expected-threeDSMethodURL=NA, Expected-errorCode=203, Expected-errorComponent=S, Expected-errorDescription=G, Expected-errorDetail=messageType, Expected-threeDSServerTransID=G, #acctNumber#=7baLwVsvt5uXuVG0qvgpAlTuab3zxrLi4etiUy5qvntg+ADqJPeZCKy/69Ww7/9ITmT9ah7PemYJQGLSkzCNfWKW+6fdJEo5IKNULs4lD8i0Dxqx8dezuPGAzBmSQKLvmX2iKhJcADPBn838rQtBo5B0eph6lhmDiOh8PDWwA/NOk7o7ujiqoTAiaTTM0QDWo52n3YI2P7KfE8qQUR9MSYmVXdFgJ9qZ1uWqGdOtXXYX9zRnvuvE+TH5qG1BvUiUgdwQEz/AZDfB3EdGDLS70QBcD+a0JEgDXd8Uw2xfocQXFKB+orVj0eiFt+fnqdfXedWSX8bbko809DaeyeEriA==, #caMerchantID#=CA_EU, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #messageType#=ThreeDSMethodURLReq1}</td>
+<td><div><pre>java.lang.AssertionError: Three DS method URL API response schema validation failed.&lt;br&gt;2 schema violations found&lt;br&gt; api response : {&quot;errorComponent&quot;:&quot;S&quot;,&quot;errorDescription&quot;:&quot;Invalid messageType field or messageType field missing&quot;,&quot;messageType&quot;:&quot;Erro&quot;,&quot;errorCode&quot;:&quot;101&quot;,&quot;errorDetail&quot;:&quot;Invalid messageType field or messageType field missing&quot;,&quot;messageVersion&quot;:&quot;2.1.0&quot;}
+	at com.ca.tds.main.TDSMethodURL_TC.testArequestAPI(TDSMethodURL_TC.java:84)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1528319833", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1528319833'><pre>java.lang.AssertionError: Three DS method URL API response schema validation failed.&lt;br&gt;2 schema violations found&lt;br&gt; api response : {&quot;errorComponent&quot;:&quot;S&quot;,&quot;errorDescription&quot;:&quot;Invalid messageType field or messageType field missing&quot;,&quot;messageType&quot;:&quot;Erro&quot;,&quot;errorCode&quot;:&quot;101&quot;,&quot;errorDetail&quot;:&quot;Invalid messageType field or messageType field missing&quot;,&quot;messageVersion&quot;:&quot;2.1.0&quot;}
+	at org.testng.Assert.fail(Assert.java:96)
+	at com.ca.tds.main.TDSMethodURL_TC.testArequestAPI(TDSMethodURL_TC.java:84)
+	at sun.reflect.GeneratedMethodAccessor28.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</pre></div></td>
+<td>1</td>
+<td>com.ca.tds.main.TDSMethodURL_TC@2038ae61</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSMethodURL_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSMethodURL_TC<br>Parameters: org.testng.TestRunner@e1f7c49, {TestCaseID=_V022, TestCaseName=TDSMethodURL_RemovalOfMessageTypeFromTheRequestPayload, SanityFlag=Y, Test Case type=N, Expected-callerTxnRefID=NA, Expected-messageType=Erro, Expected-messageVersion=2.1.0, Expected-threeDSMethodURL=NA, Expected-errorCode=201, Expected-errorComponent=S, Expected-errorDescription=G, Expected-errorDetail=messageType, Expected-threeDSServerTransID=G, #acctNumber#=7baLwVsvt5uXuVG0qvgpAlTuab3zxrLi4etiUy5qvntg+ADqJPeZCKy/69Ww7/9ITmT9ah7PemYJQGLSkzCNfWKW+6fdJEo5IKNULs4lD8i0Dxqx8dezuPGAzBmSQKLvmX2iKhJcADPBn838rQtBo5B0eph6lhmDiOh8PDWwA/NOk7o7ujiqoTAiaTTM0QDWo52n3YI2P7KfE8qQUR9MSYmVXdFgJ9qZ1uWqGdOtXXYX9zRnvuvE+TH5qG1BvUiUgdwQEz/AZDfB3EdGDLS70QBcD+a0JEgDXd8Uw2xfocQXFKB+orVj0eiFt+fnqdfXedWSX8bbko809DaeyeEriA==, #caMerchantID#=CA_EU, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #messageType#=#REMOVE#}</td>
+<td><div><pre>java.lang.AssertionError: Three DS method URL API response schema validation failed.&lt;br&gt;2 schema violations found&lt;br&gt; api response : {&quot;errorComponent&quot;:&quot;S&quot;,&quot;errorDescription&quot;:&quot;MessageType field missing&quot;,&quot;messageType&quot;:&quot;Erro&quot;,&quot;errorCode&quot;:&quot;201&quot;,&quot;errorDetail&quot;:&quot;MessageType field missing&quot;,&quot;messageVersion&quot;:&quot;2.1.0&quot;}
+	at com.ca.tds.main.TDSMethodURL_TC.testArequestAPI(TDSMethodURL_TC.java:84)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace468613193", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace468613193'><pre>java.lang.AssertionError: Three DS method URL API response schema validation failed.&lt;br&gt;2 schema violations found&lt;br&gt; api response : {&quot;errorComponent&quot;:&quot;S&quot;,&quot;errorDescription&quot;:&quot;MessageType field missing&quot;,&quot;messageType&quot;:&quot;Erro&quot;,&quot;errorCode&quot;:&quot;201&quot;,&quot;errorDetail&quot;:&quot;MessageType field missing&quot;,&quot;messageVersion&quot;:&quot;2.1.0&quot;}
+	at org.testng.Assert.fail(Assert.java:96)
+	at com.ca.tds.main.TDSMethodURL_TC.testArequestAPI(TDSMethodURL_TC.java:84)
+	at sun.reflect.GeneratedMethodAccessor28.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</pre></div></td>
+<td>1</td>
+<td>com.ca.tds.main.TDSMethodURL_TC@2038ae61</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.ca.tds.main.TDSMethodURL_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSMethodURL_TC<br>Parameters: org.testng.TestRunner@e1f7c49, {TestCaseID=_V001, TestCaseName=Sample_Valid_TDSMethodURL_CallWith_callerTxnRefID, SanityFlag=Y, Test Case type=P, Expected-callerTxnRefID=341b7153-da86-4543-860f-2ba47f0168a5, Expected-messageType=ThreeDSMethodURLRes, Expected-messageVersion=2.1.0, Expected-threeDSMethodURL=http://10.74.235.88:6790, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, Expected-threeDSServerTransID=G, #acctNumber#=7baLwVsvt5uXuVG0qvgpAlTuab3zxrLi4etiUy5qvntg+ADqJPeZCKy/69Ww7/9ITmT9ah7PemYJQGLSkzCNfWKW+6fdJEo5IKNULs4lD8i0Dxqx8dezuPGAzBmSQKLvmX2iKhJcADPBn838rQtBo5B0eph6lhmDiOh8PDWwA/NOk7o7ujiqoTAiaTTM0QDWo52n3YI2P7KfE8qQUR9MSYmVXdFgJ9qZ1uWqGdOtXXYX9zRnvuvE+TH5qG1BvUiUgdwQEz/AZDfB3EdGDLS70QBcD+a0JEgDXd8Uw2xfocQXFKB+orVj0eiFt+fnqdfXedWSX8bbko809DaeyeEriA==, #caMerchantID#=CA_EU, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #messageType#=ThreeDSMethodURLReq}</td>
+<td></td>
+<td>5</td>
+<td>com.ca.tds.main.TDSMethodURL_TC@2038ae61</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSMethodURL_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSMethodURL_TC<br>Parameters: org.testng.TestRunner@e1f7c49, {TestCaseID=_V002, TestCaseName=Sample_Valid_TDSMethodURL_Empty_callerTxnRefID, SanityFlag=Y, Test Case type=N, Expected-callerTxnRefID=NA, Expected-messageType=Erro, Expected-messageVersion=2.1.0, Expected-threeDSMethodURL=NA, Expected-errorCode=203, Expected-errorComponent=S, Expected-errorDescription=G, Expected-errorDetail=callerTxnRefID, Expected-threeDSServerTransID=G, #acctNumber#=7baLwVsvt5uXuVG0qvgpAlTuab3zxrLi4etiUy5qvntg+ADqJPeZCKy/69Ww7/9ITmT9ah7PemYJQGLSkzCNfWKW+6fdJEo5IKNULs4lD8i0Dxqx8dezuPGAzBmSQKLvmX2iKhJcADPBn838rQtBo5B0eph6lhmDiOh8PDWwA/NOk7o7ujiqoTAiaTTM0QDWo52n3YI2P7KfE8qQUR9MSYmVXdFgJ9qZ1uWqGdOtXXYX9zRnvuvE+TH5qG1BvUiUgdwQEz/AZDfB3EdGDLS70QBcD+a0JEgDXd8Uw2xfocQXFKB+orVj0eiFt+fnqdfXedWSX8bbko809DaeyeEriA==, #caMerchantID#=CA_EU, #callerTxnRefID#=, #messageType#=ThreeDSMethodURLReq}</td>
+<td></td>
+<td>2</td>
+<td>com.ca.tds.main.TDSMethodURL_TC@2038ae61</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSMethodURL_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSMethodURL_TC<br>Parameters: org.testng.TestRunner@e1f7c49, {TestCaseID=_V003, TestCaseName=TDSMethodURL_CallWith_ValidAccounttNumber, SanityFlag=Y, Test Case type=P, Expected-callerTxnRefID=341b7153-da86-4543-860f-2ba47f0168a5, Expected-messageType=ThreeDSMethodURLRes, Expected-messageVersion=2.1.0, Expected-threeDSMethodURL=http://10.74.235.88:6790, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, Expected-threeDSServerTransID=G, #acctNumber#=7baLwVsvt5uXuVG0qvgpAlTuab3zxrLi4etiUy5qvntg+ADqJPeZCKy/69Ww7/9ITmT9ah7PemYJQGLSkzCNfWKW+6fdJEo5IKNULs4lD8i0Dxqx8dezuPGAzBmSQKLvmX2iKhJcADPBn838rQtBo5B0eph6lhmDiOh8PDWwA/NOk7o7ujiqoTAiaTTM0QDWo52n3YI2P7KfE8qQUR9MSYmVXdFgJ9qZ1uWqGdOtXXYX9zRnvuvE+TH5qG1BvUiUgdwQEz/AZDfB3EdGDLS70QBcD+a0JEgDXd8Uw2xfocQXFKB+orVj0eiFt+fnqdfXedWSX8bbko809DaeyeEriA==, #caMerchantID#=CA_EU, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #messageType#=ThreeDSMethodURLReq}</td>
+<td></td>
+<td>2</td>
+<td>com.ca.tds.main.TDSMethodURL_TC@2038ae61</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSMethodURL_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSMethodURL_TC<br>Parameters: org.testng.TestRunner@e1f7c49, {TestCaseID=_V009, TestCaseName=TDSMethodURL_CallWith_ValidCAMerchantID, SanityFlag=Y, Test Case type=P, Expected-callerTxnRefID=341b7153-da86-4543-860f-2ba47f0168a5, Expected-messageType=ThreeDSMethodURLRes, Expected-messageVersion=2.1.0, Expected-threeDSMethodURL=http://10.74.235.88:6790, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, Expected-threeDSServerTransID=G, #acctNumber#=7baLwVsvt5uXuVG0qvgpAlTuab3zxrLi4etiUy5qvntg+ADqJPeZCKy/69Ww7/9ITmT9ah7PemYJQGLSkzCNfWKW+6fdJEo5IKNULs4lD8i0Dxqx8dezuPGAzBmSQKLvmX2iKhJcADPBn838rQtBo5B0eph6lhmDiOh8PDWwA/NOk7o7ujiqoTAiaTTM0QDWo52n3YI2P7KfE8qQUR9MSYmVXdFgJ9qZ1uWqGdOtXXYX9zRnvuvE+TH5qG1BvUiUgdwQEz/AZDfB3EdGDLS70QBcD+a0JEgDXd8Uw2xfocQXFKB+orVj0eiFt+fnqdfXedWSX8bbko809DaeyeEriA==, #caMerchantID#=CA_EU, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #messageType#=ThreeDSMethodURLReq}</td>
+<td></td>
+<td>1</td>
+<td>com.ca.tds.main.TDSMethodURL_TC@2038ae61</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSMethodURL_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSMethodURL_TC<br>Parameters: org.testng.TestRunner@e1f7c49, {TestCaseID=_V013, TestCaseName=TDSMethodURL_CallWith_ValidCallerTxnRefID, SanityFlag=Y, Test Case type=P, Expected-callerTxnRefID=341b7153-da86-4543-860f-2ba47f0168a5, Expected-messageType=ThreeDSMethodURLRes, Expected-messageVersion=2.1.0, Expected-threeDSMethodURL=http://10.74.235.88:6790, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, Expected-threeDSServerTransID=G, #acctNumber#=7baLwVsvt5uXuVG0qvgpAlTuab3zxrLi4etiUy5qvntg+ADqJPeZCKy/69Ww7/9ITmT9ah7PemYJQGLSkzCNfWKW+6fdJEo5IKNULs4lD8i0Dxqx8dezuPGAzBmSQKLvmX2iKhJcADPBn838rQtBo5B0eph6lhmDiOh8PDWwA/NOk7o7ujiqoTAiaTTM0QDWo52n3YI2P7KfE8qQUR9MSYmVXdFgJ9qZ1uWqGdOtXXYX9zRnvuvE+TH5qG1BvUiUgdwQEz/AZDfB3EdGDLS70QBcD+a0JEgDXd8Uw2xfocQXFKB+orVj0eiFt+fnqdfXedWSX8bbko809DaeyeEriA==, #caMerchantID#=CA_EU, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #messageType#=ThreeDSMethodURLReq}</td>
+<td></td>
+<td>1</td>
+<td>com.ca.tds.main.TDSMethodURL_TC@2038ae61</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSMethodURL_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSMethodURL_TC<br>Parameters: org.testng.TestRunner@e1f7c49, {TestCaseID=_V014, TestCaseName=TDSMethodURL_Null_CallerTxnRefID, SanityFlag=Y, Test Case type=N, Expected-callerTxnRefID=NA, Expected-messageType=Erro, Expected-messageVersion=2.1.0, Expected-threeDSMethodURL=NA, Expected-errorCode=203, Expected-errorComponent=S, Expected-errorDescription=G, Expected-errorDetail=callerTxnRefID, Expected-threeDSServerTransID=G, #acctNumber#=7baLwVsvt5uXuVG0qvgpAlTuab3zxrLi4etiUy5qvntg+ADqJPeZCKy/69Ww7/9ITmT9ah7PemYJQGLSkzCNfWKW+6fdJEo5IKNULs4lD8i0Dxqx8dezuPGAzBmSQKLvmX2iKhJcADPBn838rQtBo5B0eph6lhmDiOh8PDWwA/NOk7o7ujiqoTAiaTTM0QDWo52n3YI2P7KfE8qQUR9MSYmVXdFgJ9qZ1uWqGdOtXXYX9zRnvuvE+TH5qG1BvUiUgdwQEz/AZDfB3EdGDLS70QBcD+a0JEgDXd8Uw2xfocQXFKB+orVj0eiFt+fnqdfXedWSX8bbko809DaeyeEriA==, #caMerchantID#=CA_EU, #callerTxnRefID#=, #messageType#=ThreeDSMethodURLReq}</td>
+<td></td>
+<td>1</td>
+<td>com.ca.tds.main.TDSMethodURL_TC@2038ae61</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSMethodURL_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSMethodURL_TC<br>Parameters: org.testng.TestRunner@e1f7c49, {TestCaseID=_V015, TestCaseName=TDSMethodURL_CallWith_InvalidCallerTxnRefID, SanityFlag=Y, Test Case type=N, Expected-callerTxnRefID=NA, Expected-messageType=Erro, Expected-messageVersion=2.1.0, Expected-threeDSMethodURL=NA, Expected-errorCode=203, Expected-errorComponent=S, Expected-errorDescription=G, Expected-errorDetail=callerTxnRefID, Expected-threeDSServerTransID=G, #acctNumber#=7baLwVsvt5uXuVG0qvgpAlTuab3zxrLi4etiUy5qvntg+ADqJPeZCKy/69Ww7/9ITmT9ah7PemYJQGLSkzCNfWKW+6fdJEo5IKNULs4lD8i0Dxqx8dezuPGAzBmSQKLvmX2iKhJcADPBn838rQtBo5B0eph6lhmDiOh8PDWwA/NOk7o7ujiqoTAiaTTM0QDWo52n3YI2P7KfE8qQUR9MSYmVXdFgJ9qZ1uWqGdOtXXYX9zRnvuvE+TH5qG1BvUiUgdwQEz/AZDfB3EdGDLS70QBcD+a0JEgDXd8Uw2xfocQXFKB+orVj0eiFt+fnqdfXedWSX8bbko809DaeyeEriA==, #caMerchantID#=CA_EU, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a501, #messageType#=ThreeDSMethodURLReq}</td>
+<td></td>
+<td>1</td>
+<td>com.ca.tds.main.TDSMethodURL_TC@2038ae61</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSMethodURL_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSMethodURL_TC<br>Parameters: org.testng.TestRunner@e1f7c49, {TestCaseID=_V016, TestCaseName=TDSMethodURL_CallWith_CallerTxnRefIDLengthMoreThan36Chars, SanityFlag=Y, Test Case type=N, Expected-callerTxnRefID=NA, Expected-messageType=Erro, Expected-messageVersion=2.1.0, Expected-threeDSMethodURL=NA, Expected-errorCode=203, Expected-errorComponent=S, Expected-errorDescription=G, Expected-errorDetail=callerTxnRefID, Expected-threeDSServerTransID=G, #acctNumber#=7baLwVsvt5uXuVG0qvgpAlTuab3zxrLi4etiUy5qvntg+ADqJPeZCKy/69Ww7/9ITmT9ah7PemYJQGLSkzCNfWKW+6fdJEo5IKNULs4lD8i0Dxqx8dezuPGAzBmSQKLvmX2iKhJcADPBn838rQtBo5B0eph6lhmDiOh8PDWwA/NOk7o7ujiqoTAiaTTM0QDWo52n3YI2P7KfE8qQUR9MSYmVXdFgJ9qZ1uWqGdOtXXYX9zRnvuvE+TH5qG1BvUiUgdwQEz/AZDfB3EdGDLS70QBcD+a0JEgDXd8Uw2xfocQXFKB+orVj0eiFt+fnqdfXedWSX8bbko809DaeyeEriA==, #caMerchantID#=CA_EU, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5341b7153-da86-4543-860f-2ba47f0168a5, #messageType#=ThreeDSMethodURLReq}</td>
+<td></td>
+<td>1</td>
+<td>com.ca.tds.main.TDSMethodURL_TC@2038ae61</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSMethodURL_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSMethodURL_TC<br>Parameters: org.testng.TestRunner@e1f7c49, {TestCaseID=_V017, TestCaseName=TDSMethodURL_RemovalOfCallerTxnRefIDFromTheRequestPayload, SanityFlag=Y, Test Case type=P, Expected-callerTxnRefID=NA, Expected-messageType=ThreeDSMethodURLRes, Expected-messageVersion=2.1.0, Expected-threeDSMethodURL=http://10.74.235.88:6790, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, Expected-threeDSServerTransID=G, #acctNumber#=7baLwVsvt5uXuVG0qvgpAlTuab3zxrLi4etiUy5qvntg+ADqJPeZCKy/69Ww7/9ITmT9ah7PemYJQGLSkzCNfWKW+6fdJEo5IKNULs4lD8i0Dxqx8dezuPGAzBmSQKLvmX2iKhJcADPBn838rQtBo5B0eph6lhmDiOh8PDWwA/NOk7o7ujiqoTAiaTTM0QDWo52n3YI2P7KfE8qQUR9MSYmVXdFgJ9qZ1uWqGdOtXXYX9zRnvuvE+TH5qG1BvUiUgdwQEz/AZDfB3EdGDLS70QBcD+a0JEgDXd8Uw2xfocQXFKB+orVj0eiFt+fnqdfXedWSX8bbko809DaeyeEriA==, #caMerchantID#=CA_EU, #callerTxnRefID#=#REMOVE#, #messageType#=ThreeDSMethodURLReq}</td>
+<td></td>
+<td>1</td>
+<td>com.ca.tds.main.TDSMethodURL_TC@2038ae61</td></tr>
+</table><p>
+</body>
+</html>

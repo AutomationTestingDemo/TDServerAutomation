@@ -41,7 +41,11 @@ public class TDSMethodURL_TC extends BaseClassTDS {
 			Map<String, String> apiTestdata = testScenarioData.get("Pre-Areq Request");
 			String jsonRequest = apiTestdata.get("Request Json");
 			
-			jsonRequest = AssertionUtility.prepareRequest(testCaseData, jsonRequest);
+			JSONObject jsonReq = AssertionUtility.prepareRequest(testCaseData, jsonRequest);
+			
+			jsonRequest=jsonReq.toString();
+			
+			parentTest.log(LogStatus.INFO,"TDSMethodURL Request : "+jsonRequest);
 			
 			System.out.println("================================================================");
 			System.out.println("TDS MethodURL Json Request ***:\n" + jsonRequest);
@@ -49,6 +53,8 @@ public class TDSMethodURL_TC extends BaseClassTDS {
 			
 			PostHttpRequest sendHttpReq = new PostHttpRequest();
 			apiResponse=sendHttpReq.httpPost(jsonRequest, caPropMap.get("TDSMethodURL"));
+			
+			//parentTest.log(null, apiResponse.toString());
 			
 			if(apiResponse == null){
 				Assert.fail("3DS server is not responding at this moment");

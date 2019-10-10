@@ -25,7 +25,7 @@
         "authenticationValue":{
             "description":"authenticationValue",
             "type": "string",
-            "maxLength":41,
+            "maxLength":42,
               "minLength":28
         },
         "callerTxnRefID":{
@@ -38,7 +38,7 @@
             "description":"dsReferenceNumber",
             "type": "string",
             "maxLength":32,
-              "minLength":17
+              "minLength":4
         },
         "dsTransID":{
             "description":"dsTransID",

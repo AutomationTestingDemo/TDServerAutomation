@@ -16,6 +16,8 @@ import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 import com.ca.tds.dao.TDSDao;
+import com.ca.tds.utilityfiles.AppParams;
+import com.ca.tds.utilityfiles.AssertionUtility;
 import com.ca.tds.utilityfiles.CommonUtil;
 import com.ca.tds.utilityfiles.JsonUtility;
 import com.relevantcodes.extentreports.LogStatus;
@@ -29,11 +31,15 @@ public class TDSRReq_TC extends BaseClassTDS {
 
 
 	@Test(dataProvider = "DataProvider3dsTestData")
-	public void testArequestAPI(ITestContext testContext, Map<String, String> testCaseData)
+	public void testRRequestAPI(ITestContext testContext, Map<String, String> testCaseData)
 			throws JSONException, InterruptedException {
 		
 		if(aResArr == null || aResArr.length() == 0){
+			
+			extentTestInit(testCaseData);
+			parentTest.log(LogStatus.INFO,"============No challenges request to test RReq================");
 			System.out.println("============No challenges request to test RReq================");
+			Assert.fail();
 			return;
 		}
 	
@@ -42,58 +48,52 @@ public class TDSRReq_TC extends BaseClassTDS {
 
 		extentTestInit(testCaseData);
 		CommonUtil cu = new CommonUtil();
-		Map<String, Map<String, String>> testScenarioData = cu.getInputDataFromExcel(testContext, "TDSExcelFile",
-				"TEST SCENARIOS", "API Name");	
+		
+		/*Map<String, Map<String, String>> testScenarioData = cu.getInputDataFromExcel(testContext, "TDSExcelFile",
+				"TEST SCENARIOS", "API Name");*/
+		
+		String enableEncryption = AppParams.getEnableDecryption();
+		Map<String, Map<String, String>> testScenarioData= null;
+		if(enableEncryption != null && "true".equalsIgnoreCase(enableEncryption)){
+			testScenarioData = cu.getInputDataFromExcel(testContext, "TDSExcelFileE",
+				"TEST SCENARIOS", "API Name");
+		}else{
+			testScenarioData = cu.getInputDataFromExcel(testContext, "TDSExcelFileC",
+					"TEST SCENARIOS", "API Name");
+		}
+		
 		Map<String, String> apiTestdata = testScenarioData.get("Result Request API");
 		String jsonRequest = apiTestdata.get("Request Json");
 		
-		if (!threeDSServerTransIDList.isEmpty()) {
+/*		if (!threeDSServerTransIDList.isEmpty()) {
 			String replaceTag = "#threeDSServerTransID#";
 			while (loopcount < threeDSServerTransIDList.size()) {
 				jsonRequest = jsonRequest.replace(replaceTag, threeDSServerTransIDList.get(loopcount));
 				TRANSACTIONLOOPCOUNT++;
 				break;
 			}
-		}
-
-		List<String> keysToRemove = new ArrayList<>();
-		for (Map.Entry<String, String> entry  : testCaseData.entrySet()) {
-			
-			if(entry.getValue().equalsIgnoreCase("#REMOVE#"))			
-				keysToRemove.add(entry.getKey().replaceAll("#", ""));
-			else			
-				jsonRequest = jsonRequest.replaceAll(entry.getKey(), entry.getValue());
-		}
+		}*/
 		
-		
-		JSONObject reqJson = new JSONObject(jsonRequest);
-		for (Map.Entry<String, String> entry : testCaseData.entrySet()) {
-
-			String key = entry.getKey().replaceAll("#", "");
-			String value = entry.getValue();
-			if(reqJson.has(key) && value.equalsIgnoreCase("null")){
-				reqJson.put(key, JSONObject.NULL);
-			}
-			
-		}
-
-
-		System.out.println("Keys removed from RReq request : " + keysToRemove);
-
-		for (String key : keysToRemove){
-			reqJson.remove(key);
-		}
+		JSONObject jsonReq = AssertionUtility.prepareRequest(testCaseData, jsonRequest);
 		
 		JSONObject aResJSON = aResArr.getJSONObject(loopcount);
 		Iterator<String> iterAres = aResJSON.keys();
 		while(iterAres.hasNext()){
 			String replaceTag = iterAres.next();
-			if(reqJson.has(replaceTag) && "".equalsIgnoreCase(reqJson.getString(replaceTag))) {
-				reqJson.put(replaceTag, aResJSON.getString(replaceTag));
-			}
+			if(jsonReq.has(replaceTag) && "".equalsIgnoreCase(jsonReq.getString(replaceTag))) {
+				jsonReq.put(replaceTag, aResJSON.getString(replaceTag));
+			} 
+			
+			if(jsonReq.has(replaceTag) && "empty".equalsIgnoreCase(jsonReq.getString(replaceTag))) {
+				jsonReq.put(replaceTag,"");
+			} 
+			
 		}
+		
 		loopcount++;
-		jsonRequest = reqJson.toString();
+		jsonRequest = jsonReq.toString();
+		parentTest.log(LogStatus.INFO, jsonRequest);
+		
 		System.out.println("================================================================");
 		System.out.println("RReq Json Request ***:\n" + jsonRequest);
 		System.out.println("================================================================");
@@ -105,9 +105,11 @@ public class TDSRReq_TC extends BaseClassTDS {
 			parentTest.log(LogStatus.FAIL, "3DS server is not responding at this moment");
 			return;
 		}
+		
 		if("P".equalsIgnoreCase(testCaseData.get("Test Case type")) && "Erro".equalsIgnoreCase(apiResponse.getString("messageType"))){
-			Assert.fail("errorComponent: "+apiResponse.getString("errorComponent")+", errorCode: "+apiResponse.getString("errorComponent")+", errorDescription:"+apiResponse.getString("errorDescription"));
-			parentTest.log(LogStatus.FAIL, "errorComponent: "+apiResponse.getString("errorComponent")+", errorCode: "+apiResponse.getString("errorComponent")+", errorDescription:"+apiResponse.getString("errorDescription"));
+			Assert.fail("errorComponent: "+apiResponse.getString("errorComponent")+", errorCode: "+apiResponse.getString("errorCode")+", errorDescription:"+apiResponse.getString("errorDescription")
+			+ "errorDetail : "+apiResponse.getString("errorDetail")+", threeDSServerTransID : "+apiResponse.getString("threeDSServerTransID"));
+			parentTest.log(LogStatus.FAIL, "errorComponent: "+apiResponse.getString("errorComponent")+", errorCode: "+apiResponse.getString("errorCode")+", errorDescription:"+apiResponse.getString("errorDescription"));
 			return;
 		}else if("N".equalsIgnoreCase(testCaseData.get("Test Case type")) && !"Erro".equalsIgnoreCase(apiResponse.getString("messageType"))){
 			Assert.fail("Expected to Fail");
@@ -178,7 +180,7 @@ public class TDSRReq_TC extends BaseClassTDS {
 			threeDSFieldAssert(apiResponse, testCaseData, "errorCode", sa);
 			threeDSFieldAssert(apiResponse, testCaseData, "errorComponent", sa);
 			threeDSFieldAssert(apiResponse, testCaseData, "errorDescription", sa);
-			threeDSFieldAssert(apiResponse, testCaseData, "errorMessageType", sa);
+			threeDSFieldAssert(apiResponse, testCaseData, "messageType", sa);
 			threeDSFieldAssert(apiResponse, testCaseData, "errorDetail", sa);
 		}
 		sa.assertAll();
@@ -195,7 +197,19 @@ public class TDSRReq_TC extends BaseClassTDS {
 	@DataProvider
 	public Object[][] DataProvider3dsTestData(ITestContext testContext) {
 
-		return new CommonUtil().getInputData(testContext, "TDSExcelFile", "ExcelSheetVerify");
+		/*return new CommonUtil().getInputData(testContext, "TDSExcelFile", "ExcelSheetVerify");*/
+		
+		try {
+			String enableEncryption = AppParams.getEnableDecryption();
+			if(enableEncryption != null && "true".equalsIgnoreCase(enableEncryption)){
+				return new CommonUtil().getInputData(testContext, "TDSExcelFileE", "ExcelSheetVerify");
+			}else{
+				return new CommonUtil().getInputData(testContext, "TDSExcelFileC", "ExcelSheetVerify");
+			}
+		} catch (Exception e) {
+			System.out.println("Error while reading data from excel sheet");
+		}
+		return null;
 	}
 
 	protected void extentTestInit( Map<String, String> testCaseData) {
