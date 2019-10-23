@@ -4,9 +4,10 @@
 <suite name="AMEXAReqTestSuite" verbose="1" parallel="instances" group-by-instances="true">
 
   <!--Based on EnableDecryption parameter in mtdconfig table of 3DSS DB one of the below excel file is picked  -->
-	<parameter name="TDSExcelFileC" value="data/3DS_ClearCardTestData.xlsx" />
-	<parameter name="TDSExcelFileE" value="data/3DS_EncryptedCardTestData.xlsx" />
+	<!-- <parameter name="TDSExcelFileC" value="data/3DS_ClearCardTestData.xlsx" />
+	<parameter name="TDSExcelFileE" value="data/3DS_EncryptedCardTestData.xlsx" /> -->
 	
+	<parameter name="TDSExcelFileC" value="data/TestExcel.xlsx" />
 	
           <!-- This Test is to perform the threedsMethodurl call for AMEX  -->
           <!-- ExcelSheetVerify refers to the sheet name in the TestData workbook  -->
@@ -14,7 +15,8 @@
           <!-- class name refers to the class called to test the threedsMethodurl API-->
       
 	<test name="AMEX::Clear Card::Browser::ThreeDSMethodURL flow" preserve-order="true" >
-		<parameter name="ExcelSheetVerify" value="2_AMURL" />
+		<!-- <parameter name="ExcelSheetVerify" value="2_AMURL" /> -->
+		<parameter name="ExcelSheetVerify" value="Sheet2" />
 		<parameter name="ReportTitle" value="3DSAutomationReportOfBrowser" />
 		<classes>
 		    <class name="com.ca.tds.main.TDSMethodURL_TC"/>
@@ -28,7 +30,8 @@
           <!-- class name refers to the class called to test the AReq API-->
 	
 	<test name="AMEX::Clear Card::Browser::AReq flow" preserve-order="true" >
-		<parameter name="ExcelSheetVerify" value="2_AAREQ" />
+		<!-- <parameter name="ExcelSheetVerify" value="2_AAREQ" /> -->
+		<parameter name="ExcelSheetVerify" value="Sheet1" />
 		<parameter name="ReportTitle" value="3DSAutomationReportOfBrowser" />
 		<classes>
 			<class name="com.ca.tds.main.TDSPreAreq_TC"/>

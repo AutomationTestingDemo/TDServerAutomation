@@ -1,38 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [AMEXAReqTestSuite]" parallel="instances">
-  <parameter name="TDSExcelFileE" value="data/3DS_EncryptedCardTestData.xlsx"/>
-  <parameter name="TDSExcelFileC" value="data/3DS_ClearCardTestData.xlsx"/>
-  <test thread-count="5" name="AMEX::Clear Card::Browser::ThreeDSMethodURL flow(failed)" parallel="instances">
-    <parameter name="TDSMethodURL" value="2_AMURL"/>
-    <parameter name="ReportTitle" value="3DSAutomationReportOfBrowser"/>
-    <parameter name="ExcelSheetVerify" value="2_AMURL"/>
-    <classes>
-      <class name="com.ca.tds.main.TDSMethodURL_TC">
-        <methods>
-          <include name="AfterTestClass"/>
-          <include name="BeforeClass"/>
-          <include name="AfterClass"/>
-          <include name="testArequestAPI" invocation-numbers="322 323 324 325 326 327 328 329 330 331 332 333 334 335"/>
-          <include name="beforeSuite"/>
-          <include name="afterMethodProcessing"/>
-          <include name="endSuite"/>
-          <include name="beforeTestClass"/>
-        </methods>
-      </class> <!-- com.ca.tds.main.TDSMethodURL_TC -->
-    </classes>
-  </test> <!-- AMEX::Clear Card::Browser::ThreeDSMethodURL flow(failed) -->
+  <parameter name="TDSExcelFileC" value="data/TestExcel.xlsx"/>
   <test thread-count="5" name="AMEX::Clear Card::Browser::AReq flow(failed)" parallel="instances">
     <parameter name="ReportTitle" value="3DSAutomationReportOfBrowser"/>
-    <parameter name="PreAreq" value="2_AAREQ"/>
-    <parameter name="ExcelSheetVerify" value="2_AAREQ"/>
+    <parameter name="ExcelSheetVerify" value="Sheet1"/>
     <classes>
       <class name="com.ca.tds.main.TDSPreAreq_TC">
         <methods>
           <include name="AfterTestClass"/>
           <include name="BeforeClass"/>
           <include name="AfterClass"/>
-          <include name="testArequestAPI" invocation-numbers="4 90 91 92 93 94 101 107 109 114 127 129 130 132 133 135 136 137 140 143 153 160 166 170 171 174 177 180 181 184 187 193 197 198 204 206 210 213 215 219 220 221 224 225 227 231 235 237 242 257 262 263 266 267 273 283 286 287 301 302 304 305 307 308 310 311 314 319 321 324 325 328 338 355 359 373 374 376 377 382 383 386 387 390 391 392 396 397 402 404 409 413 414 415 416 417 418 419 420 421 422 423 424 425 428 429 432 439 441 444 451 452 453 454 455 456 457 458 459 460 461 462 463 465 466 469 474 479 492 493 512 516 523 530 533 541 542 549 556 559 564 572 574 575 576 578 579 580 581 582 583 584 585 586 587 588 589 590 591"/>
+          <include name="testArequestAPI" invocation-numbers="0 2 3 4"/>
           <include name="beforeSuite"/>
           <include name="afterMethodProcessing"/>
           <include name="endSuite"/>

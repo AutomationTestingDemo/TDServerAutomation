@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [AREQTestSuite]" parallel="instances">
-  <parameter name="TDSExcelFileE" value="data/3DS_EncryptedCardTestData.xlsx"/>
-  <parameter name="TDSExcelFileC" value="data/3DS_ClearCardTestData.xlsx"/>
+<suite guice-stage="DEVELOPMENT" name="Failed suite [AMEXAReqTestSuite]" parallel="instances">
+  <parameter name="TDSExcelFileC" value="data/TestExcel.xlsx"/>
   <test thread-count="5" name="AMEX::Clear Card::Browser::AReq flow(failed)" parallel="instances">
     <parameter name="ReportTitle" value="3DSAutomationReportOfBrowser"/>
-    <parameter name="ExcelSheetVerify" value="2_AAREQ"/>
+    <parameter name="ExcelSheetVerify" value="Sheet1"/>
     <classes>
       <class name="com.ca.tds.main.TDSPreAreq_TC">
         <methods>
           <include name="AfterTestClass"/>
           <include name="BeforeClass"/>
           <include name="AfterClass"/>
-          <include name="testArequestAPI" invocation-numbers="90 91 92 93 94 137 171 180 181 184 197 219 220 221 286 325 392 396 413 414 415 416 417 418 419 420 421 422 423 424 425 452 453 454 455 456 457 458 459 460 461 462 463 493 523 530 533 564 572"/>
+          <include name="testArequestAPI" invocation-numbers="0 2 3 4"/>
           <include name="beforeSuite"/>
           <include name="afterMethodProcessing"/>
           <include name="endSuite"/>
@@ -21,4 +20,4 @@
       </class> <!-- com.ca.tds.main.TDSPreAreq_TC -->
     </classes>
   </test> <!-- AMEX::Clear Card::Browser::AReq flow(failed) -->
-</suite> <!-- Failed suite [AREQTestSuite] -->
+</suite> <!-- Failed suite [AMEXAReqTestSuite] -->

@@ -76,5 +76,48 @@ public class ThreeDSSdbAPI extends BaseClassTDS {
 		
 		return dstransid;
 	}
+	
+	public String getAResFromDB(String threeDStransactionId,Map<String, String> caPropMap) throws Exception {
+		
+		HashMap<String, String> dataMap = new HashMap<String, String>();
+		
+		String responseARes=null;
+	
+		String query= "select responsejson from ms_user.mtdresponsedata where threedsservertransid='"+threeDStransactionId+"'";
+		try {
+			
+			stmt = dbConn.getConn3DS(caPropMap).createStatement();
+			rs = stmt.executeQuery(query);
+			ResultSetMetaData rowData = rs.getMetaData();
+			int columns = rowData.getColumnCount();
+			dataMap = new HashMap<String, String>(columns);
+			while (rs.next()) {
+				
+				for (int i = 1; i <= columns; ++i) {
+					
+					dataMap.put(rowData.getColumnName(i), DBConnection.convertValueToString(rs.getObject(i)));
+				}
+			}
+			
+		} catch (Exception e) {
+			
+			throw new Exception(e.getMessage());
+			
+		} finally {
+			if (rs != null) {
+				rs.close();
+			}
+			if (stmt != null) {
+				stmt.close();
+			}
+		}
+		
+		if(dataMap.get("responsejson")!=null){
+			
+			responseARes = dataMap.get("responsejson").trim().toString();
+		}
+		
+		return responseARes;
+	}
 
 } 
