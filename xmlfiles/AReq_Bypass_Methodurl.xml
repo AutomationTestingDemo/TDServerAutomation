@@ -6,8 +6,6 @@
      <parameter name="TDSExcelFileC" value="data/3DS_ClearCardTestData.xlsx" />
 	 <parameter name="TDSExcelFileE" value="data/3DS_EncryptedCardTestData.xlsx" />
 	 
-<!-- 	 <parameter name="TDSExcelFileC" value="data/TestExcel.xlsx" />
-	 <parameter name="TDSExcelFileE" value="data/TestExcel.xlsx" /> -->
 
           <!-- This Test is to perform the AReq call for AMEX Bypassing threedsMethodurl API  -->
 	      <!-- ExcelSheetVerify refers to the sheet name in the TestData workbook  -->

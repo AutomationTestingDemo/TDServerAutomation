@@ -41,12 +41,12 @@
           <!-- ReportTitle refers to the report name it is saved in TestResultReport folder  -->
           <!-- class name refers to the class called to test the threedsMethodurl API-->
           
-	<!-- <test name="VISA ::Clear Card::Browser::TDSMethodURL flow" preserve-order="true">
+	<test name="VISA ::Clear Card::Browser::TDSMethodURL flow" preserve-order="true">
 		<parameter name="ExcelSheetVerify" value="1_VMURL" />
 		<parameter name="ReportTitle" value="3DSAutomationReportOfBrowser" />
 		<classes>
 			<class name="com.ca.tds.main.TDSMethodURL_TC"/>
 		</classes>
-	</test>  -->
+	</test> 
 		
 </suite>

@@ -25,6 +25,7 @@ import com.relevantcodes.extentreports.LogStatus;
 
 import ca.com.tds.restapi.PostHttpRequest;
 
+@SuppressWarnings("unused")
 public class TDSVerifyAPI_TC extends BaseClassTDS {
 
 	private String previousTest = "TestCaseName";
@@ -49,9 +50,6 @@ public class TDSVerifyAPI_TC extends BaseClassTDS {
 		extentTestInit(testCaseData);
 		CommonUtil cu = new CommonUtil();
 		
-		/*Map<String, Map<String, String>> testScenarioData = cu.getInputDataFromExcel(testContext, "TDSExcelFile",
-				"TEST SCENARIOS", "API Name");	*/
-		
 		Map<String, String> apiTestdata=null;
 		String enableEncryption = AppParams.getEnableDecryption();
 		Map<String, Map<String, String>> testScenarioData= null;
@@ -63,25 +61,15 @@ public class TDSVerifyAPI_TC extends BaseClassTDS {
 					"TEST SCENARIOS", "API Name");
 		}
 			
-		/*if (aResArr != null || aResArr.length() != 0) {
-			apiTestdata = testScenarioData.get("Verify Request API_Positive");}*/
 		apiTestdata = testScenarioData.get("Verify Request API");
 		String jsonRequest = apiTestdata.get("Request Json"); 
 		
-		
-		/*if (!threeDSServerTransIDList.isEmpty()) {
-			String replaceTag = "#threeDSServerTransID#";
-			while (loopcount < threeDSServerTransIDList.size()) {
-				jsonRequest = jsonRequest.replace(replaceTag, threeDSServerTransIDList.get(loopcount));
-				TRANSACTIONLOOPCOUNT++;
-				break; } }*/
-		
-	JSONObject jsonReq = AssertionUtility.prepareRequest(testCaseData, jsonRequest);
-		
+		JSONObject jsonReq = AssertionUtility.prepareRequest(testCaseData, jsonRequest);
+	String transStatus = null;
 		JSONObject aResJSON = aResArr.getJSONObject(loopcount);
 		//System.out.println("acsTransID :"+aResJSON.get("acsTransID"));
 		//System.out.println("threeDSServerTransID :"+aResJSON.get("threeDSServerTransID"));
-	 String cres = CRESPrep.cresBody(aResJSON.get("acsTransID").toString(), aResJSON.get("threeDSServerTransID").toString());
+	 String cres = CRESPrep.cresBody(aResJSON.get("acsTransID").toString(), aResJSON.get("threeDSServerTransID").toString(),testCaseData.get(transStatus));
 		Iterator<String> iterAres = aResJSON.keys();
 		while(iterAres.hasNext()){
 			String replaceTag = iterAres.next();

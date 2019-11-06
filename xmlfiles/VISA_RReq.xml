@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-     <suite name="TestSuite" verbose="1" parallel="instances" group-by-instances="true">
+     <suite name="VISARReqTestSuite" verbose="1" parallel="instances" group-by-instances="true">
      
 <!--Based on EnableDecryption parameter in mtdconfig table of 3DSS DB one of the below excel file is picked  -->
 	<parameter name="TDSExcelFileC" value="data/3DS_ClearCardTestData.xlsx" />

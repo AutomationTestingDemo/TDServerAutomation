@@ -8,19 +8,19 @@
             "description":"errorComponent",
             "type": "string",
             "maxLength":1,
-              "minLength":1
+              "minLength":0
         },
         "errorDescription":{
             "description":"errorDescription",
             "type": "string",
             "maxLength":2048,
-              "minLength":1
+              "minLength":0
         },
         "errorCode":{
             "description":"errorCode",
             "type": "string",
             "maxLength":3,
-              "minLength":1
+              "minLength":0
         },
         "errorDetail":{
             "description":"errorDetail",

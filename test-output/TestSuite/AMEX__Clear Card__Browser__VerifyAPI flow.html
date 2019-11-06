@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>AMEX::Clear Card::Browser::VerifyAPI flow</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>2/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>31/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Oct 07 15:09:01 IST 2019</td>
+<td>Started on:</td><td>Wed Oct 23 12:30:28 IST 2019</td>
 </tr>
-<tr><td>Total time:</td><td>4 seconds (4680 ms)</td>
+<tr><td>Total time:</td><td>67 seconds (67805 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,12 +75,157 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@3ae7ad76, {TestCaseID=_S001, TestCaseName=Sample Valid Verify Request, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=G, Expected-eci=G, Expected-authenticationValue=G, Expected-transStatus=G, Expected-transStatusReason=G, Expected-challengeCancel=G, Expected-resultsStatus=G, Expected-authenticationType=G, Expected-interactionCounter=G, Expected-messageType=G, Expected-XID=G, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU}</td>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@3c867a41, {TestCaseID=_S001, TestCaseName=Sample Valid Verify Request, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=G, Expected-eci=G, Expected-authenticationValue=G, Expected-transStatus=G, Expected-transStatusReason=G, Expected-challengeCancel=G, Expected-resultsStatus=G, Expected-authenticationType=G, Expected-interactionCounter=G, Expected-messageType=RSRs, Expected-XID=G, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU}</td>
 <td></td>
 <td>2</td>
 <td>com.ca.tds.main.TDSVerifyAPI_TC@5ce81285</td></tr>
 <tr>
-<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@3ae7ad76, {TestCaseID=_S002, TestCaseName=Sample Valid Verify Request, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=G, Expected-eci=G, Expected-authenticationValue=G, Expected-transStatus=G, Expected-transStatusReason=G, Expected-challengeCancel=G, Expected-resultsStatus=G, Expected-authenticationType=G, Expected-interactionCounter=G, Expected-messageType=G, Expected-XID=G, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU}</td>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@3c867a41, {TestCaseID=_S002, TestCaseName=3DSServerTransactionID_Empty, SanityFlag=Y, Test Case type=N, RequirementID=, FieldName=, Expected-threeDSServerTransID=NA, Expected-callerTxnRefID=NA, Expected-eci=NA, Expected-authenticationValue=NA, Expected-transStatus=NA, Expected-transStatusReason=NA, Expected-challengeCancel=NA, Expected-resultsStatus=NA, Expected-authenticationType=NA, Expected-interactionCounter=NA, Expected-messageType=Erro, Expected-XID=NA, Expected-errorCode=203, Expected-errorComponent=S, Expected-errorDescription=G, Expected-errorDetail=G, #threeDSServerTransID#=empty , #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU}</td>
+<td></td>
+<td>1</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@5ce81285</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@3c867a41, {TestCaseID=_S003, TestCaseName=3DSServerTransactionID_MoreThanMaxAcceptedLen>36Chars, SanityFlag=Y, Test Case type=N, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=NA, Expected-eci=NA, Expected-authenticationValue=NA, Expected-transStatus=NA, Expected-transStatusReason=NA, Expected-challengeCancel=NA, Expected-resultsStatus=NA, Expected-authenticationType=NA, Expected-interactionCounter=NA, Expected-messageType=Erro, Expected-XID=NA, Expected-errorCode=203, Expected-errorComponent=S, Expected-errorDescription=G, Expected-errorDetail=G, #threeDSServerTransID#=74381944-293c-44a0-9ce8-bf3a2491358074381944-293c-44a0-9ce8-bf3a24913580, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU}</td>
+<td></td>
+<td>1</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@5ce81285</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@3c867a41, {TestCaseID=_S004, TestCaseName=3DSServerTransactionID_FLV_TransID, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=G, Expected-eci=G, Expected-authenticationValue=G, Expected-transStatus=G, Expected-transStatusReason=G, Expected-challengeCancel=G, Expected-resultsStatus=G, Expected-authenticationType=G, Expected-interactionCounter=G, Expected-messageType=RSRs, Expected-XID=G, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU}</td>
+<td></td>
+<td>2</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@5ce81285</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@3c867a41, {TestCaseID=_S005, TestCaseName=RemovalOfRequiredField_3DSServerTransactionID, SanityFlag=Y, Test Case type=N, RequirementID=, FieldName=, Expected-threeDSServerTransID=NA, Expected-callerTxnRefID=NA, Expected-eci=NA, Expected-authenticationValue=NA, Expected-transStatus=NA, Expected-transStatusReason=NA, Expected-challengeCancel=NA, Expected-resultsStatus=NA, Expected-authenticationType=NA, Expected-interactionCounter=NA, Expected-messageType=Erro, Expected-XID=NA, Expected-errorCode=201, Expected-errorComponent=S, Expected-errorDescription=G, Expected-errorDetail=G, #threeDSServerTransID#=#REMOVE#, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU}</td>
+<td></td>
+<td>1</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@5ce81285</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@3c867a41, {TestCaseID=_S006, TestCaseName=3DSServerTransactionID_InvalidTransID, SanityFlag=Y, Test Case type=N, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=NA, Expected-eci=NA, Expected-authenticationValue=NA, Expected-transStatus=NA, Expected-transStatusReason=NA, Expected-challengeCancel=NA, Expected-resultsStatus=NA, Expected-authenticationType=NA, Expected-interactionCounter=NA, Expected-messageType=Erro, Expected-XID=NA, Expected-errorCode=305, Expected-errorComponent=S, Expected-errorDescription=G, Expected-errorDetail=G, #threeDSServerTransID#=11111111-1111-1111-1111-111111111111, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU}</td>
+<td></td>
+<td>1</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@5ce81285</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@3c867a41, {TestCaseID=_S007, TestCaseName=ValidCallerTxnRefID, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=G, Expected-eci=G, Expected-authenticationValue=G, Expected-transStatus=G, Expected-transStatusReason=G, Expected-challengeCancel=G, Expected-resultsStatus=G, Expected-authenticationType=G, Expected-interactionCounter=G, Expected-messageType=RSRs, Expected-XID=G, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU}</td>
+<td></td>
+<td>2</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@5ce81285</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@3c867a41, {TestCaseID=_S008, TestCaseName=Empty_CallerTxnRefID, SanityFlag=Y, Test Case type=N, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=NA, Expected-eci=NA, Expected-authenticationValue=NA, Expected-transStatus=NA, Expected-transStatusReason=NA, Expected-challengeCancel=NA, Expected-resultsStatus=NA, Expected-authenticationType=NA, Expected-interactionCounter=NA, Expected-messageType=Erro, Expected-XID=NA, Expected-errorCode=203, Expected-errorComponent=S, Expected-errorDescription=G, Expected-errorDetail=G, #threeDSServerTransID#=, #callerTxnRefID#=empty, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU}</td>
+<td></td>
+<td>1</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@5ce81285</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@3c867a41, {TestCaseID=_S009, TestCaseName=InvalidCallerTxnRefID, SanityFlag=Y, Test Case type=N, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=NA, Expected-eci=NA, Expected-authenticationValue=NA, Expected-transStatus=NA, Expected-transStatusReason=NA, Expected-challengeCancel=NA, Expected-resultsStatus=NA, Expected-authenticationType=NA, Expected-interactionCounter=NA, Expected-messageType=Erro, Expected-XID=NA, Expected-errorCode=203, Expected-errorComponent=S, Expected-errorDescription=G, Expected-errorDetail=G, #threeDSServerTransID#=, #callerTxnRefID#=11111111-1111-1111-1111-111111111111111, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU}</td>
+<td></td>
+<td>1</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@5ce81285</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@3c867a41, {TestCaseID=_S010, TestCaseName=CallerTxnRefIDLengthMoreThan36Chars, SanityFlag=Y, Test Case type=N, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=NA, Expected-eci=NA, Expected-authenticationValue=NA, Expected-transStatus=NA, Expected-transStatusReason=NA, Expected-challengeCancel=NA, Expected-resultsStatus=NA, Expected-authenticationType=NA, Expected-interactionCounter=NA, Expected-messageType=Erro, Expected-XID=NA, Expected-errorCode=203, Expected-errorComponent=S, Expected-errorDescription=G, Expected-errorDetail=G, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU}</td>
+<td></td>
+<td>1</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@5ce81285</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@3c867a41, {TestCaseID=_S011, TestCaseName=RemovalOfOptionalField_CallerTxnRefID, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=G, Expected-eci=G, Expected-authenticationValue=G, Expected-transStatus=G, Expected-transStatusReason=G, Expected-challengeCancel=G, Expected-resultsStatus=G, Expected-authenticationType=G, Expected-interactionCounter=G, Expected-messageType=RSRs, Expected-XID=G, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #threeDSServerTransID#=, #callerTxnRefID#=#REMOVE#, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU}</td>
+<td></td>
+<td>2</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@5ce81285</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@3c867a41, {TestCaseID=_S012, TestCaseName=WithValid_FullCRES, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=G, Expected-eci=G, Expected-authenticationValue=G, Expected-transStatus=G, Expected-transStatusReason=G, Expected-challengeCancel=G, Expected-resultsStatus=G, Expected-authenticationType=G, Expected-interactionCounter=G, Expected-messageType=RSRs, Expected-XID=G, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #threeDSServerTransID#=, #callerTxnRefID#= , #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU}</td>
+<td></td>
+<td>2</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@5ce81285</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@3c867a41, {TestCaseID=_S013, TestCaseName=PartialCRES_Without_threeDSServerTransID, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=G, Expected-eci=G, Expected-authenticationValue=G, Expected-transStatus=G, Expected-transStatusReason=G, Expected-challengeCancel=G, Expected-resultsStatus=G, Expected-authenticationType=G, Expected-interactionCounter=G, Expected-messageType=RSRs, Expected-XID=G, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU}</td>
+<td></td>
+<td>2</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@5ce81285</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@3c867a41, {TestCaseID=_S014, TestCaseName=PartialCRES_Without_acsTransID, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=G, Expected-eci=G, Expected-authenticationValue=G, Expected-transStatus=G, Expected-transStatusReason=G, Expected-challengeCancel=G, Expected-resultsStatus=G, Expected-authenticationType=G, Expected-interactionCounter=G, Expected-messageType=RSRs, Expected-XID=G, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU}</td>
+<td></td>
+<td>2</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@5ce81285</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@3c867a41, {TestCaseID=_S015, TestCaseName=PartialCRES_Without_challengeCompletionInd, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=G, Expected-eci=G, Expected-authenticationValue=G, Expected-transStatus=G, Expected-transStatusReason=G, Expected-challengeCancel=G, Expected-resultsStatus=G, Expected-authenticationType=G, Expected-interactionCounter=G, Expected-messageType=RSRs, Expected-XID=G, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU}</td>
+<td></td>
+<td>2</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@5ce81285</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@3c867a41, {TestCaseID=_S016, TestCaseName=PartialCRES_Without_messageType, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=G, Expected-eci=G, Expected-authenticationValue=G, Expected-transStatus=G, Expected-transStatusReason=G, Expected-challengeCancel=G, Expected-resultsStatus=G, Expected-authenticationType=G, Expected-interactionCounter=G, Expected-messageType=RSRs, Expected-XID=G, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU}</td>
+<td></td>
+<td>2</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@5ce81285</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@3c867a41, {TestCaseID=_S017, TestCaseName=PartialCRES_Without_transStatus, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=G, Expected-eci=G, Expected-authenticationValue=G, Expected-transStatus=G, Expected-transStatusReason=G, Expected-challengeCancel=G, Expected-resultsStatus=G, Expected-authenticationType=G, Expected-interactionCounter=G, Expected-messageType=RSRs, Expected-XID=G, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU}</td>
+<td></td>
+<td>3</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@5ce81285</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@3c867a41, {TestCaseID=_S018, TestCaseName=PartialCRES_Without_messageVersion, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=G, Expected-eci=G, Expected-authenticationValue=G, Expected-transStatus=G, Expected-transStatusReason=G, Expected-challengeCancel=G, Expected-resultsStatus=G, Expected-authenticationType=G, Expected-interactionCounter=G, Expected-messageType=RSRs, Expected-XID=G, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU}</td>
+<td></td>
+<td>2</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@5ce81285</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@3c867a41, {TestCaseID=_S019, TestCaseName=Empty_CRES, SanityFlag=Y, Test Case type=N, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=NA, Expected-eci=NA, Expected-authenticationValue=NA, Expected-transStatus=NA, Expected-transStatusReason=NA, Expected-challengeCancel=NA, Expected-resultsStatus=NA, Expected-authenticationType=NA, Expected-interactionCounter=NA, Expected-messageType=Erro, Expected-XID=NA, Expected-errorCode=203, Expected-errorComponent=S, Expected-errorDescription=G, Expected-errorDetail=G, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=empty, #messageType#=RSRq, #caMerchantID#=CA_EU}</td>
+<td></td>
+<td>1</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@5ce81285</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@3c867a41, {TestCaseID=_S020, TestCaseName=Invalid_CRES, SanityFlag=Y, Test Case type=N, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=NA, Expected-eci=NA, Expected-authenticationValue=NA, Expected-transStatus=NA, Expected-transStatusReason=NA, Expected-challengeCancel=NA, Expected-resultsStatus=NA, Expected-authenticationType=NA, Expected-interactionCounter=NA, Expected-messageType=Erro, Expected-XID=NA, Expected-errorCode=305, Expected-errorComponent=S, Expected-errorDescription=G, Expected-errorDetail=G, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=ewogICAiYWNzVHJhbnNJRCIgOiAiZDVmNDZjM2UtMjgzYS00MDU5LTlkNjQtMDZjNzk0ZTdhZGEzIiwKICAgImNoYWxsZW5nZVdpbmRvd1NpemUiIDogIjA0IiwKICAgIm1lc3NhZ2VUeXBlIiA6ICJDUmVxIiwKICAgIm1lc3NhZ2VWZXJzaW9uIiA6ICIyLjEuMCIsCiAgICJ0aHJlZURTU2VydmVyVHJhbnNJRCIgOiAiOTA2MTY2MGQtMzRkMy00YjI0LTk3ZjMtYTBlMjY2MmY1YzRlIgp9Cg==, #messageType#=RSRq, #caMerchantID#=CA_EU}</td>
+<td></td>
+<td>1</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@5ce81285</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@3c867a41, {TestCaseID=_S021, TestCaseName=RemovalOfOptionalField_CRES, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=G, Expected-eci=G, Expected-authenticationValue=G, Expected-transStatus=G, Expected-transStatusReason=G, Expected-challengeCancel=G, Expected-resultsStatus=G, Expected-authenticationType=G, Expected-interactionCounter=G, Expected-messageType=RSRs, Expected-XID=G, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=#REMOVE#, #messageType#=RSRq, #caMerchantID#=CA_EU}</td>
+<td></td>
+<td>2</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@5ce81285</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@3c867a41, {TestCaseID=_S022, TestCaseName=MessageType_RSRq, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=G, Expected-eci=G, Expected-authenticationValue=G, Expected-transStatus=G, Expected-transStatusReason=G, Expected-challengeCancel=G, Expected-resultsStatus=G, Expected-authenticationType=G, Expected-interactionCounter=G, Expected-messageType=RSRs, Expected-XID=G, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU}</td>
+<td></td>
+<td>2</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@5ce81285</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@3c867a41, {TestCaseID=_S023, TestCaseName=MessageType_Invalid_RSRQ, SanityFlag=Y, Test Case type=N, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=NA, Expected-eci=NA, Expected-authenticationValue=NA, Expected-transStatus=NA, Expected-transStatusReason=NA, Expected-challengeCancel=NA, Expected-resultsStatus=NA, Expected-authenticationType=NA, Expected-interactionCounter=NA, Expected-messageType=Erro, Expected-XID=NA, Expected-errorCode=101, Expected-errorComponent=S, Expected-errorDescription=G, Expected-errorDetail=G, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRQ, #caMerchantID#=CA_EU}</td>
+<td></td>
+<td>1</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@5ce81285</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@3c867a41, {TestCaseID=_S024, TestCaseName=MessageType_Empty, SanityFlag=Y, Test Case type=N, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=NA, Expected-eci=NA, Expected-authenticationValue=NA, Expected-transStatus=NA, Expected-transStatusReason=NA, Expected-challengeCancel=NA, Expected-resultsStatus=NA, Expected-authenticationType=NA, Expected-interactionCounter=NA, Expected-messageType=Erro, Expected-XID=NA, Expected-errorCode=101, Expected-errorComponent=S, Expected-errorDescription=G, Expected-errorDetail=G, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=empty , #caMerchantID#=CA_EU}</td>
+<td></td>
+<td>1</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@5ce81285</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@3c867a41, {TestCaseID=_S025, TestCaseName=MessageType_MoreThanMaxAcceptedLen>4Chars, SanityFlag=Y, Test Case type=N, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=NA, Expected-eci=NA, Expected-authenticationValue=NA, Expected-transStatus=NA, Expected-transStatusReason=NA, Expected-challengeCancel=NA, Expected-resultsStatus=NA, Expected-authenticationType=NA, Expected-interactionCounter=NA, Expected-messageType=Erro, Expected-XID=NA, Expected-errorCode=101, Expected-errorComponent=S, Expected-errorDescription=G, Expected-errorDetail=G, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRQ1, #caMerchantID#=CA_EU}</td>
+<td></td>
+<td>1</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@5ce81285</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@3c867a41, {TestCaseID=_S026, TestCaseName=RemovalOfRequiredField_MessageType, SanityFlag=Y, Test Case type=N, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=NA, Expected-eci=NA, Expected-authenticationValue=NA, Expected-transStatus=NA, Expected-transStatusReason=NA, Expected-challengeCancel=NA, Expected-resultsStatus=NA, Expected-authenticationType=NA, Expected-interactionCounter=NA, Expected-messageType=Erro, Expected-XID=NA, Expected-errorCode=201, Expected-errorComponent=S, Expected-errorDescription=G, Expected-errorDetail=G, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=#REMOVE#, #caMerchantID#=CA_EU}</td>
+<td></td>
+<td>1</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@5ce81285</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@3c867a41, {TestCaseID=_S027, TestCaseName=ValidCAMerchantID, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=G, Expected-eci=G, Expected-authenticationValue=G, Expected-transStatus=G, Expected-transStatusReason=G, Expected-challengeCancel=G, Expected-resultsStatus=G, Expected-authenticationType=G, Expected-interactionCounter=G, Expected-messageType=RSRs, Expected-XID=G, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU}</td>
+<td></td>
+<td>2</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@5ce81285</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@3c867a41, {TestCaseID=_S028, TestCaseName=Empty_CAMerchantID, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=G, Expected-eci=G, Expected-authenticationValue=G, Expected-transStatus=G, Expected-transStatusReason=G, Expected-challengeCancel=G, Expected-resultsStatus=G, Expected-authenticationType=G, Expected-interactionCounter=G, Expected-messageType=RSRs, Expected-XID=G, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=empty}</td>
+<td></td>
+<td>2</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@5ce81285</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@3c867a41, {TestCaseID=_S029, TestCaseName=Invalid_CAMerchantID, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=G, Expected-eci=G, Expected-authenticationValue=G, Expected-transStatus=G, Expected-transStatusReason=G, Expected-challengeCancel=G, Expected-resultsStatus=G, Expected-authenticationType=G, Expected-interactionCounter=G, Expected-messageType=RSRs, Expected-XID=G, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU}</td>
+<td></td>
+<td>2</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@5ce81285</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@3c867a41, {TestCaseID=_S030, TestCaseName=RemovalOfRequiredField_CAMerchantID, SanityFlag=Y, Test Case type=N, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=NA, Expected-eci=NA, Expected-authenticationValue=NA, Expected-transStatus=NA, Expected-transStatusReason=NA, Expected-challengeCancel=NA, Expected-resultsStatus=NA, Expected-authenticationType=NA, Expected-interactionCounter=NA, Expected-messageType=Erro, Expected-XID=NA, Expected-errorCode=201, Expected-errorComponent=S, Expected-errorDescription=G, Expected-errorDetail=G, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=#REMOVE#}</td>
+<td></td>
+<td>1</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@5ce81285</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@3c867a41, {TestCaseID=_S031, TestCaseName=CAMerchantID_MoreThanMaxAcceptedLen>2KChars, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=G, Expected-eci=G, Expected-authenticationValue=G, Expected-transStatus=G, Expected-transStatusReason=G, Expected-challengeCancel=G, Expected-resultsStatus=G, Expected-authenticationType=G, Expected-interactionCounter=G, Expected-messageType=RSRs, Expected-XID=G, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU}</td>
 <td></td>
 <td>2</td>
 <td>com.ca.tds.main.TDSVerifyAPI_TC@5ce81285</td></tr>
