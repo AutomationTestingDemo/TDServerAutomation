@@ -27,7 +27,8 @@ public class AppParams {
 	private String tDSMethodURL;
 	private String tDSVerifyAPIURL;
 	private String tDSVerifyCacheURL;
-	private static String reportFile;
+	private static String reportFilePath;
+	private static String reportFileName;
 	
 	private String tdsMetaRanges;
 	private static Map<String, String> caPropMap = null;
@@ -82,16 +83,25 @@ public class AppParams {
 		initTDSVerifyAPIURL();
 		initTDSVerifyCacheURL();
 		initTDSMetaRanges();
-		initreportFile();
+		initreportFilePath();
+		initreportFileName();
 		
 	}
 	
-	private void initreportFile(){
-		reportFile = System.getenv("reportFile");
+	private void initreportFilePath(){
+		reportFilePath = System.getenv("reportFilePath");
 	}
 	
-	public static String getreportFile() {
-		return reportFile;
+	public static String getreportFilePath() {
+		return reportFilePath;
+	}
+	
+	private void initreportFileName(){
+		reportFileName = System.getenv("reportFileName");
+	}
+	
+	public static String getreportFileName() {
+		return reportFileName;
 	}
 	
 	private void initDBHost(){

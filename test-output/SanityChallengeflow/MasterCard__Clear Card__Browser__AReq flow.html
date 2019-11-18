@@ -1,0 +1,84 @@
+<html>
+<head>
+<title>TestNG:  MasterCard::Clear Card::Browser::AReq flow</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>MasterCard::Clear Card::Browser::AReq flow</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Fri Nov 15 16:35:24 IST 2019</td>
+</tr>
+<tr><td>Total time:</td><td>0 seconds (651 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.ca.tds.main.TDSPreAreq_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSPreAreq_TC<br>Parameters: org.testng.TestRunner@6093fd5c, {TestCaseID=_S001, TestCaseName=_SanityChallenge_AReq_MC_For_Verify_TC001, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-cardholderInfo=NA, Expected-creq=G, Expected-transStatusReason=NA, Expected-authenticationValue=NA, Expected-authenticationType=G, Expected-acsURL=G, Expected-acsOperatorID=ACS_OPERATOR_ID, Expected-acsChallengeMandated=G, Expected-callerTxnRefID=G, Expected-threeDSServerTransID=G, Expected-dsTransID=G, Expected-acsTransID=G, Expected-eci=NA, Expected-messageType=ARes, Expected-dsName=mastercard, Expected-messageVersion=2.1.0, Expected-dsReferenceNumber=CADS, Expected-acsReferenceNumber=ABCDEF987654321, Expected-transStatus=C, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #browserJavascriptEnabled#=true, #challengeWindowSize#=04, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #caMerchantID#=CA_EU, #acctID#=ACCTID98X3fw3, #chAccAgeInd#=02, #chAccChange#=20180928, #chAccChangeInd#=02, #chAccDate#=20180928, #chAccPwChange#=20180901, #chAccPwChangeInd#=01, #nbPurchaseAccount#=8, #paymentAccAge#=20180808, #paymentAccInd#=01, #provisionAttemptsDay#=1, #shipAddressUsage#=20180910, #shipAddressUsageInd#=03, #shipNameIndicator#=01, #suspiciousAccActivity#=01, #txnActivityDay#=5, #txnActivityYear#=8, #acctNumber#=5186003100001014, #acctType#=01, #addrMatch#=Y, #billAddrCity#=San Jose, #billAddrCountry#=840, #billAddrLine1#=500 West Maude Ave, #billAddrLine2#=ABC, #billAddrLine3#=HMS, #billAddrPostCode#=95101, #billAddrState#=CA, #browserAcceptHeader#=text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8, #browserColorDepth#=24, #browserIP#=155.35.122.4, #browserJavaEnabled#=true, #browserLanguage#=en-US, #browserScreenHeight#=720, #browserScreenWidth#=1280, #browserTZ#=-330, #browserUserAgent#=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.84 Safari/537.36, #cardExpiryDate#=2008, #cardholderName#=Stephen, #deviceChannel#=02, #email#=harsh08@ca.com, #hcc#=840, #hsubscriber#=1234567899, #messageCategory#=01, #messageType#=AReq, #messageVersion#=2.1.0, #mcc#=840, #msubscriber#=1234567899, #notificationURL#=http://localhost:9090/golfstore2/CreqNotification.jsp, #purchaseAmount#=300, #purchaseCurrency#=840, #purchaseDate#=20180928160450, #purchaseExponent#=2, #recurringExpiry#=#REMOVE#, #recurringFrequency#=#REMOVE#, #shipAddrCity#=San Jose, #shipAddrCountry#=840, #shipAddrLine1#=500 West Maude Ave, #shipAddrLine2#=ABC, #shipAddrLine3#=HMS, #shipAddrPostCode#=95101, #shipAddrState#=CA, #threeDSCompInd#=Y, #threeDSServerTransID#=, #wcc#=840, #wsubscriber#=1234567899, #threeDSRequestorAuthenticationInd#=01, #threeDSReqAuthData#=3DS PA Request, #threeDSReqAuthMethod#=02, #threeDSReqAuthTimestamp#=201809281603, #threeDSRequestorChallengeInd#=01, #threeDSRequestorID#=611, #threeDSRequestorName#=ew0KCSJEViI6ICIxLjAiLA0KCSJERCI6Iaa45, #threeDSReqPriorAuthData#=three DS Request Prior Authentication Data, #threeDSReqPriorAuthMethod#=01, #threeDSReqPriorAuthTimestamp#=201810010323, #threeDSReqPriorRef#=4c6453da-4c56-4980-98cd-d04a064899c4, #threeDSRequestorURL#=http://10.131.94.242:1080/content-server/api/tds2/txn/browser/v1/tds-method, #threeDSServerRefNumber#=AAAAAA123456789, #threeDSServerOperatorID#=serverOperatorID, #threeDSServerURL#=http://10.138.158.51:9608, #acquirerBIN#=12345678912, #acquirerMerchantID#=AcquirerMerchantID222, #payTokenInd#=true, #purchaseInstalData#=#REMOVE#, #mcc1#=0742, #merchantCountryCode#=840, #merchantName#=global, #deliveryEmailAddress#=harsh08@ca.com, #deliveryTimeframe#=01, #giftCardAmount#=500, #giftCardCount#=02, #giftCardCurr#=840, #preOrderDate#=20200803, #preOrderPurchaseInd#=01, #reorderItemsInd#=01, #shipIndicator#=01, #criticalityIndicator#=false, #id#=ID2018SEP282001, #name#=ShashishekharHM, #transType#=01, #threeDSRequestorAuthenticationInfo#=, #threeDSRequestorPriorAuthenticationInfo#=, #broadInfo#=, #broadInfoValue#=broadInfoValue, #acctInfo#=, #homePhone#=, #mobilePhone#=, #workPhone#=, #merchantRiskIndicator#=, #messageExtension#=, #Dvalue#=HMS, #Dvalue1#=HMS, #Dvalue2#=HMS}</td>
+<td></td>
+<td>0</td>
+<td>com.ca.tds.main.TDSPreAreq_TC@67784306</td></tr>
+</table><p>
+</body>
+</html>

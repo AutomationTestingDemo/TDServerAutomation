@@ -27,15 +27,8 @@
           <version>3.0.0-M3</version>
           <configuration>
           <suiteXmlFiles>
-          <suiteXmlFile>xmlfiles/AMEX_AReq.xml</suiteXmlFile>
-          <suiteXmlFile>xmlfiles/MasterCard_AReq.xml</suiteXmlFile>
-          <suiteXmlFile>xmlfiles/VISA_AReq.xml</suiteXmlFile>
-          <suiteXmlFile>xmlfiles/AMEX_RReq.xml</suiteXmlFile>
-          <suiteXmlFile>xmlfiles/MasterCard_RReq.xml</suiteXmlFile>
-          <suiteXmlFile>xmlfiles/VISA_RReq.xml</suiteXmlFile>
-           <suiteXmlFile>xmlfiles/AMEX_VerifyAPI.xml</suiteXmlFile>
-          <suiteXmlFile>xmlfiles/MasterCard_VerifyAPI.xml</suiteXmlFile>
-          <suiteXmlFile>xmlfiles/VISA_VerifyAPI.xml</suiteXmlFile>
+         <!--  <suiteXmlFile>xmlfiles/3DS_AllFlows_Preview.xml</suiteXmlFile> -->
+          <suiteXmlFile>xmlfiles/3DS_AllFlows_Develop.xml</suiteXmlFile>
           </suiteXmlFiles>
           </configuration>
         </plugin>

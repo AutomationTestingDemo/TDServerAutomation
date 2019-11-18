@@ -5,6 +5,8 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
 
 import org.everit.json.schema.ValidationException;
 import org.json.JSONException;
@@ -64,12 +66,25 @@ public class TDSVerifyAPI_TC extends BaseClassTDS {
 		apiTestdata = testScenarioData.get("Verify Request API");
 		String jsonRequest = apiTestdata.get("Request Json"); 
 		
+		/* int i=0;
+		    
+		    while(i!=5) {*/
+		    	
 		JSONObject jsonReq = AssertionUtility.prepareRequest(testCaseData, jsonRequest);
-	String transStatus = null;
-		JSONObject aResJSON = aResArr.getJSONObject(loopcount);
+	    String transStatus = null;
+	   
+	    JSONObject aResJSON = aResArr.getJSONObject(loopcount);
 		//System.out.println("acsTransID :"+aResJSON.get("acsTransID"));
 		//System.out.println("threeDSServerTransID :"+aResJSON.get("threeDSServerTransID"));
-	 String cres = CRESPrep.cresBody(aResJSON.get("acsTransID").toString(), aResJSON.get("threeDSServerTransID").toString(),testCaseData.get(transStatus));
+	for (Map.Entry<String, String> entry  : testCaseData.entrySet()) {
+			
+		if(entry.getKey().equals("#transStatus#")) {
+			
+			transStatus=entry.getValue();
+		}
+		
+		}
+	 String cres = CRESPrep.cresBody(aResJSON.get("acsTransID").toString(), aResJSON.get("threeDSServerTransID").toString(),transStatus);
 		Iterator<String> iterAres = aResJSON.keys();
 		while(iterAres.hasNext()){
 			String replaceTag = iterAres.next();
@@ -194,13 +209,19 @@ public class TDSVerifyAPI_TC extends BaseClassTDS {
 		}
 		sa.assertAll();
 			
-		}catch(ValidationException ve){
+	/*	i++; }*/  }catch(ValidationException ve){
 			Assert.fail("Verify API response data validation failed.<br>"+ve.getErrorMessage()+"<br> api response : "+apiResponse);
 		} 
 		catch(Exception e) {
 		e.printStackTrace();	
 		Assert.fail("Browser Flow:: Verify API Validation Failed."+apiResponse);
-		}
+		} 
+		
+	/*	finally {
+			
+		loopcount++;
+		
+		}*/
 	}
 
 	@DataProvider

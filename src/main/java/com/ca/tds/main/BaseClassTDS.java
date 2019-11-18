@@ -120,7 +120,6 @@ public class BaseClassTDS {
 	public void AfterClass(){
 		System.out.println("==== Inside After Class =======");
 		System.out.println("No.of threeDSServerTransIDs :"+threeDSServerTransIDList.size());
-		System.out.println("threeDSServerTransID :"+threeDSServerTransIDList);
 	}
 	
 	@AfterSuite
@@ -128,6 +127,7 @@ public class BaseClassTDS {
 		
 		System.out.println("====+++++Execution Completed Kindly verify the Reports for the summary +++++=======");
 		ReportsBackup.zippingReports();
+	
 		
 	}
 
@@ -136,12 +136,15 @@ public class BaseClassTDS {
 		initializeApplicationParams.initializeAppParams();
 		appParams = initializeApplicationParams.getAppParams();
 	}
+	
 	public void initialiseReport(ITestContext testContext) {
 
 		if (extent == null) {
 			
-			String reportfile =caPropMap.get("reportFile");
-			String dest =System.getProperty("user.dir")+ reportfile;
+			String reportfilepath =caPropMap.get("reportFilePath");
+			String reportfilename =caPropMap.get("reportFileName");
+			String suiteName = testContext.getCurrentXmlTest().getSuite().getName().toString();
+			String dest =System.getProperty("user.dir")+reportfilepath+suiteName+"_"+reportfilename;
 			System.out.println("Report file location : " + dest);
 			extent = new ExtentReports(dest, true);
 			extent.config().documentTitle(getPropertyValue("ReportTitle", testContext, null));
@@ -207,6 +210,7 @@ public class BaseClassTDS {
 				
 			}
 			System.out.println("ACTIVE THREAD COUNTS : "+java.lang.Thread.activeCount());
+		
 			try {
 				extent.endTest(parentTest);
 			} catch (Exception e) {

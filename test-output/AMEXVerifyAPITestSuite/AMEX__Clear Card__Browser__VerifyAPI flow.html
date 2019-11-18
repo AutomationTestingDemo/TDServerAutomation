@@ -1,0 +1,538 @@
+<html>
+<head>
+<title>TestNG:  AMEX::Clear Card::Browser::VerifyAPI flow</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>AMEX::Clear Card::Browser::VerifyAPI flow</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>21/13/0</td>
+</tr><tr>
+<td>Started on:</td><td>Thu Nov 14 20:41:19 IST 2019</td>
+</tr>
+<tr><td>Total time:</td><td>319 seconds (319218 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@3da2d2bc, {TestCaseID=_S004, TestCaseName=3DSServerTransactionID_FLV_TransID, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=G, Expected-eci=G, Expected-authenticationValue=G, Expected-transStatus=G, Expected-transStatusReason=G, Expected-challengeCancel=G, Expected-resultsStatus=G, Expected-authenticationType=G, Expected-interactionCounter=G, Expected-messageType=RSRs, Expected-XID=G, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU, #transStatus#=Y}</td>
+<td><div><pre>java.lang.AssertionError: errorComponent: S, errorCode: 501, errorDescription:CA Merchant Server:: RReq not recieved due to technical errorerrorDetail : Internal Trasient error occured for this transaction. Temporary Error occured for this transaction, threeDSServerTransID : 42b46467-fd48-4911-8f04-774ee171dd3c
+	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:120)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 11 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace270288210", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace270288210'><pre>java.lang.AssertionError: errorComponent: S, errorCode: 501, errorDescription:CA Merchant Server:: RReq not recieved due to technical errorerrorDetail : Internal Trasient error occured for this transaction. Temporary Error occured for this transaction, threeDSServerTransID : 42b46467-fd48-4911-8f04-774ee171dd3c
+	at org.testng.Assert.fail(Assert.java:96)
+	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:120)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</pre></div></td>
+<td>2</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@79be0360</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@3da2d2bc, {TestCaseID=_S008, TestCaseName=Empty_CallerTxnRefID, SanityFlag=Y, Test Case type=N, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=NA, Expected-eci=NA, Expected-authenticationValue=NA, Expected-transStatus=NA, Expected-transStatusReason=NA, Expected-challengeCancel=NA, Expected-resultsStatus=NA, Expected-authenticationType=NA, Expected-interactionCounter=NA, Expected-messageType=Erro, Expected-XID=NA, Expected-errorCode=203, Expected-errorComponent=S, Expected-errorDescription=G, Expected-errorDetail=G, #threeDSServerTransID#=, #callerTxnRefID#=empty, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU, #transStatus#=N}</td>
+<td><div><pre>java.lang.AssertionError: Expected to Fail
+	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:126)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 11 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace790417102", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace790417102'><pre>java.lang.AssertionError: Expected to Fail
+	at org.testng.Assert.fail(Assert.java:96)
+	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:126)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</pre></div></td>
+<td>5</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@79be0360</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@3da2d2bc, {TestCaseID=_S011, TestCaseName=RemovalOfOptionalField_CallerTxnRefID, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=G, Expected-eci=G, Expected-authenticationValue=G, Expected-transStatus=G, Expected-transStatusReason=G, Expected-challengeCancel=G, Expected-resultsStatus=G, Expected-authenticationType=G, Expected-interactionCounter=G, Expected-messageType=RSRs, Expected-XID=G, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #threeDSServerTransID#=, #callerTxnRefID#=#REMOVE#, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU, #transStatus#=Y}</td>
+<td><div><pre>java.lang.AssertionError: errorComponent: S, errorCode: 501, errorDescription:CA Merchant Server:: RReq not recieved due to technical errorerrorDetail : Internal Trasient error occured for this transaction. Temporary Error occured for this transaction, threeDSServerTransID : 3250e1f0-1754-4c15-92af-54499b77b17f
+	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:120)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 11 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1230305002", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1230305002'><pre>java.lang.AssertionError: errorComponent: S, errorCode: 501, errorDescription:CA Merchant Server:: RReq not recieved due to technical errorerrorDetail : Internal Trasient error occured for this transaction. Temporary Error occured for this transaction, threeDSServerTransID : 3250e1f0-1754-4c15-92af-54499b77b17f
+	at org.testng.Assert.fail(Assert.java:96)
+	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:120)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</pre></div></td>
+<td>2</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@79be0360</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@3da2d2bc, {TestCaseID=_S012, TestCaseName=WithValid_FullCRES, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=G, Expected-eci=G, Expected-authenticationValue=G, Expected-transStatus=G, Expected-transStatusReason=G, Expected-challengeCancel=G, Expected-resultsStatus=G, Expected-authenticationType=G, Expected-interactionCounter=G, Expected-messageType=RSRs, Expected-XID=G, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #threeDSServerTransID#=, #callerTxnRefID#= , #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU, #transStatus#=Y}</td>
+<td><div><pre>java.lang.AssertionError: errorComponent: S, errorCode: 501, errorDescription:CA Merchant Server:: RReq not recieved due to technical errorerrorDetail : Internal Trasient error occured for this transaction. Temporary Error occured for this transaction, threeDSServerTransID : bd624704-93ff-4fb5-9b52-6e7878a6aae8
+	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:120)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 11 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2059117450", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2059117450'><pre>java.lang.AssertionError: errorComponent: S, errorCode: 501, errorDescription:CA Merchant Server:: RReq not recieved due to technical errorerrorDetail : Internal Trasient error occured for this transaction. Temporary Error occured for this transaction, threeDSServerTransID : bd624704-93ff-4fb5-9b52-6e7878a6aae8
+	at org.testng.Assert.fail(Assert.java:96)
+	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:120)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</pre></div></td>
+<td>2</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@79be0360</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@3da2d2bc, {TestCaseID=_S013, TestCaseName=PartialCRES_Without_threeDSServerTransID, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=G, Expected-eci=G, Expected-authenticationValue=G, Expected-transStatus=G, Expected-transStatusReason=G, Expected-challengeCancel=G, Expected-resultsStatus=G, Expected-authenticationType=G, Expected-interactionCounter=G, Expected-messageType=RSRs, Expected-XID=G, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU, #transStatus#=Y}</td>
+<td><div><pre>java.lang.AssertionError: errorComponent: S, errorCode: 501, errorDescription:CA Merchant Server:: RReq not recieved due to technical errorerrorDetail : Internal Trasient error occured for this transaction. Temporary Error occured for this transaction, threeDSServerTransID : f77f41bc-0bc0-48c3-9c9a-2c46f7620fe5
+	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:120)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 11 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2073269567", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2073269567'><pre>java.lang.AssertionError: errorComponent: S, errorCode: 501, errorDescription:CA Merchant Server:: RReq not recieved due to technical errorerrorDetail : Internal Trasient error occured for this transaction. Temporary Error occured for this transaction, threeDSServerTransID : f77f41bc-0bc0-48c3-9c9a-2c46f7620fe5
+	at org.testng.Assert.fail(Assert.java:96)
+	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:120)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</pre></div></td>
+<td>2</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@79be0360</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@3da2d2bc, {TestCaseID=_S014, TestCaseName=PartialCRES_Without_acsTransID, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=G, Expected-eci=G, Expected-authenticationValue=G, Expected-transStatus=G, Expected-transStatusReason=G, Expected-challengeCancel=G, Expected-resultsStatus=G, Expected-authenticationType=G, Expected-interactionCounter=G, Expected-messageType=RSRs, Expected-XID=G, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU, #transStatus#=Y}</td>
+<td><div><pre>java.lang.AssertionError: errorComponent: S, errorCode: 501, errorDescription:CA Merchant Server:: RReq not recieved due to technical errorerrorDetail : Internal Trasient error occured for this transaction. Temporary Error occured for this transaction, threeDSServerTransID : 888e8fb9-0509-438e-abe1-fd2dcc40e95b
+	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:120)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 11 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace421945814", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace421945814'><pre>java.lang.AssertionError: errorComponent: S, errorCode: 501, errorDescription:CA Merchant Server:: RReq not recieved due to technical errorerrorDetail : Internal Trasient error occured for this transaction. Temporary Error occured for this transaction, threeDSServerTransID : 888e8fb9-0509-438e-abe1-fd2dcc40e95b
+	at org.testng.Assert.fail(Assert.java:96)
+	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:120)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</pre></div></td>
+<td>2</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@79be0360</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@3da2d2bc, {TestCaseID=_S015, TestCaseName=PartialCRES_Without_challengeCompletionInd, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=G, Expected-eci=G, Expected-authenticationValue=G, Expected-transStatus=G, Expected-transStatusReason=G, Expected-challengeCancel=G, Expected-resultsStatus=G, Expected-authenticationType=G, Expected-interactionCounter=G, Expected-messageType=RSRs, Expected-XID=G, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU, #transStatus#=Y}</td>
+<td><div><pre>java.lang.AssertionError: errorComponent: S, errorCode: 501, errorDescription:CA Merchant Server:: RReq not recieved due to technical errorerrorDetail : Internal Trasient error occured for this transaction. Temporary Error occured for this transaction, threeDSServerTransID : 34a85a91-8754-41f0-8a76-b3a52ad9214c
+	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:120)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 11 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1674165612", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1674165612'><pre>java.lang.AssertionError: errorComponent: S, errorCode: 501, errorDescription:CA Merchant Server:: RReq not recieved due to technical errorerrorDetail : Internal Trasient error occured for this transaction. Temporary Error occured for this transaction, threeDSServerTransID : 34a85a91-8754-41f0-8a76-b3a52ad9214c
+	at org.testng.Assert.fail(Assert.java:96)
+	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:120)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</pre></div></td>
+<td>3</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@79be0360</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@3da2d2bc, {TestCaseID=_S016, TestCaseName=PartialCRES_Without_messageType, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=G, Expected-eci=G, Expected-authenticationValue=G, Expected-transStatus=G, Expected-transStatusReason=G, Expected-challengeCancel=G, Expected-resultsStatus=G, Expected-authenticationType=G, Expected-interactionCounter=G, Expected-messageType=RSRs, Expected-XID=G, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU, #transStatus#=Y}</td>
+<td><div><pre>java.lang.AssertionError: errorComponent: S, errorCode: 501, errorDescription:CA Merchant Server:: RReq not recieved due to technical errorerrorDetail : Internal Trasient error occured for this transaction. Temporary Error occured for this transaction, threeDSServerTransID : 59bebb29-9bd0-4fe0-bd21-454f0281c542
+	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:120)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 11 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace235408860", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace235408860'><pre>java.lang.AssertionError: errorComponent: S, errorCode: 501, errorDescription:CA Merchant Server:: RReq not recieved due to technical errorerrorDetail : Internal Trasient error occured for this transaction. Temporary Error occured for this transaction, threeDSServerTransID : 59bebb29-9bd0-4fe0-bd21-454f0281c542
+	at org.testng.Assert.fail(Assert.java:96)
+	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:120)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</pre></div></td>
+<td>3</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@79be0360</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@3da2d2bc, {TestCaseID=_S018, TestCaseName=PartialCRES_Without_messageVersion, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=G, Expected-eci=G, Expected-authenticationValue=G, Expected-transStatus=G, Expected-transStatusReason=G, Expected-challengeCancel=G, Expected-resultsStatus=G, Expected-authenticationType=G, Expected-interactionCounter=G, Expected-messageType=RSRs, Expected-XID=G, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU, #transStatus#=Y}</td>
+<td><div><pre>java.lang.AssertionError: errorComponent: S, errorCode: 501, errorDescription:CA Merchant Server:: RReq not recieved due to technical errorerrorDetail : Internal Trasient error occured for this transaction. Temporary Error occured for this transaction, threeDSServerTransID : 04462e8c-314b-451a-ac74-779f5c626373
+	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:120)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1399273833", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1399273833'><pre>java.lang.AssertionError: errorComponent: S, errorCode: 501, errorDescription:CA Merchant Server:: RReq not recieved due to technical errorerrorDetail : Internal Trasient error occured for this transaction. Temporary Error occured for this transaction, threeDSServerTransID : 04462e8c-314b-451a-ac74-779f5c626373
+	at org.testng.Assert.fail(Assert.java:96)
+	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:120)
+	at sun.reflect.GeneratedMethodAccessor37.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</pre></div></td>
+<td>2</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@79be0360</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@3da2d2bc, {TestCaseID=_S027, TestCaseName=ValidCAMerchantID, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=G, Expected-eci=G, Expected-authenticationValue=G, Expected-transStatus=G, Expected-transStatusReason=G, Expected-challengeCancel=G, Expected-resultsStatus=G, Expected-authenticationType=G, Expected-interactionCounter=G, Expected-messageType=RSRs, Expected-XID=G, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU, #transStatus#=Y}</td>
+<td><div><pre>java.lang.AssertionError: errorComponent: S, errorCode: 501, errorDescription:CA Merchant Server:: RReq not recieved due to technical errorerrorDetail : Internal Trasient error occured for this transaction. Temporary Error occured for this transaction, threeDSServerTransID : 2cf3611d-de7a-4739-9b58-57311df76e10
+	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:120)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace278790580", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace278790580'><pre>java.lang.AssertionError: errorComponent: S, errorCode: 501, errorDescription:CA Merchant Server:: RReq not recieved due to technical errorerrorDetail : Internal Trasient error occured for this transaction. Temporary Error occured for this transaction, threeDSServerTransID : 2cf3611d-de7a-4739-9b58-57311df76e10
+	at org.testng.Assert.fail(Assert.java:96)
+	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:120)
+	at sun.reflect.GeneratedMethodAccessor37.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</pre></div></td>
+<td>3</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@79be0360</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@3da2d2bc, {TestCaseID=_S028, TestCaseName=Empty_CAMerchantID, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=G, Expected-eci=G, Expected-authenticationValue=G, Expected-transStatus=G, Expected-transStatusReason=G, Expected-challengeCancel=G, Expected-resultsStatus=G, Expected-authenticationType=G, Expected-interactionCounter=G, Expected-messageType=RSRs, Expected-XID=G, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=empty, #transStatus#=Y}</td>
+<td><div><pre>java.lang.AssertionError: errorComponent: S, errorCode: 501, errorDescription:CA Merchant Server:: RReq not recieved due to technical errorerrorDetail : Internal Trasient error occured for this transaction. Temporary Error occured for this transaction, threeDSServerTransID : 8ef52c93-e1b1-46a7-9fb4-b3048a6dbe55
+	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:120)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1431961061", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1431961061'><pre>java.lang.AssertionError: errorComponent: S, errorCode: 501, errorDescription:CA Merchant Server:: RReq not recieved due to technical errorerrorDetail : Internal Trasient error occured for this transaction. Temporary Error occured for this transaction, threeDSServerTransID : 8ef52c93-e1b1-46a7-9fb4-b3048a6dbe55
+	at org.testng.Assert.fail(Assert.java:96)
+	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:120)
+	at sun.reflect.GeneratedMethodAccessor37.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</pre></div></td>
+<td>6</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@79be0360</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@3da2d2bc, {TestCaseID=_S032, TestCaseName=Timeout scenario for DS unable to send Rres to ACS, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=G, Expected-eci=G, Expected-authenticationValue=G, Expected-transStatus=G, Expected-transStatusReason=G, Expected-challengeCancel=G, Expected-resultsStatus=G, Expected-authenticationType=G, Expected-interactionCounter=G, Expected-messageType=RSRs, Expected-XID=G, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU, #transStatus#=N}</td>
+<td><div><pre>java.lang.AssertionError: errorComponent: S, errorCode: 501, errorDescription:CA Merchant Server:: RReq not recieved due to technical errorerrorDetail : Internal Trasient error occured for this transaction. Temporary Error occured for this transaction, threeDSServerTransID : e8375f7f-b629-4604-803c-6fd763b976cb
+	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:120)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1803655405", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1803655405'><pre>java.lang.AssertionError: errorComponent: S, errorCode: 501, errorDescription:CA Merchant Server:: RReq not recieved due to technical errorerrorDetail : Internal Trasient error occured for this transaction. Temporary Error occured for this transaction, threeDSServerTransID : e8375f7f-b629-4604-803c-6fd763b976cb
+	at org.testng.Assert.fail(Assert.java:96)
+	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:120)
+	at sun.reflect.GeneratedMethodAccessor37.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</pre></div></td>
+<td>3</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@79be0360</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@3da2d2bc, {TestCaseID=_S033, TestCaseName=Timeout scenario for 3DSS unable to send Rres to DS, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=G, Expected-eci=G, Expected-authenticationValue=G, Expected-transStatus=G, Expected-transStatusReason=G, Expected-challengeCancel=G, Expected-resultsStatus=G, Expected-authenticationType=G, Expected-interactionCounter=G, Expected-messageType=RSRs, Expected-XID=G, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU, #transStatus#=N}</td>
+<td><div><pre>java.lang.AssertionError: errorComponent: S, errorCode: 501, errorDescription:CA Merchant Server:: RReq not recieved due to technical errorerrorDetail : Internal Trasient error occured for this transaction. Temporary Error occured for this transaction, threeDSServerTransID : e9288731-6ab7-4df0-85c9-8c2228bb277c
+	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:120)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1726808207", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1726808207'><pre>java.lang.AssertionError: errorComponent: S, errorCode: 501, errorDescription:CA Merchant Server:: RReq not recieved due to technical errorerrorDetail : Internal Trasient error occured for this transaction. Temporary Error occured for this transaction, threeDSServerTransID : e9288731-6ab7-4df0-85c9-8c2228bb277c
+	at org.testng.Assert.fail(Assert.java:96)
+	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:120)
+	at sun.reflect.GeneratedMethodAccessor37.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</pre></div></td>
+<td>2</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@79be0360</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@3da2d2bc, {TestCaseID=_S001, TestCaseName=Sample Valid Verify Request, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=G, Expected-eci=G, Expected-authenticationValue=G, Expected-transStatus=G, Expected-transStatusReason=G, Expected-challengeCancel=G, Expected-resultsStatus=G, Expected-authenticationType=G, Expected-interactionCounter=G, Expected-messageType=RSRs, Expected-XID=G, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU, #transStatus#=Y}</td>
+<td></td>
+<td>21</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@79be0360</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@3da2d2bc, {TestCaseID=_S002, TestCaseName=3DSServerTransactionID_Empty, SanityFlag=Y, Test Case type=N, RequirementID=, FieldName=, Expected-threeDSServerTransID=NA, Expected-callerTxnRefID=NA, Expected-eci=NA, Expected-authenticationValue=NA, Expected-transStatus=NA, Expected-transStatusReason=NA, Expected-challengeCancel=NA, Expected-resultsStatus=NA, Expected-authenticationType=NA, Expected-interactionCounter=NA, Expected-messageType=Erro, Expected-XID=NA, Expected-errorCode=203, Expected-errorComponent=S, Expected-errorDescription=G, Expected-errorDetail=G, #threeDSServerTransID#=empty , #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU, #transStatus#=N}</td>
+<td></td>
+<td>6</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@79be0360</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@3da2d2bc, {TestCaseID=_S003, TestCaseName=3DSServerTransactionID_MoreThanMaxAcceptedLen>36Chars, SanityFlag=Y, Test Case type=N, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=NA, Expected-eci=NA, Expected-authenticationValue=NA, Expected-transStatus=NA, Expected-transStatusReason=NA, Expected-challengeCancel=NA, Expected-resultsStatus=NA, Expected-authenticationType=NA, Expected-interactionCounter=NA, Expected-messageType=Erro, Expected-XID=NA, Expected-errorCode=203, Expected-errorComponent=S, Expected-errorDescription=G, Expected-errorDetail=G, #threeDSServerTransID#=74381944-293c-44a0-9ce8-bf3a2491358074381944-293c-44a0-9ce8-bf3a24913580, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU, #transStatus#=N}</td>
+<td></td>
+<td>6</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@79be0360</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@3da2d2bc, {TestCaseID=_S005, TestCaseName=RemovalOfRequiredField_3DSServerTransactionID, SanityFlag=Y, Test Case type=N, RequirementID=, FieldName=, Expected-threeDSServerTransID=NA, Expected-callerTxnRefID=NA, Expected-eci=NA, Expected-authenticationValue=NA, Expected-transStatus=NA, Expected-transStatusReason=NA, Expected-challengeCancel=NA, Expected-resultsStatus=NA, Expected-authenticationType=NA, Expected-interactionCounter=NA, Expected-messageType=Erro, Expected-XID=NA, Expected-errorCode=201, Expected-errorComponent=S, Expected-errorDescription=G, Expected-errorDetail=G, #threeDSServerTransID#=#REMOVE#, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU, #transStatus#=N}</td>
+<td></td>
+<td>10</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@79be0360</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@3da2d2bc, {TestCaseID=_S006, TestCaseName=3DSServerTransactionID_InvalidTransID, SanityFlag=Y, Test Case type=N, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=NA, Expected-eci=NA, Expected-authenticationValue=NA, Expected-transStatus=NA, Expected-transStatusReason=NA, Expected-challengeCancel=NA, Expected-resultsStatus=NA, Expected-authenticationType=NA, Expected-interactionCounter=NA, Expected-messageType=Erro, Expected-XID=NA, Expected-errorCode=305, Expected-errorComponent=S, Expected-errorDescription=G, Expected-errorDetail=G, #threeDSServerTransID#=11111111-1111-1111-1111-111111111111, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU, #transStatus#=N}</td>
+<td></td>
+<td>8</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@79be0360</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@3da2d2bc, {TestCaseID=_S007, TestCaseName=ValidCallerTxnRefID, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=G, Expected-eci=G, Expected-authenticationValue=G, Expected-transStatus=G, Expected-transStatusReason=G, Expected-challengeCancel=G, Expected-resultsStatus=G, Expected-authenticationType=G, Expected-interactionCounter=G, Expected-messageType=RSRs, Expected-XID=G, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU, #transStatus#=Y}</td>
+<td></td>
+<td>21</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@79be0360</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@3da2d2bc, {TestCaseID=_S009, TestCaseName=InvalidCallerTxnRefID, SanityFlag=Y, Test Case type=N, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=NA, Expected-eci=NA, Expected-authenticationValue=NA, Expected-transStatus=NA, Expected-transStatusReason=NA, Expected-challengeCancel=NA, Expected-resultsStatus=NA, Expected-authenticationType=NA, Expected-interactionCounter=NA, Expected-messageType=Erro, Expected-XID=NA, Expected-errorCode=203, Expected-errorComponent=S, Expected-errorDescription=G, Expected-errorDetail=G, #threeDSServerTransID#=, #callerTxnRefID#=11111111-1111-1111-1111-111111111111111, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU, #transStatus#=N}</td>
+<td></td>
+<td>6</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@79be0360</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@3da2d2bc, {TestCaseID=_S010, TestCaseName=CallerTxnRefIDLengthMoreThan36Chars, SanityFlag=Y, Test Case type=N, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=NA, Expected-eci=NA, Expected-authenticationValue=NA, Expected-transStatus=NA, Expected-transStatusReason=NA, Expected-challengeCancel=NA, Expected-resultsStatus=NA, Expected-authenticationType=NA, Expected-interactionCounter=NA, Expected-messageType=Erro, Expected-XID=NA, Expected-errorCode=203, Expected-errorComponent=S, Expected-errorDescription=G, Expected-errorDetail=G, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU, #transStatus#=N}</td>
+<td></td>
+<td>5</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@79be0360</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@3da2d2bc, {TestCaseID=_S017, TestCaseName=PartialCRES_Without_transStatus, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=G, Expected-eci=G, Expected-authenticationValue=G, Expected-transStatus=G, Expected-transStatusReason=G, Expected-challengeCancel=G, Expected-resultsStatus=G, Expected-authenticationType=G, Expected-interactionCounter=G, Expected-messageType=RSRs, Expected-XID=G, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU, #transStatus#=Y}</td>
+<td></td>
+<td>23</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@79be0360</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@3da2d2bc, {TestCaseID=_S019, TestCaseName=Empty_CRES, SanityFlag=Y, Test Case type=N, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=NA, Expected-eci=NA, Expected-authenticationValue=NA, Expected-transStatus=NA, Expected-transStatusReason=NA, Expected-challengeCancel=NA, Expected-resultsStatus=NA, Expected-authenticationType=NA, Expected-interactionCounter=NA, Expected-messageType=Erro, Expected-XID=NA, Expected-errorCode=203, Expected-errorComponent=S, Expected-errorDescription=G, Expected-errorDetail=G, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=empty, #messageType#=RSRq, #caMerchantID#=CA_EU, #transStatus#=N}</td>
+<td></td>
+<td>4</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@79be0360</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@3da2d2bc, {TestCaseID=_S020, TestCaseName=Invalid_CRES, SanityFlag=Y, Test Case type=N, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=NA, Expected-eci=NA, Expected-authenticationValue=NA, Expected-transStatus=NA, Expected-transStatusReason=NA, Expected-challengeCancel=NA, Expected-resultsStatus=NA, Expected-authenticationType=NA, Expected-interactionCounter=NA, Expected-messageType=Erro, Expected-XID=NA, Expected-errorCode=305, Expected-errorComponent=S, Expected-errorDescription=G, Expected-errorDetail=G, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=ewogICAiYWNzVHJhbnNJRCIgOiAiZDVmNDZjM2UtMjgzYS00MDU5LTlkNjQtMDZjNzk0ZTdhZGEzIiwKICAgImNoYWxsZW5nZVdpbmRvd1NpemUiIDogIjA0IiwKICAgIm1lc3NhZ2VUeXBlIiA6ICJDUmVxIiwKICAgIm1lc3NhZ2VWZXJzaW9uIiA6ICIyLjEuMCIsCiAgICJ0aHJlZURTU2VydmVyVHJhbnNJRCIgOiAiOTA2MTY2MGQtMzRkMy00YjI0LTk3ZjMtYTBlMjY2MmY1YzRlIgp9Cg==, #messageType#=RSRq, #caMerchantID#=CA_EU, #transStatus#=N}</td>
+<td></td>
+<td>10</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@79be0360</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@3da2d2bc, {TestCaseID=_S021, TestCaseName=RemovalOfOptionalField_CRES, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=G, Expected-eci=G, Expected-authenticationValue=G, Expected-transStatus=G, Expected-transStatusReason=G, Expected-challengeCancel=G, Expected-resultsStatus=G, Expected-authenticationType=G, Expected-interactionCounter=G, Expected-messageType=RSRs, Expected-XID=G, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=#REMOVE#, #messageType#=RSRq, #caMerchantID#=CA_EU, #transStatus#=Y}</td>
+<td></td>
+<td>20</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@79be0360</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@3da2d2bc, {TestCaseID=_S022, TestCaseName=MessageType_RSRq, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=G, Expected-eci=G, Expected-authenticationValue=G, Expected-transStatus=G, Expected-transStatusReason=G, Expected-challengeCancel=G, Expected-resultsStatus=G, Expected-authenticationType=G, Expected-interactionCounter=G, Expected-messageType=RSRs, Expected-XID=G, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU, #transStatus#=Y}</td>
+<td></td>
+<td>20</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@79be0360</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@3da2d2bc, {TestCaseID=_S023, TestCaseName=MessageType_Invalid_RSRQ, SanityFlag=Y, Test Case type=N, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=NA, Expected-eci=NA, Expected-authenticationValue=NA, Expected-transStatus=NA, Expected-transStatusReason=NA, Expected-challengeCancel=NA, Expected-resultsStatus=NA, Expected-authenticationType=NA, Expected-interactionCounter=NA, Expected-messageType=Erro, Expected-XID=NA, Expected-errorCode=101, Expected-errorComponent=S, Expected-errorDescription=G, Expected-errorDetail=G, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRQ, #caMerchantID#=CA_EU, #transStatus#=N}</td>
+<td></td>
+<td>5</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@79be0360</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@3da2d2bc, {TestCaseID=_S024, TestCaseName=MessageType_Empty, SanityFlag=Y, Test Case type=N, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=NA, Expected-eci=NA, Expected-authenticationValue=NA, Expected-transStatus=NA, Expected-transStatusReason=NA, Expected-challengeCancel=NA, Expected-resultsStatus=NA, Expected-authenticationType=NA, Expected-interactionCounter=NA, Expected-messageType=Erro, Expected-XID=NA, Expected-errorCode=101, Expected-errorComponent=S, Expected-errorDescription=G, Expected-errorDetail=G, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=empty , #caMerchantID#=CA_EU, #transStatus#=N}</td>
+<td></td>
+<td>4</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@79be0360</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@3da2d2bc, {TestCaseID=_S025, TestCaseName=MessageType_MoreThanMaxAcceptedLen>4Chars, SanityFlag=Y, Test Case type=N, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=NA, Expected-eci=NA, Expected-authenticationValue=NA, Expected-transStatus=NA, Expected-transStatusReason=NA, Expected-challengeCancel=NA, Expected-resultsStatus=NA, Expected-authenticationType=NA, Expected-interactionCounter=NA, Expected-messageType=Erro, Expected-XID=NA, Expected-errorCode=101, Expected-errorComponent=S, Expected-errorDescription=G, Expected-errorDetail=G, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRQ1, #caMerchantID#=CA_EU, #transStatus#=N}</td>
+<td></td>
+<td>7</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@79be0360</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@3da2d2bc, {TestCaseID=_S026, TestCaseName=RemovalOfRequiredField_MessageType, SanityFlag=Y, Test Case type=N, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=NA, Expected-eci=NA, Expected-authenticationValue=NA, Expected-transStatus=NA, Expected-transStatusReason=NA, Expected-challengeCancel=NA, Expected-resultsStatus=NA, Expected-authenticationType=NA, Expected-interactionCounter=NA, Expected-messageType=Erro, Expected-XID=NA, Expected-errorCode=201, Expected-errorComponent=S, Expected-errorDescription=G, Expected-errorDetail=G, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=#REMOVE#, #caMerchantID#=CA_EU, #transStatus#=N}</td>
+<td></td>
+<td>5</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@79be0360</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@3da2d2bc, {TestCaseID=_S029, TestCaseName=Invalid_CAMerchantID, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=G, Expected-eci=G, Expected-authenticationValue=G, Expected-transStatus=G, Expected-transStatusReason=G, Expected-challengeCancel=G, Expected-resultsStatus=G, Expected-authenticationType=G, Expected-interactionCounter=G, Expected-messageType=RSRs, Expected-XID=G, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU, #transStatus#=Y}</td>
+<td></td>
+<td>24</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@79be0360</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@3da2d2bc, {TestCaseID=_S030, TestCaseName=RemovalOfRequiredField_CAMerchantID, SanityFlag=Y, Test Case type=N, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=NA, Expected-eci=NA, Expected-authenticationValue=NA, Expected-transStatus=NA, Expected-transStatusReason=NA, Expected-challengeCancel=NA, Expected-resultsStatus=NA, Expected-authenticationType=NA, Expected-interactionCounter=NA, Expected-messageType=Erro, Expected-XID=NA, Expected-errorCode=201, Expected-errorComponent=S, Expected-errorDescription=G, Expected-errorDetail=G, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=#REMOVE#, #transStatus#=N}</td>
+<td></td>
+<td>6</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@79be0360</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@3da2d2bc, {TestCaseID=_S031, TestCaseName=CAMerchantID_MoreThanMaxAcceptedLen>2KChars, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=G, Expected-eci=G, Expected-authenticationValue=G, Expected-transStatus=G, Expected-transStatusReason=G, Expected-challengeCancel=G, Expected-resultsStatus=G, Expected-authenticationType=G, Expected-interactionCounter=G, Expected-messageType=RSRs, Expected-XID=G, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU, #transStatus#=Y}</td>
+<td></td>
+<td>27</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@79be0360</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@3da2d2bc, {TestCaseID=_S034, TestCaseName=Timeout scenario for Merchant did Rsrq without receiving CRES, SanityFlag=Y, Test Case type=N, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=NA, Expected-eci=NA, Expected-authenticationValue=NA, Expected-transStatus=NA, Expected-transStatusReason=NA, Expected-challengeCancel=NA, Expected-resultsStatus=NA, Expected-authenticationType=NA, Expected-interactionCounter=NA, Expected-messageType=Erro, Expected-XID=G, Expected-errorCode=501, Expected-errorComponent=S, Expected-errorDescription=G, Expected-errorDetail=G, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU, #transStatus#=Y}</td>
+<td></td>
+<td>5</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@79be0360</td></tr>
+</table><p>
+</body>
+</html>
