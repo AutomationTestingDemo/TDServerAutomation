@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>AMEX::Clear Card::Browser::VerifyAPI flow</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>14/20/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>15/19/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Nov 15 00:35:13 IST 2019</td>
+<td>Started on:</td><td>Wed Nov 20 15:22:29 IST 2019</td>
 </tr>
-<tr><td>Total time:</td><td>174 seconds (174622 ms)</td>
+<tr><td>Total time:</td><td>47 seconds (47402 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,14 +75,14 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@1bebe3a7, {TestCaseID=_S001, TestCaseName=Sample Valid Verify Request, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=G, Expected-eci=G, Expected-authenticationValue=G, Expected-transStatus=G, Expected-transStatusReason=G, Expected-challengeCancel=G, Expected-resultsStatus=G, Expected-authenticationType=G, Expected-interactionCounter=G, Expected-messageType=RSRs, Expected-XID=G, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU, #transStatus#=Y}</td>
-<td><div><pre>java.lang.AssertionError: Verify API response data validation failed.&lt;br&gt;required key [authenticationValue] not found&lt;br&gt; api response : {&quot;XID&quot;:&quot;02010000b09a44ec94f247c9a216641d0f211a24&quot;,&quot;messageType&quot;:&quot;RSRs&quot;,&quot;transStatusReason&quot;:&quot;14&quot;,&quot;resultsStatus&quot;:&quot;01&quot;,&quot;authenticationType&quot;:&quot;01&quot;,&quot;interactionCounter&quot;:&quot;00&quot;,&quot;callerTxnRefID&quot;:&quot;341b7153-da86-4543-860f-2ba47f0168a5&quot;,&quot;transStatus&quot;:&quot;Y&quot;,&quot;threeDSServerTransID&quot;:&quot;0a21f9ee-6b35-4af6-86cb-71717ac4262a&quot;}
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@63149ce, {TestCaseID=_S001, TestCaseName=Sample Valid Verify Request, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=G, Expected-eci=G, Expected-authenticationValue=G, Expected-transStatus=G, Expected-transStatusReason=G, Expected-challengeCancel=G, Expected-resultsStatus=G, Expected-authenticationType=G, Expected-interactionCounter=G, Expected-messageType=RSRs, Expected-XID=G, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU, #transStatus#=Y}</td>
+<td><div><pre>java.lang.AssertionError: Verify API response data validation failed.&lt;br&gt;required key [authenticationValue] not found&lt;br&gt; api response : {&quot;XID&quot;:&quot;020100008c4a082a23bc43c2a6f4ded9d6da35e1&quot;,&quot;messageType&quot;:&quot;RSRs&quot;,&quot;transStatusReason&quot;:&quot;14&quot;,&quot;resultsStatus&quot;:&quot;01&quot;,&quot;authenticationType&quot;:&quot;01&quot;,&quot;interactionCounter&quot;:&quot;00&quot;,&quot;callerTxnRefID&quot;:&quot;341b7153-da86-4543-860f-2ba47f0168a5&quot;,&quot;transStatus&quot;:&quot;Y&quot;,&quot;threeDSServerTransID&quot;:&quot;c87acfae-7409-4508-aafa-022d0a088f4f&quot;}
 	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:213)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
-... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1268279671", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1268279671'><pre>java.lang.AssertionError: Verify API response data validation failed.&lt;br&gt;required key [authenticationValue] not found&lt;br&gt; api response : {&quot;XID&quot;:&quot;02010000b09a44ec94f247c9a216641d0f211a24&quot;,&quot;messageType&quot;:&quot;RSRs&quot;,&quot;transStatusReason&quot;:&quot;14&quot;,&quot;resultsStatus&quot;:&quot;01&quot;,&quot;authenticationType&quot;:&quot;01&quot;,&quot;interactionCounter&quot;:&quot;00&quot;,&quot;callerTxnRefID&quot;:&quot;341b7153-da86-4543-860f-2ba47f0168a5&quot;,&quot;transStatus&quot;:&quot;Y&quot;,&quot;threeDSServerTransID&quot;:&quot;0a21f9ee-6b35-4af6-86cb-71717ac4262a&quot;}
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace403355580", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace403355580'><pre>java.lang.AssertionError: Verify API response data validation failed.&lt;br&gt;required key [authenticationValue] not found&lt;br&gt; api response : {&quot;XID&quot;:&quot;020100008c4a082a23bc43c2a6f4ded9d6da35e1&quot;,&quot;messageType&quot;:&quot;RSRs&quot;,&quot;transStatusReason&quot;:&quot;14&quot;,&quot;resultsStatus&quot;:&quot;01&quot;,&quot;authenticationType&quot;:&quot;01&quot;,&quot;interactionCounter&quot;:&quot;00&quot;,&quot;callerTxnRefID&quot;:&quot;341b7153-da86-4543-860f-2ba47f0168a5&quot;,&quot;transStatus&quot;:&quot;Y&quot;,&quot;threeDSServerTransID&quot;:&quot;c87acfae-7409-4508-aafa-022d0a088f4f&quot;}
 	at org.testng.Assert.fail(Assert.java:96)
 	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:213)
 	at sun.reflect.GeneratedMethodAccessor37.invoke(Unknown Source)
@@ -98,17 +98,17 @@ function toggleAllBoxes() {
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
 </pre></div></td>
-<td>3</td>
-<td>com.ca.tds.main.TDSVerifyAPI_TC@1a1d6a08</td></tr>
+<td>1</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@11438d26</td></tr>
 <tr>
-<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@1bebe3a7, {TestCaseID=_S004, TestCaseName=3DSServerTransactionID_FLV_TransID, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=G, Expected-eci=G, Expected-authenticationValue=G, Expected-transStatus=G, Expected-transStatusReason=G, Expected-challengeCancel=G, Expected-resultsStatus=G, Expected-authenticationType=G, Expected-interactionCounter=G, Expected-messageType=RSRs, Expected-XID=G, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU, #transStatus#=Y}</td>
-<td><div><pre>java.lang.AssertionError: Verify API response data validation failed.&lt;br&gt;required key [authenticationValue] not found&lt;br&gt; api response : {&quot;XID&quot;:&quot;02010000f2aa8973d5794b599549e4cb45cb0520&quot;,&quot;messageType&quot;:&quot;RSRs&quot;,&quot;resultsStatus&quot;:&quot;01&quot;,&quot;interactionCounter&quot;:&quot;00&quot;,&quot;callerTxnRefID&quot;:&quot;341b7153-da86-4543-860f-2ba47f0168a5&quot;,&quot;transStatus&quot;:&quot;Y&quot;,&quot;threeDSServerTransID&quot;:&quot;d1a3b128-9486-4f95-902f-27a0b7fb6255&quot;}
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@63149ce, {TestCaseID=_S004, TestCaseName=3DSServerTransactionID_FLV_TransID, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=G, Expected-eci=G, Expected-authenticationValue=G, Expected-transStatus=G, Expected-transStatusReason=G, Expected-challengeCancel=G, Expected-resultsStatus=G, Expected-authenticationType=G, Expected-interactionCounter=G, Expected-messageType=RSRs, Expected-XID=G, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU, #transStatus#=Y}</td>
+<td><div><pre>java.lang.AssertionError: Verify API response data validation failed.&lt;br&gt;required key [authenticationValue] not found&lt;br&gt; api response : {&quot;XID&quot;:&quot;020100009ac683066c734133a1ddccc117ee89a8&quot;,&quot;messageType&quot;:&quot;RSRs&quot;,&quot;resultsStatus&quot;:&quot;01&quot;,&quot;interactionCounter&quot;:&quot;00&quot;,&quot;callerTxnRefID&quot;:&quot;341b7153-da86-4543-860f-2ba47f0168a5&quot;,&quot;transStatus&quot;:&quot;Y&quot;,&quot;threeDSServerTransID&quot;:&quot;a65e3b04-092b-4caf-9cef-9e61d12fed8c&quot;}
 	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:213)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
-... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1414521947", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1414521947'><pre>java.lang.AssertionError: Verify API response data validation failed.&lt;br&gt;required key [authenticationValue] not found&lt;br&gt; api response : {&quot;XID&quot;:&quot;02010000f2aa8973d5794b599549e4cb45cb0520&quot;,&quot;messageType&quot;:&quot;RSRs&quot;,&quot;resultsStatus&quot;:&quot;01&quot;,&quot;interactionCounter&quot;:&quot;00&quot;,&quot;callerTxnRefID&quot;:&quot;341b7153-da86-4543-860f-2ba47f0168a5&quot;,&quot;transStatus&quot;:&quot;Y&quot;,&quot;threeDSServerTransID&quot;:&quot;d1a3b128-9486-4f95-902f-27a0b7fb6255&quot;}
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1801315976", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1801315976'><pre>java.lang.AssertionError: Verify API response data validation failed.&lt;br&gt;required key [authenticationValue] not found&lt;br&gt; api response : {&quot;XID&quot;:&quot;020100009ac683066c734133a1ddccc117ee89a8&quot;,&quot;messageType&quot;:&quot;RSRs&quot;,&quot;resultsStatus&quot;:&quot;01&quot;,&quot;interactionCounter&quot;:&quot;00&quot;,&quot;callerTxnRefID&quot;:&quot;341b7153-da86-4543-860f-2ba47f0168a5&quot;,&quot;transStatus&quot;:&quot;Y&quot;,&quot;threeDSServerTransID&quot;:&quot;a65e3b04-092b-4caf-9cef-9e61d12fed8c&quot;}
 	at org.testng.Assert.fail(Assert.java:96)
 	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:213)
 	at sun.reflect.GeneratedMethodAccessor37.invoke(Unknown Source)
@@ -124,409 +124,17 @@ function toggleAllBoxes() {
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
 </pre></div></td>
-<td>2</td>
-<td>com.ca.tds.main.TDSVerifyAPI_TC@1a1d6a08</td></tr>
+<td>1</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@11438d26</td></tr>
 <tr>
-<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@1bebe3a7, {TestCaseID=_S007, TestCaseName=ValidCallerTxnRefID, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=G, Expected-eci=G, Expected-authenticationValue=G, Expected-transStatus=G, Expected-transStatusReason=G, Expected-challengeCancel=G, Expected-resultsStatus=G, Expected-authenticationType=G, Expected-interactionCounter=G, Expected-messageType=RSRs, Expected-XID=G, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU, #transStatus#=Y}</td>
-<td><div><pre>java.lang.AssertionError: errorComponent: S, errorCode: 501, errorDescription:CA Merchant Server:: RReq not recieved due to technical errorerrorDetail : Internal Trasient error occured for this transaction. Temporary Error occured for this transaction, threeDSServerTransID : c537ad85-e1d1-45fd-84e7-e93a14d8e6ac
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@63149ce, {TestCaseID=_S007, TestCaseName=ValidCallerTxnRefID, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=G, Expected-eci=G, Expected-authenticationValue=G, Expected-transStatus=G, Expected-transStatusReason=G, Expected-challengeCancel=G, Expected-resultsStatus=G, Expected-authenticationType=G, Expected-interactionCounter=G, Expected-messageType=RSRs, Expected-XID=G, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU, #transStatus#=Y}</td>
+<td><div><pre>java.lang.AssertionError: errorComponent: S, errorCode: 501, errorDescription:CA Merchant Server:: RReq not recieved due to technical errorerrorDetail : Internal Trasient error occured for this transaction. Temporary Error occured for this transaction, threeDSServerTransID : ed2fa097-7cbd-43a9-b6e3-10d7347f978d
 	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:120)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
-... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1756112104", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1756112104'><pre>java.lang.AssertionError: errorComponent: S, errorCode: 501, errorDescription:CA Merchant Server:: RReq not recieved due to technical errorerrorDetail : Internal Trasient error occured for this transaction. Temporary Error occured for this transaction, threeDSServerTransID : c537ad85-e1d1-45fd-84e7-e93a14d8e6ac
-	at org.testng.Assert.fail(Assert.java:96)
-	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:120)
-	at sun.reflect.GeneratedMethodAccessor37.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
-</pre></div></td>
-<td>2</td>
-<td>com.ca.tds.main.TDSVerifyAPI_TC@1a1d6a08</td></tr>
-<tr>
-<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@1bebe3a7, {TestCaseID=_S008, TestCaseName=Empty_CallerTxnRefID, SanityFlag=Y, Test Case type=N, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=NA, Expected-eci=NA, Expected-authenticationValue=NA, Expected-transStatus=NA, Expected-transStatusReason=NA, Expected-challengeCancel=NA, Expected-resultsStatus=NA, Expected-authenticationType=NA, Expected-interactionCounter=NA, Expected-messageType=Erro, Expected-XID=NA, Expected-errorCode=203, Expected-errorComponent=S, Expected-errorDescription=G, Expected-errorDetail=G, #threeDSServerTransID#=, #callerTxnRefID#=empty, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU, #transStatus#=N}</td>
-<td><div><pre>java.lang.AssertionError: The following asserts failed:
-	expected [203] but found [501]
-	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:210)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
-... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace534910345", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace534910345'><pre>java.lang.AssertionError: The following asserts failed:
-	expected [203] but found [501]
-	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:43)
-	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:210)
-	at sun.reflect.GeneratedMethodAccessor37.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
-</pre></div></td>
-<td>4</td>
-<td>com.ca.tds.main.TDSVerifyAPI_TC@1a1d6a08</td></tr>
-<tr>
-<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@1bebe3a7, {TestCaseID=_S011, TestCaseName=RemovalOfOptionalField_CallerTxnRefID, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=G, Expected-eci=G, Expected-authenticationValue=G, Expected-transStatus=G, Expected-transStatusReason=G, Expected-challengeCancel=G, Expected-resultsStatus=G, Expected-authenticationType=G, Expected-interactionCounter=G, Expected-messageType=RSRs, Expected-XID=G, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #threeDSServerTransID#=, #callerTxnRefID#=#REMOVE#, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU, #transStatus#=Y}</td>
-<td><div><pre>java.lang.AssertionError: Verify API response data validation failed.&lt;br&gt;required key [authenticationValue] not found&lt;br&gt; api response : {&quot;XID&quot;:&quot;02010000374a864d490c4926a33cb2610316bb07&quot;,&quot;messageType&quot;:&quot;RSRs&quot;,&quot;transStatusReason&quot;:&quot;02&quot;,&quot;resultsStatus&quot;:&quot;01&quot;,&quot;authenticationType&quot;:&quot;01&quot;,&quot;interactionCounter&quot;:&quot;00&quot;,&quot;transStatus&quot;:&quot;Y&quot;,&quot;threeDSServerTransID&quot;:&quot;7f48793f-9e4c-4ac8-b19e-fb16a77c1748&quot;}
-	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:213)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
-... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1405555325", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1405555325'><pre>java.lang.AssertionError: Verify API response data validation failed.&lt;br&gt;required key [authenticationValue] not found&lt;br&gt; api response : {&quot;XID&quot;:&quot;02010000374a864d490c4926a33cb2610316bb07&quot;,&quot;messageType&quot;:&quot;RSRs&quot;,&quot;transStatusReason&quot;:&quot;02&quot;,&quot;resultsStatus&quot;:&quot;01&quot;,&quot;authenticationType&quot;:&quot;01&quot;,&quot;interactionCounter&quot;:&quot;00&quot;,&quot;transStatus&quot;:&quot;Y&quot;,&quot;threeDSServerTransID&quot;:&quot;7f48793f-9e4c-4ac8-b19e-fb16a77c1748&quot;}
-	at org.testng.Assert.fail(Assert.java:96)
-	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:213)
-	at sun.reflect.GeneratedMethodAccessor37.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
-</pre></div></td>
-<td>2</td>
-<td>com.ca.tds.main.TDSVerifyAPI_TC@1a1d6a08</td></tr>
-<tr>
-<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@1bebe3a7, {TestCaseID=_S012, TestCaseName=WithValid_FullCRES, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=G, Expected-eci=G, Expected-authenticationValue=G, Expected-transStatus=G, Expected-transStatusReason=G, Expected-challengeCancel=G, Expected-resultsStatus=G, Expected-authenticationType=G, Expected-interactionCounter=G, Expected-messageType=RSRs, Expected-XID=G, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #threeDSServerTransID#=, #callerTxnRefID#= , #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU, #transStatus#=Y}</td>
-<td><div><pre>java.lang.AssertionError: Verify API response data validation failed.&lt;br&gt;required key [authenticationValue] not found&lt;br&gt; api response : {&quot;XID&quot;:&quot;020100008461c62ee8cd438b854c5f2a5cfc3c76&quot;,&quot;messageType&quot;:&quot;RSRs&quot;,&quot;transStatusReason&quot;:&quot;03&quot;,&quot;resultsStatus&quot;:&quot;01&quot;,&quot;authenticationType&quot;:&quot;01&quot;,&quot;interactionCounter&quot;:&quot;00&quot;,&quot;callerTxnRefID&quot;:&quot; &quot;,&quot;transStatus&quot;:&quot;Y&quot;,&quot;threeDSServerTransID&quot;:&quot;dcf16dc3-816a-4ad6-ae4d-29d20f81910e&quot;}
-	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:213)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
-... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2138348012", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2138348012'><pre>java.lang.AssertionError: Verify API response data validation failed.&lt;br&gt;required key [authenticationValue] not found&lt;br&gt; api response : {&quot;XID&quot;:&quot;020100008461c62ee8cd438b854c5f2a5cfc3c76&quot;,&quot;messageType&quot;:&quot;RSRs&quot;,&quot;transStatusReason&quot;:&quot;03&quot;,&quot;resultsStatus&quot;:&quot;01&quot;,&quot;authenticationType&quot;:&quot;01&quot;,&quot;interactionCounter&quot;:&quot;00&quot;,&quot;callerTxnRefID&quot;:&quot; &quot;,&quot;transStatus&quot;:&quot;Y&quot;,&quot;threeDSServerTransID&quot;:&quot;dcf16dc3-816a-4ad6-ae4d-29d20f81910e&quot;}
-	at org.testng.Assert.fail(Assert.java:96)
-	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:213)
-	at sun.reflect.GeneratedMethodAccessor37.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
-</pre></div></td>
-<td>2</td>
-<td>com.ca.tds.main.TDSVerifyAPI_TC@1a1d6a08</td></tr>
-<tr>
-<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@1bebe3a7, {TestCaseID=_S013, TestCaseName=PartialCRES_Without_threeDSServerTransID, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=G, Expected-eci=G, Expected-authenticationValue=G, Expected-transStatus=G, Expected-transStatusReason=G, Expected-challengeCancel=G, Expected-resultsStatus=G, Expected-authenticationType=G, Expected-interactionCounter=G, Expected-messageType=RSRs, Expected-XID=G, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU, #transStatus#=Y}</td>
-<td><div><pre>java.lang.AssertionError: Verify API response data validation failed.&lt;br&gt;required key [authenticationValue] not found&lt;br&gt; api response : {&quot;XID&quot;:&quot;02010000155158b93c984b9fbc80fe95dcf0b68e&quot;,&quot;messageType&quot;:&quot;RSRs&quot;,&quot;transStatusReason&quot;:&quot;04&quot;,&quot;resultsStatus&quot;:&quot;01&quot;,&quot;authenticationType&quot;:&quot;01&quot;,&quot;interactionCounter&quot;:&quot;00&quot;,&quot;callerTxnRefID&quot;:&quot;341b7153-da86-4543-860f-2ba47f0168a5&quot;,&quot;transStatus&quot;:&quot;Y&quot;,&quot;threeDSServerTransID&quot;:&quot;b0b8f33b-d9c7-477c-b8b8-8edb180eb44a&quot;}
-	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:213)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
-... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1007315269", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1007315269'><pre>java.lang.AssertionError: Verify API response data validation failed.&lt;br&gt;required key [authenticationValue] not found&lt;br&gt; api response : {&quot;XID&quot;:&quot;02010000155158b93c984b9fbc80fe95dcf0b68e&quot;,&quot;messageType&quot;:&quot;RSRs&quot;,&quot;transStatusReason&quot;:&quot;04&quot;,&quot;resultsStatus&quot;:&quot;01&quot;,&quot;authenticationType&quot;:&quot;01&quot;,&quot;interactionCounter&quot;:&quot;00&quot;,&quot;callerTxnRefID&quot;:&quot;341b7153-da86-4543-860f-2ba47f0168a5&quot;,&quot;transStatus&quot;:&quot;Y&quot;,&quot;threeDSServerTransID&quot;:&quot;b0b8f33b-d9c7-477c-b8b8-8edb180eb44a&quot;}
-	at org.testng.Assert.fail(Assert.java:96)
-	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:213)
-	at sun.reflect.GeneratedMethodAccessor37.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
-</pre></div></td>
-<td>2</td>
-<td>com.ca.tds.main.TDSVerifyAPI_TC@1a1d6a08</td></tr>
-<tr>
-<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@1bebe3a7, {TestCaseID=_S014, TestCaseName=PartialCRES_Without_acsTransID, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=G, Expected-eci=G, Expected-authenticationValue=G, Expected-transStatus=G, Expected-transStatusReason=G, Expected-challengeCancel=G, Expected-resultsStatus=G, Expected-authenticationType=G, Expected-interactionCounter=G, Expected-messageType=RSRs, Expected-XID=G, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU, #transStatus#=Y}</td>
-<td><div><pre>java.lang.AssertionError: Verify API response data validation failed.&lt;br&gt;required key [authenticationValue] not found&lt;br&gt; api response : {&quot;XID&quot;:&quot;020100009268dc9290d24dc98b78fc43ffc1cb1e&quot;,&quot;messageType&quot;:&quot;RSRs&quot;,&quot;transStatusReason&quot;:&quot;05&quot;,&quot;resultsStatus&quot;:&quot;01&quot;,&quot;authenticationType&quot;:&quot;01&quot;,&quot;interactionCounter&quot;:&quot;00&quot;,&quot;callerTxnRefID&quot;:&quot;341b7153-da86-4543-860f-2ba47f0168a5&quot;,&quot;transStatus&quot;:&quot;Y&quot;,&quot;threeDSServerTransID&quot;:&quot;e0219328-f7ca-4450-a1df-5a6af2e451a9&quot;}
-	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:213)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
-... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace246534381", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace246534381'><pre>java.lang.AssertionError: Verify API response data validation failed.&lt;br&gt;required key [authenticationValue] not found&lt;br&gt; api response : {&quot;XID&quot;:&quot;020100009268dc9290d24dc98b78fc43ffc1cb1e&quot;,&quot;messageType&quot;:&quot;RSRs&quot;,&quot;transStatusReason&quot;:&quot;05&quot;,&quot;resultsStatus&quot;:&quot;01&quot;,&quot;authenticationType&quot;:&quot;01&quot;,&quot;interactionCounter&quot;:&quot;00&quot;,&quot;callerTxnRefID&quot;:&quot;341b7153-da86-4543-860f-2ba47f0168a5&quot;,&quot;transStatus&quot;:&quot;Y&quot;,&quot;threeDSServerTransID&quot;:&quot;e0219328-f7ca-4450-a1df-5a6af2e451a9&quot;}
-	at org.testng.Assert.fail(Assert.java:96)
-	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:213)
-	at sun.reflect.GeneratedMethodAccessor37.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
-</pre></div></td>
-<td>3</td>
-<td>com.ca.tds.main.TDSVerifyAPI_TC@1a1d6a08</td></tr>
-<tr>
-<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@1bebe3a7, {TestCaseID=_S015, TestCaseName=PartialCRES_Without_challengeCompletionInd, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=G, Expected-eci=G, Expected-authenticationValue=G, Expected-transStatus=G, Expected-transStatusReason=G, Expected-challengeCancel=G, Expected-resultsStatus=G, Expected-authenticationType=G, Expected-interactionCounter=G, Expected-messageType=RSRs, Expected-XID=G, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU, #transStatus#=Y}</td>
-<td><div><pre>java.lang.AssertionError: Verify API response data validation failed.&lt;br&gt;required key [authenticationValue] not found&lt;br&gt; api response : {&quot;XID&quot;:&quot;02010000f2c58099ab6e463a81a82c0c4f8efd72&quot;,&quot;messageType&quot;:&quot;RSRs&quot;,&quot;transStatusReason&quot;:&quot;06&quot;,&quot;resultsStatus&quot;:&quot;01&quot;,&quot;authenticationType&quot;:&quot;01&quot;,&quot;interactionCounter&quot;:&quot;00&quot;,&quot;callerTxnRefID&quot;:&quot;341b7153-da86-4543-860f-2ba47f0168a5&quot;,&quot;transStatus&quot;:&quot;Y&quot;,&quot;threeDSServerTransID&quot;:&quot;6b5fd563-be72-4f8e-8bf1-06d0b767be1a&quot;}
-	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:213)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
-... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1666040168", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1666040168'><pre>java.lang.AssertionError: Verify API response data validation failed.&lt;br&gt;required key [authenticationValue] not found&lt;br&gt; api response : {&quot;XID&quot;:&quot;02010000f2c58099ab6e463a81a82c0c4f8efd72&quot;,&quot;messageType&quot;:&quot;RSRs&quot;,&quot;transStatusReason&quot;:&quot;06&quot;,&quot;resultsStatus&quot;:&quot;01&quot;,&quot;authenticationType&quot;:&quot;01&quot;,&quot;interactionCounter&quot;:&quot;00&quot;,&quot;callerTxnRefID&quot;:&quot;341b7153-da86-4543-860f-2ba47f0168a5&quot;,&quot;transStatus&quot;:&quot;Y&quot;,&quot;threeDSServerTransID&quot;:&quot;6b5fd563-be72-4f8e-8bf1-06d0b767be1a&quot;}
-	at org.testng.Assert.fail(Assert.java:96)
-	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:213)
-	at sun.reflect.GeneratedMethodAccessor37.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
-</pre></div></td>
-<td>2</td>
-<td>com.ca.tds.main.TDSVerifyAPI_TC@1a1d6a08</td></tr>
-<tr>
-<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@1bebe3a7, {TestCaseID=_S016, TestCaseName=PartialCRES_Without_messageType, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=G, Expected-eci=G, Expected-authenticationValue=G, Expected-transStatus=G, Expected-transStatusReason=G, Expected-challengeCancel=G, Expected-resultsStatus=G, Expected-authenticationType=G, Expected-interactionCounter=G, Expected-messageType=RSRs, Expected-XID=G, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU, #transStatus#=Y}</td>
-<td><div><pre>java.lang.AssertionError: Verify API response data validation failed.&lt;br&gt;required key [authenticationValue] not found&lt;br&gt; api response : {&quot;XID&quot;:&quot;020100007970fe278f114bf9bc5fc3e3e614ba08&quot;,&quot;messageType&quot;:&quot;RSRs&quot;,&quot;transStatusReason&quot;:&quot;07&quot;,&quot;resultsStatus&quot;:&quot;01&quot;,&quot;authenticationType&quot;:&quot;01&quot;,&quot;interactionCounter&quot;:&quot;00&quot;,&quot;callerTxnRefID&quot;:&quot;341b7153-da86-4543-860f-2ba47f0168a5&quot;,&quot;transStatus&quot;:&quot;Y&quot;,&quot;threeDSServerTransID&quot;:&quot;81f3d5a5-2382-4b01-b96e-505e24bb9a8b&quot;}
-	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:213)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
-... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace194129354", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace194129354'><pre>java.lang.AssertionError: Verify API response data validation failed.&lt;br&gt;required key [authenticationValue] not found&lt;br&gt; api response : {&quot;XID&quot;:&quot;020100007970fe278f114bf9bc5fc3e3e614ba08&quot;,&quot;messageType&quot;:&quot;RSRs&quot;,&quot;transStatusReason&quot;:&quot;07&quot;,&quot;resultsStatus&quot;:&quot;01&quot;,&quot;authenticationType&quot;:&quot;01&quot;,&quot;interactionCounter&quot;:&quot;00&quot;,&quot;callerTxnRefID&quot;:&quot;341b7153-da86-4543-860f-2ba47f0168a5&quot;,&quot;transStatus&quot;:&quot;Y&quot;,&quot;threeDSServerTransID&quot;:&quot;81f3d5a5-2382-4b01-b96e-505e24bb9a8b&quot;}
-	at org.testng.Assert.fail(Assert.java:96)
-	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:213)
-	at sun.reflect.GeneratedMethodAccessor37.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
-</pre></div></td>
-<td>2</td>
-<td>com.ca.tds.main.TDSVerifyAPI_TC@1a1d6a08</td></tr>
-<tr>
-<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@1bebe3a7, {TestCaseID=_S017, TestCaseName=PartialCRES_Without_transStatus, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=G, Expected-eci=G, Expected-authenticationValue=G, Expected-transStatus=G, Expected-transStatusReason=G, Expected-challengeCancel=G, Expected-resultsStatus=G, Expected-authenticationType=G, Expected-interactionCounter=G, Expected-messageType=RSRs, Expected-XID=G, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU, #transStatus#=Y}</td>
-<td><div><pre>java.lang.AssertionError: Verify API response data validation failed.&lt;br&gt;required key [authenticationValue] not found&lt;br&gt; api response : {&quot;XID&quot;:&quot;02010000921ca4c2241846b1a564d19bce7d56d2&quot;,&quot;messageType&quot;:&quot;RSRs&quot;,&quot;transStatusReason&quot;:&quot;08&quot;,&quot;resultsStatus&quot;:&quot;01&quot;,&quot;authenticationType&quot;:&quot;01&quot;,&quot;interactionCounter&quot;:&quot;00&quot;,&quot;callerTxnRefID&quot;:&quot;341b7153-da86-4543-860f-2ba47f0168a5&quot;,&quot;transStatus&quot;:&quot;Y&quot;,&quot;threeDSServerTransID&quot;:&quot;55a774e3-f3a3-4751-b5d7-1948ee14d21c&quot;}
-	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:213)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
-... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace606066613", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace606066613'><pre>java.lang.AssertionError: Verify API response data validation failed.&lt;br&gt;required key [authenticationValue] not found&lt;br&gt; api response : {&quot;XID&quot;:&quot;02010000921ca4c2241846b1a564d19bce7d56d2&quot;,&quot;messageType&quot;:&quot;RSRs&quot;,&quot;transStatusReason&quot;:&quot;08&quot;,&quot;resultsStatus&quot;:&quot;01&quot;,&quot;authenticationType&quot;:&quot;01&quot;,&quot;interactionCounter&quot;:&quot;00&quot;,&quot;callerTxnRefID&quot;:&quot;341b7153-da86-4543-860f-2ba47f0168a5&quot;,&quot;transStatus&quot;:&quot;Y&quot;,&quot;threeDSServerTransID&quot;:&quot;55a774e3-f3a3-4751-b5d7-1948ee14d21c&quot;}
-	at org.testng.Assert.fail(Assert.java:96)
-	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:213)
-	at sun.reflect.GeneratedMethodAccessor37.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
-</pre></div></td>
-<td>2</td>
-<td>com.ca.tds.main.TDSVerifyAPI_TC@1a1d6a08</td></tr>
-<tr>
-<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@1bebe3a7, {TestCaseID=_S018, TestCaseName=PartialCRES_Without_messageVersion, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=G, Expected-eci=G, Expected-authenticationValue=G, Expected-transStatus=G, Expected-transStatusReason=G, Expected-challengeCancel=G, Expected-resultsStatus=G, Expected-authenticationType=G, Expected-interactionCounter=G, Expected-messageType=RSRs, Expected-XID=G, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU, #transStatus#=Y}</td>
-<td><div><pre>java.lang.AssertionError: Verify API response data validation failed.&lt;br&gt;required key [authenticationValue] not found&lt;br&gt; api response : {&quot;XID&quot;:&quot;020100009e44867ca9654bd9b953c0c227c44acf&quot;,&quot;messageType&quot;:&quot;RSRs&quot;,&quot;transStatusReason&quot;:&quot;09&quot;,&quot;resultsStatus&quot;:&quot;01&quot;,&quot;authenticationType&quot;:&quot;01&quot;,&quot;interactionCounter&quot;:&quot;00&quot;,&quot;callerTxnRefID&quot;:&quot;341b7153-da86-4543-860f-2ba47f0168a5&quot;,&quot;transStatus&quot;:&quot;Y&quot;,&quot;threeDSServerTransID&quot;:&quot;eca04c46-92b8-4a18-b253-6b2e6b26c482&quot;}
-	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:213)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
-... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2058193108", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2058193108'><pre>java.lang.AssertionError: Verify API response data validation failed.&lt;br&gt;required key [authenticationValue] not found&lt;br&gt; api response : {&quot;XID&quot;:&quot;020100009e44867ca9654bd9b953c0c227c44acf&quot;,&quot;messageType&quot;:&quot;RSRs&quot;,&quot;transStatusReason&quot;:&quot;09&quot;,&quot;resultsStatus&quot;:&quot;01&quot;,&quot;authenticationType&quot;:&quot;01&quot;,&quot;interactionCounter&quot;:&quot;00&quot;,&quot;callerTxnRefID&quot;:&quot;341b7153-da86-4543-860f-2ba47f0168a5&quot;,&quot;transStatus&quot;:&quot;Y&quot;,&quot;threeDSServerTransID&quot;:&quot;eca04c46-92b8-4a18-b253-6b2e6b26c482&quot;}
-	at org.testng.Assert.fail(Assert.java:96)
-	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:213)
-	at sun.reflect.GeneratedMethodAccessor37.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
-</pre></div></td>
-<td>2</td>
-<td>com.ca.tds.main.TDSVerifyAPI_TC@1a1d6a08</td></tr>
-<tr>
-<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@1bebe3a7, {TestCaseID=_S021, TestCaseName=RemovalOfOptionalField_CRES, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=G, Expected-eci=G, Expected-authenticationValue=G, Expected-transStatus=G, Expected-transStatusReason=G, Expected-challengeCancel=G, Expected-resultsStatus=G, Expected-authenticationType=G, Expected-interactionCounter=G, Expected-messageType=RSRs, Expected-XID=G, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=#REMOVE#, #messageType#=RSRq, #caMerchantID#=CA_EU, #transStatus#=Y}</td>
-<td><div><pre>java.lang.AssertionError: Verify API response data validation failed.&lt;br&gt;required key [authenticationValue] not found&lt;br&gt; api response : {&quot;XID&quot;:&quot;02010000259a2ea61b5349f49b6c0dd0cb6489a2&quot;,&quot;messageType&quot;:&quot;RSRs&quot;,&quot;transStatusReason&quot;:&quot;12&quot;,&quot;resultsStatus&quot;:&quot;01&quot;,&quot;authenticationType&quot;:&quot;01&quot;,&quot;interactionCounter&quot;:&quot;00&quot;,&quot;callerTxnRefID&quot;:&quot;341b7153-da86-4543-860f-2ba47f0168a5&quot;,&quot;transStatus&quot;:&quot;N&quot;,&quot;threeDSServerTransID&quot;:&quot;161a2609-7303-462d-9832-e63e6872ec40&quot;}
-	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:213)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
-... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace567752315", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace567752315'><pre>java.lang.AssertionError: Verify API response data validation failed.&lt;br&gt;required key [authenticationValue] not found&lt;br&gt; api response : {&quot;XID&quot;:&quot;02010000259a2ea61b5349f49b6c0dd0cb6489a2&quot;,&quot;messageType&quot;:&quot;RSRs&quot;,&quot;transStatusReason&quot;:&quot;12&quot;,&quot;resultsStatus&quot;:&quot;01&quot;,&quot;authenticationType&quot;:&quot;01&quot;,&quot;interactionCounter&quot;:&quot;00&quot;,&quot;callerTxnRefID&quot;:&quot;341b7153-da86-4543-860f-2ba47f0168a5&quot;,&quot;transStatus&quot;:&quot;N&quot;,&quot;threeDSServerTransID&quot;:&quot;161a2609-7303-462d-9832-e63e6872ec40&quot;}
-	at org.testng.Assert.fail(Assert.java:96)
-	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:213)
-	at sun.reflect.GeneratedMethodAccessor37.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
-</pre></div></td>
-<td>2</td>
-<td>com.ca.tds.main.TDSVerifyAPI_TC@1a1d6a08</td></tr>
-<tr>
-<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@1bebe3a7, {TestCaseID=_S022, TestCaseName=MessageType_RSRq, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=G, Expected-eci=G, Expected-authenticationValue=G, Expected-transStatus=G, Expected-transStatusReason=G, Expected-challengeCancel=G, Expected-resultsStatus=G, Expected-authenticationType=G, Expected-interactionCounter=G, Expected-messageType=RSRs, Expected-XID=G, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU, #transStatus#=Y}</td>
-<td><div><pre>java.lang.AssertionError: Verify API response data validation failed.&lt;br&gt;required key [authenticationValue] not found&lt;br&gt; api response : {&quot;XID&quot;:&quot;02010000a1ae24186fd749a4a734293b6c164ab8&quot;,&quot;messageType&quot;:&quot;RSRs&quot;,&quot;transStatusReason&quot;:&quot;13&quot;,&quot;resultsStatus&quot;:&quot;01&quot;,&quot;authenticationType&quot;:&quot;01&quot;,&quot;interactionCounter&quot;:&quot;00&quot;,&quot;callerTxnRefID&quot;:&quot;341b7153-da86-4543-860f-2ba47f0168a5&quot;,&quot;transStatus&quot;:&quot;Y&quot;,&quot;threeDSServerTransID&quot;:&quot;e6a72f17-3770-4a2a-9921-5a0fcf9ea9df&quot;}
-	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:213)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
-... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace99673009", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace99673009'><pre>java.lang.AssertionError: Verify API response data validation failed.&lt;br&gt;required key [authenticationValue] not found&lt;br&gt; api response : {&quot;XID&quot;:&quot;02010000a1ae24186fd749a4a734293b6c164ab8&quot;,&quot;messageType&quot;:&quot;RSRs&quot;,&quot;transStatusReason&quot;:&quot;13&quot;,&quot;resultsStatus&quot;:&quot;01&quot;,&quot;authenticationType&quot;:&quot;01&quot;,&quot;interactionCounter&quot;:&quot;00&quot;,&quot;callerTxnRefID&quot;:&quot;341b7153-da86-4543-860f-2ba47f0168a5&quot;,&quot;transStatus&quot;:&quot;Y&quot;,&quot;threeDSServerTransID&quot;:&quot;e6a72f17-3770-4a2a-9921-5a0fcf9ea9df&quot;}
-	at org.testng.Assert.fail(Assert.java:96)
-	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:213)
-	at sun.reflect.GeneratedMethodAccessor37.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
-</pre></div></td>
-<td>2</td>
-<td>com.ca.tds.main.TDSVerifyAPI_TC@1a1d6a08</td></tr>
-<tr>
-<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@1bebe3a7, {TestCaseID=_S027, TestCaseName=ValidCAMerchantID, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=G, Expected-eci=G, Expected-authenticationValue=G, Expected-transStatus=G, Expected-transStatusReason=G, Expected-challengeCancel=G, Expected-resultsStatus=G, Expected-authenticationType=G, Expected-interactionCounter=G, Expected-messageType=RSRs, Expected-XID=G, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU, #transStatus#=Y}</td>
-<td><div><pre>java.lang.AssertionError: Verify API response data validation failed.&lt;br&gt;required key [authenticationValue] not found&lt;br&gt; api response : {&quot;XID&quot;:&quot;020100007a422ac475ad47fa9684e006e7fa7ade&quot;,&quot;messageType&quot;:&quot;RSRs&quot;,&quot;transStatusReason&quot;:&quot;18&quot;,&quot;resultsStatus&quot;:&quot;01&quot;,&quot;authenticationType&quot;:&quot;01&quot;,&quot;interactionCounter&quot;:&quot;00&quot;,&quot;callerTxnRefID&quot;:&quot;341b7153-da86-4543-860f-2ba47f0168a5&quot;,&quot;transStatus&quot;:&quot;Y&quot;,&quot;threeDSServerTransID&quot;:&quot;2d18c364-ed47-42e1-9bd0-b98bd71370ab&quot;}
-	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:213)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
-... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1361912548", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1361912548'><pre>java.lang.AssertionError: Verify API response data validation failed.&lt;br&gt;required key [authenticationValue] not found&lt;br&gt; api response : {&quot;XID&quot;:&quot;020100007a422ac475ad47fa9684e006e7fa7ade&quot;,&quot;messageType&quot;:&quot;RSRs&quot;,&quot;transStatusReason&quot;:&quot;18&quot;,&quot;resultsStatus&quot;:&quot;01&quot;,&quot;authenticationType&quot;:&quot;01&quot;,&quot;interactionCounter&quot;:&quot;00&quot;,&quot;callerTxnRefID&quot;:&quot;341b7153-da86-4543-860f-2ba47f0168a5&quot;,&quot;transStatus&quot;:&quot;Y&quot;,&quot;threeDSServerTransID&quot;:&quot;2d18c364-ed47-42e1-9bd0-b98bd71370ab&quot;}
-	at org.testng.Assert.fail(Assert.java:96)
-	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:213)
-	at sun.reflect.GeneratedMethodAccessor37.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
-</pre></div></td>
-<td>2</td>
-<td>com.ca.tds.main.TDSVerifyAPI_TC@1a1d6a08</td></tr>
-<tr>
-<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@1bebe3a7, {TestCaseID=_S028, TestCaseName=Empty_CAMerchantID, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=G, Expected-eci=G, Expected-authenticationValue=G, Expected-transStatus=G, Expected-transStatusReason=G, Expected-challengeCancel=G, Expected-resultsStatus=G, Expected-authenticationType=G, Expected-interactionCounter=G, Expected-messageType=RSRs, Expected-XID=G, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=empty, #transStatus#=Y}</td>
-<td><div><pre>java.lang.AssertionError: Verify API response data validation failed.&lt;br&gt;required key [authenticationValue] not found&lt;br&gt; api response : {&quot;XID&quot;:&quot;020100000e2494e161b44a2e85eb3fd2005a83be&quot;,&quot;messageType&quot;:&quot;RSRs&quot;,&quot;transStatusReason&quot;:&quot;19&quot;,&quot;resultsStatus&quot;:&quot;01&quot;,&quot;authenticationType&quot;:&quot;01&quot;,&quot;interactionCounter&quot;:&quot;00&quot;,&quot;callerTxnRefID&quot;:&quot;341b7153-da86-4543-860f-2ba47f0168a5&quot;,&quot;transStatus&quot;:&quot;Y&quot;,&quot;threeDSServerTransID&quot;:&quot;16bf04b2-2e79-44ca-9172-8eeaa39e923b&quot;}
-	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:213)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
-... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace756010941", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace756010941'><pre>java.lang.AssertionError: Verify API response data validation failed.&lt;br&gt;required key [authenticationValue] not found&lt;br&gt; api response : {&quot;XID&quot;:&quot;020100000e2494e161b44a2e85eb3fd2005a83be&quot;,&quot;messageType&quot;:&quot;RSRs&quot;,&quot;transStatusReason&quot;:&quot;19&quot;,&quot;resultsStatus&quot;:&quot;01&quot;,&quot;authenticationType&quot;:&quot;01&quot;,&quot;interactionCounter&quot;:&quot;00&quot;,&quot;callerTxnRefID&quot;:&quot;341b7153-da86-4543-860f-2ba47f0168a5&quot;,&quot;transStatus&quot;:&quot;Y&quot;,&quot;threeDSServerTransID&quot;:&quot;16bf04b2-2e79-44ca-9172-8eeaa39e923b&quot;}
-	at org.testng.Assert.fail(Assert.java:96)
-	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:213)
-	at sun.reflect.GeneratedMethodAccessor37.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
-</pre></div></td>
-<td>2</td>
-<td>com.ca.tds.main.TDSVerifyAPI_TC@1a1d6a08</td></tr>
-<tr>
-<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@1bebe3a7, {TestCaseID=_S029, TestCaseName=Invalid_CAMerchantID, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=G, Expected-eci=G, Expected-authenticationValue=G, Expected-transStatus=G, Expected-transStatusReason=G, Expected-challengeCancel=G, Expected-resultsStatus=G, Expected-authenticationType=G, Expected-interactionCounter=G, Expected-messageType=RSRs, Expected-XID=G, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU, #transStatus#=Y}</td>
-<td><div><pre>java.lang.AssertionError: Verify API response data validation failed.&lt;br&gt;required key [authenticationValue] not found&lt;br&gt; api response : {&quot;XID&quot;:&quot;02010000d579351e5e16416b9592bf6246d6eb4b&quot;,&quot;messageType&quot;:&quot;RSRs&quot;,&quot;transStatusReason&quot;:&quot;20&quot;,&quot;resultsStatus&quot;:&quot;01&quot;,&quot;authenticationType&quot;:&quot;01&quot;,&quot;interactionCounter&quot;:&quot;00&quot;,&quot;callerTxnRefID&quot;:&quot;341b7153-da86-4543-860f-2ba47f0168a5&quot;,&quot;transStatus&quot;:&quot;Y&quot;,&quot;threeDSServerTransID&quot;:&quot;bff1c297-367f-44b4-88f7-0dd59419644d&quot;}
-	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:213)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
-... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1896753343", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1896753343'><pre>java.lang.AssertionError: Verify API response data validation failed.&lt;br&gt;required key [authenticationValue] not found&lt;br&gt; api response : {&quot;XID&quot;:&quot;02010000d579351e5e16416b9592bf6246d6eb4b&quot;,&quot;messageType&quot;:&quot;RSRs&quot;,&quot;transStatusReason&quot;:&quot;20&quot;,&quot;resultsStatus&quot;:&quot;01&quot;,&quot;authenticationType&quot;:&quot;01&quot;,&quot;interactionCounter&quot;:&quot;00&quot;,&quot;callerTxnRefID&quot;:&quot;341b7153-da86-4543-860f-2ba47f0168a5&quot;,&quot;transStatus&quot;:&quot;Y&quot;,&quot;threeDSServerTransID&quot;:&quot;bff1c297-367f-44b4-88f7-0dd59419644d&quot;}
-	at org.testng.Assert.fail(Assert.java:96)
-	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:213)
-	at sun.reflect.GeneratedMethodAccessor37.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
-</pre></div></td>
-<td>2</td>
-<td>com.ca.tds.main.TDSVerifyAPI_TC@1a1d6a08</td></tr>
-<tr>
-<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@1bebe3a7, {TestCaseID=_S031, TestCaseName=CAMerchantID_MoreThanMaxAcceptedLen>2KChars, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=G, Expected-eci=G, Expected-authenticationValue=G, Expected-transStatus=G, Expected-transStatusReason=G, Expected-challengeCancel=G, Expected-resultsStatus=G, Expected-authenticationType=G, Expected-interactionCounter=G, Expected-messageType=RSRs, Expected-XID=G, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU, #transStatus#=Y}</td>
-<td><div><pre>java.lang.AssertionError: errorComponent: S, errorCode: 501, errorDescription:CA Merchant Server:: RReq not recieved due to technical errorerrorDetail : Internal Trasient error occured for this transaction. Temporary Error occured for this transaction, threeDSServerTransID : 34041e14-10c2-4f46-8981-f2813309465d
-	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:120)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
-... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1250243849", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1250243849'><pre>java.lang.AssertionError: errorComponent: S, errorCode: 501, errorDescription:CA Merchant Server:: RReq not recieved due to technical errorerrorDetail : Internal Trasient error occured for this transaction. Temporary Error occured for this transaction, threeDSServerTransID : 34041e14-10c2-4f46-8981-f2813309465d
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace854150640", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace854150640'><pre>java.lang.AssertionError: errorComponent: S, errorCode: 501, errorDescription:CA Merchant Server:: RReq not recieved due to technical errorerrorDetail : Internal Trasient error occured for this transaction. Temporary Error occured for this transaction, threeDSServerTransID : ed2fa097-7cbd-43a9-b6e3-10d7347f978d
 	at org.testng.Assert.fail(Assert.java:96)
 	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:120)
 	at sun.reflect.GeneratedMethodAccessor37.invoke(Unknown Source)
@@ -542,17 +150,355 @@ function toggleAllBoxes() {
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
 </pre></div></td>
-<td>2</td>
-<td>com.ca.tds.main.TDSVerifyAPI_TC@1a1d6a08</td></tr>
+<td>1</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@11438d26</td></tr>
 <tr>
-<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@1bebe3a7, {TestCaseID=_S032, TestCaseName=Timeout scenario for DS unable to send Rres to ACS, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=G, Expected-eci=G, Expected-authenticationValue=G, Expected-transStatus=G, Expected-transStatusReason=G, Expected-challengeCancel=G, Expected-resultsStatus=G, Expected-authenticationType=G, Expected-interactionCounter=G, Expected-messageType=RSRs, Expected-XID=G, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU, #transStatus#=N}</td>
-<td><div><pre>java.lang.AssertionError: errorComponent: S, errorCode: 501, errorDescription:CA Merchant Server:: RReq not recieved due to technical errorerrorDetail : Internal Trasient error occured for this transaction. Temporary Error occured for this transaction, threeDSServerTransID : a1c5d31b-6a1c-4c3e-acc5-c468d2f92911
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@63149ce, {TestCaseID=_S011, TestCaseName=RemovalOfOptionalField_CallerTxnRefID, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=G, Expected-eci=G, Expected-authenticationValue=G, Expected-transStatus=G, Expected-transStatusReason=G, Expected-challengeCancel=G, Expected-resultsStatus=G, Expected-authenticationType=G, Expected-interactionCounter=G, Expected-messageType=RSRs, Expected-XID=G, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #threeDSServerTransID#=, #callerTxnRefID#=#REMOVE#, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU, #transStatus#=Y}</td>
+<td><div><pre>java.lang.AssertionError: Verify API response data validation failed.&lt;br&gt;required key [authenticationValue] not found&lt;br&gt; api response : {&quot;XID&quot;:&quot;02010000c744a2935fd8431e8f85bdcf9919b6a7&quot;,&quot;messageType&quot;:&quot;RSRs&quot;,&quot;transStatusReason&quot;:&quot;02&quot;,&quot;resultsStatus&quot;:&quot;01&quot;,&quot;authenticationType&quot;:&quot;01&quot;,&quot;interactionCounter&quot;:&quot;00&quot;,&quot;transStatus&quot;:&quot;Y&quot;,&quot;threeDSServerTransID&quot;:&quot;2a1a86b9-b144-4979-8be4-8461efb07cb8&quot;}
+	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:213)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace787598356", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace787598356'><pre>java.lang.AssertionError: Verify API response data validation failed.&lt;br&gt;required key [authenticationValue] not found&lt;br&gt; api response : {&quot;XID&quot;:&quot;02010000c744a2935fd8431e8f85bdcf9919b6a7&quot;,&quot;messageType&quot;:&quot;RSRs&quot;,&quot;transStatusReason&quot;:&quot;02&quot;,&quot;resultsStatus&quot;:&quot;01&quot;,&quot;authenticationType&quot;:&quot;01&quot;,&quot;interactionCounter&quot;:&quot;00&quot;,&quot;transStatus&quot;:&quot;Y&quot;,&quot;threeDSServerTransID&quot;:&quot;2a1a86b9-b144-4979-8be4-8461efb07cb8&quot;}
+	at org.testng.Assert.fail(Assert.java:96)
+	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:213)
+	at sun.reflect.GeneratedMethodAccessor37.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</pre></div></td>
+<td>1</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@11438d26</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@63149ce, {TestCaseID=_S012, TestCaseName=WithValid_FullCRES, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=G, Expected-eci=G, Expected-authenticationValue=G, Expected-transStatus=G, Expected-transStatusReason=G, Expected-challengeCancel=G, Expected-resultsStatus=G, Expected-authenticationType=G, Expected-interactionCounter=G, Expected-messageType=RSRs, Expected-XID=G, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #threeDSServerTransID#=, #callerTxnRefID#= , #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU, #transStatus#=Y}</td>
+<td><div><pre>java.lang.AssertionError: Verify API response data validation failed.&lt;br&gt;required key [authenticationValue] not found&lt;br&gt; api response : {&quot;XID&quot;:&quot;02010000b9c0329395a4422691aaa8d70f9ae2f6&quot;,&quot;messageType&quot;:&quot;RSRs&quot;,&quot;transStatusReason&quot;:&quot;03&quot;,&quot;resultsStatus&quot;:&quot;01&quot;,&quot;authenticationType&quot;:&quot;01&quot;,&quot;interactionCounter&quot;:&quot;00&quot;,&quot;callerTxnRefID&quot;:&quot; &quot;,&quot;transStatus&quot;:&quot;Y&quot;,&quot;threeDSServerTransID&quot;:&quot;4e593d7a-00b4-4634-abee-4aea6cd9be0a&quot;}
+	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:213)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace286355617", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace286355617'><pre>java.lang.AssertionError: Verify API response data validation failed.&lt;br&gt;required key [authenticationValue] not found&lt;br&gt; api response : {&quot;XID&quot;:&quot;02010000b9c0329395a4422691aaa8d70f9ae2f6&quot;,&quot;messageType&quot;:&quot;RSRs&quot;,&quot;transStatusReason&quot;:&quot;03&quot;,&quot;resultsStatus&quot;:&quot;01&quot;,&quot;authenticationType&quot;:&quot;01&quot;,&quot;interactionCounter&quot;:&quot;00&quot;,&quot;callerTxnRefID&quot;:&quot; &quot;,&quot;transStatus&quot;:&quot;Y&quot;,&quot;threeDSServerTransID&quot;:&quot;4e593d7a-00b4-4634-abee-4aea6cd9be0a&quot;}
+	at org.testng.Assert.fail(Assert.java:96)
+	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:213)
+	at sun.reflect.GeneratedMethodAccessor37.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</pre></div></td>
+<td>1</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@11438d26</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@63149ce, {TestCaseID=_S013, TestCaseName=PartialCRES_Without_threeDSServerTransID, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=G, Expected-eci=G, Expected-authenticationValue=G, Expected-transStatus=G, Expected-transStatusReason=G, Expected-challengeCancel=G, Expected-resultsStatus=G, Expected-authenticationType=G, Expected-interactionCounter=G, Expected-messageType=RSRs, Expected-XID=G, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU, #transStatus#=Y}</td>
+<td><div><pre>java.lang.AssertionError: Verify API response data validation failed.&lt;br&gt;required key [authenticationValue] not found&lt;br&gt; api response : {&quot;XID&quot;:&quot;02010000b718e1811a5b48cbacc749eb879cf6c3&quot;,&quot;messageType&quot;:&quot;RSRs&quot;,&quot;transStatusReason&quot;:&quot;04&quot;,&quot;resultsStatus&quot;:&quot;01&quot;,&quot;authenticationType&quot;:&quot;01&quot;,&quot;interactionCounter&quot;:&quot;00&quot;,&quot;callerTxnRefID&quot;:&quot;341b7153-da86-4543-860f-2ba47f0168a5&quot;,&quot;transStatus&quot;:&quot;Y&quot;,&quot;threeDSServerTransID&quot;:&quot;ef91101f-7474-45e8-9064-17d1dfc5c3ae&quot;}
+	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:213)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1683548840", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1683548840'><pre>java.lang.AssertionError: Verify API response data validation failed.&lt;br&gt;required key [authenticationValue] not found&lt;br&gt; api response : {&quot;XID&quot;:&quot;02010000b718e1811a5b48cbacc749eb879cf6c3&quot;,&quot;messageType&quot;:&quot;RSRs&quot;,&quot;transStatusReason&quot;:&quot;04&quot;,&quot;resultsStatus&quot;:&quot;01&quot;,&quot;authenticationType&quot;:&quot;01&quot;,&quot;interactionCounter&quot;:&quot;00&quot;,&quot;callerTxnRefID&quot;:&quot;341b7153-da86-4543-860f-2ba47f0168a5&quot;,&quot;transStatus&quot;:&quot;Y&quot;,&quot;threeDSServerTransID&quot;:&quot;ef91101f-7474-45e8-9064-17d1dfc5c3ae&quot;}
+	at org.testng.Assert.fail(Assert.java:96)
+	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:213)
+	at sun.reflect.GeneratedMethodAccessor37.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</pre></div></td>
+<td>1</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@11438d26</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@63149ce, {TestCaseID=_S014, TestCaseName=PartialCRES_Without_acsTransID, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=G, Expected-eci=G, Expected-authenticationValue=G, Expected-transStatus=G, Expected-transStatusReason=G, Expected-challengeCancel=G, Expected-resultsStatus=G, Expected-authenticationType=G, Expected-interactionCounter=G, Expected-messageType=RSRs, Expected-XID=G, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU, #transStatus#=Y}</td>
+<td><div><pre>java.lang.AssertionError: Verify API response data validation failed.&lt;br&gt;required key [authenticationValue] not found&lt;br&gt; api response : {&quot;XID&quot;:&quot;0201000059cfeb1064904cf383a75bb5487c191d&quot;,&quot;messageType&quot;:&quot;RSRs&quot;,&quot;transStatusReason&quot;:&quot;05&quot;,&quot;resultsStatus&quot;:&quot;01&quot;,&quot;authenticationType&quot;:&quot;01&quot;,&quot;interactionCounter&quot;:&quot;00&quot;,&quot;callerTxnRefID&quot;:&quot;341b7153-da86-4543-860f-2ba47f0168a5&quot;,&quot;transStatus&quot;:&quot;Y&quot;,&quot;threeDSServerTransID&quot;:&quot;ee9478fa-ae63-4d83-a4ea-973a0adc24f2&quot;}
+	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:213)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace578831343", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace578831343'><pre>java.lang.AssertionError: Verify API response data validation failed.&lt;br&gt;required key [authenticationValue] not found&lt;br&gt; api response : {&quot;XID&quot;:&quot;0201000059cfeb1064904cf383a75bb5487c191d&quot;,&quot;messageType&quot;:&quot;RSRs&quot;,&quot;transStatusReason&quot;:&quot;05&quot;,&quot;resultsStatus&quot;:&quot;01&quot;,&quot;authenticationType&quot;:&quot;01&quot;,&quot;interactionCounter&quot;:&quot;00&quot;,&quot;callerTxnRefID&quot;:&quot;341b7153-da86-4543-860f-2ba47f0168a5&quot;,&quot;transStatus&quot;:&quot;Y&quot;,&quot;threeDSServerTransID&quot;:&quot;ee9478fa-ae63-4d83-a4ea-973a0adc24f2&quot;}
+	at org.testng.Assert.fail(Assert.java:96)
+	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:213)
+	at sun.reflect.GeneratedMethodAccessor37.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</pre></div></td>
+<td>1</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@11438d26</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@63149ce, {TestCaseID=_S015, TestCaseName=PartialCRES_Without_challengeCompletionInd, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=G, Expected-eci=G, Expected-authenticationValue=G, Expected-transStatus=G, Expected-transStatusReason=G, Expected-challengeCancel=G, Expected-resultsStatus=G, Expected-authenticationType=G, Expected-interactionCounter=G, Expected-messageType=RSRs, Expected-XID=G, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU, #transStatus#=Y}</td>
+<td><div><pre>java.lang.AssertionError: Verify API response data validation failed.&lt;br&gt;required key [authenticationValue] not found&lt;br&gt; api response : {&quot;XID&quot;:&quot;02010000339e736f61de4a6fae6d632ed508aa83&quot;,&quot;messageType&quot;:&quot;RSRs&quot;,&quot;transStatusReason&quot;:&quot;06&quot;,&quot;resultsStatus&quot;:&quot;01&quot;,&quot;authenticationType&quot;:&quot;01&quot;,&quot;interactionCounter&quot;:&quot;00&quot;,&quot;callerTxnRefID&quot;:&quot;341b7153-da86-4543-860f-2ba47f0168a5&quot;,&quot;transStatus&quot;:&quot;Y&quot;,&quot;threeDSServerTransID&quot;:&quot;789a2f1c-41d5-4558-b1de-bbb38bbad5f6&quot;}
+	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:213)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1899075486", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1899075486'><pre>java.lang.AssertionError: Verify API response data validation failed.&lt;br&gt;required key [authenticationValue] not found&lt;br&gt; api response : {&quot;XID&quot;:&quot;02010000339e736f61de4a6fae6d632ed508aa83&quot;,&quot;messageType&quot;:&quot;RSRs&quot;,&quot;transStatusReason&quot;:&quot;06&quot;,&quot;resultsStatus&quot;:&quot;01&quot;,&quot;authenticationType&quot;:&quot;01&quot;,&quot;interactionCounter&quot;:&quot;00&quot;,&quot;callerTxnRefID&quot;:&quot;341b7153-da86-4543-860f-2ba47f0168a5&quot;,&quot;transStatus&quot;:&quot;Y&quot;,&quot;threeDSServerTransID&quot;:&quot;789a2f1c-41d5-4558-b1de-bbb38bbad5f6&quot;}
+	at org.testng.Assert.fail(Assert.java:96)
+	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:213)
+	at sun.reflect.GeneratedMethodAccessor37.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</pre></div></td>
+<td>1</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@11438d26</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@63149ce, {TestCaseID=_S016, TestCaseName=PartialCRES_Without_messageType, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=G, Expected-eci=G, Expected-authenticationValue=G, Expected-transStatus=G, Expected-transStatusReason=G, Expected-challengeCancel=G, Expected-resultsStatus=G, Expected-authenticationType=G, Expected-interactionCounter=G, Expected-messageType=RSRs, Expected-XID=G, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU, #transStatus#=Y}</td>
+<td><div><pre>java.lang.AssertionError: Verify API response data validation failed.&lt;br&gt;required key [authenticationValue] not found&lt;br&gt; api response : {&quot;XID&quot;:&quot;02010000c9c1878c7a5341c8acc1e2a5da561987&quot;,&quot;messageType&quot;:&quot;RSRs&quot;,&quot;transStatusReason&quot;:&quot;07&quot;,&quot;resultsStatus&quot;:&quot;01&quot;,&quot;authenticationType&quot;:&quot;01&quot;,&quot;interactionCounter&quot;:&quot;00&quot;,&quot;callerTxnRefID&quot;:&quot;341b7153-da86-4543-860f-2ba47f0168a5&quot;,&quot;transStatus&quot;:&quot;Y&quot;,&quot;threeDSServerTransID&quot;:&quot;8bd45e82-c2bd-4eda-b393-2af3a7982ddb&quot;}
+	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:213)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace342506076", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace342506076'><pre>java.lang.AssertionError: Verify API response data validation failed.&lt;br&gt;required key [authenticationValue] not found&lt;br&gt; api response : {&quot;XID&quot;:&quot;02010000c9c1878c7a5341c8acc1e2a5da561987&quot;,&quot;messageType&quot;:&quot;RSRs&quot;,&quot;transStatusReason&quot;:&quot;07&quot;,&quot;resultsStatus&quot;:&quot;01&quot;,&quot;authenticationType&quot;:&quot;01&quot;,&quot;interactionCounter&quot;:&quot;00&quot;,&quot;callerTxnRefID&quot;:&quot;341b7153-da86-4543-860f-2ba47f0168a5&quot;,&quot;transStatus&quot;:&quot;Y&quot;,&quot;threeDSServerTransID&quot;:&quot;8bd45e82-c2bd-4eda-b393-2af3a7982ddb&quot;}
+	at org.testng.Assert.fail(Assert.java:96)
+	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:213)
+	at sun.reflect.GeneratedMethodAccessor37.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</pre></div></td>
+<td>1</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@11438d26</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@63149ce, {TestCaseID=_S017, TestCaseName=PartialCRES_Without_transStatus, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=G, Expected-eci=G, Expected-authenticationValue=G, Expected-transStatus=G, Expected-transStatusReason=G, Expected-challengeCancel=G, Expected-resultsStatus=G, Expected-authenticationType=G, Expected-interactionCounter=G, Expected-messageType=RSRs, Expected-XID=G, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU, #transStatus#=Y}</td>
+<td><div><pre>java.lang.AssertionError: Verify API response data validation failed.&lt;br&gt;required key [authenticationValue] not found&lt;br&gt; api response : {&quot;XID&quot;:&quot;020100005bef2d2155f64ad99d78e6392517b271&quot;,&quot;messageType&quot;:&quot;RSRs&quot;,&quot;transStatusReason&quot;:&quot;08&quot;,&quot;resultsStatus&quot;:&quot;01&quot;,&quot;authenticationType&quot;:&quot;01&quot;,&quot;interactionCounter&quot;:&quot;00&quot;,&quot;callerTxnRefID&quot;:&quot;341b7153-da86-4543-860f-2ba47f0168a5&quot;,&quot;transStatus&quot;:&quot;Y&quot;,&quot;threeDSServerTransID&quot;:&quot;b73230d3-2ea4-4dcf-b483-ef2aa8a9978b&quot;}
+	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:213)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace421190398", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace421190398'><pre>java.lang.AssertionError: Verify API response data validation failed.&lt;br&gt;required key [authenticationValue] not found&lt;br&gt; api response : {&quot;XID&quot;:&quot;020100005bef2d2155f64ad99d78e6392517b271&quot;,&quot;messageType&quot;:&quot;RSRs&quot;,&quot;transStatusReason&quot;:&quot;08&quot;,&quot;resultsStatus&quot;:&quot;01&quot;,&quot;authenticationType&quot;:&quot;01&quot;,&quot;interactionCounter&quot;:&quot;00&quot;,&quot;callerTxnRefID&quot;:&quot;341b7153-da86-4543-860f-2ba47f0168a5&quot;,&quot;transStatus&quot;:&quot;Y&quot;,&quot;threeDSServerTransID&quot;:&quot;b73230d3-2ea4-4dcf-b483-ef2aa8a9978b&quot;}
+	at org.testng.Assert.fail(Assert.java:96)
+	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:213)
+	at sun.reflect.GeneratedMethodAccessor37.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</pre></div></td>
+<td>1</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@11438d26</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@63149ce, {TestCaseID=_S018, TestCaseName=PartialCRES_Without_messageVersion, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=G, Expected-eci=G, Expected-authenticationValue=G, Expected-transStatus=G, Expected-transStatusReason=G, Expected-challengeCancel=G, Expected-resultsStatus=G, Expected-authenticationType=G, Expected-interactionCounter=G, Expected-messageType=RSRs, Expected-XID=G, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU, #transStatus#=Y}</td>
+<td><div><pre>java.lang.AssertionError: Verify API response data validation failed.&lt;br&gt;required key [authenticationValue] not found&lt;br&gt; api response : {&quot;XID&quot;:&quot;02010000ca1654d8c927471e828b19011ef2a83f&quot;,&quot;messageType&quot;:&quot;RSRs&quot;,&quot;transStatusReason&quot;:&quot;09&quot;,&quot;resultsStatus&quot;:&quot;01&quot;,&quot;authenticationType&quot;:&quot;01&quot;,&quot;interactionCounter&quot;:&quot;00&quot;,&quot;callerTxnRefID&quot;:&quot;341b7153-da86-4543-860f-2ba47f0168a5&quot;,&quot;transStatus&quot;:&quot;Y&quot;,&quot;threeDSServerTransID&quot;:&quot;48876657-9963-4803-872c-4996261f1203&quot;}
+	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:213)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1301012048", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1301012048'><pre>java.lang.AssertionError: Verify API response data validation failed.&lt;br&gt;required key [authenticationValue] not found&lt;br&gt; api response : {&quot;XID&quot;:&quot;02010000ca1654d8c927471e828b19011ef2a83f&quot;,&quot;messageType&quot;:&quot;RSRs&quot;,&quot;transStatusReason&quot;:&quot;09&quot;,&quot;resultsStatus&quot;:&quot;01&quot;,&quot;authenticationType&quot;:&quot;01&quot;,&quot;interactionCounter&quot;:&quot;00&quot;,&quot;callerTxnRefID&quot;:&quot;341b7153-da86-4543-860f-2ba47f0168a5&quot;,&quot;transStatus&quot;:&quot;Y&quot;,&quot;threeDSServerTransID&quot;:&quot;48876657-9963-4803-872c-4996261f1203&quot;}
+	at org.testng.Assert.fail(Assert.java:96)
+	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:213)
+	at sun.reflect.GeneratedMethodAccessor37.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</pre></div></td>
+<td>1</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@11438d26</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@63149ce, {TestCaseID=_S021, TestCaseName=RemovalOfOptionalField_CRES, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=G, Expected-eci=G, Expected-authenticationValue=G, Expected-transStatus=G, Expected-transStatusReason=G, Expected-challengeCancel=G, Expected-resultsStatus=G, Expected-authenticationType=G, Expected-interactionCounter=G, Expected-messageType=RSRs, Expected-XID=G, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=#REMOVE#, #messageType#=RSRq, #caMerchantID#=CA_EU, #transStatus#=Y}</td>
+<td><div><pre>java.lang.AssertionError: Verify API response data validation failed.&lt;br&gt;required key [authenticationValue] not found&lt;br&gt; api response : {&quot;XID&quot;:&quot;02010000b52e16a24a234388a7578b4e92b5d3d9&quot;,&quot;messageType&quot;:&quot;RSRs&quot;,&quot;transStatusReason&quot;:&quot;12&quot;,&quot;resultsStatus&quot;:&quot;01&quot;,&quot;authenticationType&quot;:&quot;01&quot;,&quot;interactionCounter&quot;:&quot;00&quot;,&quot;callerTxnRefID&quot;:&quot;341b7153-da86-4543-860f-2ba47f0168a5&quot;,&quot;transStatus&quot;:&quot;N&quot;,&quot;threeDSServerTransID&quot;:&quot;faa3e695-2bbe-4ff2-9303-21afc0f77388&quot;}
+	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:213)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace472680065", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace472680065'><pre>java.lang.AssertionError: Verify API response data validation failed.&lt;br&gt;required key [authenticationValue] not found&lt;br&gt; api response : {&quot;XID&quot;:&quot;02010000b52e16a24a234388a7578b4e92b5d3d9&quot;,&quot;messageType&quot;:&quot;RSRs&quot;,&quot;transStatusReason&quot;:&quot;12&quot;,&quot;resultsStatus&quot;:&quot;01&quot;,&quot;authenticationType&quot;:&quot;01&quot;,&quot;interactionCounter&quot;:&quot;00&quot;,&quot;callerTxnRefID&quot;:&quot;341b7153-da86-4543-860f-2ba47f0168a5&quot;,&quot;transStatus&quot;:&quot;N&quot;,&quot;threeDSServerTransID&quot;:&quot;faa3e695-2bbe-4ff2-9303-21afc0f77388&quot;}
+	at org.testng.Assert.fail(Assert.java:96)
+	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:213)
+	at sun.reflect.GeneratedMethodAccessor37.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</pre></div></td>
+<td>1</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@11438d26</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@63149ce, {TestCaseID=_S022, TestCaseName=MessageType_RSRq, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=G, Expected-eci=G, Expected-authenticationValue=G, Expected-transStatus=G, Expected-transStatusReason=G, Expected-challengeCancel=G, Expected-resultsStatus=G, Expected-authenticationType=G, Expected-interactionCounter=G, Expected-messageType=RSRs, Expected-XID=G, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU, #transStatus#=Y}</td>
+<td><div><pre>java.lang.AssertionError: Verify API response data validation failed.&lt;br&gt;required key [authenticationValue] not found&lt;br&gt; api response : {&quot;XID&quot;:&quot;0201000002f86c9eff3348bfa2802d5a4b8f6e71&quot;,&quot;messageType&quot;:&quot;RSRs&quot;,&quot;transStatusReason&quot;:&quot;13&quot;,&quot;resultsStatus&quot;:&quot;01&quot;,&quot;authenticationType&quot;:&quot;01&quot;,&quot;interactionCounter&quot;:&quot;00&quot;,&quot;callerTxnRefID&quot;:&quot;341b7153-da86-4543-860f-2ba47f0168a5&quot;,&quot;transStatus&quot;:&quot;Y&quot;,&quot;threeDSServerTransID&quot;:&quot;07e31593-6efe-476e-84b9-69705f0af98b&quot;}
+	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:213)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1068754582", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1068754582'><pre>java.lang.AssertionError: Verify API response data validation failed.&lt;br&gt;required key [authenticationValue] not found&lt;br&gt; api response : {&quot;XID&quot;:&quot;0201000002f86c9eff3348bfa2802d5a4b8f6e71&quot;,&quot;messageType&quot;:&quot;RSRs&quot;,&quot;transStatusReason&quot;:&quot;13&quot;,&quot;resultsStatus&quot;:&quot;01&quot;,&quot;authenticationType&quot;:&quot;01&quot;,&quot;interactionCounter&quot;:&quot;00&quot;,&quot;callerTxnRefID&quot;:&quot;341b7153-da86-4543-860f-2ba47f0168a5&quot;,&quot;transStatus&quot;:&quot;Y&quot;,&quot;threeDSServerTransID&quot;:&quot;07e31593-6efe-476e-84b9-69705f0af98b&quot;}
+	at org.testng.Assert.fail(Assert.java:96)
+	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:213)
+	at sun.reflect.GeneratedMethodAccessor37.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</pre></div></td>
+<td>1</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@11438d26</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@63149ce, {TestCaseID=_S027, TestCaseName=ValidCAMerchantID, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=G, Expected-eci=G, Expected-authenticationValue=G, Expected-transStatus=G, Expected-transStatusReason=G, Expected-challengeCancel=G, Expected-resultsStatus=G, Expected-authenticationType=G, Expected-interactionCounter=G, Expected-messageType=RSRs, Expected-XID=G, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU, #transStatus#=Y}</td>
+<td><div><pre>java.lang.AssertionError: Verify API response data validation failed.&lt;br&gt;required key [authenticationValue] not found&lt;br&gt; api response : {&quot;XID&quot;:&quot;02010000de8d822b8656468ea706fe63886d4d6a&quot;,&quot;messageType&quot;:&quot;RSRs&quot;,&quot;transStatusReason&quot;:&quot;18&quot;,&quot;resultsStatus&quot;:&quot;01&quot;,&quot;authenticationType&quot;:&quot;01&quot;,&quot;interactionCounter&quot;:&quot;00&quot;,&quot;callerTxnRefID&quot;:&quot;341b7153-da86-4543-860f-2ba47f0168a5&quot;,&quot;transStatus&quot;:&quot;Y&quot;,&quot;threeDSServerTransID&quot;:&quot;83b3c987-a584-4392-9d32-4464a9ff3660&quot;}
+	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:213)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace344902876", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace344902876'><pre>java.lang.AssertionError: Verify API response data validation failed.&lt;br&gt;required key [authenticationValue] not found&lt;br&gt; api response : {&quot;XID&quot;:&quot;02010000de8d822b8656468ea706fe63886d4d6a&quot;,&quot;messageType&quot;:&quot;RSRs&quot;,&quot;transStatusReason&quot;:&quot;18&quot;,&quot;resultsStatus&quot;:&quot;01&quot;,&quot;authenticationType&quot;:&quot;01&quot;,&quot;interactionCounter&quot;:&quot;00&quot;,&quot;callerTxnRefID&quot;:&quot;341b7153-da86-4543-860f-2ba47f0168a5&quot;,&quot;transStatus&quot;:&quot;Y&quot;,&quot;threeDSServerTransID&quot;:&quot;83b3c987-a584-4392-9d32-4464a9ff3660&quot;}
+	at org.testng.Assert.fail(Assert.java:96)
+	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:213)
+	at sun.reflect.GeneratedMethodAccessor37.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</pre></div></td>
+<td>1</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@11438d26</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@63149ce, {TestCaseID=_S028, TestCaseName=Empty_CAMerchantID, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=G, Expected-eci=G, Expected-authenticationValue=G, Expected-transStatus=G, Expected-transStatusReason=G, Expected-challengeCancel=G, Expected-resultsStatus=G, Expected-authenticationType=G, Expected-interactionCounter=G, Expected-messageType=RSRs, Expected-XID=G, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=empty, #transStatus#=Y}</td>
+<td><div><pre>java.lang.AssertionError: Verify API response data validation failed.&lt;br&gt;required key [authenticationValue] not found&lt;br&gt; api response : {&quot;XID&quot;:&quot;0201000033e3b71248c5414ab34bac8b4c3b82a7&quot;,&quot;messageType&quot;:&quot;RSRs&quot;,&quot;transStatusReason&quot;:&quot;19&quot;,&quot;resultsStatus&quot;:&quot;01&quot;,&quot;authenticationType&quot;:&quot;01&quot;,&quot;interactionCounter&quot;:&quot;00&quot;,&quot;callerTxnRefID&quot;:&quot;341b7153-da86-4543-860f-2ba47f0168a5&quot;,&quot;transStatus&quot;:&quot;Y&quot;,&quot;threeDSServerTransID&quot;:&quot;3c9cb85a-2b6b-420e-8fc8-9b50267d0d61&quot;}
+	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:213)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1081676748", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1081676748'><pre>java.lang.AssertionError: Verify API response data validation failed.&lt;br&gt;required key [authenticationValue] not found&lt;br&gt; api response : {&quot;XID&quot;:&quot;0201000033e3b71248c5414ab34bac8b4c3b82a7&quot;,&quot;messageType&quot;:&quot;RSRs&quot;,&quot;transStatusReason&quot;:&quot;19&quot;,&quot;resultsStatus&quot;:&quot;01&quot;,&quot;authenticationType&quot;:&quot;01&quot;,&quot;interactionCounter&quot;:&quot;00&quot;,&quot;callerTxnRefID&quot;:&quot;341b7153-da86-4543-860f-2ba47f0168a5&quot;,&quot;transStatus&quot;:&quot;Y&quot;,&quot;threeDSServerTransID&quot;:&quot;3c9cb85a-2b6b-420e-8fc8-9b50267d0d61&quot;}
+	at org.testng.Assert.fail(Assert.java:96)
+	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:213)
+	at sun.reflect.GeneratedMethodAccessor37.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</pre></div></td>
+<td>1</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@11438d26</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@63149ce, {TestCaseID=_S029, TestCaseName=Invalid_CAMerchantID, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=G, Expected-eci=G, Expected-authenticationValue=G, Expected-transStatus=G, Expected-transStatusReason=G, Expected-challengeCancel=G, Expected-resultsStatus=G, Expected-authenticationType=G, Expected-interactionCounter=G, Expected-messageType=RSRs, Expected-XID=G, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU, #transStatus#=Y}</td>
+<td><div><pre>java.lang.AssertionError: Verify API response data validation failed.&lt;br&gt;required key [authenticationValue] not found&lt;br&gt; api response : {&quot;XID&quot;:&quot;02010000afd2b83c922047ffaff70a5c3df2d4e6&quot;,&quot;messageType&quot;:&quot;RSRs&quot;,&quot;transStatusReason&quot;:&quot;20&quot;,&quot;resultsStatus&quot;:&quot;01&quot;,&quot;authenticationType&quot;:&quot;01&quot;,&quot;interactionCounter&quot;:&quot;00&quot;,&quot;callerTxnRefID&quot;:&quot;341b7153-da86-4543-860f-2ba47f0168a5&quot;,&quot;transStatus&quot;:&quot;Y&quot;,&quot;threeDSServerTransID&quot;:&quot;d2e48ad8-609c-48e4-a2f3-7f3daee4a058&quot;}
+	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:213)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1283402463", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1283402463'><pre>java.lang.AssertionError: Verify API response data validation failed.&lt;br&gt;required key [authenticationValue] not found&lt;br&gt; api response : {&quot;XID&quot;:&quot;02010000afd2b83c922047ffaff70a5c3df2d4e6&quot;,&quot;messageType&quot;:&quot;RSRs&quot;,&quot;transStatusReason&quot;:&quot;20&quot;,&quot;resultsStatus&quot;:&quot;01&quot;,&quot;authenticationType&quot;:&quot;01&quot;,&quot;interactionCounter&quot;:&quot;00&quot;,&quot;callerTxnRefID&quot;:&quot;341b7153-da86-4543-860f-2ba47f0168a5&quot;,&quot;transStatus&quot;:&quot;Y&quot;,&quot;threeDSServerTransID&quot;:&quot;d2e48ad8-609c-48e4-a2f3-7f3daee4a058&quot;}
+	at org.testng.Assert.fail(Assert.java:96)
+	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:213)
+	at sun.reflect.GeneratedMethodAccessor37.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</pre></div></td>
+<td>1</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@11438d26</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@63149ce, {TestCaseID=_S031, TestCaseName=CAMerchantID_MoreThanMaxAcceptedLen>2KChars, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=G, Expected-eci=G, Expected-authenticationValue=G, Expected-transStatus=G, Expected-transStatusReason=G, Expected-challengeCancel=G, Expected-resultsStatus=G, Expected-authenticationType=G, Expected-interactionCounter=G, Expected-messageType=RSRs, Expected-XID=G, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU, #transStatus#=Y}</td>
+<td><div><pre>java.lang.AssertionError: errorComponent: S, errorCode: 501, errorDescription:CA Merchant Server:: RReq not recieved due to technical errorerrorDetail : Internal Trasient error occured for this transaction. Temporary Error occured for this transaction, threeDSServerTransID : d96a387b-28e4-443e-8052-17d9db8251d4
 	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:120)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
-... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1097625391", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1097625391'><pre>java.lang.AssertionError: errorComponent: S, errorCode: 501, errorDescription:CA Merchant Server:: RReq not recieved due to technical errorerrorDetail : Internal Trasient error occured for this transaction. Temporary Error occured for this transaction, threeDSServerTransID : a1c5d31b-6a1c-4c3e-acc5-c468d2f92911
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1393846098", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1393846098'><pre>java.lang.AssertionError: errorComponent: S, errorCode: 501, errorDescription:CA Merchant Server:: RReq not recieved due to technical errorerrorDetail : Internal Trasient error occured for this transaction. Temporary Error occured for this transaction, threeDSServerTransID : d96a387b-28e4-443e-8052-17d9db8251d4
 	at org.testng.Assert.fail(Assert.java:96)
 	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:120)
 	at sun.reflect.GeneratedMethodAccessor37.invoke(Unknown Source)
@@ -568,17 +514,17 @@ function toggleAllBoxes() {
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
 </pre></div></td>
-<td>2</td>
-<td>com.ca.tds.main.TDSVerifyAPI_TC@1a1d6a08</td></tr>
+<td>1</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@11438d26</td></tr>
 <tr>
-<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@1bebe3a7, {TestCaseID=_S033, TestCaseName=Timeout scenario for 3DSS unable to send Rres to DS, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=G, Expected-eci=G, Expected-authenticationValue=G, Expected-transStatus=G, Expected-transStatusReason=G, Expected-challengeCancel=G, Expected-resultsStatus=G, Expected-authenticationType=G, Expected-interactionCounter=G, Expected-messageType=RSRs, Expected-XID=G, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU, #transStatus#=N}</td>
-<td><div><pre>java.lang.AssertionError: errorComponent: S, errorCode: 501, errorDescription:CA Merchant Server:: RReq not recieved due to technical errorerrorDetail : Internal Trasient error occured for this transaction. Temporary Error occured for this transaction, threeDSServerTransID : 20dfcfe2-fa4c-42cf-ae60-ca774e1b796c
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@63149ce, {TestCaseID=_S032, TestCaseName=Timeout scenario for DS unable to send Rres to ACS, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=G, Expected-eci=G, Expected-authenticationValue=G, Expected-transStatus=G, Expected-transStatusReason=G, Expected-challengeCancel=G, Expected-resultsStatus=G, Expected-authenticationType=G, Expected-interactionCounter=G, Expected-messageType=RSRs, Expected-XID=G, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU, #transStatus#=N}</td>
+<td><div><pre>java.lang.AssertionError: errorComponent: S, errorCode: 501, errorDescription:CA Merchant Server:: RReq not recieved due to technical errorerrorDetail : Internal Trasient error occured for this transaction. Temporary Error occured for this transaction, threeDSServerTransID : 4d5c441b-02e4-47f0-8420-146a16c1579f
 	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:120)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
-... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace727581621", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace727581621'><pre>java.lang.AssertionError: errorComponent: S, errorCode: 501, errorDescription:CA Merchant Server:: RReq not recieved due to technical errorerrorDetail : Internal Trasient error occured for this transaction. Temporary Error occured for this transaction, threeDSServerTransID : 20dfcfe2-fa4c-42cf-ae60-ca774e1b796c
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1096646761", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1096646761'><pre>java.lang.AssertionError: errorComponent: S, errorCode: 501, errorDescription:CA Merchant Server:: RReq not recieved due to technical errorerrorDetail : Internal Trasient error occured for this transaction. Temporary Error occured for this transaction, threeDSServerTransID : 4d5c441b-02e4-47f0-8420-146a16c1579f
 	at org.testng.Assert.fail(Assert.java:96)
 	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:120)
 	at sun.reflect.GeneratedMethodAccessor37.invoke(Unknown Source)
@@ -594,8 +540,34 @@ function toggleAllBoxes() {
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
 </pre></div></td>
-<td>2</td>
-<td>com.ca.tds.main.TDSVerifyAPI_TC@1a1d6a08</td></tr>
+<td>1</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@11438d26</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@63149ce, {TestCaseID=_S033, TestCaseName=Timeout scenario for 3DSS unable to send Rres to DS, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=G, Expected-eci=G, Expected-authenticationValue=G, Expected-transStatus=G, Expected-transStatusReason=G, Expected-challengeCancel=G, Expected-resultsStatus=G, Expected-authenticationType=G, Expected-interactionCounter=G, Expected-messageType=RSRs, Expected-XID=G, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU, #transStatus#=N}</td>
+<td><div><pre>java.lang.AssertionError: errorComponent: S, errorCode: 501, errorDescription:CA Merchant Server:: RReq not recieved due to technical errorerrorDetail : Internal Trasient error occured for this transaction. Temporary Error occured for this transaction, threeDSServerTransID : d506a612-ae84-4199-8a28-4d23c30d0696
+	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:120)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1360820418", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1360820418'><pre>java.lang.AssertionError: errorComponent: S, errorCode: 501, errorDescription:CA Merchant Server:: RReq not recieved due to technical errorerrorDetail : Internal Trasient error occured for this transaction. Temporary Error occured for this transaction, threeDSServerTransID : d506a612-ae84-4199-8a28-4d23c30d0696
+	at org.testng.Assert.fail(Assert.java:96)
+	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:120)
+	at sun.reflect.GeneratedMethodAccessor37.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</pre></div></td>
+<td>1</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@11438d26</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -605,75 +577,80 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@1bebe3a7, {TestCaseID=_S002, TestCaseName=3DSServerTransactionID_Empty, SanityFlag=Y, Test Case type=N, RequirementID=, FieldName=, Expected-threeDSServerTransID=NA, Expected-callerTxnRefID=NA, Expected-eci=NA, Expected-authenticationValue=NA, Expected-transStatus=NA, Expected-transStatusReason=NA, Expected-challengeCancel=NA, Expected-resultsStatus=NA, Expected-authenticationType=NA, Expected-interactionCounter=NA, Expected-messageType=Erro, Expected-XID=NA, Expected-errorCode=203, Expected-errorComponent=S, Expected-errorDescription=G, Expected-errorDetail=G, #threeDSServerTransID#=empty , #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU, #transStatus#=N}</td>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@63149ce, {TestCaseID=_S002, TestCaseName=3DSServerTransactionID_Empty, SanityFlag=Y, Test Case type=N, RequirementID=, FieldName=, Expected-threeDSServerTransID=NA, Expected-callerTxnRefID=NA, Expected-eci=NA, Expected-authenticationValue=NA, Expected-transStatus=NA, Expected-transStatusReason=NA, Expected-challengeCancel=NA, Expected-resultsStatus=NA, Expected-authenticationType=NA, Expected-interactionCounter=NA, Expected-messageType=Erro, Expected-XID=NA, Expected-errorCode=203, Expected-errorComponent=S, Expected-errorDescription=G, Expected-errorDetail=G, #threeDSServerTransID#=empty , #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU, #transStatus#=N}</td>
 <td></td>
-<td>5</td>
-<td>com.ca.tds.main.TDSVerifyAPI_TC@1a1d6a08</td></tr>
+<td>1</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@11438d26</td></tr>
 <tr>
-<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@1bebe3a7, {TestCaseID=_S003, TestCaseName=3DSServerTransactionID_MoreThanMaxAcceptedLen>36Chars, SanityFlag=Y, Test Case type=N, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=NA, Expected-eci=NA, Expected-authenticationValue=NA, Expected-transStatus=NA, Expected-transStatusReason=NA, Expected-challengeCancel=NA, Expected-resultsStatus=NA, Expected-authenticationType=NA, Expected-interactionCounter=NA, Expected-messageType=Erro, Expected-XID=NA, Expected-errorCode=203, Expected-errorComponent=S, Expected-errorDescription=G, Expected-errorDetail=G, #threeDSServerTransID#=74381944-293c-44a0-9ce8-bf3a2491358074381944-293c-44a0-9ce8-bf3a24913580, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU, #transStatus#=N}</td>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@63149ce, {TestCaseID=_S003, TestCaseName=3DSServerTransactionID_MoreThanMaxAcceptedLen>36Chars, SanityFlag=Y, Test Case type=N, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=NA, Expected-eci=NA, Expected-authenticationValue=NA, Expected-transStatus=NA, Expected-transStatusReason=NA, Expected-challengeCancel=NA, Expected-resultsStatus=NA, Expected-authenticationType=NA, Expected-interactionCounter=NA, Expected-messageType=Erro, Expected-XID=NA, Expected-errorCode=203, Expected-errorComponent=S, Expected-errorDescription=G, Expected-errorDetail=G, #threeDSServerTransID#=74381944-293c-44a0-9ce8-bf3a2491358074381944-293c-44a0-9ce8-bf3a24913580, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU, #transStatus#=N}</td>
 <td></td>
-<td>4</td>
-<td>com.ca.tds.main.TDSVerifyAPI_TC@1a1d6a08</td></tr>
+<td>1</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@11438d26</td></tr>
 <tr>
-<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@1bebe3a7, {TestCaseID=_S005, TestCaseName=RemovalOfRequiredField_3DSServerTransactionID, SanityFlag=Y, Test Case type=N, RequirementID=, FieldName=, Expected-threeDSServerTransID=NA, Expected-callerTxnRefID=NA, Expected-eci=NA, Expected-authenticationValue=NA, Expected-transStatus=NA, Expected-transStatusReason=NA, Expected-challengeCancel=NA, Expected-resultsStatus=NA, Expected-authenticationType=NA, Expected-interactionCounter=NA, Expected-messageType=Erro, Expected-XID=NA, Expected-errorCode=201, Expected-errorComponent=S, Expected-errorDescription=G, Expected-errorDetail=G, #threeDSServerTransID#=#REMOVE#, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU, #transStatus#=N}</td>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@63149ce, {TestCaseID=_S005, TestCaseName=RemovalOfRequiredField_3DSServerTransactionID, SanityFlag=Y, Test Case type=N, RequirementID=, FieldName=, Expected-threeDSServerTransID=NA, Expected-callerTxnRefID=NA, Expected-eci=NA, Expected-authenticationValue=NA, Expected-transStatus=NA, Expected-transStatusReason=NA, Expected-challengeCancel=NA, Expected-resultsStatus=NA, Expected-authenticationType=NA, Expected-interactionCounter=NA, Expected-messageType=Erro, Expected-XID=NA, Expected-errorCode=201, Expected-errorComponent=S, Expected-errorDescription=G, Expected-errorDetail=G, #threeDSServerTransID#=#REMOVE#, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU, #transStatus#=N}</td>
 <td></td>
-<td>5</td>
-<td>com.ca.tds.main.TDSVerifyAPI_TC@1a1d6a08</td></tr>
+<td>1</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@11438d26</td></tr>
 <tr>
-<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@1bebe3a7, {TestCaseID=_S006, TestCaseName=3DSServerTransactionID_InvalidTransID, SanityFlag=Y, Test Case type=N, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=NA, Expected-eci=NA, Expected-authenticationValue=NA, Expected-transStatus=NA, Expected-transStatusReason=NA, Expected-challengeCancel=NA, Expected-resultsStatus=NA, Expected-authenticationType=NA, Expected-interactionCounter=NA, Expected-messageType=Erro, Expected-XID=NA, Expected-errorCode=305, Expected-errorComponent=S, Expected-errorDescription=G, Expected-errorDetail=G, #threeDSServerTransID#=11111111-1111-1111-1111-111111111111, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU, #transStatus#=N}</td>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@63149ce, {TestCaseID=_S006, TestCaseName=3DSServerTransactionID_InvalidTransID, SanityFlag=Y, Test Case type=N, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=NA, Expected-eci=NA, Expected-authenticationValue=NA, Expected-transStatus=NA, Expected-transStatusReason=NA, Expected-challengeCancel=NA, Expected-resultsStatus=NA, Expected-authenticationType=NA, Expected-interactionCounter=NA, Expected-messageType=Erro, Expected-XID=NA, Expected-errorCode=305, Expected-errorComponent=S, Expected-errorDescription=G, Expected-errorDetail=G, #threeDSServerTransID#=11111111-1111-1111-1111-111111111111, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU, #transStatus#=N}</td>
 <td></td>
-<td>5</td>
-<td>com.ca.tds.main.TDSVerifyAPI_TC@1a1d6a08</td></tr>
+<td>1</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@11438d26</td></tr>
 <tr>
-<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@1bebe3a7, {TestCaseID=_S009, TestCaseName=InvalidCallerTxnRefID, SanityFlag=Y, Test Case type=N, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=NA, Expected-eci=NA, Expected-authenticationValue=NA, Expected-transStatus=NA, Expected-transStatusReason=NA, Expected-challengeCancel=NA, Expected-resultsStatus=NA, Expected-authenticationType=NA, Expected-interactionCounter=NA, Expected-messageType=Erro, Expected-XID=NA, Expected-errorCode=203, Expected-errorComponent=S, Expected-errorDescription=G, Expected-errorDetail=G, #threeDSServerTransID#=, #callerTxnRefID#=11111111-1111-1111-1111-111111111111111, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU, #transStatus#=N}</td>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@63149ce, {TestCaseID=_S008, TestCaseName=Empty_CallerTxnRefID, SanityFlag=Y, Test Case type=N, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=NA, Expected-eci=NA, Expected-authenticationValue=NA, Expected-transStatus=NA, Expected-transStatusReason=NA, Expected-challengeCancel=NA, Expected-resultsStatus=NA, Expected-authenticationType=NA, Expected-interactionCounter=NA, Expected-messageType=Erro, Expected-XID=NA, Expected-errorCode=203, Expected-errorComponent=S, Expected-errorDescription=G, Expected-errorDetail=G, #threeDSServerTransID#=, #callerTxnRefID#=empty, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU, #transStatus#=N}</td>
 <td></td>
-<td>6</td>
-<td>com.ca.tds.main.TDSVerifyAPI_TC@1a1d6a08</td></tr>
+<td>1</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@11438d26</td></tr>
 <tr>
-<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@1bebe3a7, {TestCaseID=_S010, TestCaseName=CallerTxnRefIDLengthMoreThan36Chars, SanityFlag=Y, Test Case type=N, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=NA, Expected-eci=NA, Expected-authenticationValue=NA, Expected-transStatus=NA, Expected-transStatusReason=NA, Expected-challengeCancel=NA, Expected-resultsStatus=NA, Expected-authenticationType=NA, Expected-interactionCounter=NA, Expected-messageType=Erro, Expected-XID=NA, Expected-errorCode=203, Expected-errorComponent=S, Expected-errorDescription=G, Expected-errorDetail=G, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU, #transStatus#=N}</td>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@63149ce, {TestCaseID=_S009, TestCaseName=InvalidCallerTxnRefID, SanityFlag=Y, Test Case type=N, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=NA, Expected-eci=NA, Expected-authenticationValue=NA, Expected-transStatus=NA, Expected-transStatusReason=NA, Expected-challengeCancel=NA, Expected-resultsStatus=NA, Expected-authenticationType=NA, Expected-interactionCounter=NA, Expected-messageType=Erro, Expected-XID=NA, Expected-errorCode=203, Expected-errorComponent=S, Expected-errorDescription=G, Expected-errorDetail=G, #threeDSServerTransID#=, #callerTxnRefID#=11111111-1111-1111-1111-111111111111111, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU, #transStatus#=N}</td>
 <td></td>
-<td>5</td>
-<td>com.ca.tds.main.TDSVerifyAPI_TC@1a1d6a08</td></tr>
+<td>1</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@11438d26</td></tr>
 <tr>
-<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@1bebe3a7, {TestCaseID=_S019, TestCaseName=Empty_CRES, SanityFlag=Y, Test Case type=N, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=NA, Expected-eci=NA, Expected-authenticationValue=NA, Expected-transStatus=NA, Expected-transStatusReason=NA, Expected-challengeCancel=NA, Expected-resultsStatus=NA, Expected-authenticationType=NA, Expected-interactionCounter=NA, Expected-messageType=Erro, Expected-XID=NA, Expected-errorCode=203, Expected-errorComponent=S, Expected-errorDescription=G, Expected-errorDetail=G, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=empty, #messageType#=RSRq, #caMerchantID#=CA_EU, #transStatus#=N}</td>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@63149ce, {TestCaseID=_S010, TestCaseName=CallerTxnRefIDLengthMoreThan36Chars, SanityFlag=Y, Test Case type=N, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=NA, Expected-eci=NA, Expected-authenticationValue=NA, Expected-transStatus=NA, Expected-transStatusReason=NA, Expected-challengeCancel=NA, Expected-resultsStatus=NA, Expected-authenticationType=NA, Expected-interactionCounter=NA, Expected-messageType=Erro, Expected-XID=NA, Expected-errorCode=203, Expected-errorComponent=S, Expected-errorDescription=G, Expected-errorDetail=G, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU, #transStatus#=N}</td>
 <td></td>
-<td>5</td>
-<td>com.ca.tds.main.TDSVerifyAPI_TC@1a1d6a08</td></tr>
+<td>1</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@11438d26</td></tr>
 <tr>
-<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@1bebe3a7, {TestCaseID=_S020, TestCaseName=Invalid_CRES, SanityFlag=Y, Test Case type=N, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=NA, Expected-eci=NA, Expected-authenticationValue=NA, Expected-transStatus=NA, Expected-transStatusReason=NA, Expected-challengeCancel=NA, Expected-resultsStatus=NA, Expected-authenticationType=NA, Expected-interactionCounter=NA, Expected-messageType=Erro, Expected-XID=NA, Expected-errorCode=305, Expected-errorComponent=S, Expected-errorDescription=G, Expected-errorDetail=G, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=ewogICAiYWNzVHJhbnNJRCIgOiAiZDVmNDZjM2UtMjgzYS00MDU5LTlkNjQtMDZjNzk0ZTdhZGEzIiwKICAgImNoYWxsZW5nZVdpbmRvd1NpemUiIDogIjA0IiwKICAgIm1lc3NhZ2VUeXBlIiA6ICJDUmVxIiwKICAgIm1lc3NhZ2VWZXJzaW9uIiA6ICIyLjEuMCIsCiAgICJ0aHJlZURTU2VydmVyVHJhbnNJRCIgOiAiOTA2MTY2MGQtMzRkMy00YjI0LTk3ZjMtYTBlMjY2MmY1YzRlIgp9Cg==, #messageType#=RSRq, #caMerchantID#=CA_EU, #transStatus#=N}</td>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@63149ce, {TestCaseID=_S019, TestCaseName=Empty_CRES, SanityFlag=Y, Test Case type=N, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=NA, Expected-eci=NA, Expected-authenticationValue=NA, Expected-transStatus=NA, Expected-transStatusReason=NA, Expected-challengeCancel=NA, Expected-resultsStatus=NA, Expected-authenticationType=NA, Expected-interactionCounter=NA, Expected-messageType=Erro, Expected-XID=NA, Expected-errorCode=203, Expected-errorComponent=S, Expected-errorDescription=G, Expected-errorDetail=G, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=empty, #messageType#=RSRq, #caMerchantID#=CA_EU, #transStatus#=N}</td>
 <td></td>
-<td>5</td>
-<td>com.ca.tds.main.TDSVerifyAPI_TC@1a1d6a08</td></tr>
+<td>1</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@11438d26</td></tr>
 <tr>
-<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@1bebe3a7, {TestCaseID=_S023, TestCaseName=MessageType_Invalid_RSRQ, SanityFlag=Y, Test Case type=N, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=NA, Expected-eci=NA, Expected-authenticationValue=NA, Expected-transStatus=NA, Expected-transStatusReason=NA, Expected-challengeCancel=NA, Expected-resultsStatus=NA, Expected-authenticationType=NA, Expected-interactionCounter=NA, Expected-messageType=Erro, Expected-XID=NA, Expected-errorCode=101, Expected-errorComponent=S, Expected-errorDescription=G, Expected-errorDetail=G, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRQ, #caMerchantID#=CA_EU, #transStatus#=N}</td>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@63149ce, {TestCaseID=_S020, TestCaseName=Invalid_CRES, SanityFlag=Y, Test Case type=N, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=NA, Expected-eci=NA, Expected-authenticationValue=NA, Expected-transStatus=NA, Expected-transStatusReason=NA, Expected-challengeCancel=NA, Expected-resultsStatus=NA, Expected-authenticationType=NA, Expected-interactionCounter=NA, Expected-messageType=Erro, Expected-XID=NA, Expected-errorCode=305, Expected-errorComponent=S, Expected-errorDescription=G, Expected-errorDetail=G, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=ewogICAiYWNzVHJhbnNJRCIgOiAiZDVmNDZjM2UtMjgzYS00MDU5LTlkNjQtMDZjNzk0ZTdhZGEzIiwKICAgImNoYWxsZW5nZVdpbmRvd1NpemUiIDogIjA0IiwKICAgIm1lc3NhZ2VUeXBlIiA6ICJDUmVxIiwKICAgIm1lc3NhZ2VWZXJzaW9uIiA6ICIyLjEuMCIsCiAgICJ0aHJlZURTU2VydmVyVHJhbnNJRCIgOiAiOTA2MTY2MGQtMzRkMy00YjI0LTk3ZjMtYTBlMjY2MmY1YzRlIgp9Cg==, #messageType#=RSRq, #caMerchantID#=CA_EU, #transStatus#=N}</td>
 <td></td>
-<td>5</td>
-<td>com.ca.tds.main.TDSVerifyAPI_TC@1a1d6a08</td></tr>
+<td>1</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@11438d26</td></tr>
 <tr>
-<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@1bebe3a7, {TestCaseID=_S024, TestCaseName=MessageType_Empty, SanityFlag=Y, Test Case type=N, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=NA, Expected-eci=NA, Expected-authenticationValue=NA, Expected-transStatus=NA, Expected-transStatusReason=NA, Expected-challengeCancel=NA, Expected-resultsStatus=NA, Expected-authenticationType=NA, Expected-interactionCounter=NA, Expected-messageType=Erro, Expected-XID=NA, Expected-errorCode=101, Expected-errorComponent=S, Expected-errorDescription=G, Expected-errorDetail=G, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=empty , #caMerchantID#=CA_EU, #transStatus#=N}</td>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@63149ce, {TestCaseID=_S023, TestCaseName=MessageType_Invalid_RSRQ, SanityFlag=Y, Test Case type=N, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=NA, Expected-eci=NA, Expected-authenticationValue=NA, Expected-transStatus=NA, Expected-transStatusReason=NA, Expected-challengeCancel=NA, Expected-resultsStatus=NA, Expected-authenticationType=NA, Expected-interactionCounter=NA, Expected-messageType=Erro, Expected-XID=NA, Expected-errorCode=101, Expected-errorComponent=S, Expected-errorDescription=G, Expected-errorDetail=G, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRQ, #caMerchantID#=CA_EU, #transStatus#=N}</td>
 <td></td>
-<td>5</td>
-<td>com.ca.tds.main.TDSVerifyAPI_TC@1a1d6a08</td></tr>
+<td>1</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@11438d26</td></tr>
 <tr>
-<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@1bebe3a7, {TestCaseID=_S025, TestCaseName=MessageType_MoreThanMaxAcceptedLen>4Chars, SanityFlag=Y, Test Case type=N, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=NA, Expected-eci=NA, Expected-authenticationValue=NA, Expected-transStatus=NA, Expected-transStatusReason=NA, Expected-challengeCancel=NA, Expected-resultsStatus=NA, Expected-authenticationType=NA, Expected-interactionCounter=NA, Expected-messageType=Erro, Expected-XID=NA, Expected-errorCode=101, Expected-errorComponent=S, Expected-errorDescription=G, Expected-errorDetail=G, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRQ1, #caMerchantID#=CA_EU, #transStatus#=N}</td>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@63149ce, {TestCaseID=_S024, TestCaseName=MessageType_Empty, SanityFlag=Y, Test Case type=N, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=NA, Expected-eci=NA, Expected-authenticationValue=NA, Expected-transStatus=NA, Expected-transStatusReason=NA, Expected-challengeCancel=NA, Expected-resultsStatus=NA, Expected-authenticationType=NA, Expected-interactionCounter=NA, Expected-messageType=Erro, Expected-XID=NA, Expected-errorCode=101, Expected-errorComponent=S, Expected-errorDescription=G, Expected-errorDetail=G, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=empty , #caMerchantID#=CA_EU, #transStatus#=N}</td>
 <td></td>
-<td>4</td>
-<td>com.ca.tds.main.TDSVerifyAPI_TC@1a1d6a08</td></tr>
+<td>1</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@11438d26</td></tr>
 <tr>
-<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@1bebe3a7, {TestCaseID=_S026, TestCaseName=RemovalOfRequiredField_MessageType, SanityFlag=Y, Test Case type=N, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=NA, Expected-eci=NA, Expected-authenticationValue=NA, Expected-transStatus=NA, Expected-transStatusReason=NA, Expected-challengeCancel=NA, Expected-resultsStatus=NA, Expected-authenticationType=NA, Expected-interactionCounter=NA, Expected-messageType=Erro, Expected-XID=NA, Expected-errorCode=201, Expected-errorComponent=S, Expected-errorDescription=G, Expected-errorDetail=G, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=#REMOVE#, #caMerchantID#=CA_EU, #transStatus#=N}</td>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@63149ce, {TestCaseID=_S025, TestCaseName=MessageType_MoreThanMaxAcceptedLen>4Chars, SanityFlag=Y, Test Case type=N, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=NA, Expected-eci=NA, Expected-authenticationValue=NA, Expected-transStatus=NA, Expected-transStatusReason=NA, Expected-challengeCancel=NA, Expected-resultsStatus=NA, Expected-authenticationType=NA, Expected-interactionCounter=NA, Expected-messageType=Erro, Expected-XID=NA, Expected-errorCode=101, Expected-errorComponent=S, Expected-errorDescription=G, Expected-errorDetail=G, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRQ1, #caMerchantID#=CA_EU, #transStatus#=N}</td>
 <td></td>
-<td>5</td>
-<td>com.ca.tds.main.TDSVerifyAPI_TC@1a1d6a08</td></tr>
+<td>1</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@11438d26</td></tr>
 <tr>
-<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@1bebe3a7, {TestCaseID=_S030, TestCaseName=RemovalOfRequiredField_CAMerchantID, SanityFlag=Y, Test Case type=N, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=NA, Expected-eci=NA, Expected-authenticationValue=NA, Expected-transStatus=NA, Expected-transStatusReason=NA, Expected-challengeCancel=NA, Expected-resultsStatus=NA, Expected-authenticationType=NA, Expected-interactionCounter=NA, Expected-messageType=Erro, Expected-XID=NA, Expected-errorCode=201, Expected-errorComponent=S, Expected-errorDescription=G, Expected-errorDetail=G, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=#REMOVE#, #transStatus#=N}</td>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@63149ce, {TestCaseID=_S026, TestCaseName=RemovalOfRequiredField_MessageType, SanityFlag=Y, Test Case type=N, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=NA, Expected-eci=NA, Expected-authenticationValue=NA, Expected-transStatus=NA, Expected-transStatusReason=NA, Expected-challengeCancel=NA, Expected-resultsStatus=NA, Expected-authenticationType=NA, Expected-interactionCounter=NA, Expected-messageType=Erro, Expected-XID=NA, Expected-errorCode=201, Expected-errorComponent=S, Expected-errorDescription=G, Expected-errorDetail=G, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=#REMOVE#, #caMerchantID#=CA_EU, #transStatus#=N}</td>
 <td></td>
-<td>4</td>
-<td>com.ca.tds.main.TDSVerifyAPI_TC@1a1d6a08</td></tr>
+<td>1</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@11438d26</td></tr>
 <tr>
-<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@1bebe3a7, {TestCaseID=_S034, TestCaseName=Timeout scenario for Merchant did Rsrq without receiving CRES, SanityFlag=Y, Test Case type=N, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=NA, Expected-eci=NA, Expected-authenticationValue=NA, Expected-transStatus=NA, Expected-transStatusReason=NA, Expected-challengeCancel=NA, Expected-resultsStatus=NA, Expected-authenticationType=NA, Expected-interactionCounter=NA, Expected-messageType=Erro, Expected-XID=G, Expected-errorCode=501, Expected-errorComponent=S, Expected-errorDescription=G, Expected-errorDetail=G, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU, #transStatus#=Y}</td>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@63149ce, {TestCaseID=_S030, TestCaseName=RemovalOfRequiredField_CAMerchantID, SanityFlag=Y, Test Case type=N, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=NA, Expected-eci=NA, Expected-authenticationValue=NA, Expected-transStatus=NA, Expected-transStatusReason=NA, Expected-challengeCancel=NA, Expected-resultsStatus=NA, Expected-authenticationType=NA, Expected-interactionCounter=NA, Expected-messageType=Erro, Expected-XID=NA, Expected-errorCode=201, Expected-errorComponent=S, Expected-errorDescription=G, Expected-errorDetail=G, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=#REMOVE#, #transStatus#=N}</td>
 <td></td>
-<td>5</td>
-<td>com.ca.tds.main.TDSVerifyAPI_TC@1a1d6a08</td></tr>
+<td>1</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@11438d26</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@63149ce, {TestCaseID=_S034, TestCaseName=Timeout scenario for Merchant did Rsrq without receiving CRES, SanityFlag=Y, Test Case type=N, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=NA, Expected-eci=NA, Expected-authenticationValue=NA, Expected-transStatus=NA, Expected-transStatusReason=NA, Expected-challengeCancel=NA, Expected-resultsStatus=NA, Expected-authenticationType=NA, Expected-interactionCounter=NA, Expected-messageType=Erro, Expected-XID=G, Expected-errorCode=501, Expected-errorComponent=S, Expected-errorDescription=G, Expected-errorDetail=G, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU, #transStatus#=Y}</td>
+<td></td>
+<td>1</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@11438d26</td></tr>
 </table><p>
 </body>
 </html>

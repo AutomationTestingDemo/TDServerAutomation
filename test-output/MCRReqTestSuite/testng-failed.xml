@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [MCRReqTestSuite]" parallel="instances">
+  <parameter name="TDSExcelFileE" value="data/3DS_EncryptedCardTestData.xlsx"/>
+  <parameter name="TDSExcelFileC" value="data/3DS_ClearCardTestData.xlsx"/>
+  <test thread-count="5" name="MASTERCARD::Clear Card::Browser::RReq flow(failed)" parallel="instances">
+    <parameter name="ReportTitle" value="3DSAutomationReportOfBrowser"/>
+    <parameter name="ExcelSheetVerify" value="3_RREQ"/>
+    <classes>
+      <class name="com.ca.tds.main.TDSRReq_TC">
+        <methods>
+          <include name="testRRequestAPI" invocation-numbers="17 18 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109"/>
+          <include name="AfterTestClass"/>
+          <include name="BeforeClass"/>
+          <include name="AfterClass"/>
+          <include name="beforeSuite"/>
+          <include name="afterMethodProcessing"/>
+          <include name="endSuite"/>
+          <include name="beforeTestClass"/>
+        </methods>
+      </class> <!-- com.ca.tds.main.TDSRReq_TC -->
+    </classes>
+  </test> <!-- MASTERCARD::Clear Card::Browser::RReq flow(failed) -->
+</suite> <!-- Failed suite [MCRReqTestSuite] -->

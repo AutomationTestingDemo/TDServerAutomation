@@ -9,7 +9,7 @@
     <classes>
       <class name="com.ca.tds.main.TDSVerifyAPI_TC">
         <methods>
-          <include name="testArequestAPI" invocation-numbers="7"/>
+          <include name="testArequestAPI" invocation-numbers="0 3 6 10 11 12 13 14 15 16 17 20 21 26 27 28 30 31 32"/>
           <include name="AfterTestClass"/>
           <include name="BeforeClass"/>
           <include name="AfterClass"/>
