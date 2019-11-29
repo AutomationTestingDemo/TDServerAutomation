@@ -15,7 +15,7 @@ public class ReportsBackup {
 	
 	static String source = System.getProperty("user.dir");
 	
-	static String dest = System.getProperty("user.dir")+"\\"+"Reportsbackup"+"\\";
+	static String dest = null;
 	public static void zippingReports() throws IOException {
 		
 		
@@ -106,6 +106,11 @@ public class ReportsBackup {
 		try{
     		
 	    	   File afile =new File(source+"\\"+filename);
+	    	   
+	    	   dest = System.getProperty("user.dir")+"\\"+"ReportsBackup"+"\\";
+	    	   
+	    	   if (!new File(dest).exists())
+					new File(dest).mkdir();
 	    		
 	    	   if(afile.renameTo(new File(dest+afile.getName()))){
 	    		   

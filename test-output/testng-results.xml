@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="30" passed="30">
   <reporter-output>
   </reporter-output>
-  <suite name="SanityFrictionLess" duration-ms="14484" started-at="2019-11-28T13:36:21Z" finished-at="2019-11-28T13:36:35Z">
+  <suite name="SanityFrictionLess" duration-ms="13921" started-at="2019-11-29T12:36:52Z" finished-at="2019-11-29T12:37:06Z">
     <groups>
     </groups>
-    <test name="AMEX::Clear Card::Browser::AReq flow" duration-ms="6880" started-at="2019-11-28T13:36:21Z" finished-at="2019-11-28T13:36:28Z">
+    <test name="AMEX::Clear Card::Browser::AReq flow" duration-ms="5898" started-at="2019-11-29T12:36:52Z" finished-at="2019-11-29T12:36:58Z">
       <class name="com.ca.tds.main.TDSPreAreq_TC">
-        <test-method status="PASS" signature="beforeTestClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@56ac3a89]" name="beforeTestClass" is-config="true" duration-ms="0" started-at="2019-11-28T13:36:21Z" finished-at="2019-11-28T13:36:21Z">
+        <test-method status="PASS" signature="beforeTestClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@56ac3a89]" name="beforeTestClass" is-config="true" duration-ms="1" started-at="2019-11-29T12:36:52Z" finished-at="2019-11-29T12:36:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTestClass -->
-        <test-method status="PASS" signature="BeforeClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@56ac3a89]" name="BeforeClass" is-config="true" duration-ms="0" started-at="2019-11-28T13:36:21Z" finished-at="2019-11-28T13:36:21Z">
+        <test-method status="PASS" signature="BeforeClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@56ac3a89]" name="BeforeClass" is-config="true" duration-ms="1" started-at="2019-11-29T12:36:52Z" finished-at="2019-11-29T12:36:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeClass -->
-        <test-method status="PASS" signature="testArequestAPI(org.testng.ITestContext, java.util.Map)[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@56ac3a89]" name="testArequestAPI" duration-ms="6019" started-at="2019-11-28T13:36:21Z" data-provider="DataProvider3dsTestData" finished-at="2019-11-28T13:36:27Z">
+        <test-method status="PASS" signature="testArequestAPI(org.testng.ITestContext, java.util.Map)[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@56ac3a89]" name="testArequestAPI" duration-ms="5513" started-at="2019-11-29T12:36:52Z" data-provider="DataProvider3dsTestData" finished-at="2019-11-29T12:36:58Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@7d677cf5]]>
+                <![CDATA[org.testng.TestRunner@6723b282]]>
               </value>
             </param>
             <param index="1">
@@ -31,7 +31,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testArequestAPI -->
-        <test-method status="PASS" signature="afterMethodProcessing(org.testng.ITestResult)[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@56ac3a89]" name="afterMethodProcessing" is-config="true" duration-ms="583" started-at="2019-11-28T13:36:27Z" finished-at="2019-11-28T13:36:28Z">
+        <test-method status="PASS" signature="afterMethodProcessing(org.testng.ITestResult)[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@56ac3a89]" name="afterMethodProcessing" is-config="true" duration-ms="200" started-at="2019-11-29T12:36:58Z" finished-at="2019-11-29T12:36:58Z">
           <params>
             <param index="0">
               <value>
@@ -42,31 +42,31 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethodProcessing -->
-        <test-method status="PASS" signature="AfterClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@56ac3a89]" name="AfterClass" is-config="true" duration-ms="1" started-at="2019-11-28T13:36:28Z" finished-at="2019-11-28T13:36:28Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AfterClass -->
-        <test-method status="PASS" signature="AfterTestClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@56ac3a89]" name="AfterTestClass" is-config="true" duration-ms="1" started-at="2019-11-28T13:36:28Z" finished-at="2019-11-28T13:36:28Z">
+        <test-method status="PASS" signature="AfterTestClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@56ac3a89]" name="AfterTestClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:36:58Z" finished-at="2019-11-29T12:36:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterTestClass -->
+        <test-method status="PASS" signature="AfterClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@56ac3a89]" name="AfterClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:36:58Z" finished-at="2019-11-29T12:36:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterClass -->
       </class> <!-- com.ca.tds.main.TDSPreAreq_TC -->
     </test> <!-- AMEX::Clear Card::Browser::AReq flow -->
-    <test name="MASTERC::Clear Card::Browser::AReq flow" duration-ms="4343" started-at="2019-11-28T13:36:28Z" finished-at="2019-11-28T13:36:32Z">
+    <test name="MASTERC::Clear Card::Browser::AReq flow" duration-ms="5054" started-at="2019-11-29T12:36:58Z" finished-at="2019-11-29T12:37:03Z">
       <class name="com.ca.tds.main.TDSPreAreq_TC">
-        <test-method status="PASS" signature="beforeTestClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@544fe44c]" name="beforeTestClass" is-config="true" duration-ms="1" started-at="2019-11-28T13:36:28Z" finished-at="2019-11-28T13:36:28Z">
+        <test-method status="PASS" signature="beforeTestClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@544fe44c]" name="beforeTestClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:36:58Z" finished-at="2019-11-29T12:36:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTestClass -->
-        <test-method status="PASS" signature="BeforeClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@544fe44c]" name="BeforeClass" is-config="true" duration-ms="0" started-at="2019-11-28T13:36:28Z" finished-at="2019-11-28T13:36:28Z">
+        <test-method status="PASS" signature="BeforeClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@544fe44c]" name="BeforeClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:36:58Z" finished-at="2019-11-29T12:36:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeClass -->
-        <test-method status="PASS" signature="testArequestAPI(org.testng.ITestContext, java.util.Map)[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@544fe44c]" name="testArequestAPI" duration-ms="3837" started-at="2019-11-28T13:36:28Z" data-provider="DataProvider3dsTestData" finished-at="2019-11-28T13:36:32Z">
+        <test-method status="PASS" signature="testArequestAPI(org.testng.ITestContext, java.util.Map)[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@544fe44c]" name="testArequestAPI" duration-ms="4893" started-at="2019-11-29T12:36:58Z" data-provider="DataProvider3dsTestData" finished-at="2019-11-29T12:37:03Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@7df6e574]]>
+                <![CDATA[org.testng.TestRunner@153a17da]]>
               </value>
             </param>
             <param index="1">
@@ -78,7 +78,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testArequestAPI -->
-        <test-method status="PASS" signature="afterMethodProcessing(org.testng.ITestResult)[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@544fe44c]" name="afterMethodProcessing" is-config="true" duration-ms="183" started-at="2019-11-28T13:36:32Z" finished-at="2019-11-28T13:36:32Z">
+        <test-method status="PASS" signature="afterMethodProcessing(org.testng.ITestResult)[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@544fe44c]" name="afterMethodProcessing" is-config="true" duration-ms="34" started-at="2019-11-29T12:37:03Z" finished-at="2019-11-29T12:37:03Z">
           <params>
             <param index="0">
               <value>
@@ -89,42 +89,42 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethodProcessing -->
-        <test-method status="PASS" signature="AfterClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@544fe44c]" name="AfterClass" is-config="true" duration-ms="1" started-at="2019-11-28T13:36:32Z" finished-at="2019-11-28T13:36:32Z">
+        <test-method status="PASS" signature="AfterClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@544fe44c]" name="AfterClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:37:03Z" finished-at="2019-11-29T12:37:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterClass -->
-        <test-method status="PASS" signature="AfterTestClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@544fe44c]" name="AfterTestClass" is-config="true" duration-ms="0" started-at="2019-11-28T13:36:32Z" finished-at="2019-11-28T13:36:32Z">
+        <test-method status="PASS" signature="AfterTestClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@544fe44c]" name="AfterTestClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:37:03Z" finished-at="2019-11-29T12:37:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterTestClass -->
       </class> <!-- com.ca.tds.main.TDSPreAreq_TC -->
     </test> <!-- MASTERC::Clear Card::Browser::AReq flow -->
-    <test name="VISA::Clear Card::Browser::AReq flow" duration-ms="3159" started-at="2019-11-28T13:36:32Z" finished-at="2019-11-28T13:36:35Z">
+    <test name="VISA::Clear Card::Browser::AReq flow" duration-ms="2929" started-at="2019-11-29T12:37:03Z" finished-at="2019-11-29T12:37:06Z">
       <class name="com.ca.tds.main.TDSPreAreq_TC">
-        <test-method status="PASS" signature="beforeSuite(org.testng.ITestContext)[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@66480dd7]" name="beforeSuite" is-config="true" duration-ms="3581" started-at="2019-11-28T13:36:17Z" finished-at="2019-11-28T13:36:21Z">
+        <test-method status="PASS" signature="beforeSuite(org.testng.ITestContext)[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@66480dd7]" name="beforeSuite" is-config="true" duration-ms="2697" started-at="2019-11-29T12:36:49Z" finished-at="2019-11-29T12:36:52Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@5b71314e]]>
+                <![CDATA[org.testng.TestRunner@3c7ba5]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method status="PASS" signature="beforeTestClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@66480dd7]" name="beforeTestClass" is-config="true" duration-ms="0" started-at="2019-11-28T13:36:32Z" finished-at="2019-11-28T13:36:32Z">
+        <test-method status="PASS" signature="beforeTestClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@66480dd7]" name="beforeTestClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:37:03Z" finished-at="2019-11-29T12:37:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTestClass -->
-        <test-method status="PASS" signature="BeforeClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@66480dd7]" name="BeforeClass" is-config="true" duration-ms="0" started-at="2019-11-28T13:36:32Z" finished-at="2019-11-28T13:36:32Z">
+        <test-method status="PASS" signature="BeforeClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@66480dd7]" name="BeforeClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:37:03Z" finished-at="2019-11-29T12:37:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeClass -->
-        <test-method status="PASS" signature="testArequestAPI(org.testng.ITestContext, java.util.Map)[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@66480dd7]" name="testArequestAPI" duration-ms="2883" started-at="2019-11-28T13:36:32Z" data-provider="DataProvider3dsTestData" finished-at="2019-11-28T13:36:35Z">
+        <test-method status="PASS" signature="testArequestAPI(org.testng.ITestContext, java.util.Map)[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@66480dd7]" name="testArequestAPI" duration-ms="2834" started-at="2019-11-29T12:37:03Z" data-provider="DataProvider3dsTestData" finished-at="2019-11-29T12:37:06Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@5b71314e]]>
+                <![CDATA[org.testng.TestRunner@3c7ba5]]>
               </value>
             </param>
             <param index="1">
@@ -136,7 +136,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testArequestAPI -->
-        <test-method status="PASS" signature="afterMethodProcessing(org.testng.ITestResult)[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@66480dd7]" name="afterMethodProcessing" is-config="true" duration-ms="148" started-at="2019-11-28T13:36:35Z" finished-at="2019-11-28T13:36:35Z">
+        <test-method status="PASS" signature="afterMethodProcessing(org.testng.ITestResult)[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@66480dd7]" name="afterMethodProcessing" is-config="true" duration-ms="25" started-at="2019-11-29T12:37:06Z" finished-at="2019-11-29T12:37:06Z">
           <params>
             <param index="0">
               <value>
@@ -147,39 +147,39 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethodProcessing -->
-        <test-method status="PASS" signature="AfterClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@66480dd7]" name="AfterClass" is-config="true" duration-ms="1" started-at="2019-11-28T13:36:35Z" finished-at="2019-11-28T13:36:35Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AfterClass -->
-        <test-method status="PASS" signature="AfterTestClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@66480dd7]" name="AfterTestClass" is-config="true" duration-ms="1" started-at="2019-11-28T13:36:35Z" finished-at="2019-11-28T13:36:35Z">
+        <test-method status="PASS" signature="AfterTestClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@66480dd7]" name="AfterTestClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:37:06Z" finished-at="2019-11-29T12:37:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterTestClass -->
-        <test-method status="PASS" signature="endSuite()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@66480dd7]" name="endSuite" is-config="true" duration-ms="1956" started-at="2019-11-28T13:36:35Z" finished-at="2019-11-28T13:36:37Z">
+        <test-method status="PASS" signature="AfterClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@66480dd7]" name="AfterClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:37:06Z" finished-at="2019-11-29T12:37:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterClass -->
+        <test-method status="PASS" signature="endSuite()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@66480dd7]" name="endSuite" is-config="true" duration-ms="19" started-at="2019-11-29T12:37:06Z" finished-at="2019-11-29T12:37:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endSuite -->
       </class> <!-- com.ca.tds.main.TDSPreAreq_TC -->
     </test> <!-- VISA::Clear Card::Browser::AReq flow -->
   </suite> <!-- SanityFrictionLess -->
-  <suite name="SanityChallengeflow" duration-ms="32529" started-at="2019-11-28T13:36:37Z" finished-at="2019-11-28T13:37:10Z">
+  <suite name="SanityChallengeflow" duration-ms="29680" started-at="2019-11-29T12:37:06Z" finished-at="2019-11-29T12:37:36Z">
     <groups>
     </groups>
-    <test name="AMEX::Clear Card::Browser::AReq flow" duration-ms="3626" started-at="2019-11-28T13:36:37Z" finished-at="2019-11-28T13:36:41Z">
+    <test name="AMEX::Clear Card::Browser::AReq flow" duration-ms="3426" started-at="2019-11-29T12:37:06Z" finished-at="2019-11-29T12:37:10Z">
       <class name="com.ca.tds.main.TDSPreAreq_TC">
-        <test-method status="PASS" signature="beforeTestClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@2ac273d3]" name="beforeTestClass" is-config="true" duration-ms="0" started-at="2019-11-28T13:36:37Z" finished-at="2019-11-28T13:36:37Z">
+        <test-method status="PASS" signature="beforeTestClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@2ac273d3]" name="beforeTestClass" is-config="true" duration-ms="1" started-at="2019-11-29T12:37:06Z" finished-at="2019-11-29T12:37:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTestClass -->
-        <test-method status="PASS" signature="BeforeClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@2ac273d3]" name="BeforeClass" is-config="true" duration-ms="0" started-at="2019-11-28T13:36:37Z" finished-at="2019-11-28T13:36:37Z">
+        <test-method status="PASS" signature="BeforeClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@2ac273d3]" name="BeforeClass" is-config="true" duration-ms="1" started-at="2019-11-29T12:37:06Z" finished-at="2019-11-29T12:37:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeClass -->
-        <test-method status="PASS" signature="testArequestAPI(org.testng.ITestContext, java.util.Map)[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@2ac273d3]" name="testArequestAPI" duration-ms="3339" started-at="2019-11-28T13:36:37Z" data-provider="DataProvider3dsTestData" finished-at="2019-11-28T13:36:41Z">
+        <test-method status="PASS" signature="testArequestAPI(org.testng.ITestContext, java.util.Map)[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@2ac273d3]" name="testArequestAPI" duration-ms="3307" started-at="2019-11-29T12:37:06Z" data-provider="DataProvider3dsTestData" finished-at="2019-11-29T12:37:09Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@19e20c3]]>
+                <![CDATA[org.testng.TestRunner@70917f16]]>
               </value>
             </param>
             <param index="1">
@@ -191,7 +191,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testArequestAPI -->
-        <test-method status="PASS" signature="afterMethodProcessing(org.testng.ITestResult)[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@2ac273d3]" name="afterMethodProcessing" is-config="true" duration-ms="142" started-at="2019-11-28T13:36:41Z" finished-at="2019-11-28T13:36:41Z">
+        <test-method status="PASS" signature="afterMethodProcessing(org.testng.ITestResult)[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@2ac273d3]" name="afterMethodProcessing" is-config="true" duration-ms="32" started-at="2019-11-29T12:37:09Z" finished-at="2019-11-29T12:37:10Z">
           <params>
             <param index="0">
               <value>
@@ -202,31 +202,31 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethodProcessing -->
-        <test-method status="PASS" signature="AfterClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@2ac273d3]" name="AfterClass" is-config="true" duration-ms="1" started-at="2019-11-28T13:36:41Z" finished-at="2019-11-28T13:36:41Z">
+        <test-method status="PASS" signature="AfterClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@2ac273d3]" name="AfterClass" is-config="true" duration-ms="1" started-at="2019-11-29T12:37:10Z" finished-at="2019-11-29T12:37:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterClass -->
-        <test-method status="PASS" signature="AfterTestClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@2ac273d3]" name="AfterTestClass" is-config="true" duration-ms="1" started-at="2019-11-28T13:36:41Z" finished-at="2019-11-28T13:36:41Z">
+        <test-method status="PASS" signature="AfterTestClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@2ac273d3]" name="AfterTestClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:37:10Z" finished-at="2019-11-29T12:37:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterTestClass -->
       </class> <!-- com.ca.tds.main.TDSPreAreq_TC -->
     </test> <!-- AMEX::Clear Card::Browser::AReq flow -->
-    <test name="AMEX::Clear Card::Browser::RReq flow" duration-ms="4394" started-at="2019-11-28T13:36:41Z" finished-at="2019-11-28T13:36:45Z">
+    <test name="AMEX::Clear Card::Browser::RReq flow" duration-ms="3967" started-at="2019-11-29T12:37:10Z" finished-at="2019-11-29T12:37:14Z">
       <class name="com.ca.tds.main.TDSRReq_TC">
-        <test-method status="PASS" signature="beforeTestClass()[pri:0, instance:com.ca.tds.main.TDSRReq_TC@6d7b4f4c]" name="beforeTestClass" is-config="true" duration-ms="0" started-at="2019-11-28T13:36:41Z" finished-at="2019-11-28T13:36:41Z">
+        <test-method status="PASS" signature="beforeTestClass()[pri:0, instance:com.ca.tds.main.TDSRReq_TC@6d7b4f4c]" name="beforeTestClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:37:10Z" finished-at="2019-11-29T12:37:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTestClass -->
-        <test-method status="PASS" signature="BeforeClass()[pri:0, instance:com.ca.tds.main.TDSRReq_TC@6d7b4f4c]" name="BeforeClass" is-config="true" duration-ms="0" started-at="2019-11-28T13:36:41Z" finished-at="2019-11-28T13:36:41Z">
+        <test-method status="PASS" signature="BeforeClass()[pri:0, instance:com.ca.tds.main.TDSRReq_TC@6d7b4f4c]" name="BeforeClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:37:10Z" finished-at="2019-11-29T12:37:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeClass -->
-        <test-method status="PASS" signature="testRRequestAPI(org.testng.ITestContext, java.util.Map)[pri:0, instance:com.ca.tds.main.TDSRReq_TC@6d7b4f4c]" name="testRRequestAPI" duration-ms="4035" started-at="2019-11-28T13:36:41Z" data-provider="DataProvider3dsTestData" finished-at="2019-11-28T13:36:45Z">
+        <test-method status="PASS" signature="testRRequestAPI(org.testng.ITestContext, java.util.Map)[pri:0, instance:com.ca.tds.main.TDSRReq_TC@6d7b4f4c]" name="testRRequestAPI" duration-ms="3874" started-at="2019-11-29T12:37:10Z" data-provider="DataProvider3dsTestData" finished-at="2019-11-29T12:37:13Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@285ca5fa]]>
+                <![CDATA[org.testng.TestRunner@6a4b180e]]>
               </value>
             </param>
             <param index="1">
@@ -238,7 +238,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testRRequestAPI -->
-        <test-method status="PASS" signature="afterMethodProcessing(org.testng.ITestResult)[pri:0, instance:com.ca.tds.main.TDSRReq_TC@6d7b4f4c]" name="afterMethodProcessing" is-config="true" duration-ms="134" started-at="2019-11-28T13:36:45Z" finished-at="2019-11-28T13:36:45Z">
+        <test-method status="PASS" signature="afterMethodProcessing(org.testng.ITestResult)[pri:0, instance:com.ca.tds.main.TDSRReq_TC@6d7b4f4c]" name="afterMethodProcessing" is-config="true" duration-ms="34" started-at="2019-11-29T12:37:13Z" finished-at="2019-11-29T12:37:14Z">
           <params>
             <param index="0">
               <value>
@@ -249,31 +249,31 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethodProcessing -->
-        <test-method status="PASS" signature="AfterClass()[pri:0, instance:com.ca.tds.main.TDSRReq_TC@6d7b4f4c]" name="AfterClass" is-config="true" duration-ms="0" started-at="2019-11-28T13:36:45Z" finished-at="2019-11-28T13:36:45Z">
+        <test-method status="PASS" signature="AfterClass()[pri:0, instance:com.ca.tds.main.TDSRReq_TC@6d7b4f4c]" name="AfterClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:37:14Z" finished-at="2019-11-29T12:37:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterClass -->
-        <test-method status="PASS" signature="AfterTestClass()[pri:0, instance:com.ca.tds.main.TDSRReq_TC@6d7b4f4c]" name="AfterTestClass" is-config="true" duration-ms="1" started-at="2019-11-28T13:36:45Z" finished-at="2019-11-28T13:36:45Z">
+        <test-method status="PASS" signature="AfterTestClass()[pri:0, instance:com.ca.tds.main.TDSRReq_TC@6d7b4f4c]" name="AfterTestClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:37:14Z" finished-at="2019-11-29T12:37:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterTestClass -->
       </class> <!-- com.ca.tds.main.TDSRReq_TC -->
     </test> <!-- AMEX::Clear Card::Browser::RReq flow -->
-    <test name="AMEX::Clear Card::Browser::VerifyAPI flow" duration-ms="3004" started-at="2019-11-28T13:36:45Z" finished-at="2019-11-28T13:36:49Z">
+    <test name="AMEX::Clear Card::Browser::VerifyAPI flow" duration-ms="2633" started-at="2019-11-29T12:37:14Z" finished-at="2019-11-29T12:37:16Z">
       <class name="com.ca.tds.main.TDSVerifyAPI_TC">
-        <test-method status="PASS" signature="beforeTestClass()[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@6536e911]" name="beforeTestClass" is-config="true" duration-ms="0" started-at="2019-11-28T13:36:46Z" finished-at="2019-11-28T13:36:46Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeTestClass -->
-        <test-method status="PASS" signature="BeforeClass()[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@6536e911]" name="BeforeClass" is-config="true" duration-ms="0" started-at="2019-11-28T13:36:46Z" finished-at="2019-11-28T13:36:46Z">
+        <test-method status="PASS" signature="BeforeClass()[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@6536e911]" name="BeforeClass" is-config="true" duration-ms="1" started-at="2019-11-29T12:37:14Z" finished-at="2019-11-29T12:37:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeClass -->
-        <test-method status="PASS" signature="testArequestAPI(org.testng.ITestContext, java.util.Map)[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@6536e911]" name="testArequestAPI" duration-ms="2711" started-at="2019-11-28T13:36:46Z" data-provider="DataProvider3dsTestData" finished-at="2019-11-28T13:36:48Z">
+        <test-method status="PASS" signature="beforeTestClass()[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@6536e911]" name="beforeTestClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:37:14Z" finished-at="2019-11-29T12:37:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTestClass -->
+        <test-method status="PASS" signature="testArequestAPI(org.testng.ITestContext, java.util.Map)[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@6536e911]" name="testArequestAPI" duration-ms="2529" started-at="2019-11-29T12:37:14Z" data-provider="DataProvider3dsTestData" finished-at="2019-11-29T12:37:16Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@6093fd5c]]>
+                <![CDATA[org.testng.TestRunner@3118b085]]>
               </value>
             </param>
             <param index="1">
@@ -285,7 +285,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testArequestAPI -->
-        <test-method status="PASS" signature="afterMethodProcessing(org.testng.ITestResult)[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@6536e911]" name="afterMethodProcessing" is-config="true" duration-ms="152" started-at="2019-11-28T13:36:48Z" finished-at="2019-11-28T13:36:49Z">
+        <test-method status="PASS" signature="afterMethodProcessing(org.testng.ITestResult)[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@6536e911]" name="afterMethodProcessing" is-config="true" duration-ms="23" started-at="2019-11-29T12:37:16Z" finished-at="2019-11-29T12:37:16Z">
           <params>
             <param index="0">
               <value>
@@ -296,31 +296,31 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethodProcessing -->
-        <test-method status="PASS" signature="AfterClass()[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@6536e911]" name="AfterClass" is-config="true" duration-ms="1" started-at="2019-11-28T13:36:49Z" finished-at="2019-11-28T13:36:49Z">
+        <test-method status="PASS" signature="AfterClass()[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@6536e911]" name="AfterClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:37:16Z" finished-at="2019-11-29T12:37:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterClass -->
-        <test-method status="PASS" signature="AfterTestClass()[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@6536e911]" name="AfterTestClass" is-config="true" duration-ms="1" started-at="2019-11-28T13:36:49Z" finished-at="2019-11-28T13:36:49Z">
+        <test-method status="PASS" signature="AfterTestClass()[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@6536e911]" name="AfterTestClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:37:16Z" finished-at="2019-11-29T12:37:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterTestClass -->
       </class> <!-- com.ca.tds.main.TDSVerifyAPI_TC -->
     </test> <!-- AMEX::Clear Card::Browser::VerifyAPI flow -->
-    <test name="MasterCard::Clear Card::Browser::AReq flow" duration-ms="4936" started-at="2019-11-28T13:36:49Z" finished-at="2019-11-28T13:36:54Z">
+    <test name="MasterCard::Clear Card::Browser::AReq flow" duration-ms="4657" started-at="2019-11-29T12:37:16Z" finished-at="2019-11-29T12:37:21Z">
       <class name="com.ca.tds.main.TDSPreAreq_TC">
-        <test-method status="PASS" signature="beforeTestClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@67784306]" name="beforeTestClass" is-config="true" duration-ms="0" started-at="2019-11-28T13:36:49Z" finished-at="2019-11-28T13:36:49Z">
+        <test-method status="PASS" signature="beforeTestClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@67784306]" name="beforeTestClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:37:16Z" finished-at="2019-11-29T12:37:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTestClass -->
-        <test-method status="PASS" signature="BeforeClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@67784306]" name="BeforeClass" is-config="true" duration-ms="0" started-at="2019-11-28T13:36:49Z" finished-at="2019-11-28T13:36:49Z">
+        <test-method status="PASS" signature="BeforeClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@67784306]" name="BeforeClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:37:16Z" finished-at="2019-11-29T12:37:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeClass -->
-        <test-method status="PASS" signature="testArequestAPI(org.testng.ITestContext, java.util.Map)[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@67784306]" name="testArequestAPI" duration-ms="4716" started-at="2019-11-28T13:36:49Z" data-provider="DataProvider3dsTestData" finished-at="2019-11-28T13:36:53Z">
+        <test-method status="PASS" signature="testArequestAPI(org.testng.ITestContext, java.util.Map)[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@67784306]" name="testArequestAPI" duration-ms="4572" started-at="2019-11-29T12:37:16Z" data-provider="DataProvider3dsTestData" finished-at="2019-11-29T12:37:21Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@1a08543]]>
+                <![CDATA[org.testng.TestRunner@295b6039]]>
               </value>
             </param>
             <param index="1">
@@ -332,7 +332,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testArequestAPI -->
-        <test-method status="PASS" signature="afterMethodProcessing(org.testng.ITestResult)[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@67784306]" name="afterMethodProcessing" is-config="true" duration-ms="64" started-at="2019-11-28T13:36:53Z" finished-at="2019-11-28T13:36:54Z">
+        <test-method status="PASS" signature="afterMethodProcessing(org.testng.ITestResult)[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@67784306]" name="afterMethodProcessing" is-config="true" duration-ms="27" started-at="2019-11-29T12:37:21Z" finished-at="2019-11-29T12:37:21Z">
           <params>
             <param index="0">
               <value>
@@ -343,31 +343,31 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethodProcessing -->
-        <test-method status="PASS" signature="AfterClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@67784306]" name="AfterClass" is-config="true" duration-ms="0" started-at="2019-11-28T13:36:54Z" finished-at="2019-11-28T13:36:54Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AfterClass -->
-        <test-method status="PASS" signature="AfterTestClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@67784306]" name="AfterTestClass" is-config="true" duration-ms="0" started-at="2019-11-28T13:36:54Z" finished-at="2019-11-28T13:36:54Z">
+        <test-method status="PASS" signature="AfterTestClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@67784306]" name="AfterTestClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:37:21Z" finished-at="2019-11-29T12:37:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterTestClass -->
-      </class> <!-- com.ca.tds.main.TDSPreAreq_TC -->
-    </test> <!-- MasterCard::Clear Card::Browser::AReq flow -->
-    <test name="MasterCard::Clear Card::Browser::RReq flow" duration-ms="4431" started-at="2019-11-28T13:36:54Z" finished-at="2019-11-28T13:36:58Z">
-      <class name="com.ca.tds.main.TDSRReq_TC">
-        <test-method status="PASS" signature="beforeTestClass()[pri:0, instance:com.ca.tds.main.TDSRReq_TC@3b0143d3]" name="beforeTestClass" is-config="true" duration-ms="0" started-at="2019-11-28T13:36:54Z" finished-at="2019-11-28T13:36:54Z">
+        <test-method status="PASS" signature="AfterClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@67784306]" name="AfterClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:37:21Z" finished-at="2019-11-29T12:37:21Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeTestClass -->
-        <test-method status="PASS" signature="BeforeClass()[pri:0, instance:com.ca.tds.main.TDSRReq_TC@3b0143d3]" name="BeforeClass" is-config="true" duration-ms="0" started-at="2019-11-28T13:36:54Z" finished-at="2019-11-28T13:36:54Z">
+        </test-method> <!-- AfterClass -->
+      </class> <!-- com.ca.tds.main.TDSPreAreq_TC -->
+    </test> <!-- MasterCard::Clear Card::Browser::AReq flow -->
+    <test name="MasterCard::Clear Card::Browser::RReq flow" duration-ms="4256" started-at="2019-11-29T12:37:21Z" finished-at="2019-11-29T12:37:25Z">
+      <class name="com.ca.tds.main.TDSRReq_TC">
+        <test-method status="PASS" signature="BeforeClass()[pri:0, instance:com.ca.tds.main.TDSRReq_TC@3b0143d3]" name="BeforeClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:37:21Z" finished-at="2019-11-29T12:37:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeClass -->
-        <test-method status="PASS" signature="testRRequestAPI(org.testng.ITestContext, java.util.Map)[pri:0, instance:com.ca.tds.main.TDSRReq_TC@3b0143d3]" name="testRRequestAPI" duration-ms="4213" started-at="2019-11-28T13:36:54Z" data-provider="DataProvider3dsTestData" finished-at="2019-11-28T13:36:58Z">
+        <test-method status="PASS" signature="beforeTestClass()[pri:0, instance:com.ca.tds.main.TDSRReq_TC@3b0143d3]" name="beforeTestClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:37:21Z" finished-at="2019-11-29T12:37:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTestClass -->
+        <test-method status="PASS" signature="testRRequestAPI(org.testng.ITestContext, java.util.Map)[pri:0, instance:com.ca.tds.main.TDSRReq_TC@3b0143d3]" name="testRRequestAPI" duration-ms="4164" started-at="2019-11-29T12:37:21Z" data-provider="DataProvider3dsTestData" finished-at="2019-11-29T12:37:25Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@6fafeba3]]>
+                <![CDATA[org.testng.TestRunner@62574]]>
               </value>
             </param>
             <param index="1">
@@ -379,7 +379,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testRRequestAPI -->
-        <test-method status="PASS" signature="afterMethodProcessing(org.testng.ITestResult)[pri:0, instance:com.ca.tds.main.TDSRReq_TC@3b0143d3]" name="afterMethodProcessing" is-config="true" duration-ms="59" started-at="2019-11-28T13:36:58Z" finished-at="2019-11-28T13:36:58Z">
+        <test-method status="PASS" signature="afterMethodProcessing(org.testng.ITestResult)[pri:0, instance:com.ca.tds.main.TDSRReq_TC@3b0143d3]" name="afterMethodProcessing" is-config="true" duration-ms="30" started-at="2019-11-29T12:37:25Z" finished-at="2019-11-29T12:37:25Z">
           <params>
             <param index="0">
               <value>
@@ -390,31 +390,31 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethodProcessing -->
-        <test-method status="PASS" signature="AfterClass()[pri:0, instance:com.ca.tds.main.TDSRReq_TC@3b0143d3]" name="AfterClass" is-config="true" duration-ms="1" started-at="2019-11-28T13:36:58Z" finished-at="2019-11-28T13:36:58Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AfterClass -->
-        <test-method status="PASS" signature="AfterTestClass()[pri:0, instance:com.ca.tds.main.TDSRReq_TC@3b0143d3]" name="AfterTestClass" is-config="true" duration-ms="1" started-at="2019-11-28T13:36:58Z" finished-at="2019-11-28T13:36:58Z">
+        <test-method status="PASS" signature="AfterTestClass()[pri:0, instance:com.ca.tds.main.TDSRReq_TC@3b0143d3]" name="AfterTestClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:37:25Z" finished-at="2019-11-29T12:37:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterTestClass -->
+        <test-method status="PASS" signature="AfterClass()[pri:0, instance:com.ca.tds.main.TDSRReq_TC@3b0143d3]" name="AfterClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:37:25Z" finished-at="2019-11-29T12:37:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterClass -->
       </class> <!-- com.ca.tds.main.TDSRReq_TC -->
     </test> <!-- MasterCard::Clear Card::Browser::RReq flow -->
-    <test name="MasterCard::Clear Card::Browser::VerifyAPI flow" duration-ms="1185" started-at="2019-11-28T13:36:58Z" finished-at="2019-11-28T13:36:59Z">
+    <test name="MasterCard::Clear Card::Browser::VerifyAPI flow" duration-ms="903" started-at="2019-11-29T12:37:25Z" finished-at="2019-11-29T12:37:26Z">
       <class name="com.ca.tds.main.TDSVerifyAPI_TC">
-        <test-method status="PASS" signature="beforeTestClass()[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@7791a895]" name="beforeTestClass" is-config="true" duration-ms="1" started-at="2019-11-28T13:36:58Z" finished-at="2019-11-28T13:36:58Z">
+        <test-method status="PASS" signature="beforeTestClass()[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@7791a895]" name="beforeTestClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:37:25Z" finished-at="2019-11-29T12:37:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTestClass -->
-        <test-method status="PASS" signature="BeforeClass()[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@7791a895]" name="BeforeClass" is-config="true" duration-ms="0" started-at="2019-11-28T13:36:58Z" finished-at="2019-11-28T13:36:58Z">
+        <test-method status="PASS" signature="BeforeClass()[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@7791a895]" name="BeforeClass" is-config="true" duration-ms="1" started-at="2019-11-29T12:37:25Z" finished-at="2019-11-29T12:37:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeClass -->
-        <test-method status="PASS" signature="testArequestAPI(org.testng.ITestContext, java.util.Map)[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@7791a895]" name="testArequestAPI" duration-ms="887" started-at="2019-11-28T13:36:58Z" data-provider="DataProvider3dsTestData" finished-at="2019-11-28T13:36:59Z">
+        <test-method status="PASS" signature="testArequestAPI(org.testng.ITestContext, java.util.Map)[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@7791a895]" name="testArequestAPI" duration-ms="809" started-at="2019-11-29T12:37:25Z" data-provider="DataProvider3dsTestData" finished-at="2019-11-29T12:37:26Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@6cb3fc24]]>
+                <![CDATA[org.testng.TestRunner@588fee44]]>
               </value>
             </param>
             <param index="1">
@@ -426,7 +426,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testArequestAPI -->
-        <test-method status="PASS" signature="afterMethodProcessing(org.testng.ITestResult)[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@7791a895]" name="afterMethodProcessing" is-config="true" duration-ms="49" started-at="2019-11-28T13:36:59Z" finished-at="2019-11-28T13:36:59Z">
+        <test-method status="PASS" signature="afterMethodProcessing(org.testng.ITestResult)[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@7791a895]" name="afterMethodProcessing" is-config="true" duration-ms="21" started-at="2019-11-29T12:37:26Z" finished-at="2019-11-29T12:37:26Z">
           <params>
             <param index="0">
               <value>
@@ -437,31 +437,31 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethodProcessing -->
-        <test-method status="PASS" signature="AfterClass()[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@7791a895]" name="AfterClass" is-config="true" duration-ms="0" started-at="2019-11-28T13:36:59Z" finished-at="2019-11-28T13:36:59Z">
+        <test-method status="PASS" signature="AfterClass()[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@7791a895]" name="AfterClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:37:26Z" finished-at="2019-11-29T12:37:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterClass -->
-        <test-method status="PASS" signature="AfterTestClass()[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@7791a895]" name="AfterTestClass" is-config="true" duration-ms="0" started-at="2019-11-28T13:36:59Z" finished-at="2019-11-28T13:36:59Z">
+        <test-method status="PASS" signature="AfterTestClass()[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@7791a895]" name="AfterTestClass" is-config="true" duration-ms="10" started-at="2019-11-29T12:37:26Z" finished-at="2019-11-29T12:37:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterTestClass -->
       </class> <!-- com.ca.tds.main.TDSVerifyAPI_TC -->
     </test> <!-- MasterCard::Clear Card::Browser::VerifyAPI flow -->
-    <test name="Visa::Clear Card::Browser::AReq flow" duration-ms="5032" started-at="2019-11-28T13:36:59Z" finished-at="2019-11-28T13:37:04Z">
+    <test name="Visa::Clear Card::Browser::AReq flow" duration-ms="4695" started-at="2019-11-29T12:37:26Z" finished-at="2019-11-29T12:37:31Z">
       <class name="com.ca.tds.main.TDSPreAreq_TC">
-        <test-method status="PASS" signature="beforeTestClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@4f970963]" name="beforeTestClass" is-config="true" duration-ms="1" started-at="2019-11-28T13:36:59Z" finished-at="2019-11-28T13:36:59Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeTestClass -->
-        <test-method status="PASS" signature="BeforeClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@4f970963]" name="BeforeClass" is-config="true" duration-ms="0" started-at="2019-11-28T13:36:59Z" finished-at="2019-11-28T13:36:59Z">
+        <test-method status="PASS" signature="BeforeClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@4f970963]" name="BeforeClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:37:26Z" finished-at="2019-11-29T12:37:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeClass -->
-        <test-method status="PASS" signature="testArequestAPI(org.testng.ITestContext, java.util.Map)[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@4f970963]" name="testArequestAPI" duration-ms="4720" started-at="2019-11-28T13:36:59Z" data-provider="DataProvider3dsTestData" finished-at="2019-11-28T13:37:04Z">
+        <test-method status="PASS" signature="beforeTestClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@4f970963]" name="beforeTestClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:37:26Z" finished-at="2019-11-29T12:37:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTestClass -->
+        <test-method status="PASS" signature="testArequestAPI(org.testng.ITestContext, java.util.Map)[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@4f970963]" name="testArequestAPI" duration-ms="4612" started-at="2019-11-29T12:37:26Z" data-provider="DataProvider3dsTestData" finished-at="2019-11-29T12:37:31Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@5f818348]]>
+                <![CDATA[org.testng.TestRunner@14f7a0dc]]>
               </value>
             </param>
             <param index="1">
@@ -473,7 +473,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testArequestAPI -->
-        <test-method status="PASS" signature="afterMethodProcessing(org.testng.ITestResult)[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@4f970963]" name="afterMethodProcessing" is-config="true" duration-ms="125" started-at="2019-11-28T13:37:04Z" finished-at="2019-11-28T13:37:04Z">
+        <test-method status="PASS" signature="afterMethodProcessing(org.testng.ITestResult)[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@4f970963]" name="afterMethodProcessing" is-config="true" duration-ms="29" started-at="2019-11-29T12:37:31Z" finished-at="2019-11-29T12:37:31Z">
           <params>
             <param index="0">
               <value>
@@ -484,31 +484,31 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethodProcessing -->
-        <test-method status="PASS" signature="AfterClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@4f970963]" name="AfterClass" is-config="true" duration-ms="1" started-at="2019-11-28T13:37:04Z" finished-at="2019-11-28T13:37:04Z">
+        <test-method status="PASS" signature="AfterClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@4f970963]" name="AfterClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:37:31Z" finished-at="2019-11-29T12:37:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterClass -->
-        <test-method status="PASS" signature="AfterTestClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@4f970963]" name="AfterTestClass" is-config="true" duration-ms="0" started-at="2019-11-28T13:37:04Z" finished-at="2019-11-28T13:37:04Z">
+        <test-method status="PASS" signature="AfterTestClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@4f970963]" name="AfterTestClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:37:31Z" finished-at="2019-11-29T12:37:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterTestClass -->
       </class> <!-- com.ca.tds.main.TDSPreAreq_TC -->
     </test> <!-- Visa::Clear Card::Browser::AReq flow -->
-    <test name="VISA::Clear Card::Browser::RReq flow" duration-ms="4384" started-at="2019-11-28T13:37:04Z" finished-at="2019-11-28T13:37:09Z">
+    <test name="VISA::Clear Card::Browser::RReq flow" duration-ms="4172" started-at="2019-11-29T12:37:31Z" finished-at="2019-11-29T12:37:35Z">
       <class name="com.ca.tds.main.TDSRReq_TC">
-        <test-method status="PASS" signature="beforeTestClass()[pri:0, instance:com.ca.tds.main.TDSRReq_TC@5bc79255]" name="beforeTestClass" is-config="true" duration-ms="0" started-at="2019-11-28T13:37:04Z" finished-at="2019-11-28T13:37:04Z">
+        <test-method status="PASS" signature="beforeTestClass()[pri:0, instance:com.ca.tds.main.TDSRReq_TC@5bc79255]" name="beforeTestClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:37:31Z" finished-at="2019-11-29T12:37:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTestClass -->
-        <test-method status="PASS" signature="BeforeClass()[pri:0, instance:com.ca.tds.main.TDSRReq_TC@5bc79255]" name="BeforeClass" is-config="true" duration-ms="1" started-at="2019-11-28T13:37:04Z" finished-at="2019-11-28T13:37:04Z">
+        <test-method status="PASS" signature="BeforeClass()[pri:0, instance:com.ca.tds.main.TDSRReq_TC@5bc79255]" name="BeforeClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:37:31Z" finished-at="2019-11-29T12:37:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeClass -->
-        <test-method status="PASS" signature="testRRequestAPI(org.testng.ITestContext, java.util.Map)[pri:0, instance:com.ca.tds.main.TDSRReq_TC@5bc79255]" name="testRRequestAPI" duration-ms="4132" started-at="2019-11-28T13:37:05Z" data-provider="DataProvider3dsTestData" finished-at="2019-11-28T13:37:09Z">
+        <test-method status="PASS" signature="testRRequestAPI(org.testng.ITestContext, java.util.Map)[pri:0, instance:com.ca.tds.main.TDSRReq_TC@5bc79255]" name="testRRequestAPI" duration-ms="4085" started-at="2019-11-29T12:37:31Z" data-provider="DataProvider3dsTestData" finished-at="2019-11-29T12:37:35Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@34c64726]]>
+                <![CDATA[org.testng.TestRunner@778bd8c6]]>
               </value>
             </param>
             <param index="1">
@@ -520,7 +520,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testRRequestAPI -->
-        <test-method status="PASS" signature="afterMethodProcessing(org.testng.ITestResult)[pri:0, instance:com.ca.tds.main.TDSRReq_TC@5bc79255]" name="afterMethodProcessing" is-config="true" duration-ms="59" started-at="2019-11-28T13:37:09Z" finished-at="2019-11-28T13:37:09Z">
+        <test-method status="PASS" signature="afterMethodProcessing(org.testng.ITestResult)[pri:0, instance:com.ca.tds.main.TDSRReq_TC@5bc79255]" name="afterMethodProcessing" is-config="true" duration-ms="11" started-at="2019-11-29T12:37:35Z" finished-at="2019-11-29T12:37:35Z">
           <params>
             <param index="0">
               <value>
@@ -531,42 +531,42 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethodProcessing -->
-        <test-method status="PASS" signature="AfterClass()[pri:0, instance:com.ca.tds.main.TDSRReq_TC@5bc79255]" name="AfterClass" is-config="true" duration-ms="1" started-at="2019-11-28T13:37:09Z" finished-at="2019-11-28T13:37:09Z">
+        <test-method status="PASS" signature="AfterClass()[pri:0, instance:com.ca.tds.main.TDSRReq_TC@5bc79255]" name="AfterClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:37:35Z" finished-at="2019-11-29T12:37:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterClass -->
-        <test-method status="PASS" signature="AfterTestClass()[pri:0, instance:com.ca.tds.main.TDSRReq_TC@5bc79255]" name="AfterTestClass" is-config="true" duration-ms="1" started-at="2019-11-28T13:37:09Z" finished-at="2019-11-28T13:37:09Z">
+        <test-method status="PASS" signature="AfterTestClass()[pri:0, instance:com.ca.tds.main.TDSRReq_TC@5bc79255]" name="AfterTestClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:37:35Z" finished-at="2019-11-29T12:37:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterTestClass -->
       </class> <!-- com.ca.tds.main.TDSRReq_TC -->
     </test> <!-- VISA::Clear Card::Browser::RReq flow -->
-    <test name="VISA::Clear Card::Browser::VerifyAPI flow" duration-ms="1142" started-at="2019-11-28T13:37:09Z" finished-at="2019-11-28T13:37:10Z">
+    <test name="VISA::Clear Card::Browser::VerifyAPI flow" duration-ms="851" started-at="2019-11-29T12:37:35Z" finished-at="2019-11-29T12:37:36Z">
       <class name="com.ca.tds.main.TDSVerifyAPI_TC">
-        <test-method status="PASS" signature="beforeSuite(org.testng.ITestContext)[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@5c5a1b69]" name="beforeSuite" is-config="true" duration-ms="158" started-at="2019-11-28T13:36:37Z" finished-at="2019-11-28T13:36:37Z">
+        <test-method status="PASS" signature="beforeSuite(org.testng.ITestContext)[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@5c5a1b69]" name="beforeSuite" is-config="true" duration-ms="84" started-at="2019-11-29T12:37:06Z" finished-at="2019-11-29T12:37:06Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@7810931e]]>
+                <![CDATA[org.testng.TestRunner@17c16608]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method status="PASS" signature="beforeTestClass()[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@5c5a1b69]" name="beforeTestClass" is-config="true" duration-ms="0" started-at="2019-11-28T13:37:09Z" finished-at="2019-11-28T13:37:09Z">
+        <test-method status="PASS" signature="beforeTestClass()[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@5c5a1b69]" name="beforeTestClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:37:35Z" finished-at="2019-11-29T12:37:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTestClass -->
-        <test-method status="PASS" signature="BeforeClass()[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@5c5a1b69]" name="BeforeClass" is-config="true" duration-ms="0" started-at="2019-11-28T13:37:09Z" finished-at="2019-11-28T13:37:09Z">
+        <test-method status="PASS" signature="BeforeClass()[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@5c5a1b69]" name="BeforeClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:37:35Z" finished-at="2019-11-29T12:37:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeClass -->
-        <test-method status="PASS" signature="testArequestAPI(org.testng.ITestContext, java.util.Map)[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@5c5a1b69]" name="testArequestAPI" duration-ms="881" started-at="2019-11-28T13:37:09Z" data-provider="DataProvider3dsTestData" finished-at="2019-11-28T13:37:10Z">
+        <test-method status="PASS" signature="testArequestAPI(org.testng.ITestContext, java.util.Map)[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@5c5a1b69]" name="testArequestAPI" duration-ms="773" started-at="2019-11-29T12:37:35Z" data-provider="DataProvider3dsTestData" finished-at="2019-11-29T12:37:36Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@7810931e]]>
+                <![CDATA[org.testng.TestRunner@17c16608]]>
               </value>
             </param>
             <param index="1">
@@ -578,7 +578,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testArequestAPI -->
-        <test-method status="PASS" signature="afterMethodProcessing(org.testng.ITestResult)[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@5c5a1b69]" name="afterMethodProcessing" is-config="true" duration-ms="120" started-at="2019-11-28T13:37:10Z" finished-at="2019-11-28T13:37:10Z">
+        <test-method status="PASS" signature="afterMethodProcessing(org.testng.ITestResult)[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@5c5a1b69]" name="afterMethodProcessing" is-config="true" duration-ms="23" started-at="2019-11-29T12:37:36Z" finished-at="2019-11-29T12:37:36Z">
           <params>
             <param index="0">
               <value>
@@ -589,39 +589,39 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethodProcessing -->
-        <test-method status="PASS" signature="AfterClass()[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@5c5a1b69]" name="AfterClass" is-config="true" duration-ms="1" started-at="2019-11-28T13:37:10Z" finished-at="2019-11-28T13:37:10Z">
+        <test-method status="PASS" signature="AfterClass()[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@5c5a1b69]" name="AfterClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:37:36Z" finished-at="2019-11-29T12:37:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterClass -->
-        <test-method status="PASS" signature="AfterTestClass()[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@5c5a1b69]" name="AfterTestClass" is-config="true" duration-ms="0" started-at="2019-11-28T13:37:10Z" finished-at="2019-11-28T13:37:10Z">
+        <test-method status="PASS" signature="AfterTestClass()[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@5c5a1b69]" name="AfterTestClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:37:36Z" finished-at="2019-11-29T12:37:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterTestClass -->
-        <test-method status="PASS" signature="endSuite()[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@5c5a1b69]" name="endSuite" is-config="true" duration-ms="2677" started-at="2019-11-28T13:37:10Z" finished-at="2019-11-28T13:37:13Z">
+        <test-method status="PASS" signature="endSuite()[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@5c5a1b69]" name="endSuite" is-config="true" duration-ms="20" started-at="2019-11-29T12:37:36Z" finished-at="2019-11-29T12:37:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endSuite -->
       </class> <!-- com.ca.tds.main.TDSVerifyAPI_TC -->
     </test> <!-- VISA::Clear Card::Browser::VerifyAPI flow -->
   </suite> <!-- SanityChallengeflow -->
-  <suite name="SanityFrictionLessMethodurl" duration-ms="18277" started-at="2019-11-28T13:37:13Z" finished-at="2019-11-28T13:37:31Z">
+  <suite name="SanityFrictionLessMethodurl" duration-ms="15927" started-at="2019-11-29T12:37:36Z" finished-at="2019-11-29T12:37:52Z">
     <groups>
     </groups>
-    <test name="AMEX::Clear Card::Browser::ThreeDSMethodURL flow" duration-ms="1503" started-at="2019-11-28T13:37:13Z" finished-at="2019-11-28T13:37:14Z">
+    <test name="AMEX::Clear Card::Browser::ThreeDSMethodURL flow" duration-ms="1308" started-at="2019-11-29T12:37:36Z" finished-at="2019-11-29T12:37:37Z">
       <class name="com.ca.tds.main.TDSMethodURL_TC">
-        <test-method status="PASS" signature="beforeTestClass()[pri:0, instance:com.ca.tds.main.TDSMethodURL_TC@35d176f7]" name="beforeTestClass" is-config="true" duration-ms="0" started-at="2019-11-28T13:37:13Z" finished-at="2019-11-28T13:37:13Z">
+        <test-method status="PASS" signature="beforeTestClass()[pri:0, instance:com.ca.tds.main.TDSMethodURL_TC@35d176f7]" name="beforeTestClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:37:36Z" finished-at="2019-11-29T12:37:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTestClass -->
-        <test-method status="PASS" signature="BeforeClass()[pri:0, instance:com.ca.tds.main.TDSMethodURL_TC@35d176f7]" name="BeforeClass" is-config="true" duration-ms="0" started-at="2019-11-28T13:37:13Z" finished-at="2019-11-28T13:37:13Z">
+        <test-method status="PASS" signature="BeforeClass()[pri:0, instance:com.ca.tds.main.TDSMethodURL_TC@35d176f7]" name="BeforeClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:37:36Z" finished-at="2019-11-29T12:37:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeClass -->
-        <test-method status="PASS" signature="testArequestAPI(org.testng.ITestContext, java.util.Map)[pri:0, instance:com.ca.tds.main.TDSMethodURL_TC@35d176f7]" name="testArequestAPI" duration-ms="1330" started-at="2019-11-28T13:37:13Z" data-provider="DataProviderTDSMethodURL" finished-at="2019-11-28T13:37:14Z">
+        <test-method status="PASS" signature="testArequestAPI(org.testng.ITestContext, java.util.Map)[pri:0, instance:com.ca.tds.main.TDSMethodURL_TC@35d176f7]" name="testArequestAPI" duration-ms="1230" started-at="2019-11-29T12:37:36Z" data-provider="DataProviderTDSMethodURL" finished-at="2019-11-29T12:37:37Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@250cea15]]>
+                <![CDATA[org.testng.TestRunner@216bedc7]]>
               </value>
             </param>
             <param index="1">
@@ -633,7 +633,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testArequestAPI -->
-        <test-method status="PASS" signature="afterMethodProcessing(org.testng.ITestResult)[pri:0, instance:com.ca.tds.main.TDSMethodURL_TC@35d176f7]" name="afterMethodProcessing" is-config="true" duration-ms="56" started-at="2019-11-28T13:37:14Z" finished-at="2019-11-28T13:37:14Z">
+        <test-method status="PASS" signature="afterMethodProcessing(org.testng.ITestResult)[pri:0, instance:com.ca.tds.main.TDSMethodURL_TC@35d176f7]" name="afterMethodProcessing" is-config="true" duration-ms="26" started-at="2019-11-29T12:37:37Z" finished-at="2019-11-29T12:37:37Z">
           <params>
             <param index="0">
               <value>
@@ -644,31 +644,31 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethodProcessing -->
-        <test-method status="PASS" signature="AfterClass()[pri:0, instance:com.ca.tds.main.TDSMethodURL_TC@35d176f7]" name="AfterClass" is-config="true" duration-ms="1" started-at="2019-11-28T13:37:14Z" finished-at="2019-11-28T13:37:14Z">
+        <test-method status="PASS" signature="AfterClass()[pri:0, instance:com.ca.tds.main.TDSMethodURL_TC@35d176f7]" name="AfterClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:37:37Z" finished-at="2019-11-29T12:37:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterClass -->
-        <test-method status="PASS" signature="AfterTestClass()[pri:0, instance:com.ca.tds.main.TDSMethodURL_TC@35d176f7]" name="AfterTestClass" is-config="true" duration-ms="1" started-at="2019-11-28T13:37:14Z" finished-at="2019-11-28T13:37:14Z">
+        <test-method status="PASS" signature="AfterTestClass()[pri:0, instance:com.ca.tds.main.TDSMethodURL_TC@35d176f7]" name="AfterTestClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:37:37Z" finished-at="2019-11-29T12:37:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterTestClass -->
       </class> <!-- com.ca.tds.main.TDSMethodURL_TC -->
     </test> <!-- AMEX::Clear Card::Browser::ThreeDSMethodURL flow -->
-    <test name="AMEX::Clear Card::Browser::AReq flow" duration-ms="5592" started-at="2019-11-28T13:37:14Z" finished-at="2019-11-28T13:37:20Z">
+    <test name="AMEX::Clear Card::Browser::AReq flow" duration-ms="5334" started-at="2019-11-29T12:37:37Z" finished-at="2019-11-29T12:37:43Z">
       <class name="com.ca.tds.main.TDSPreAreq_TC">
-        <test-method status="PASS" signature="beforeTestClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@49fc609f]" name="beforeTestClass" is-config="true" duration-ms="0" started-at="2019-11-28T13:37:14Z" finished-at="2019-11-28T13:37:14Z">
+        <test-method status="PASS" signature="beforeTestClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@49fc609f]" name="beforeTestClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:37:37Z" finished-at="2019-11-29T12:37:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTestClass -->
-        <test-method status="PASS" signature="BeforeClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@49fc609f]" name="BeforeClass" is-config="true" duration-ms="0" started-at="2019-11-28T13:37:14Z" finished-at="2019-11-28T13:37:14Z">
+        <test-method status="PASS" signature="BeforeClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@49fc609f]" name="BeforeClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:37:37Z" finished-at="2019-11-29T12:37:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeClass -->
-        <test-method status="PASS" signature="testArequestAPI(org.testng.ITestContext, java.util.Map)[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@49fc609f]" name="testArequestAPI" duration-ms="5309" started-at="2019-11-28T13:37:14Z" data-provider="DataProvider3dsTestData" finished-at="2019-11-28T13:37:20Z">
+        <test-method status="PASS" signature="testArequestAPI(org.testng.ITestContext, java.util.Map)[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@49fc609f]" name="testArequestAPI" duration-ms="5265" started-at="2019-11-29T12:37:37Z" data-provider="DataProvider3dsTestData" finished-at="2019-11-29T12:37:43Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@3fabd1f]]>
+                <![CDATA[org.testng.TestRunner@4285f5f2]]>
               </value>
             </param>
             <param index="1">
@@ -680,7 +680,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testArequestAPI -->
-        <test-method status="PASS" signature="afterMethodProcessing(org.testng.ITestResult)[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@49fc609f]" name="afterMethodProcessing" is-config="true" duration-ms="147" started-at="2019-11-28T13:37:20Z" finished-at="2019-11-28T13:37:20Z">
+        <test-method status="PASS" signature="afterMethodProcessing(org.testng.ITestResult)[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@49fc609f]" name="afterMethodProcessing" is-config="true" duration-ms="20" started-at="2019-11-29T12:37:43Z" finished-at="2019-11-29T12:37:43Z">
           <params>
             <param index="0">
               <value>
@@ -691,31 +691,31 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethodProcessing -->
-        <test-method status="PASS" signature="AfterClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@49fc609f]" name="AfterClass" is-config="true" duration-ms="0" started-at="2019-11-28T13:37:20Z" finished-at="2019-11-28T13:37:20Z">
+        <test-method status="PASS" signature="AfterClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@49fc609f]" name="AfterClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:37:43Z" finished-at="2019-11-29T12:37:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterClass -->
-        <test-method status="PASS" signature="AfterTestClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@49fc609f]" name="AfterTestClass" is-config="true" duration-ms="0" started-at="2019-11-28T13:37:20Z" finished-at="2019-11-28T13:37:20Z">
+        <test-method status="PASS" signature="AfterTestClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@49fc609f]" name="AfterTestClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:37:43Z" finished-at="2019-11-29T12:37:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterTestClass -->
       </class> <!-- com.ca.tds.main.TDSPreAreq_TC -->
     </test> <!-- AMEX::Clear Card::Browser::AReq flow -->
-    <test name="MASTERC::Clear Card::Browser::ThreeDSMethodURL flow" duration-ms="1164" started-at="2019-11-28T13:37:20Z" finished-at="2019-11-28T13:37:21Z">
+    <test name="MASTERC::Clear Card::Browser::ThreeDSMethodURL flow" duration-ms="869" started-at="2019-11-29T12:37:43Z" finished-at="2019-11-29T12:37:43Z">
       <class name="com.ca.tds.main.TDSMethodURL_TC">
-        <test-method status="PASS" signature="beforeTestClass()[pri:0, instance:com.ca.tds.main.TDSMethodURL_TC@57855c9a]" name="beforeTestClass" is-config="true" duration-ms="1" started-at="2019-11-28T13:37:20Z" finished-at="2019-11-28T13:37:20Z">
+        <test-method status="PASS" signature="beforeTestClass()[pri:0, instance:com.ca.tds.main.TDSMethodURL_TC@57855c9a]" name="beforeTestClass" is-config="true" duration-ms="1" started-at="2019-11-29T12:37:43Z" finished-at="2019-11-29T12:37:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTestClass -->
-        <test-method status="PASS" signature="BeforeClass()[pri:0, instance:com.ca.tds.main.TDSMethodURL_TC@57855c9a]" name="BeforeClass" is-config="true" duration-ms="2" started-at="2019-11-28T13:37:20Z" finished-at="2019-11-28T13:37:20Z">
+        <test-method status="PASS" signature="BeforeClass()[pri:0, instance:com.ca.tds.main.TDSMethodURL_TC@57855c9a]" name="BeforeClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:37:43Z" finished-at="2019-11-29T12:37:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeClass -->
-        <test-method status="PASS" signature="testArequestAPI(org.testng.ITestContext, java.util.Map)[pri:0, instance:com.ca.tds.main.TDSMethodURL_TC@57855c9a]" name="testArequestAPI" duration-ms="881" started-at="2019-11-28T13:37:20Z" data-provider="DataProviderTDSMethodURL" finished-at="2019-11-28T13:37:21Z">
+        <test-method status="PASS" signature="testArequestAPI(org.testng.ITestContext, java.util.Map)[pri:0, instance:com.ca.tds.main.TDSMethodURL_TC@57855c9a]" name="testArequestAPI" duration-ms="780" started-at="2019-11-29T12:37:43Z" data-provider="DataProviderTDSMethodURL" finished-at="2019-11-29T12:37:43Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@1768fe13]]>
+                <![CDATA[org.testng.TestRunner@34c64726]]>
               </value>
             </param>
             <param index="1">
@@ -727,7 +727,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testArequestAPI -->
-        <test-method status="PASS" signature="afterMethodProcessing(org.testng.ITestResult)[pri:0, instance:com.ca.tds.main.TDSMethodURL_TC@57855c9a]" name="afterMethodProcessing" is-config="true" duration-ms="119" started-at="2019-11-28T13:37:21Z" finished-at="2019-11-28T13:37:21Z">
+        <test-method status="PASS" signature="afterMethodProcessing(org.testng.ITestResult)[pri:0, instance:com.ca.tds.main.TDSMethodURL_TC@57855c9a]" name="afterMethodProcessing" is-config="true" duration-ms="26" started-at="2019-11-29T12:37:43Z" finished-at="2019-11-29T12:37:43Z">
           <params>
             <param index="0">
               <value>
@@ -738,31 +738,31 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethodProcessing -->
-        <test-method status="PASS" signature="AfterClass()[pri:0, instance:com.ca.tds.main.TDSMethodURL_TC@57855c9a]" name="AfterClass" is-config="true" duration-ms="0" started-at="2019-11-28T13:37:21Z" finished-at="2019-11-28T13:37:21Z">
+        <test-method status="PASS" signature="AfterClass()[pri:0, instance:com.ca.tds.main.TDSMethodURL_TC@57855c9a]" name="AfterClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:37:43Z" finished-at="2019-11-29T12:37:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterClass -->
-        <test-method status="PASS" signature="AfterTestClass()[pri:0, instance:com.ca.tds.main.TDSMethodURL_TC@57855c9a]" name="AfterTestClass" is-config="true" duration-ms="1" started-at="2019-11-28T13:37:21Z" finished-at="2019-11-28T13:37:21Z">
+        <test-method status="PASS" signature="AfterTestClass()[pri:0, instance:com.ca.tds.main.TDSMethodURL_TC@57855c9a]" name="AfterTestClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:37:43Z" finished-at="2019-11-29T12:37:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterTestClass -->
       </class> <!-- com.ca.tds.main.TDSMethodURL_TC -->
     </test> <!-- MASTERC::Clear Card::Browser::ThreeDSMethodURL flow -->
-    <test name="MASTERC::Clear Card::Browser::AReq flow" duration-ms="4198" started-at="2019-11-28T13:37:21Z" finished-at="2019-11-28T13:37:25Z">
+    <test name="MASTERC::Clear Card::Browser::AReq flow" duration-ms="3752" started-at="2019-11-29T12:37:43Z" finished-at="2019-11-29T12:37:47Z">
       <class name="com.ca.tds.main.TDSPreAreq_TC">
-        <test-method status="PASS" signature="beforeTestClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@a7e666]" name="beforeTestClass" is-config="true" duration-ms="1" started-at="2019-11-28T13:37:21Z" finished-at="2019-11-28T13:37:21Z">
+        <test-method status="PASS" signature="beforeTestClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@a7e666]" name="beforeTestClass" is-config="true" duration-ms="1" started-at="2019-11-29T12:37:43Z" finished-at="2019-11-29T12:37:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTestClass -->
-        <test-method status="PASS" signature="BeforeClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@a7e666]" name="BeforeClass" is-config="true" duration-ms="1" started-at="2019-11-28T13:37:21Z" finished-at="2019-11-28T13:37:21Z">
+        <test-method status="PASS" signature="BeforeClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@a7e666]" name="BeforeClass" is-config="true" duration-ms="1" started-at="2019-11-29T12:37:43Z" finished-at="2019-11-29T12:37:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeClass -->
-        <test-method status="PASS" signature="testArequestAPI(org.testng.ITestContext, java.util.Map)[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@a7e666]" name="testArequestAPI" duration-ms="3839" started-at="2019-11-28T13:37:21Z" data-provider="DataProvider3dsTestData" finished-at="2019-11-28T13:37:25Z">
+        <test-method status="PASS" signature="testArequestAPI(org.testng.ITestContext, java.util.Map)[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@a7e666]" name="testArequestAPI" duration-ms="3673" started-at="2019-11-29T12:37:43Z" data-provider="DataProvider3dsTestData" finished-at="2019-11-29T12:37:47Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@c712951]]>
+                <![CDATA[org.testng.TestRunner@3fc9c110]]>
               </value>
             </param>
             <param index="1">
@@ -774,7 +774,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testArequestAPI -->
-        <test-method status="PASS" signature="afterMethodProcessing(org.testng.ITestResult)[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@a7e666]" name="afterMethodProcessing" is-config="true" duration-ms="166" started-at="2019-11-28T13:37:25Z" finished-at="2019-11-28T13:37:25Z">
+        <test-method status="PASS" signature="afterMethodProcessing(org.testng.ITestResult)[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@a7e666]" name="afterMethodProcessing" is-config="true" duration-ms="23" started-at="2019-11-29T12:37:47Z" finished-at="2019-11-29T12:37:47Z">
           <params>
             <param index="0">
               <value>
@@ -785,31 +785,31 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethodProcessing -->
-        <test-method status="PASS" signature="AfterClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@a7e666]" name="AfterClass" is-config="true" duration-ms="1" started-at="2019-11-28T13:37:25Z" finished-at="2019-11-28T13:37:25Z">
+        <test-method status="PASS" signature="AfterClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@a7e666]" name="AfterClass" is-config="true" duration-ms="1" started-at="2019-11-29T12:37:47Z" finished-at="2019-11-29T12:37:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterClass -->
-        <test-method status="PASS" signature="AfterTestClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@a7e666]" name="AfterTestClass" is-config="true" duration-ms="1" started-at="2019-11-28T13:37:25Z" finished-at="2019-11-28T13:37:25Z">
+        <test-method status="PASS" signature="AfterTestClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@a7e666]" name="AfterTestClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:37:47Z" finished-at="2019-11-29T12:37:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterTestClass -->
       </class> <!-- com.ca.tds.main.TDSPreAreq_TC -->
     </test> <!-- MASTERC::Clear Card::Browser::AReq flow -->
-    <test name="VISA::Clear Card::Browser::ThreeDSMethodURL flow" duration-ms="1154" started-at="2019-11-28T13:37:25Z" finished-at="2019-11-28T13:37:27Z">
+    <test name="VISA::Clear Card::Browser::ThreeDSMethodURL flow" duration-ms="835" started-at="2019-11-29T12:37:47Z" finished-at="2019-11-29T12:37:48Z">
       <class name="com.ca.tds.main.TDSMethodURL_TC">
-        <test-method status="PASS" signature="beforeTestClass()[pri:0, instance:com.ca.tds.main.TDSMethodURL_TC@6c49835d]" name="beforeTestClass" is-config="true" duration-ms="1" started-at="2019-11-28T13:37:25Z" finished-at="2019-11-28T13:37:25Z">
+        <test-method status="PASS" signature="beforeTestClass()[pri:0, instance:com.ca.tds.main.TDSMethodURL_TC@6c49835d]" name="beforeTestClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:37:47Z" finished-at="2019-11-29T12:37:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTestClass -->
-        <test-method status="PASS" signature="BeforeClass()[pri:0, instance:com.ca.tds.main.TDSMethodURL_TC@6c49835d]" name="BeforeClass" is-config="true" duration-ms="0" started-at="2019-11-28T13:37:25Z" finished-at="2019-11-28T13:37:25Z">
+        <test-method status="PASS" signature="BeforeClass()[pri:0, instance:com.ca.tds.main.TDSMethodURL_TC@6c49835d]" name="BeforeClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:37:47Z" finished-at="2019-11-29T12:37:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeClass -->
-        <test-method status="PASS" signature="testArequestAPI(org.testng.ITestContext, java.util.Map)[pri:0, instance:com.ca.tds.main.TDSMethodURL_TC@6c49835d]" name="testArequestAPI" duration-ms="887" started-at="2019-11-28T13:37:26Z" data-provider="DataProviderTDSMethodURL" finished-at="2019-11-28T13:37:26Z">
+        <test-method status="PASS" signature="testArequestAPI(org.testng.ITestContext, java.util.Map)[pri:0, instance:com.ca.tds.main.TDSMethodURL_TC@6c49835d]" name="testArequestAPI" duration-ms="769" started-at="2019-11-29T12:37:47Z" data-provider="DataProviderTDSMethodURL" finished-at="2019-11-29T12:37:48Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@11716116]]>
+                <![CDATA[org.testng.TestRunner@519cd76d]]>
               </value>
             </param>
             <param index="1">
@@ -821,7 +821,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testArequestAPI -->
-        <test-method status="PASS" signature="afterMethodProcessing(org.testng.ITestResult)[pri:0, instance:com.ca.tds.main.TDSMethodURL_TC@6c49835d]" name="afterMethodProcessing" is-config="true" duration-ms="122" started-at="2019-11-28T13:37:26Z" finished-at="2019-11-28T13:37:27Z">
+        <test-method status="PASS" signature="afterMethodProcessing(org.testng.ITestResult)[pri:0, instance:com.ca.tds.main.TDSMethodURL_TC@6c49835d]" name="afterMethodProcessing" is-config="true" duration-ms="18" started-at="2019-11-29T12:37:48Z" finished-at="2019-11-29T12:37:48Z">
           <params>
             <param index="0">
               <value>
@@ -832,42 +832,42 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethodProcessing -->
-        <test-method status="PASS" signature="AfterClass()[pri:0, instance:com.ca.tds.main.TDSMethodURL_TC@6c49835d]" name="AfterClass" is-config="true" duration-ms="0" started-at="2019-11-28T13:37:27Z" finished-at="2019-11-28T13:37:27Z">
+        <test-method status="PASS" signature="AfterClass()[pri:0, instance:com.ca.tds.main.TDSMethodURL_TC@6c49835d]" name="AfterClass" is-config="true" duration-ms="1" started-at="2019-11-29T12:37:48Z" finished-at="2019-11-29T12:37:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterClass -->
-        <test-method status="PASS" signature="AfterTestClass()[pri:0, instance:com.ca.tds.main.TDSMethodURL_TC@6c49835d]" name="AfterTestClass" is-config="true" duration-ms="1" started-at="2019-11-28T13:37:27Z" finished-at="2019-11-28T13:37:27Z">
+        <test-method status="PASS" signature="AfterTestClass()[pri:0, instance:com.ca.tds.main.TDSMethodURL_TC@6c49835d]" name="AfterTestClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:37:48Z" finished-at="2019-11-29T12:37:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterTestClass -->
       </class> <!-- com.ca.tds.main.TDSMethodURL_TC -->
     </test> <!-- VISA::Clear Card::Browser::ThreeDSMethodURL flow -->
-    <test name="VISA::Clear Card::Browser::AReq flow" duration-ms="4423" started-at="2019-11-28T13:37:27Z" finished-at="2019-11-28T13:37:31Z">
+    <test name="VISA::Clear Card::Browser::AReq flow" duration-ms="3752" started-at="2019-11-29T12:37:48Z" finished-at="2019-11-29T12:37:52Z">
       <class name="com.ca.tds.main.TDSPreAreq_TC">
-        <test-method status="PASS" signature="beforeSuite(org.testng.ITestContext)[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@1e6d1014]" name="beforeSuite" is-config="true" duration-ms="117" started-at="2019-11-28T13:37:13Z" finished-at="2019-11-28T13:37:13Z">
+        <test-method status="PASS" signature="beforeSuite(org.testng.ITestContext)[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@1e6d1014]" name="beforeSuite" is-config="true" duration-ms="50" started-at="2019-11-29T12:37:36Z" finished-at="2019-11-29T12:37:36Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@209b454]]>
+                <![CDATA[org.testng.TestRunner@7bb6ebdb]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method status="PASS" signature="beforeTestClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@1e6d1014]" name="beforeTestClass" is-config="true" duration-ms="0" started-at="2019-11-28T13:37:27Z" finished-at="2019-11-28T13:37:27Z">
+        <test-method status="PASS" signature="beforeTestClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@1e6d1014]" name="beforeTestClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:37:48Z" finished-at="2019-11-29T12:37:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTestClass -->
-        <test-method status="PASS" signature="BeforeClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@1e6d1014]" name="BeforeClass" is-config="true" duration-ms="1" started-at="2019-11-28T13:37:27Z" finished-at="2019-11-28T13:37:27Z">
+        <test-method status="PASS" signature="BeforeClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@1e6d1014]" name="BeforeClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:37:48Z" finished-at="2019-11-29T12:37:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeClass -->
-        <test-method status="PASS" signature="testArequestAPI(org.testng.ITestContext, java.util.Map)[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@1e6d1014]" name="testArequestAPI" duration-ms="4127" started-at="2019-11-28T13:37:27Z" data-provider="DataProvider3dsTestData" finished-at="2019-11-28T13:37:31Z">
+        <test-method status="PASS" signature="testArequestAPI(org.testng.ITestContext, java.util.Map)[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@1e6d1014]" name="testArequestAPI" duration-ms="3668" started-at="2019-11-29T12:37:48Z" data-provider="DataProvider3dsTestData" finished-at="2019-11-29T12:37:52Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@209b454]]>
+                <![CDATA[org.testng.TestRunner@7bb6ebdb]]>
               </value>
             </param>
             <param index="1">
@@ -879,7 +879,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testArequestAPI -->
-        <test-method status="PASS" signature="afterMethodProcessing(org.testng.ITestResult)[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@1e6d1014]" name="afterMethodProcessing" is-config="true" duration-ms="57" started-at="2019-11-28T13:37:31Z" finished-at="2019-11-28T13:37:31Z">
+        <test-method status="PASS" signature="afterMethodProcessing(org.testng.ITestResult)[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@1e6d1014]" name="afterMethodProcessing" is-config="true" duration-ms="28" started-at="2019-11-29T12:37:52Z" finished-at="2019-11-29T12:37:52Z">
           <params>
             <param index="0">
               <value>
@@ -890,39 +890,39 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethodProcessing -->
-        <test-method status="PASS" signature="AfterClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@1e6d1014]" name="AfterClass" is-config="true" duration-ms="1" started-at="2019-11-28T13:37:31Z" finished-at="2019-11-28T13:37:31Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AfterClass -->
-        <test-method status="PASS" signature="AfterTestClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@1e6d1014]" name="AfterTestClass" is-config="true" duration-ms="0" started-at="2019-11-28T13:37:31Z" finished-at="2019-11-28T13:37:31Z">
+        <test-method status="PASS" signature="AfterTestClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@1e6d1014]" name="AfterTestClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:37:52Z" finished-at="2019-11-29T12:37:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterTestClass -->
-        <test-method status="PASS" signature="endSuite()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@1e6d1014]" name="endSuite" is-config="true" duration-ms="2274" started-at="2019-11-28T13:37:31Z" finished-at="2019-11-28T13:37:33Z">
+        <test-method status="PASS" signature="AfterClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@1e6d1014]" name="AfterClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:37:52Z" finished-at="2019-11-29T12:37:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterClass -->
+        <test-method status="PASS" signature="endSuite()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@1e6d1014]" name="endSuite" is-config="true" duration-ms="19" started-at="2019-11-29T12:37:52Z" finished-at="2019-11-29T12:37:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endSuite -->
       </class> <!-- com.ca.tds.main.TDSPreAreq_TC -->
     </test> <!-- VISA::Clear Card::Browser::AReq flow -->
   </suite> <!-- SanityFrictionLessMethodurl -->
-  <suite name="SanityChallengeflowMethodurl" duration-ms="38466" started-at="2019-11-28T13:37:33Z" finished-at="2019-11-28T13:38:12Z">
+  <suite name="SanityChallengeflowMethodurl" duration-ms="34639" started-at="2019-11-29T12:37:52Z" finished-at="2019-11-29T12:38:27Z">
     <groups>
     </groups>
-    <test name="AMEX::Clear Card::Browser::ThreeDSMethodURL flow" duration-ms="1090" started-at="2019-11-28T13:37:33Z" finished-at="2019-11-28T13:37:35Z">
+    <test name="AMEX::Clear Card::Browser::ThreeDSMethodURL flow" duration-ms="916" started-at="2019-11-29T12:37:52Z" finished-at="2019-11-29T12:37:53Z">
       <class name="com.ca.tds.main.TDSMethodURL_TC">
-        <test-method status="PASS" signature="beforeTestClass()[pri:0, instance:com.ca.tds.main.TDSMethodURL_TC@26aa12dd]" name="beforeTestClass" is-config="true" duration-ms="0" started-at="2019-11-28T13:37:33Z" finished-at="2019-11-28T13:37:33Z">
+        <test-method status="PASS" signature="beforeTestClass()[pri:0, instance:com.ca.tds.main.TDSMethodURL_TC@26aa12dd]" name="beforeTestClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:37:52Z" finished-at="2019-11-29T12:37:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTestClass -->
-        <test-method status="PASS" signature="BeforeClass()[pri:0, instance:com.ca.tds.main.TDSMethodURL_TC@26aa12dd]" name="BeforeClass" is-config="true" duration-ms="0" started-at="2019-11-28T13:37:33Z" finished-at="2019-11-28T13:37:33Z">
+        <test-method status="PASS" signature="BeforeClass()[pri:0, instance:com.ca.tds.main.TDSMethodURL_TC@26aa12dd]" name="BeforeClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:37:52Z" finished-at="2019-11-29T12:37:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeClass -->
-        <test-method status="PASS" signature="testArequestAPI(org.testng.ITestContext, java.util.Map)[pri:0, instance:com.ca.tds.main.TDSMethodURL_TC@26aa12dd]" name="testArequestAPI" duration-ms="850" started-at="2019-11-28T13:37:34Z" data-provider="DataProviderTDSMethodURL" finished-at="2019-11-28T13:37:34Z">
+        <test-method status="PASS" signature="testArequestAPI(org.testng.ITestContext, java.util.Map)[pri:0, instance:com.ca.tds.main.TDSMethodURL_TC@26aa12dd]" name="testArequestAPI" duration-ms="819" started-at="2019-11-29T12:37:52Z" data-provider="DataProviderTDSMethodURL" finished-at="2019-11-29T12:37:53Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@2bdd89bd]]>
+                <![CDATA[org.testng.TestRunner@63228856]]>
               </value>
             </param>
             <param index="1">
@@ -934,7 +934,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testArequestAPI -->
-        <test-method status="PASS" signature="afterMethodProcessing(org.testng.ITestResult)[pri:0, instance:com.ca.tds.main.TDSMethodURL_TC@26aa12dd]" name="afterMethodProcessing" is-config="true" duration-ms="56" started-at="2019-11-28T13:37:34Z" finished-at="2019-11-28T13:37:35Z">
+        <test-method status="PASS" signature="afterMethodProcessing(org.testng.ITestResult)[pri:0, instance:com.ca.tds.main.TDSMethodURL_TC@26aa12dd]" name="afterMethodProcessing" is-config="true" duration-ms="41" started-at="2019-11-29T12:37:53Z" finished-at="2019-11-29T12:37:53Z">
           <params>
             <param index="0">
               <value>
@@ -945,31 +945,31 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethodProcessing -->
-        <test-method status="PASS" signature="AfterClass()[pri:0, instance:com.ca.tds.main.TDSMethodURL_TC@26aa12dd]" name="AfterClass" is-config="true" duration-ms="0" started-at="2019-11-28T13:37:35Z" finished-at="2019-11-28T13:37:35Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AfterClass -->
-        <test-method status="PASS" signature="AfterTestClass()[pri:0, instance:com.ca.tds.main.TDSMethodURL_TC@26aa12dd]" name="AfterTestClass" is-config="true" duration-ms="0" started-at="2019-11-28T13:37:35Z" finished-at="2019-11-28T13:37:35Z">
+        <test-method status="PASS" signature="AfterTestClass()[pri:0, instance:com.ca.tds.main.TDSMethodURL_TC@26aa12dd]" name="AfterTestClass" is-config="true" duration-ms="1" started-at="2019-11-29T12:37:53Z" finished-at="2019-11-29T12:37:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterTestClass -->
+        <test-method status="PASS" signature="AfterClass()[pri:0, instance:com.ca.tds.main.TDSMethodURL_TC@26aa12dd]" name="AfterClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:37:53Z" finished-at="2019-11-29T12:37:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterClass -->
       </class> <!-- com.ca.tds.main.TDSMethodURL_TC -->
     </test> <!-- AMEX::Clear Card::Browser::ThreeDSMethodURL flow -->
-    <test name="AMEX::Clear Card::Browser::AReq flow" duration-ms="4474" started-at="2019-11-28T13:37:35Z" finished-at="2019-11-28T13:37:39Z">
+    <test name="AMEX::Clear Card::Browser::AReq flow" duration-ms="4334" started-at="2019-11-29T12:37:53Z" finished-at="2019-11-29T12:37:57Z">
       <class name="com.ca.tds.main.TDSPreAreq_TC">
-        <test-method status="PASS" signature="beforeTestClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@2d6eabae]" name="beforeTestClass" is-config="true" duration-ms="0" started-at="2019-11-28T13:37:35Z" finished-at="2019-11-28T13:37:35Z">
+        <test-method status="PASS" signature="beforeTestClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@2d6eabae]" name="beforeTestClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:37:53Z" finished-at="2019-11-29T12:37:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTestClass -->
-        <test-method status="PASS" signature="BeforeClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@2d6eabae]" name="BeforeClass" is-config="true" duration-ms="1" started-at="2019-11-28T13:37:35Z" finished-at="2019-11-28T13:37:35Z">
+        <test-method status="PASS" signature="BeforeClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@2d6eabae]" name="BeforeClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:37:53Z" finished-at="2019-11-29T12:37:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeClass -->
-        <test-method status="PASS" signature="testArequestAPI(org.testng.ITestContext, java.util.Map)[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@2d6eabae]" name="testArequestAPI" duration-ms="4191" started-at="2019-11-28T13:37:35Z" data-provider="DataProvider3dsTestData" finished-at="2019-11-28T13:37:39Z">
+        <test-method status="PASS" signature="testArequestAPI(org.testng.ITestContext, java.util.Map)[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@2d6eabae]" name="testArequestAPI" duration-ms="4265" started-at="2019-11-29T12:37:53Z" data-provider="DataProvider3dsTestData" finished-at="2019-11-29T12:37:57Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@810acbb]]>
+                <![CDATA[org.testng.TestRunner@438b7359]]>
               </value>
             </param>
             <param index="1">
@@ -981,7 +981,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testArequestAPI -->
-        <test-method status="PASS" signature="afterMethodProcessing(org.testng.ITestResult)[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@2d6eabae]" name="afterMethodProcessing" is-config="true" duration-ms="118" started-at="2019-11-28T13:37:39Z" finished-at="2019-11-28T13:37:39Z">
+        <test-method status="PASS" signature="afterMethodProcessing(org.testng.ITestResult)[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@2d6eabae]" name="afterMethodProcessing" is-config="true" duration-ms="17" started-at="2019-11-29T12:37:57Z" finished-at="2019-11-29T12:37:57Z">
           <params>
             <param index="0">
               <value>
@@ -992,31 +992,31 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethodProcessing -->
-        <test-method status="PASS" signature="AfterClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@2d6eabae]" name="AfterClass" is-config="true" duration-ms="1" started-at="2019-11-28T13:37:39Z" finished-at="2019-11-28T13:37:39Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AfterClass -->
-        <test-method status="PASS" signature="AfterTestClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@2d6eabae]" name="AfterTestClass" is-config="true" duration-ms="0" started-at="2019-11-28T13:37:39Z" finished-at="2019-11-28T13:37:39Z">
+        <test-method status="PASS" signature="AfterTestClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@2d6eabae]" name="AfterTestClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:37:57Z" finished-at="2019-11-29T12:37:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterTestClass -->
+        <test-method status="PASS" signature="AfterClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@2d6eabae]" name="AfterClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:37:57Z" finished-at="2019-11-29T12:37:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterClass -->
       </class> <!-- com.ca.tds.main.TDSPreAreq_TC -->
     </test> <!-- AMEX::Clear Card::Browser::AReq flow -->
-    <test name="AMEX::Clear Card::Browser::RReq flow" duration-ms="4274" started-at="2019-11-28T13:37:39Z" finished-at="2019-11-28T13:37:43Z">
+    <test name="AMEX::Clear Card::Browser::RReq flow" duration-ms="4219" started-at="2019-11-29T12:37:57Z" finished-at="2019-11-29T12:38:01Z">
       <class name="com.ca.tds.main.TDSRReq_TC">
-        <test-method status="PASS" signature="beforeTestClass()[pri:0, instance:com.ca.tds.main.TDSRReq_TC@56aac163]" name="beforeTestClass" is-config="true" duration-ms="0" started-at="2019-11-28T13:37:39Z" finished-at="2019-11-28T13:37:39Z">
+        <test-method status="PASS" signature="beforeTestClass()[pri:0, instance:com.ca.tds.main.TDSRReq_TC@56aac163]" name="beforeTestClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:37:57Z" finished-at="2019-11-29T12:37:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTestClass -->
-        <test-method status="PASS" signature="BeforeClass()[pri:0, instance:com.ca.tds.main.TDSRReq_TC@56aac163]" name="BeforeClass" is-config="true" duration-ms="0" started-at="2019-11-28T13:37:39Z" finished-at="2019-11-28T13:37:39Z">
+        <test-method status="PASS" signature="BeforeClass()[pri:0, instance:com.ca.tds.main.TDSRReq_TC@56aac163]" name="BeforeClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:37:57Z" finished-at="2019-11-29T12:37:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeClass -->
-        <test-method status="PASS" signature="testRRequestAPI(org.testng.ITestContext, java.util.Map)[pri:0, instance:com.ca.tds.main.TDSRReq_TC@56aac163]" name="testRRequestAPI" duration-ms="3997" started-at="2019-11-28T13:37:39Z" data-provider="DataProvider3dsTestData" finished-at="2019-11-28T13:37:43Z">
+        <test-method status="PASS" signature="testRRequestAPI(org.testng.ITestContext, java.util.Map)[pri:0, instance:com.ca.tds.main.TDSRReq_TC@56aac163]" name="testRRequestAPI" duration-ms="4130" started-at="2019-11-29T12:37:57Z" data-provider="DataProvider3dsTestData" finished-at="2019-11-29T12:38:01Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@359b3587]]>
+                <![CDATA[org.testng.TestRunner@b7024f8]]>
               </value>
             </param>
             <param index="1">
@@ -1028,7 +1028,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testRRequestAPI -->
-        <test-method status="PASS" signature="afterMethodProcessing(org.testng.ITestResult)[pri:0, instance:com.ca.tds.main.TDSRReq_TC@56aac163]" name="afterMethodProcessing" is-config="true" duration-ms="112" started-at="2019-11-28T13:37:43Z" finished-at="2019-11-28T13:37:43Z">
+        <test-method status="PASS" signature="afterMethodProcessing(org.testng.ITestResult)[pri:0, instance:com.ca.tds.main.TDSRReq_TC@56aac163]" name="afterMethodProcessing" is-config="true" duration-ms="26" started-at="2019-11-29T12:38:01Z" finished-at="2019-11-29T12:38:01Z">
           <params>
             <param index="0">
               <value>
@@ -1039,31 +1039,31 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethodProcessing -->
-        <test-method status="PASS" signature="AfterClass()[pri:0, instance:com.ca.tds.main.TDSRReq_TC@56aac163]" name="AfterClass" is-config="true" duration-ms="1" started-at="2019-11-28T13:37:43Z" finished-at="2019-11-28T13:37:43Z">
+        <test-method status="PASS" signature="AfterClass()[pri:0, instance:com.ca.tds.main.TDSRReq_TC@56aac163]" name="AfterClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:38:01Z" finished-at="2019-11-29T12:38:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterClass -->
-        <test-method status="PASS" signature="AfterTestClass()[pri:0, instance:com.ca.tds.main.TDSRReq_TC@56aac163]" name="AfterTestClass" is-config="true" duration-ms="0" started-at="2019-11-28T13:37:43Z" finished-at="2019-11-28T13:37:43Z">
+        <test-method status="PASS" signature="AfterTestClass()[pri:0, instance:com.ca.tds.main.TDSRReq_TC@56aac163]" name="AfterTestClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:38:01Z" finished-at="2019-11-29T12:38:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterTestClass -->
       </class> <!-- com.ca.tds.main.TDSRReq_TC -->
     </test> <!-- AMEX::Clear Card::Browser::RReq flow -->
-    <test name="AMEX::Clear Card::Browser::VerifyAPI flow" duration-ms="2885" started-at="2019-11-28T13:37:43Z" finished-at="2019-11-28T13:37:46Z">
+    <test name="AMEX::Clear Card::Browser::VerifyAPI flow" duration-ms="2604" started-at="2019-11-29T12:38:01Z" finished-at="2019-11-29T12:38:04Z">
       <class name="com.ca.tds.main.TDSVerifyAPI_TC">
-        <test-method status="PASS" signature="beforeTestClass()[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@5f282abb]" name="beforeTestClass" is-config="true" duration-ms="0" started-at="2019-11-28T13:37:43Z" finished-at="2019-11-28T13:37:43Z">
+        <test-method status="PASS" signature="beforeTestClass()[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@5f282abb]" name="beforeTestClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:38:01Z" finished-at="2019-11-29T12:38:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTestClass -->
-        <test-method status="PASS" signature="BeforeClass()[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@5f282abb]" name="BeforeClass" is-config="true" duration-ms="0" started-at="2019-11-28T13:37:43Z" finished-at="2019-11-28T13:37:43Z">
+        <test-method status="PASS" signature="BeforeClass()[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@5f282abb]" name="BeforeClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:38:01Z" finished-at="2019-11-29T12:38:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeClass -->
-        <test-method status="PASS" signature="testArequestAPI(org.testng.ITestContext, java.util.Map)[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@5f282abb]" name="testArequestAPI" duration-ms="2674" started-at="2019-11-28T13:37:44Z" data-provider="DataProvider3dsTestData" finished-at="2019-11-28T13:37:46Z">
+        <test-method status="PASS" signature="testArequestAPI(org.testng.ITestContext, java.util.Map)[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@5f282abb]" name="testArequestAPI" duration-ms="2508" started-at="2019-11-29T12:38:01Z" data-provider="DataProvider3dsTestData" finished-at="2019-11-29T12:38:04Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@41df67f4]]>
+                <![CDATA[org.testng.TestRunner@3941da83]]>
               </value>
             </param>
             <param index="1">
@@ -1075,7 +1075,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testArequestAPI -->
-        <test-method status="PASS" signature="afterMethodProcessing(org.testng.ITestResult)[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@5f282abb]" name="afterMethodProcessing" is-config="true" duration-ms="39" started-at="2019-11-28T13:37:46Z" finished-at="2019-11-28T13:37:46Z">
+        <test-method status="PASS" signature="afterMethodProcessing(org.testng.ITestResult)[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@5f282abb]" name="afterMethodProcessing" is-config="true" duration-ms="19" started-at="2019-11-29T12:38:04Z" finished-at="2019-11-29T12:38:04Z">
           <params>
             <param index="0">
               <value>
@@ -1086,31 +1086,31 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethodProcessing -->
-        <test-method status="PASS" signature="AfterClass()[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@5f282abb]" name="AfterClass" is-config="true" duration-ms="1" started-at="2019-11-28T13:37:46Z" finished-at="2019-11-28T13:37:46Z">
+        <test-method status="PASS" signature="AfterClass()[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@5f282abb]" name="AfterClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:38:04Z" finished-at="2019-11-29T12:38:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterClass -->
-        <test-method status="PASS" signature="AfterTestClass()[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@5f282abb]" name="AfterTestClass" is-config="true" duration-ms="0" started-at="2019-11-28T13:37:46Z" finished-at="2019-11-28T13:37:46Z">
+        <test-method status="PASS" signature="AfterTestClass()[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@5f282abb]" name="AfterTestClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:38:04Z" finished-at="2019-11-29T12:38:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterTestClass -->
       </class> <!-- com.ca.tds.main.TDSVerifyAPI_TC -->
     </test> <!-- AMEX::Clear Card::Browser::VerifyAPI flow -->
-    <test name="MasterCard::Clear Card::Browser::ThreeDSMethodURL flow" duration-ms="1493" started-at="2019-11-28T13:37:46Z" finished-at="2019-11-28T13:37:48Z">
+    <test name="MasterCard::Clear Card::Browser::ThreeDSMethodURL flow" duration-ms="1287" started-at="2019-11-29T12:38:04Z" finished-at="2019-11-29T12:38:05Z">
       <class name="com.ca.tds.main.TDSMethodURL_TC">
-        <test-method status="PASS" signature="beforeTestClass()[pri:0, instance:com.ca.tds.main.TDSMethodURL_TC@74650e52]" name="beforeTestClass" is-config="true" duration-ms="0" started-at="2019-11-28T13:37:46Z" finished-at="2019-11-28T13:37:46Z">
+        <test-method status="PASS" signature="beforeTestClass()[pri:0, instance:com.ca.tds.main.TDSMethodURL_TC@74650e52]" name="beforeTestClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:38:04Z" finished-at="2019-11-29T12:38:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTestClass -->
-        <test-method status="PASS" signature="BeforeClass()[pri:0, instance:com.ca.tds.main.TDSMethodURL_TC@74650e52]" name="BeforeClass" is-config="true" duration-ms="0" started-at="2019-11-28T13:37:46Z" finished-at="2019-11-28T13:37:46Z">
+        <test-method status="PASS" signature="BeforeClass()[pri:0, instance:com.ca.tds.main.TDSMethodURL_TC@74650e52]" name="BeforeClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:38:04Z" finished-at="2019-11-29T12:38:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeClass -->
-        <test-method status="PASS" signature="testArequestAPI(org.testng.ITestContext, java.util.Map)[pri:0, instance:com.ca.tds.main.TDSMethodURL_TC@74650e52]" name="testArequestAPI" duration-ms="1280" started-at="2019-11-28T13:37:46Z" data-provider="DataProviderTDSMethodURL" finished-at="2019-11-28T13:37:48Z">
+        <test-method status="PASS" signature="testArequestAPI(org.testng.ITestContext, java.util.Map)[pri:0, instance:com.ca.tds.main.TDSMethodURL_TC@74650e52]" name="testArequestAPI" duration-ms="1223" started-at="2019-11-29T12:38:04Z" data-provider="DataProviderTDSMethodURL" finished-at="2019-11-29T12:38:05Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@4d0de15b]]>
+                <![CDATA[org.testng.TestRunner@5d62c159]]>
               </value>
             </param>
             <param index="1">
@@ -1122,7 +1122,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testArequestAPI -->
-        <test-method status="PASS" signature="afterMethodProcessing(org.testng.ITestResult)[pri:0, instance:com.ca.tds.main.TDSMethodURL_TC@74650e52]" name="afterMethodProcessing" is-config="true" duration-ms="96" started-at="2019-11-28T13:37:48Z" finished-at="2019-11-28T13:37:48Z">
+        <test-method status="PASS" signature="afterMethodProcessing(org.testng.ITestResult)[pri:0, instance:com.ca.tds.main.TDSMethodURL_TC@74650e52]" name="afterMethodProcessing" is-config="true" duration-ms="22" started-at="2019-11-29T12:38:05Z" finished-at="2019-11-29T12:38:05Z">
           <params>
             <param index="0">
               <value>
@@ -1133,31 +1133,31 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethodProcessing -->
-        <test-method status="PASS" signature="AfterClass()[pri:0, instance:com.ca.tds.main.TDSMethodURL_TC@74650e52]" name="AfterClass" is-config="true" duration-ms="0" started-at="2019-11-28T13:37:48Z" finished-at="2019-11-28T13:37:48Z">
+        <test-method status="PASS" signature="AfterClass()[pri:0, instance:com.ca.tds.main.TDSMethodURL_TC@74650e52]" name="AfterClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:38:05Z" finished-at="2019-11-29T12:38:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterClass -->
-        <test-method status="PASS" signature="AfterTestClass()[pri:0, instance:com.ca.tds.main.TDSMethodURL_TC@74650e52]" name="AfterTestClass" is-config="true" duration-ms="1" started-at="2019-11-28T13:37:48Z" finished-at="2019-11-28T13:37:48Z">
+        <test-method status="PASS" signature="AfterTestClass()[pri:0, instance:com.ca.tds.main.TDSMethodURL_TC@74650e52]" name="AfterTestClass" is-config="true" duration-ms="1" started-at="2019-11-29T12:38:05Z" finished-at="2019-11-29T12:38:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterTestClass -->
       </class> <!-- com.ca.tds.main.TDSMethodURL_TC -->
     </test> <!-- MasterCard::Clear Card::Browser::ThreeDSMethodURL flow -->
-    <test name="MasterCard::Clear Card::Browser::AReq flow" duration-ms="6408" started-at="2019-11-28T13:37:48Z" finished-at="2019-11-28T13:37:54Z">
+    <test name="MasterCard::Clear Card::Browser::AReq flow" duration-ms="5748" started-at="2019-11-29T12:38:05Z" finished-at="2019-11-29T12:38:11Z">
       <class name="com.ca.tds.main.TDSPreAreq_TC">
-        <test-method status="PASS" signature="beforeTestClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@2833cc44]" name="beforeTestClass" is-config="true" duration-ms="1" started-at="2019-11-28T13:37:48Z" finished-at="2019-11-28T13:37:48Z">
+        <test-method status="PASS" signature="beforeTestClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@2833cc44]" name="beforeTestClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:38:05Z" finished-at="2019-11-29T12:38:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTestClass -->
-        <test-method status="PASS" signature="BeforeClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@2833cc44]" name="BeforeClass" is-config="true" duration-ms="0" started-at="2019-11-28T13:37:48Z" finished-at="2019-11-28T13:37:48Z">
+        <test-method status="PASS" signature="BeforeClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@2833cc44]" name="BeforeClass" is-config="true" duration-ms="1" started-at="2019-11-29T12:38:05Z" finished-at="2019-11-29T12:38:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeClass -->
-        <test-method status="PASS" signature="testArequestAPI(org.testng.ITestContext, java.util.Map)[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@2833cc44]" name="testArequestAPI" duration-ms="6123" started-at="2019-11-28T13:37:48Z" data-provider="DataProvider3dsTestData" finished-at="2019-11-28T13:37:54Z">
+        <test-method status="PASS" signature="testArequestAPI(org.testng.ITestContext, java.util.Map)[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@2833cc44]" name="testArequestAPI" duration-ms="5688" started-at="2019-11-29T12:38:05Z" data-provider="DataProvider3dsTestData" finished-at="2019-11-29T12:38:11Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@14a0436]]>
+                <![CDATA[org.testng.TestRunner@58e1bf20]]>
               </value>
             </param>
             <param index="1">
@@ -1169,7 +1169,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testArequestAPI -->
-        <test-method status="PASS" signature="afterMethodProcessing(org.testng.ITestResult)[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@2833cc44]" name="afterMethodProcessing" is-config="true" duration-ms="91" started-at="2019-11-28T13:37:54Z" finished-at="2019-11-28T13:37:54Z">
+        <test-method status="PASS" signature="afterMethodProcessing(org.testng.ITestResult)[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@2833cc44]" name="afterMethodProcessing" is-config="true" duration-ms="16" started-at="2019-11-29T12:38:11Z" finished-at="2019-11-29T12:38:11Z">
           <params>
             <param index="0">
               <value>
@@ -1180,31 +1180,31 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethodProcessing -->
-        <test-method status="PASS" signature="AfterClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@2833cc44]" name="AfterClass" is-config="true" duration-ms="0" started-at="2019-11-28T13:37:54Z" finished-at="2019-11-28T13:37:54Z">
+        <test-method status="PASS" signature="AfterClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@2833cc44]" name="AfterClass" is-config="true" duration-ms="1" started-at="2019-11-29T12:38:11Z" finished-at="2019-11-29T12:38:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterClass -->
-        <test-method status="PASS" signature="AfterTestClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@2833cc44]" name="AfterTestClass" is-config="true" duration-ms="1" started-at="2019-11-28T13:37:54Z" finished-at="2019-11-28T13:37:54Z">
+        <test-method status="PASS" signature="AfterTestClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@2833cc44]" name="AfterTestClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:38:11Z" finished-at="2019-11-29T12:38:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterTestClass -->
       </class> <!-- com.ca.tds.main.TDSPreAreq_TC -->
     </test> <!-- MasterCard::Clear Card::Browser::AReq flow -->
-    <test name="MASTERCARD::Clear Card::Browser::RReq flow" duration-ms="2915" started-at="2019-11-28T13:37:54Z" finished-at="2019-11-28T13:37:57Z">
+    <test name="MASTERCARD::Clear Card::Browser::RReq flow" duration-ms="2658" started-at="2019-11-29T12:38:11Z" finished-at="2019-11-29T12:38:14Z">
       <class name="com.ca.tds.main.TDSRReq_TC">
-        <test-method status="PASS" signature="beforeTestClass()[pri:0, instance:com.ca.tds.main.TDSRReq_TC@536aaa8d]" name="beforeTestClass" is-config="true" duration-ms="0" started-at="2019-11-28T13:37:54Z" finished-at="2019-11-28T13:37:54Z">
+        <test-method status="PASS" signature="beforeTestClass()[pri:0, instance:com.ca.tds.main.TDSRReq_TC@536aaa8d]" name="beforeTestClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:38:11Z" finished-at="2019-11-29T12:38:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTestClass -->
-        <test-method status="PASS" signature="BeforeClass()[pri:0, instance:com.ca.tds.main.TDSRReq_TC@536aaa8d]" name="BeforeClass" is-config="true" duration-ms="0" started-at="2019-11-28T13:37:54Z" finished-at="2019-11-28T13:37:54Z">
+        <test-method status="PASS" signature="BeforeClass()[pri:0, instance:com.ca.tds.main.TDSRReq_TC@536aaa8d]" name="BeforeClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:38:11Z" finished-at="2019-11-29T12:38:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeClass -->
-        <test-method status="PASS" signature="testRRequestAPI(org.testng.ITestContext, java.util.Map)[pri:0, instance:com.ca.tds.main.TDSRReq_TC@536aaa8d]" name="testRRequestAPI" duration-ms="2689" started-at="2019-11-28T13:37:54Z" data-provider="DataProvider3dsTestData" finished-at="2019-11-28T13:37:57Z">
+        <test-method status="PASS" signature="testRRequestAPI(org.testng.ITestContext, java.util.Map)[pri:0, instance:com.ca.tds.main.TDSRReq_TC@536aaa8d]" name="testRRequestAPI" duration-ms="2573" started-at="2019-11-29T12:38:11Z" data-provider="DataProvider3dsTestData" finished-at="2019-11-29T12:38:14Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@5ffc7c3]]>
+                <![CDATA[org.testng.TestRunner@51f918e5]]>
               </value>
             </param>
             <param index="1">
@@ -1216,7 +1216,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testRRequestAPI -->
-        <test-method status="PASS" signature="afterMethodProcessing(org.testng.ITestResult)[pri:0, instance:com.ca.tds.main.TDSRReq_TC@536aaa8d]" name="afterMethodProcessing" is-config="true" duration-ms="97" started-at="2019-11-28T13:37:57Z" finished-at="2019-11-28T13:37:57Z">
+        <test-method status="PASS" signature="afterMethodProcessing(org.testng.ITestResult)[pri:0, instance:com.ca.tds.main.TDSRReq_TC@536aaa8d]" name="afterMethodProcessing" is-config="true" duration-ms="37" started-at="2019-11-29T12:38:14Z" finished-at="2019-11-29T12:38:14Z">
           <params>
             <param index="0">
               <value>
@@ -1227,31 +1227,31 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethodProcessing -->
-        <test-method status="PASS" signature="AfterClass()[pri:0, instance:com.ca.tds.main.TDSRReq_TC@536aaa8d]" name="AfterClass" is-config="true" duration-ms="0" started-at="2019-11-28T13:37:57Z" finished-at="2019-11-28T13:37:57Z">
+        <test-method status="PASS" signature="AfterClass()[pri:0, instance:com.ca.tds.main.TDSRReq_TC@536aaa8d]" name="AfterClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:38:14Z" finished-at="2019-11-29T12:38:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterClass -->
-        <test-method status="PASS" signature="AfterTestClass()[pri:0, instance:com.ca.tds.main.TDSRReq_TC@536aaa8d]" name="AfterTestClass" is-config="true" duration-ms="1" started-at="2019-11-28T13:37:57Z" finished-at="2019-11-28T13:37:57Z">
+        <test-method status="PASS" signature="AfterTestClass()[pri:0, instance:com.ca.tds.main.TDSRReq_TC@536aaa8d]" name="AfterTestClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:38:14Z" finished-at="2019-11-29T12:38:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterTestClass -->
       </class> <!-- com.ca.tds.main.TDSRReq_TC -->
     </test> <!-- MASTERCARD::Clear Card::Browser::RReq flow -->
-    <test name="MasterCard::Clear Card::Browser::VerifyAPI flow" duration-ms="702" started-at="2019-11-28T13:37:57Z" finished-at="2019-11-28T13:37:58Z">
+    <test name="MasterCard::Clear Card::Browser::VerifyAPI flow" duration-ms="391" started-at="2019-11-29T12:38:14Z" finished-at="2019-11-29T12:38:14Z">
       <class name="com.ca.tds.main.TDSVerifyAPI_TC">
-        <test-method status="PASS" signature="beforeTestClass()[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@2781e022]" name="beforeTestClass" is-config="true" duration-ms="0" started-at="2019-11-28T13:37:57Z" finished-at="2019-11-28T13:37:57Z">
+        <test-method status="PASS" signature="beforeTestClass()[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@2781e022]" name="beforeTestClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:38:14Z" finished-at="2019-11-29T12:38:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTestClass -->
-        <test-method status="PASS" signature="BeforeClass()[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@2781e022]" name="BeforeClass" is-config="true" duration-ms="0" started-at="2019-11-28T13:37:57Z" finished-at="2019-11-28T13:37:57Z">
+        <test-method status="PASS" signature="BeforeClass()[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@2781e022]" name="BeforeClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:38:14Z" finished-at="2019-11-29T12:38:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeClass -->
-        <test-method status="PASS" signature="testArequestAPI(org.testng.ITestContext, java.util.Map)[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@2781e022]" name="testArequestAPI" duration-ms="454" started-at="2019-11-28T13:37:57Z" data-provider="DataProvider3dsTestData" finished-at="2019-11-28T13:37:58Z">
+        <test-method status="PASS" signature="testArequestAPI(org.testng.ITestContext, java.util.Map)[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@2781e022]" name="testArequestAPI" duration-ms="325" started-at="2019-11-29T12:38:14Z" data-provider="DataProvider3dsTestData" finished-at="2019-11-29T12:38:14Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@2dd57a3c]]>
+                <![CDATA[org.testng.TestRunner@8c91427]]>
               </value>
             </param>
             <param index="1">
@@ -1263,7 +1263,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testArequestAPI -->
-        <test-method status="PASS" signature="afterMethodProcessing(org.testng.ITestResult)[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@2781e022]" name="afterMethodProcessing" is-config="true" duration-ms="112" started-at="2019-11-28T13:37:58Z" finished-at="2019-11-28T13:37:58Z">
+        <test-method status="PASS" signature="afterMethodProcessing(org.testng.ITestResult)[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@2781e022]" name="afterMethodProcessing" is-config="true" duration-ms="22" started-at="2019-11-29T12:38:14Z" finished-at="2019-11-29T12:38:14Z">
           <params>
             <param index="0">
               <value>
@@ -1274,31 +1274,31 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethodProcessing -->
-        <test-method status="PASS" signature="AfterClass()[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@2781e022]" name="AfterClass" is-config="true" duration-ms="0" started-at="2019-11-28T13:37:58Z" finished-at="2019-11-28T13:37:58Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AfterClass -->
-        <test-method status="PASS" signature="AfterTestClass()[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@2781e022]" name="AfterTestClass" is-config="true" duration-ms="0" started-at="2019-11-28T13:37:58Z" finished-at="2019-11-28T13:37:58Z">
+        <test-method status="PASS" signature="AfterTestClass()[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@2781e022]" name="AfterTestClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:38:14Z" finished-at="2019-11-29T12:38:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterTestClass -->
+        <test-method status="PASS" signature="AfterClass()[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@2781e022]" name="AfterClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:38:14Z" finished-at="2019-11-29T12:38:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterClass -->
       </class> <!-- com.ca.tds.main.TDSVerifyAPI_TC -->
     </test> <!-- MasterCard::Clear Card::Browser::VerifyAPI flow -->
-    <test name="VISA::Clear Card::Browser::ThreeDSMethodURL flow" duration-ms="1547" started-at="2019-11-28T13:37:58Z" finished-at="2019-11-28T13:38:00Z">
+    <test name="VISA::Clear Card::Browser::ThreeDSMethodURL flow" duration-ms="1293" started-at="2019-11-29T12:38:14Z" finished-at="2019-11-29T12:38:15Z">
       <class name="com.ca.tds.main.TDSMethodURL_TC">
-        <test-method status="PASS" signature="beforeTestClass()[pri:0, instance:com.ca.tds.main.TDSMethodURL_TC@34cd072c]" name="beforeTestClass" is-config="true" duration-ms="0" started-at="2019-11-28T13:37:58Z" finished-at="2019-11-28T13:37:58Z">
+        <test-method status="PASS" signature="beforeTestClass()[pri:0, instance:com.ca.tds.main.TDSMethodURL_TC@34cd072c]" name="beforeTestClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:38:14Z" finished-at="2019-11-29T12:38:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTestClass -->
-        <test-method status="PASS" signature="BeforeClass()[pri:0, instance:com.ca.tds.main.TDSMethodURL_TC@34cd072c]" name="BeforeClass" is-config="true" duration-ms="0" started-at="2019-11-28T13:37:58Z" finished-at="2019-11-28T13:37:58Z">
+        <test-method status="PASS" signature="BeforeClass()[pri:0, instance:com.ca.tds.main.TDSMethodURL_TC@34cd072c]" name="BeforeClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:38:14Z" finished-at="2019-11-29T12:38:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeClass -->
-        <test-method status="PASS" signature="testArequestAPI(org.testng.ITestContext, java.util.Map)[pri:0, instance:com.ca.tds.main.TDSMethodURL_TC@34cd072c]" name="testArequestAPI" duration-ms="1300" started-at="2019-11-28T13:37:58Z" data-provider="DataProviderTDSMethodURL" finished-at="2019-11-28T13:38:00Z">
+        <test-method status="PASS" signature="testArequestAPI(org.testng.ITestContext, java.util.Map)[pri:0, instance:com.ca.tds.main.TDSMethodURL_TC@34cd072c]" name="testArequestAPI" duration-ms="1223" started-at="2019-11-29T12:38:14Z" data-provider="DataProviderTDSMethodURL" finished-at="2019-11-29T12:38:15Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@490d7fe9]]>
+                <![CDATA[org.testng.TestRunner@64894f48]]>
               </value>
             </param>
             <param index="1">
@@ -1310,7 +1310,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testArequestAPI -->
-        <test-method status="PASS" signature="afterMethodProcessing(org.testng.ITestResult)[pri:0, instance:com.ca.tds.main.TDSMethodURL_TC@34cd072c]" name="afterMethodProcessing" is-config="true" duration-ms="41" started-at="2019-11-28T13:38:00Z" finished-at="2019-11-28T13:38:00Z">
+        <test-method status="PASS" signature="afterMethodProcessing(org.testng.ITestResult)[pri:0, instance:com.ca.tds.main.TDSMethodURL_TC@34cd072c]" name="afterMethodProcessing" is-config="true" duration-ms="24" started-at="2019-11-29T12:38:15Z" finished-at="2019-11-29T12:38:15Z">
           <params>
             <param index="0">
               <value>
@@ -1321,31 +1321,31 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethodProcessing -->
-        <test-method status="PASS" signature="AfterClass()[pri:0, instance:com.ca.tds.main.TDSMethodURL_TC@34cd072c]" name="AfterClass" is-config="true" duration-ms="0" started-at="2019-11-28T13:38:00Z" finished-at="2019-11-28T13:38:00Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AfterClass -->
-        <test-method status="PASS" signature="AfterTestClass()[pri:0, instance:com.ca.tds.main.TDSMethodURL_TC@34cd072c]" name="AfterTestClass" is-config="true" duration-ms="0" started-at="2019-11-28T13:38:00Z" finished-at="2019-11-28T13:38:00Z">
+        <test-method status="PASS" signature="AfterTestClass()[pri:0, instance:com.ca.tds.main.TDSMethodURL_TC@34cd072c]" name="AfterTestClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:38:15Z" finished-at="2019-11-29T12:38:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterTestClass -->
+        <test-method status="PASS" signature="AfterClass()[pri:0, instance:com.ca.tds.main.TDSMethodURL_TC@34cd072c]" name="AfterClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:38:15Z" finished-at="2019-11-29T12:38:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterClass -->
       </class> <!-- com.ca.tds.main.TDSMethodURL_TC -->
     </test> <!-- VISA::Clear Card::Browser::ThreeDSMethodURL flow -->
-    <test name="VISA::Clear Card::Browser::AReq flow" duration-ms="6493" started-at="2019-11-28T13:38:00Z" finished-at="2019-11-28T13:38:06Z">
+    <test name="VISA::Clear Card::Browser::AReq flow" duration-ms="6229" started-at="2019-11-29T12:38:15Z" finished-at="2019-11-29T12:38:22Z">
       <class name="com.ca.tds.main.TDSPreAreq_TC">
-        <test-method status="PASS" signature="beforeTestClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@30a3107a]" name="beforeTestClass" is-config="true" duration-ms="0" started-at="2019-11-28T13:38:00Z" finished-at="2019-11-28T13:38:00Z">
+        <test-method status="PASS" signature="beforeTestClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@30a3107a]" name="beforeTestClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:38:15Z" finished-at="2019-11-29T12:38:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTestClass -->
-        <test-method status="PASS" signature="BeforeClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@30a3107a]" name="BeforeClass" is-config="true" duration-ms="1" started-at="2019-11-28T13:38:00Z" finished-at="2019-11-28T13:38:00Z">
+        <test-method status="PASS" signature="BeforeClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@30a3107a]" name="BeforeClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:38:15Z" finished-at="2019-11-29T12:38:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeClass -->
-        <test-method status="PASS" signature="testArequestAPI(org.testng.ITestContext, java.util.Map)[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@30a3107a]" name="testArequestAPI" duration-ms="6207" started-at="2019-11-28T13:38:00Z" data-provider="DataProvider3dsTestData" finished-at="2019-11-28T13:38:06Z">
+        <test-method status="PASS" signature="testArequestAPI(org.testng.ITestContext, java.util.Map)[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@30a3107a]" name="testArequestAPI" duration-ms="6151" started-at="2019-11-29T12:38:15Z" data-provider="DataProvider3dsTestData" finished-at="2019-11-29T12:38:22Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@47efc506]]>
+                <![CDATA[org.testng.TestRunner@1dbfda6b]]>
               </value>
             </param>
             <param index="1">
@@ -1357,7 +1357,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testArequestAPI -->
-        <test-method status="PASS" signature="afterMethodProcessing(org.testng.ITestResult)[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@30a3107a]" name="afterMethodProcessing" is-config="true" duration-ms="121" started-at="2019-11-28T13:38:06Z" finished-at="2019-11-28T13:38:06Z">
+        <test-method status="PASS" signature="afterMethodProcessing(org.testng.ITestResult)[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@30a3107a]" name="afterMethodProcessing" is-config="true" duration-ms="24" started-at="2019-11-29T12:38:22Z" finished-at="2019-11-29T12:38:22Z">
           <params>
             <param index="0">
               <value>
@@ -1368,31 +1368,31 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethodProcessing -->
-        <test-method status="PASS" signature="AfterClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@30a3107a]" name="AfterClass" is-config="true" duration-ms="0" started-at="2019-11-28T13:38:06Z" finished-at="2019-11-28T13:38:06Z">
+        <test-method status="PASS" signature="AfterClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@30a3107a]" name="AfterClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:38:22Z" finished-at="2019-11-29T12:38:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterClass -->
-        <test-method status="PASS" signature="AfterTestClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@30a3107a]" name="AfterTestClass" is-config="true" duration-ms="0" started-at="2019-11-28T13:38:06Z" finished-at="2019-11-28T13:38:06Z">
+        <test-method status="PASS" signature="AfterTestClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@30a3107a]" name="AfterTestClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:38:22Z" finished-at="2019-11-29T12:38:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterTestClass -->
       </class> <!-- com.ca.tds.main.TDSPreAreq_TC -->
     </test> <!-- VISA::Clear Card::Browser::AReq flow -->
-    <test name="VISA::Clear Card::Browser::RReq flow" duration-ms="4611" started-at="2019-11-28T13:38:06Z" finished-at="2019-11-28T13:38:11Z">
+    <test name="VISA::Clear Card::Browser::RReq flow" duration-ms="3964" started-at="2019-11-29T12:38:22Z" finished-at="2019-11-29T12:38:26Z">
       <class name="com.ca.tds.main.TDSRReq_TC">
-        <test-method status="PASS" signature="beforeTestClass()[pri:0, instance:com.ca.tds.main.TDSRReq_TC@3043fe0e]" name="beforeTestClass" is-config="true" duration-ms="0" started-at="2019-11-28T13:38:06Z" finished-at="2019-11-28T13:38:06Z">
+        <test-method status="PASS" signature="beforeTestClass()[pri:0, instance:com.ca.tds.main.TDSRReq_TC@3043fe0e]" name="beforeTestClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:38:22Z" finished-at="2019-11-29T12:38:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTestClass -->
-        <test-method status="PASS" signature="BeforeClass()[pri:0, instance:com.ca.tds.main.TDSRReq_TC@3043fe0e]" name="BeforeClass" is-config="true" duration-ms="0" started-at="2019-11-28T13:38:06Z" finished-at="2019-11-28T13:38:06Z">
+        <test-method status="PASS" signature="BeforeClass()[pri:0, instance:com.ca.tds.main.TDSRReq_TC@3043fe0e]" name="BeforeClass" is-config="true" duration-ms="1" started-at="2019-11-29T12:38:22Z" finished-at="2019-11-29T12:38:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeClass -->
-        <test-method status="PASS" signature="testRRequestAPI(org.testng.ITestContext, java.util.Map)[pri:0, instance:com.ca.tds.main.TDSRReq_TC@3043fe0e]" name="testRRequestAPI" duration-ms="4260" started-at="2019-11-28T13:38:06Z" data-provider="DataProvider3dsTestData" finished-at="2019-11-28T13:38:11Z">
+        <test-method status="PASS" signature="testRRequestAPI(org.testng.ITestContext, java.util.Map)[pri:0, instance:com.ca.tds.main.TDSRReq_TC@3043fe0e]" name="testRRequestAPI" duration-ms="3893" started-at="2019-11-29T12:38:22Z" data-provider="DataProvider3dsTestData" finished-at="2019-11-29T12:38:26Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@44552742]]>
+                <![CDATA[org.testng.TestRunner@21a540ee]]>
               </value>
             </param>
             <param index="1">
@@ -1404,7 +1404,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testRRequestAPI -->
-        <test-method status="PASS" signature="afterMethodProcessing(org.testng.ITestResult)[pri:0, instance:com.ca.tds.main.TDSRReq_TC@3043fe0e]" name="afterMethodProcessing" is-config="true" duration-ms="98" started-at="2019-11-28T13:38:11Z" finished-at="2019-11-28T13:38:11Z">
+        <test-method status="PASS" signature="afterMethodProcessing(org.testng.ITestResult)[pri:0, instance:com.ca.tds.main.TDSRReq_TC@3043fe0e]" name="afterMethodProcessing" is-config="true" duration-ms="27" started-at="2019-11-29T12:38:26Z" finished-at="2019-11-29T12:38:26Z">
           <params>
             <param index="0">
               <value>
@@ -1415,42 +1415,42 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethodProcessing -->
-        <test-method status="PASS" signature="AfterClass()[pri:0, instance:com.ca.tds.main.TDSRReq_TC@3043fe0e]" name="AfterClass" is-config="true" duration-ms="1" started-at="2019-11-28T13:38:11Z" finished-at="2019-11-28T13:38:11Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AfterClass -->
-        <test-method status="PASS" signature="AfterTestClass()[pri:0, instance:com.ca.tds.main.TDSRReq_TC@3043fe0e]" name="AfterTestClass" is-config="true" duration-ms="0" started-at="2019-11-28T13:38:11Z" finished-at="2019-11-28T13:38:11Z">
+        <test-method status="PASS" signature="AfterTestClass()[pri:0, instance:com.ca.tds.main.TDSRReq_TC@3043fe0e]" name="AfterTestClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:38:26Z" finished-at="2019-11-29T12:38:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterTestClass -->
+        <test-method status="PASS" signature="AfterClass()[pri:0, instance:com.ca.tds.main.TDSRReq_TC@3043fe0e]" name="AfterClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:38:26Z" finished-at="2019-11-29T12:38:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterClass -->
       </class> <!-- com.ca.tds.main.TDSRReq_TC -->
     </test> <!-- VISA::Clear Card::Browser::RReq flow -->
-    <test name="VISA::Clear Card::Browser::VerifyAPI flow" duration-ms="1029" started-at="2019-11-28T13:38:11Z" finished-at="2019-11-28T13:38:12Z">
+    <test name="VISA::Clear Card::Browser::VerifyAPI flow" duration-ms="844" started-at="2019-11-29T12:38:26Z" finished-at="2019-11-29T12:38:27Z">
       <class name="com.ca.tds.main.TDSVerifyAPI_TC">
-        <test-method status="PASS" signature="beforeSuite(org.testng.ITestContext)[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@86be70a]" name="beforeSuite" is-config="true" duration-ms="90" started-at="2019-11-28T13:37:33Z" finished-at="2019-11-28T13:37:33Z">
+        <test-method status="PASS" signature="beforeSuite(org.testng.ITestContext)[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@86be70a]" name="beforeSuite" is-config="true" duration-ms="45" started-at="2019-11-29T12:37:52Z" finished-at="2019-11-29T12:37:52Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@7ebe07ae]]>
+                <![CDATA[org.testng.TestRunner@75ee153e]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method status="PASS" signature="beforeTestClass()[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@86be70a]" name="beforeTestClass" is-config="true" duration-ms="1" started-at="2019-11-28T13:38:11Z" finished-at="2019-11-28T13:38:11Z">
+        <test-method status="PASS" signature="beforeTestClass()[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@86be70a]" name="beforeTestClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:38:26Z" finished-at="2019-11-29T12:38:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTestClass -->
-        <test-method status="PASS" signature="BeforeClass()[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@86be70a]" name="BeforeClass" is-config="true" duration-ms="0" started-at="2019-11-28T13:38:11Z" finished-at="2019-11-28T13:38:11Z">
+        <test-method status="PASS" signature="BeforeClass()[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@86be70a]" name="BeforeClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:38:26Z" finished-at="2019-11-29T12:38:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeClass -->
-        <test-method status="PASS" signature="testArequestAPI(org.testng.ITestContext, java.util.Map)[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@86be70a]" name="testArequestAPI" duration-ms="837" started-at="2019-11-28T13:38:11Z" data-provider="DataProvider3dsTestData" finished-at="2019-11-28T13:38:12Z">
+        <test-method status="PASS" signature="testArequestAPI(org.testng.ITestContext, java.util.Map)[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@86be70a]" name="testArequestAPI" duration-ms="778" started-at="2019-11-29T12:38:26Z" data-provider="DataProvider3dsTestData" finished-at="2019-11-29T12:38:26Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@7ebe07ae]]>
+                <![CDATA[org.testng.TestRunner@75ee153e]]>
               </value>
             </param>
             <param index="1">
@@ -1462,7 +1462,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testArequestAPI -->
-        <test-method status="PASS" signature="afterMethodProcessing(org.testng.ITestResult)[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@86be70a]" name="afterMethodProcessing" is-config="true" duration-ms="46" started-at="2019-11-28T13:38:12Z" finished-at="2019-11-28T13:38:12Z">
+        <test-method status="PASS" signature="afterMethodProcessing(org.testng.ITestResult)[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@86be70a]" name="afterMethodProcessing" is-config="true" duration-ms="22" started-at="2019-11-29T12:38:26Z" finished-at="2019-11-29T12:38:27Z">
           <params>
             <param index="0">
               <value>
@@ -1473,22 +1473,22 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethodProcessing -->
-        <test-method status="PASS" signature="AfterClass()[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@86be70a]" name="AfterClass" is-config="true" duration-ms="0" started-at="2019-11-28T13:38:12Z" finished-at="2019-11-28T13:38:12Z">
+        <test-method status="PASS" signature="AfterClass()[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@86be70a]" name="AfterClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:38:27Z" finished-at="2019-11-29T12:38:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterClass -->
-        <test-method status="PASS" signature="AfterTestClass()[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@86be70a]" name="AfterTestClass" is-config="true" duration-ms="0" started-at="2019-11-28T13:38:12Z" finished-at="2019-11-28T13:38:12Z">
+        <test-method status="PASS" signature="AfterTestClass()[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@86be70a]" name="AfterTestClass" is-config="true" duration-ms="0" started-at="2019-11-29T12:38:27Z" finished-at="2019-11-29T12:38:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterTestClass -->
-        <test-method status="PASS" signature="endSuite()[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@86be70a]" name="endSuite" is-config="true" duration-ms="2444" started-at="2019-11-28T13:38:12Z" finished-at="2019-11-28T13:38:14Z">
+        <test-method status="PASS" signature="endSuite()[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@86be70a]" name="endSuite" is-config="true" duration-ms="22" started-at="2019-11-29T12:38:27Z" finished-at="2019-11-29T12:38:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endSuite -->
       </class> <!-- com.ca.tds.main.TDSVerifyAPI_TC -->
     </test> <!-- VISA::Clear Card::Browser::VerifyAPI flow -->
   </suite> <!-- SanityChallengeflowMethodurl -->
-  <suite name="3DSSAllFlowsPreview" duration-ms="0" started-at="2019-11-28T13:38:16Z" finished-at="2019-11-28T13:38:16Z">
+  <suite name="3DSSAllFlowsPreview" duration-ms="0" started-at="2019-11-29T12:38:27Z" finished-at="2019-11-29T12:38:27Z">
     <groups>
     </groups>
   </suite> <!-- 3DSSAllFlowsPreview -->
