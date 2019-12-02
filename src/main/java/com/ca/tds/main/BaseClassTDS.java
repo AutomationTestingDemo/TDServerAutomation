@@ -143,8 +143,8 @@ public class BaseClassTDS {
 			
 			String reportfilepath =caPropMap.get("reportFilePath");
 			String reportfilename =caPropMap.get("reportFileName");
-			String suiteName = testContext.getCurrentXmlTest().getSuite().getName().toString();
-			String dest =System.getProperty("user.dir")+reportfilepath+suiteName+"_"+reportfilename;
+			//String suiteName = testContext.getCurrentXmlTest().getSuite().getName().toString();
+			String dest =System.getProperty("user.dir")+reportfilepath+reportfilename;
 			System.out.println("Report file location : " + dest);
 			extent = new ExtentReports(dest, true);
 			extent.config().documentTitle(getPropertyValue("ReportTitle", testContext, null));
