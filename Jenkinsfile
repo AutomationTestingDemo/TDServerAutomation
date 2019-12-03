@@ -21,7 +21,7 @@ pipeline{
 	post{
 	  always {
             echo 'Automation Publish report to httpd'		  
-	    sh label: '', script: "mkdir -p /var/www/html/${gitBranch}"
+			sh label: '', script: "mkdir -p /var/www/html/${gitBranch}"
             sh label: '', script: "mv *.html /var/www/html/${gitBranch}"
 			echo 'Deleting the workspace'
 			deleteDir()
