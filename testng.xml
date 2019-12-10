@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="com.ca.tds.main.TDSVerifyCacheDump_TC"/>
+      <class name="com.ca.tds.main.TDSPreAreq_TC"/>
+      <class name="com.ca.tds.main.StartAutomationSuiteFor3RI"/>
+      <class name="com.ca.tds.main.PreCReq_TC"/>
+      <class name="com.ca.tds.main.TDSMethodURL_TC"/>
+      <class name="com.ca.tds.main.TDSVerifyAPI_TC"/>
+      <class name="com.ca.tds.main.StartAutomationSuiteForApp"/>
+      <class name="com.ca.tds.main.PreAReqFor3RI"/>
+      <class name="com.ca.tds.main.TDSFlowTest"/>
+      <class name="com.ca.tds.main.PreAReqForApp"/>
+      <class name="com.ca.tds.main.TDSRReq_TC"/>
+      <class name="com.ca.tds.main.StartAutomationSuiteCReq"/>
+      <class name="com.ca.tds.main.StartAutomationSuite_BK"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

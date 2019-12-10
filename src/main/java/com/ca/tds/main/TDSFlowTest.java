@@ -58,7 +58,7 @@ public class TDSFlowTest extends BaseClassTDS{
 		Map<String, String> apiTestdata = testScenarioData.get("TEST SCENARIOS").get("Pre-Areq Request");
 		String jsonRequest = apiTestdata.get("Request Json");
 		
-		jsonRequest = AssertionUtility.prepareRequest(testCaseData, jsonRequest);
+		JSONObject jsonReq = AssertionUtility.prepareRequest(testCaseData, jsonRequest);
 		if(AssertionUtility.hexEncodingNeeded(testCaseData.get("#acctNumber#"))){
 			hexEncode = true;
 		}
@@ -127,7 +127,7 @@ public class TDSFlowTest extends BaseClassTDS{
 				jsonRequest = jsonRequest.replace(replaceTag, threeDSServerTransIDMap.get(testCaseID));		
 			}
 			
-			jsonRequest = AssertionUtility.prepareRequest(testCaseData, jsonRequest);
+			JSONObject jsonReq = AssertionUtility.prepareRequest(testCaseData, jsonRequest);
 
 			System.out.println("================================================================");
 			System.out.println("AReq Json Request ***:\n" + jsonRequest);

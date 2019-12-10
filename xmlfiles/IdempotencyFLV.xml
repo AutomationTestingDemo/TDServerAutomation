@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+      <suite name="IdempotencyFLV" verbose="1" parallel="instances" group-by-instances="true">
+   <!--Based on EnableDecryption parameter in mtdconfig table of 3DSS DB one of the below excel file is picked  -->
+     <parameter name="TDSExcelFileC" value="data/3DS_ClearCardTestData.xlsx" />
+	 <parameter name="TDSExcelFileE" value="data/3DS_EncryptedCardTestData.xlsx" />
+	  
+          <!-- This Test is to perform the threedsMethodurl call for Idempotency  -->
+          <!-- ExcelSheetVerify refers to the sheet name in the TestData workbook  -->
+          <!-- ReportTitle refers to the report name it is saved in TestResultReport folder  -->
+          <!-- class name refers to the class called to test the threedsMethodurl API-->
+      
+	<test name="Idempotency::Clear Card::Browser::ThreeDSMethodURL flow" preserve-order="true" >
+		<parameter name="ExcelSheetVerify" value="IDM_URL" />
+		<parameter name="ReportTitle" value="3DSAutomationReportOfBrowser" />
+		<classes>
+		    <class name="com.ca.tds.main.TDSMethodURL_TC"/>
+		</classes>
+	</test>
+
+          <!-- This Test is to perform the AReq call for Idempotency Verify -->
+	      <!-- ExcelSheetVerify refers to the sheet name in the TestData workbook  -->
+          <!-- ReportTitle refers to the report name it is saved in TestResultReport folder  -->
+          <!-- class name refers to the class called to test the AReq API-->
+	
+	<test name="Idempotency::Clear Card::Browser::AReq flow" preserve-order="true" >
+	
+		<parameter name="ExcelSheetVerify" value="IDM_FP" />
+		<parameter name="ReportTitle" value="3DSAutomationReportOfBrowser" />
+		<classes>
+			<class name="com.ca.tds.main.IdempotencyAReq"/>
+
+		</classes>
+	</test>
+
+</suite>

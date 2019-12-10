@@ -5,6 +5,8 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
 
 import org.everit.json.schema.ValidationException;
 import org.json.JSONException;
@@ -16,12 +18,16 @@ import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 import com.ca.tds.dao.TDSDao;
+import com.ca.tds.utilityfiles.AppParams;
+import com.ca.tds.utilityfiles.AssertionUtility;
+import com.ca.tds.utilityfiles.CRESPrep;
 import com.ca.tds.utilityfiles.CommonUtil;
 import com.ca.tds.utilityfiles.JsonUtility;
 import com.relevantcodes.extentreports.LogStatus;
 
 import ca.com.tds.restapi.PostHttpRequest;
 
+@SuppressWarnings("unused")
 public class TDSVerifyAPI_TC extends BaseClassTDS {
 
 	private String previousTest = "TestCaseName";
@@ -32,7 +38,11 @@ public class TDSVerifyAPI_TC extends BaseClassTDS {
 			throws JSONException, InterruptedException {
 		
 		if(aResArr == null || aResArr.length() == 0){
+			
+			extentTestInit(testCaseData);
+			parentTest.log(LogStatus.INFO,"============No challenges request to test Verify API================");
 			System.out.println("============ No challenges request to test Verify API ================");
+			Assert.fail();
 			return;
 		}
 	
@@ -41,58 +51,60 @@ public class TDSVerifyAPI_TC extends BaseClassTDS {
 
 		extentTestInit(testCaseData);
 		CommonUtil cu = new CommonUtil();
-		Map<String, Map<String, String>> testScenarioData = cu.getInputDataFromExcel(testContext, "TDSExcelFile",
-				"TEST SCENARIOS", "API Name");	
-		Map<String, String> apiTestdata = testScenarioData.get("Verify Request API");
-		String jsonRequest = apiTestdata.get("Request Json");
 		
-		
-		if (!threeDSServerTransIDList.isEmpty()) {
-			String replaceTag = "#threeDSServerTransID#";
-			while (loopcount < threeDSServerTransIDList.size()) {
-				jsonRequest = jsonRequest.replace(replaceTag, threeDSServerTransIDList.get(loopcount));
-				TRANSACTIONLOOPCOUNT++;
-				break;
-			}
+		Map<String, String> apiTestdata=null;
+		String enableEncryption = AppParams.getEnableDecryption();
+		Map<String, Map<String, String>> testScenarioData= null;
+		if(enableEncryption != null && "true".equalsIgnoreCase(enableEncryption)){
+			testScenarioData = cu.getInputDataFromExcel(testContext, "TDSExcelFileE",
+				"TEST SCENARIOS", "API Name");
+		}else{
+			testScenarioData = cu.getInputDataFromExcel(testContext, "TDSExcelFileC",
+					"TEST SCENARIOS", "API Name");
 		}
-
-		List<String> keysToRemove = new ArrayList<>();
-		for (Map.Entry<String, String> entry  : testCaseData.entrySet()) {
 			
-			if(entry.getValue().equalsIgnoreCase("#REMOVE#"))			
-				keysToRemove.add(entry.getKey().replaceAll("#", ""));
-			else			
-				jsonRequest = jsonRequest.replaceAll(entry.getKey(), entry.getValue());
-		}
+		apiTestdata = testScenarioData.get("Verify Request API");
+		String jsonRequest = apiTestdata.get("Request Json"); 
 		
-		
-		JSONObject reqJson = new JSONObject(jsonRequest);
-		for (Map.Entry<String, String> entry : testCaseData.entrySet()) {
-
-			String key = entry.getKey().replaceAll("#", "");
-			String value = entry.getValue();
-			if(reqJson.has(key) && value.equalsIgnoreCase("null")){
-				reqJson.put(key, JSONObject.NULL);
-			}
+		/* int i=0;
+		    
+		    while(i!=5) {*/
+		    	
+		JSONObject jsonReq = AssertionUtility.prepareRequest(testCaseData, jsonRequest);
+	    String transStatus = null;
+	   
+	    JSONObject aResJSON = aResArr.getJSONObject(loopcount);
+		//System.out.println("acsTransID :"+aResJSON.get("acsTransID"));
+		//System.out.println("threeDSServerTransID :"+aResJSON.get("threeDSServerTransID"));
+	for (Map.Entry<String, String> entry  : testCaseData.entrySet()) {
 			
-		}
-
-		System.out.println("Keys removed from Verify API request : " + keysToRemove);
-
-		for (String key : keysToRemove){
-			reqJson.remove(key);
+		if(entry.getKey().equals("#transStatus#")) {
+			
+			transStatus=entry.getValue();
 		}
 		
-		JSONObject aResJSON = aResArr.getJSONObject(loopcount);
+		}
+	 String cres = CRESPrep.cresBody(aResJSON.get("acsTransID").toString(), aResJSON.get("threeDSServerTransID").toString(),transStatus);
 		Iterator<String> iterAres = aResJSON.keys();
 		while(iterAres.hasNext()){
 			String replaceTag = iterAres.next();
-			if(reqJson.has(replaceTag) && "".equalsIgnoreCase(reqJson.getString(replaceTag))) {
-				reqJson.put(replaceTag, aResJSON.getString(replaceTag));
-			}
+			if(jsonReq.has(replaceTag) && "".equalsIgnoreCase(jsonReq.getString(replaceTag))) {
+				jsonReq.put(replaceTag, aResJSON.getString(replaceTag));
+			}  
+			
+			if(jsonReq.has(replaceTag) && "empty".equalsIgnoreCase(jsonReq.getString(replaceTag))) {
+				jsonReq.put(replaceTag,"");
+			} 
 		}
 		loopcount++;
-		jsonRequest = reqJson.toString();
+		
+		if(jsonReq.has("cres") && "".equalsIgnoreCase(jsonReq.getString("cres"))) {
+			jsonReq.put("cres",cres);
+		}
+		
+		jsonRequest = jsonReq.toString();
+		parentTest.log(LogStatus.INFO, jsonRequest);
+		
 		System.out.println("================================================================");
 		System.out.println("Verify API Json Request ***:\n" + jsonRequest);
 		System.out.println("================================================================");
@@ -105,8 +117,10 @@ public class TDSVerifyAPI_TC extends BaseClassTDS {
 			return;
 		}
 		if("P".equalsIgnoreCase(testCaseData.get("Test Case type")) && "Erro".equalsIgnoreCase(apiResponse.getString("messageType"))){
-			Assert.fail("errorComponent: "+apiResponse.getString("errorComponent")+", errorCode: "+apiResponse.getString("errorComponent")+", errorDescription:"+apiResponse.getString("errorDescription"));
-			parentTest.log(LogStatus.FAIL, "errorComponent: "+apiResponse.getString("errorComponent")+", errorCode: "+apiResponse.getString("errorComponent")+", errorDescription:"+apiResponse.getString("errorDescription"));
+			Assert.fail("errorComponent: "+apiResponse.getString("errorComponent")+", errorCode: "+apiResponse.getString("errorCode")+", errorDescription:"+apiResponse.getString("errorDescription")
+			+ "errorDetail : "+apiResponse.getString("errorDetail")+", threeDSServerTransID : "+apiResponse.getString("threeDSServerTransID"));
+			parentTest.log(LogStatus.FAIL,"errorComponent: "+apiResponse.getString("errorComponent")+", errorCode: "+apiResponse.getString("errorCode")+", errorDescription:"+apiResponse.getString("errorDescription")
+			+ "errorDetail : "+apiResponse.getString("errorDetail")+", threeDSServerTransID : "+apiResponse.getString("threeDSServerTransID"));
 			return;
 		}else if("N".equalsIgnoreCase(testCaseData.get("Test Case type")) && !"Erro".equalsIgnoreCase(apiResponse.getString("messageType"))){
 			Assert.fail("Expected to Fail");
@@ -168,14 +182,14 @@ public class TDSVerifyAPI_TC extends BaseClassTDS {
 			threeDSFieldAssert(apiResponse, testCaseData, "errorCode", sa, tdsMethodDBData.get("ERRORCODE"));
 			threeDSFieldAssert(apiResponse, testCaseData, "errorComponent", sa, tdsMethodDBData.get("ERRORCOMPONENT"));
 			threeDSFieldAssert(apiResponse, testCaseData, "errorDescription", sa);
-			threeDSFieldAssert(apiResponse, testCaseData, "errorMessageType", sa, tdsMethodDBData.get("ERRORMESSAGETYPE"));
+			threeDSFieldAssert(apiResponse, testCaseData, "messageType", sa, tdsMethodDBData.get("ERRORMESSAGETYPE"));
 			threeDSFieldAssert(apiResponse, testCaseData, "errorDetail", sa, tdsMethodDBData.get("ERRORDETAIL"));
 			
 		}else if("P".equalsIgnoreCase(testCaseData.get("Test Case type"))){
-			threeDSFieldAssert(apiResponse, testCaseData, "messageType",sa);
 			threeDSFieldAssert(apiResponse, testCaseData, "threeDSServerTransID", sa);
+			threeDSFieldAssert(apiResponse, testCaseData, "messageType",sa);	
 			threeDSFieldAssert(apiResponse, testCaseData, "callerTxnRefID", sa);
-		    threeDSFieldAssert(apiResponse, testCaseData, "eci", sa);
+		   // threeDSFieldAssert(apiResponse, testCaseData, "eci", sa);
 			threeDSFieldAssert(apiResponse, testCaseData, "authenticationValue", sa);
 			threeDSFieldAssert(apiResponse, testCaseData, "transStatus", sa);
 			
@@ -190,24 +204,42 @@ public class TDSVerifyAPI_TC extends BaseClassTDS {
 			threeDSFieldAssert(apiResponse, testCaseData, "errorCode", sa);
 			threeDSFieldAssert(apiResponse, testCaseData, "errorComponent", sa);
 			threeDSFieldAssert(apiResponse, testCaseData, "errorDescription", sa);
-			threeDSFieldAssert(apiResponse, testCaseData, "errorMessageType", sa);
+			threeDSFieldAssert(apiResponse, testCaseData, "messageType", sa);
 			threeDSFieldAssert(apiResponse, testCaseData, "errorDetail", sa);
 		}
 		sa.assertAll();
 			
-		}catch(ValidationException ve){
+	/*	i++; }*/  }catch(ValidationException ve){
 			Assert.fail("Verify API response data validation failed.<br>"+ve.getErrorMessage()+"<br> api response : "+apiResponse);
 		} 
 		catch(Exception e) {
 		e.printStackTrace();	
 		Assert.fail("Browser Flow:: Verify API Validation Failed."+apiResponse);
-		}
+		} 
+		
+	/*	finally {
+			
+		loopcount++;
+		
+		}*/
 	}
 
 	@DataProvider
 	public Object[][] DataProvider3dsTestData(ITestContext testContext) {
 
-		return new CommonUtil().getInputData(testContext, "TDSExcelFile", "ExcelSheetVerify");
+		/*return new CommonUtil().getInputData(testContext, "TDSExcelFile", "ExcelSheetVerify");*/
+		
+		try {
+			String enableEncryption = AppParams.getEnableDecryption();
+			if(enableEncryption != null && "true".equalsIgnoreCase(enableEncryption)){
+				return new CommonUtil().getInputData(testContext, "TDSExcelFileE", "ExcelSheetVerify");
+			}else{
+				return new CommonUtil().getInputData(testContext, "TDSExcelFileC", "ExcelSheetVerify");
+			}
+		} catch (Exception e) {
+			System.out.println("Error while reading data from excel sheet");
+		}
+		return null;
 	}
 
 	protected void extentTestInit( Map<String, String> testCaseData) {

@@ -14,11 +14,14 @@ import java.util.Map;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
 import org.testng.Assert;
 import org.testng.ITestContext;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.asserts.SoftAssert;
@@ -26,7 +29,10 @@ import org.testng.asserts.SoftAssert;
 import com.ca.tds.dao.TDSDao;
 import com.ca.tds.utilityfiles.AppParams;
 import com.ca.tds.utilityfiles.CommonUtil;
+import com.ca.tds.utilityfiles.DBConnection;
 import com.ca.tds.utilityfiles.InitializeApplicationParams;
+import com.ca.tds.utilityfiles.ReportsBackup;
+import com.ca.tds.utilityfiles.ThreeDSSdbAPI;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
@@ -38,6 +44,11 @@ public class BaseClassTDS {
 	protected boolean hexEncode = false;
 	protected static ExtentReports extent;
 	public static ExtentTest parentTest = null;
+	public static String dbHost=null;
+	public static String dbPort = null;
+	public static String dbservice=null;
+	public static String dbpwd = null;
+	public static String dbusr = null;
 	
 	protected static boolean startchild = false;
 	protected String apiresponse = null;
@@ -54,6 +65,10 @@ public class BaseClassTDS {
 	public static JSONArray aResArr = new JSONArray();
 	
 	protected static Map<String, String> caPropMap = null;
+	
+	public BaseClassTDS() {
+		// TODO Auto-generated constructor stub
+	}
 
 	@BeforeSuite
 	public void beforeSuite(ITestContext testContext) {
@@ -67,6 +82,13 @@ public class BaseClassTDS {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		
+		dbHost=caPropMap.get("DB_HOST");
+		dbPort=caPropMap.get("DB_PORT");
+		dbservice=caPropMap.get("DB_SERVICE");
+		dbpwd=caPropMap.get("DB_PWD");
+		dbusr=caPropMap.get("DB_USER");
+		
 		CommonUtil cu = new CommonUtil();
 		String enableEncryption = AppParams.getEnableDecryption();
 		if(enableEncryption != null && "true".equalsIgnoreCase(enableEncryption))
@@ -80,14 +102,33 @@ public class BaseClassTDS {
 	}
 
 	@BeforeTest
-	public void beforeClass(){
-		System.out.println("==== Before Test =======");
+	public void beforeTestClass(){
+		System.out.println("==== Inside Before Test =======");
 		threeDSServerTransIDMap.clear();
+	}
+	@AfterTest
+	public void AfterTestClass(){
+		System.out.println("==== Inside After Test =======");
+	}
+	
+	@BeforeClass
+	public void BeforeClass(){
+		System.out.println("==== Inside BeforeClass =======");
+	}
+	
+	@org.testng.annotations.AfterClass
+	public void AfterClass(){
+		System.out.println("==== Inside After Class =======");
+		System.out.println("No.of threeDSServerTransIDs :"+threeDSServerTransIDList.size());
 	}
 	
 	@AfterSuite
-	public void endSuite() {		
+	public void endSuite() throws IOException {	
+		
 		System.out.println("====+++++Execution Completed Kindly verify the Reports for the summary +++++=======");
+		ReportsBackup.zippingReports();
+	
+		
 	}
 
 	public void initializeApplicationParams(){
@@ -95,11 +136,15 @@ public class BaseClassTDS {
 		initializeApplicationParams.initializeAppParams();
 		appParams = initializeApplicationParams.getAppParams();
 	}
+	
 	public void initialiseReport(ITestContext testContext) {
 
 		if (extent == null) {
-
-			String dest = "3DSAutomationTestReport.html";
+			
+			String reportfilepath =caPropMap.get("reportFilePath");
+			String reportfilename =caPropMap.get("reportFileName");
+			//String suiteName = testContext.getCurrentXmlTest().getSuite().getName().toString();
+			String dest =System.getProperty("user.dir")+reportfilepath+reportfilename;
 			System.out.println("Report file location : " + dest);
 			extent = new ExtentReports(dest, true);
 			extent.config().documentTitle(getPropertyValue("ReportTitle", testContext, null));
@@ -134,6 +179,7 @@ public class BaseClassTDS {
 		return null;
 	}
 
+	@SuppressWarnings("unlikely-arg-type")
 	@AfterMethod
 	public void afterMethodProcessing(ITestResult testResult){
 		String message = "Test Passed";
@@ -155,10 +201,16 @@ public class BaseClassTDS {
 		} catch (Exception e) {
 			System.out.println(this.getClass().getSimpleName() + " error while getting screen shots ");
 		} finally {
-			if (testResult.getStatus() != ITestResult.SKIP) {				
+			if (testResult.getStatus() != ITestResult.SKIP) {	
+				
+				if(status.toString().equals("fail") && (message.equals("null"))) {
+					message="Test Failed"; }
+				
 				parentTest.log(status, message);
+				
 			}
 			System.out.println("ACTIVE THREAD COUNTS : "+java.lang.Thread.activeCount());
+		
 			try {
 				extent.endTest(parentTest);
 			} catch (Exception e) {
@@ -215,7 +267,7 @@ public class BaseClassTDS {
 	}
 	
 	public void threeDSFieldAssert(JSONObject apiResponse, Map<String,String> testCaseData, 
-			String fieldName,SoftAssert sa) {
+			String fieldName,SoftAssert sa) throws Exception {
 		
 		try {
 			String fromResponse = null;
@@ -239,6 +291,40 @@ public class BaseClassTDS {
 					sa.assertEquals(fromResponse,fromTestCaseConfig);
 				}
 			}
+			
+			if(fieldName.equals("dsTransID")) {
+			
+			if(apiResponse.has("XID")){
+				
+				String ExpectedXID =caPropMap.get("XIDVERSION");
+				
+				ExpectedXID = ExpectedXID+apiResponse.get("dsTransID").toString().replaceAll("-", "");
+				
+				String ActualXID = apiResponse.get("XID").toString();
+				
+				parentTest.log(LogStatus.INFO, "Expected-XID"+":&nbsp;"+ExpectedXID+", &emsp;Actual-XID:&nbsp;"+ActualXID);
+				sa.assertEquals(ActualXID,ExpectedXID);
+				
+			} }
+			
+          if(apiResponse.get(fieldName).equals("RSRs") && apiResponse.has("XID")){
+				
+        	  String ExpectedXID =caPropMap.get("XIDVERSION");
+        	  
+        	  ThreeDSSdbAPI db = new ThreeDSSdbAPI();
+        	  
+        	  String dstransid = db.getDSTransidFromDB(apiResponse.get("threeDSServerTransID").toString(),caPropMap).replaceAll("-", "");
+        	  
+            	ExpectedXID =ExpectedXID+dstransid;
+				
+				String ActualXID = apiResponse.get("XID").toString();
+				
+				parentTest.log(LogStatus.INFO, "Expected-XID"+":&nbsp;"+ExpectedXID+", &emsp;Actual-XID:&nbsp;"+ActualXID);
+				
+				sa.assertEquals(ActualXID,ExpectedXID);
+				
+			}
+			
 		} catch (JSONException e) {
 			e.printStackTrace();
 		}
@@ -250,7 +336,7 @@ public class BaseClassTDS {
 	}
 	
 	public void assertTDSMethodRes(Map<String, String> testCaseData, JSONObject apiResponse, SoftAssert sa,
-			String validateDBParams) throws SQLException {
+			String validateDBParams) throws Exception {
 		if(validateDBParams != null && "Y".equalsIgnoreCase(validateDBParams) && "P".equalsIgnoreCase(testCaseData.get("Test Case type"))){
 			
 			TDSDao tDSDao = new TDSDao();
@@ -310,7 +396,7 @@ public class BaseClassTDS {
 	}
 	
 	public void assertAres(Map<String, String> testCaseData, JSONObject apiResponse, SoftAssert sa,
-			String validateDBParams) throws SQLException {
+			String validateDBParams) throws Exception {
 		if(validateDBParams != null && "Y".equalsIgnoreCase(validateDBParams) && "P".equalsIgnoreCase(testCaseData.get("Test Case type"))){
 			
 			List<HashMap<String,Object>> tdsMethodListFromDB = null;
@@ -387,6 +473,7 @@ public class BaseClassTDS {
 			threeDSFieldAssert(apiResponse, testCaseData, "messageVersion", sa);
 			threeDSFieldAssert(apiResponse, testCaseData, "callerTxnRefID", sa);
 			threeDSFieldAssert(apiResponse, testCaseData, "dsReferenceNumber", sa);
+			threeDSFieldAssert(apiResponse, testCaseData, "dsName", sa);
 			threeDSFieldAssert(apiResponse, testCaseData, "acsReferenceNumber", sa);
 		
 			threeDSFieldAssert(apiResponse, testCaseData, "transStatus", sa);
@@ -408,7 +495,7 @@ public class BaseClassTDS {
 		}
 	}
 	
-	public void assertRRes(Map<String, String> testCaseData, JSONObject apiResponse, SoftAssert sa, String validateDBParams) throws SQLException {
+	public void assertRRes(Map<String, String> testCaseData, JSONObject apiResponse, SoftAssert sa, String validateDBParams) throws Exception {
 		if(validateDBParams != null && "Y".equalsIgnoreCase(validateDBParams) && "P".equalsIgnoreCase(testCaseData.get("Test Case type"))){
 		
 			TDSDao tDSDao = new TDSDao();
@@ -472,7 +559,7 @@ public class BaseClassTDS {
 	}
 	
 	public void assertVerifyAPIResponse(JSONObject apiResponse, Map<String, String> testCaseData, SoftAssert sa,
-			String validateDBParams) throws SQLException {
+			String validateDBParams) throws Exception {
 		if(validateDBParams != null && "Y".equalsIgnoreCase(validateDBParams) && "P".equalsIgnoreCase(testCaseData.get("Test Case type"))){
 		
 			TDSDao tDSDao = new TDSDao();

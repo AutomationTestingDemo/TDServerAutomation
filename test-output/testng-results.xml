@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="9" passed="9">
+  <reporter-output>
+  </reporter-output>
+  <suite name="SanityChallengeflow" duration-ms="17161" started-at="2019-12-05T06:53:46Z" finished-at="2019-12-05T06:54:03Z">
+    <groups>
+    </groups>
+    <test name="AMEX::Clear Card::Browser::AReq flow" duration-ms="2971" started-at="2019-12-05T06:53:46Z" finished-at="2019-12-05T06:53:49Z">
+      <class name="com.ca.tds.main.TDSPreAreq_TC">
+        <test-method status="PASS" signature="beforeTestClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@e45f292]" name="beforeTestClass" is-config="true" duration-ms="0" started-at="2019-12-05T06:53:46Z" finished-at="2019-12-05T06:53:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTestClass -->
+        <test-method status="PASS" signature="BeforeClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@e45f292]" name="BeforeClass" is-config="true" duration-ms="0" started-at="2019-12-05T06:53:46Z" finished-at="2019-12-05T06:53:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeClass -->
+        <test-method status="PASS" signature="testArequestAPI(org.testng.ITestContext, java.util.Map)[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@e45f292]" name="testArequestAPI" duration-ms="2629" started-at="2019-12-05T06:53:46Z" data-provider="DataProvider3dsTestData" finished-at="2019-12-05T06:53:49Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@526a357d]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[{TestCaseID=_S001, TestCaseName=_SanityChallenge_AReq_AMEX_For_Verify_TC001, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-cardholderInfo=NA, Expected-creq=G, Expected-transStatusReason=NA, Expected-authenticationValue=NA, Expected-authenticationType=G, Expected-acsURL=G, Expected-acsOperatorID=ACS_OPERATOR_ID, Expected-acsChallengeMandated=G, Expected-callerTxnRefID=G, Expected-threeDSServerTransID=G, Expected-dsTransID=G, Expected-acsTransID=G, Expected-eci=NA, Expected-messageType=ARes, Expected-dsName=amex, Expected-messageVersion=2.1.0, Expected-dsReferenceNumber=CADS, Expected-acsReferenceNumber=ABCDEF987654321, Expected-transStatus=C, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #browserJavascriptEnabled#=true, #challengeWindowSize#=04, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #caMerchantID#=CA_EU, #acctID#=ACCTID98X3fw3, #chAccAgeInd#=02, #chAccChange#=20180928, #chAccChangeInd#=02, #chAccDate#=20180928, #chAccPwChange#=20180901, #chAccPwChangeInd#=01, #nbPurchaseAccount#=8, #paymentAccAge#=20180808, #paymentAccInd#=01, #provisionAttemptsDay#=1, #shipAddressUsage#=20180910, #shipAddressUsageInd#=03, #shipNameIndicator#=01, #suspiciousAccActivity#=01, #txnActivityDay#=5, #txnActivityYear#=8, #acctNumber#=340000000001007, #acctType#=01, #addrMatch#=Y, #billAddrCity#=San Jose, #billAddrCountry#=840, #billAddrLine1#=500 West Maude Ave, #billAddrLine2#=ABC, #billAddrLine3#=HMS, #billAddrPostCode#=95101, #billAddrState#=CA, #browserAcceptHeader#=text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8, #browserColorDepth#=24, #browserIP#=155.35.122.4, #browserJavaEnabled#=true, #browserLanguage#=en-US, #browserScreenHeight#=720, #browserScreenWidth#=1280, #browserTZ#=-330, #browserUserAgent#=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.84 Safari/537.36, #cardExpiryDate#=2008, #cardholderName#=Stephen, #deviceChannel#=02, #email#=harsh08@ca.com, #hcc#=840, #hsubscriber#=1234567899, #messageCategory#=01, #messageType#=AReq, #messageVersion#=2.1.0, #mcc#=840, #msubscriber#=1234567899, #notificationURL#=http://localhost:9090/golfstore2/CreqNotification.jsp, #purchaseAmount#=350, #purchaseCurrency#=840, #purchaseDate#=20180928160450, #purchaseExponent#=2, #recurringExpiry#=#REMOVE#, #recurringFrequency#=#REMOVE#, #shipAddrCity#=San Jose, #shipAddrCountry#=840, #shipAddrLine1#=500 West Maude Ave, #shipAddrLine2#=ABC, #shipAddrLine3#=HMS, #shipAddrPostCode#=95101, #shipAddrState#=CA, #threeDSCompInd#=Y, #threeDSServerTransID#=, #wcc#=840, #wsubscriber#=1234567899, #threeDSRequestorAuthenticationInd#=01, #threeDSReqAuthData#=3DS PA Request, #threeDSReqAuthMethod#=02, #threeDSReqAuthTimestamp#=201809281603, #threeDSRequestorChallengeInd#=01, #threeDSRequestorID#=611, #threeDSRequestorName#=ew0KCSJEViI6ICIxLjAiLA0KCSJERCI6Iaa45, #threeDSReqPriorAuthData#=three DS Request Prior Authentication Data, #threeDSReqPriorAuthMethod#=01, #threeDSReqPriorAuthTimestamp#=201810010323, #threeDSReqPriorRef#=4c6453da-4c56-4980-98cd-d04a064899c4, #threeDSRequestorURL#=http://10.131.94.242:1080/content-server/api/tds2/txn/browser/v1/tds-method, #threeDSServerRefNumber#=AAAAAA123456789, #threeDSServerOperatorID#=serverOperatorID, #threeDSServerURL#=http://10.138.158.51:9608, #acquirerBIN#=12345678912, #acquirerMerchantID#=AcquirerMerchantID222, #payTokenInd#=true, #purchaseInstalData#=#REMOVE#, #mcc1#=0742, #merchantCountryCode#=840, #merchantName#=global, #deliveryEmailAddress#=harsh08@ca.com, #deliveryTimeframe#=01, #giftCardAmount#=500, #giftCardCount#=02, #giftCardCurr#=840, #preOrderDate#=20200803, #preOrderPurchaseInd#=01, #reorderItemsInd#=01, #shipIndicator#=01, #criticalityIndicator#=false, #id#=ID2018SEP282001, #name#=ShashishekharHM, #transType#=01, #threeDSRequestorAuthenticationInfo#=, #threeDSRequestorPriorAuthenticationInfo#=, #broadInfo#=, #broadInfoValue#=broadInfoValue, #acctInfo#=, #homePhone#=, #mobilePhone#=, #workPhone#=, #merchantRiskIndicator#=, #messageExtension#=, #Dvalue#=HMS, #Dvalue1#=HMS, #Dvalue2#=HMS}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testArequestAPI -->
+        <test-method status="PASS" signature="afterMethodProcessing(org.testng.ITestResult)[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@e45f292]" name="afterMethodProcessing" is-config="true" duration-ms="185" started-at="2019-12-05T06:53:49Z" finished-at="2019-12-05T06:53:49Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testArequestAPI status=SUCCESS method=TDSPreAreq_TC.testArequestAPI(org.testng.ITestContext, java.util.Map)[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@e45f292] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethodProcessing -->
+        <test-method status="PASS" signature="AfterClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@e45f292]" name="AfterClass" is-config="true" duration-ms="0" started-at="2019-12-05T06:53:49Z" finished-at="2019-12-05T06:53:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterClass -->
+        <test-method status="PASS" signature="AfterTestClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@e45f292]" name="AfterTestClass" is-config="true" duration-ms="0" started-at="2019-12-05T06:53:49Z" finished-at="2019-12-05T06:53:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterTestClass -->
+      </class> <!-- com.ca.tds.main.TDSPreAreq_TC -->
+    </test> <!-- AMEX::Clear Card::Browser::AReq flow -->
+    <test name="AMEX::Clear Card::Browser::RReq flow" duration-ms="2191" started-at="2019-12-05T06:53:49Z" finished-at="2019-12-05T06:53:51Z">
+      <class name="com.ca.tds.main.TDSRReq_TC">
+        <test-method status="PASS" signature="beforeTestClass()[pri:0, instance:com.ca.tds.main.TDSRReq_TC@1e127982]" name="beforeTestClass" is-config="true" duration-ms="0" started-at="2019-12-05T06:53:49Z" finished-at="2019-12-05T06:53:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTestClass -->
+        <test-method status="PASS" signature="BeforeClass()[pri:0, instance:com.ca.tds.main.TDSRReq_TC@1e127982]" name="BeforeClass" is-config="true" duration-ms="0" started-at="2019-12-05T06:53:49Z" finished-at="2019-12-05T06:53:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeClass -->
+        <test-method status="PASS" signature="testRRequestAPI(org.testng.ITestContext, java.util.Map)[pri:0, instance:com.ca.tds.main.TDSRReq_TC@1e127982]" name="testRRequestAPI" duration-ms="2015" started-at="2019-12-05T06:53:49Z" data-provider="DataProvider3dsTestData" finished-at="2019-12-05T06:53:51Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@4256d568]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[{TestCaseID=_S001, TestCaseName=_SanityChallenge_RReq_For_Verify_TC001, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-dsTransID=G, Expected-acsTransID=G, Expected-messageExtension=G, Expected-messageType=RRes, Expected-messageVersion=2.1.0, Expected-resultsStatus=G, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #acsTransID#=, #authenticationType#=, #challengeCancel#=#REMOVE#, #dsTransID#=, #eci#=#REMOVE#, #interactionCounter#=01, #messageCategory#=01, #messageType#=RReq, #messageVersion#=, #threeDSServerTransID#=, #transStatus#=Y, #transStatusReason#=#REMOVE#, #criticalityIndicator#=false, #Dvalue#=HMS, #Dvalue1#=HMS, #Dvalue2#=HMS, #id#=ID2019JAN240101, #name#=ShashishekharHM, #authenticationValue#=AJkCCBFHJhl3gGhDA0cmAAAAAAA=}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRRequestAPI -->
+        <test-method status="PASS" signature="afterMethodProcessing(org.testng.ITestResult)[pri:0, instance:com.ca.tds.main.TDSRReq_TC@1e127982]" name="afterMethodProcessing" is-config="true" duration-ms="33" started-at="2019-12-05T06:53:51Z" finished-at="2019-12-05T06:53:51Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testRRequestAPI status=SUCCESS method=TDSRReq_TC.testRRequestAPI(org.testng.ITestContext, java.util.Map)[pri:0, instance:com.ca.tds.main.TDSRReq_TC@1e127982] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethodProcessing -->
+        <test-method status="PASS" signature="AfterTestClass()[pri:0, instance:com.ca.tds.main.TDSRReq_TC@1e127982]" name="AfterTestClass" is-config="true" duration-ms="0" started-at="2019-12-05T06:53:51Z" finished-at="2019-12-05T06:53:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterTestClass -->
+        <test-method status="PASS" signature="AfterClass()[pri:0, instance:com.ca.tds.main.TDSRReq_TC@1e127982]" name="AfterClass" is-config="true" duration-ms="0" started-at="2019-12-05T06:53:51Z" finished-at="2019-12-05T06:53:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterClass -->
+      </class> <!-- com.ca.tds.main.TDSRReq_TC -->
+    </test> <!-- AMEX::Clear Card::Browser::RReq flow -->
+    <test name="AMEX::Clear Card::Browser::VerifyAPI flow" duration-ms="2779" started-at="2019-12-05T06:53:51Z" finished-at="2019-12-05T06:53:54Z">
+      <class name="com.ca.tds.main.TDSVerifyAPI_TC">
+        <test-method status="PASS" signature="beforeTestClass()[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@21213b92]" name="beforeTestClass" is-config="true" duration-ms="0" started-at="2019-12-05T06:53:51Z" finished-at="2019-12-05T06:53:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTestClass -->
+        <test-method status="PASS" signature="BeforeClass()[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@21213b92]" name="BeforeClass" is-config="true" duration-ms="0" started-at="2019-12-05T06:53:51Z" finished-at="2019-12-05T06:53:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeClass -->
+        <test-method status="PASS" signature="testArequestAPI(org.testng.ITestContext, java.util.Map)[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@21213b92]" name="testArequestAPI" duration-ms="2671" started-at="2019-12-05T06:53:51Z" data-provider="DataProvider3dsTestData" finished-at="2019-12-05T06:53:54Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@68c2f08]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[{TestCaseID=_S001, TestCaseName=_SanityChallenge_Sample Valid Verify Request, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=G, Expected-eci=G, Expected-authenticationValue=G, Expected-transStatus=G, Expected-transStatusReason=G, Expected-challengeCancel=G, Expected-resultsStatus=G, Expected-authenticationType=G, Expected-interactionCounter=G, Expected-messageType=RSRs, Expected-XID=G, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU, #transStatus#=Y}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testArequestAPI -->
+        <test-method status="PASS" signature="afterMethodProcessing(org.testng.ITestResult)[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@21213b92]" name="afterMethodProcessing" is-config="true" duration-ms="20" started-at="2019-12-05T06:53:54Z" finished-at="2019-12-05T06:53:54Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testArequestAPI status=SUCCESS method=TDSVerifyAPI_TC.testArequestAPI(org.testng.ITestContext, java.util.Map)[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@21213b92] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethodProcessing -->
+        <test-method status="PASS" signature="AfterClass()[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@21213b92]" name="AfterClass" is-config="true" duration-ms="0" started-at="2019-12-05T06:53:54Z" finished-at="2019-12-05T06:53:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterClass -->
+        <test-method status="PASS" signature="AfterTestClass()[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@21213b92]" name="AfterTestClass" is-config="true" duration-ms="0" started-at="2019-12-05T06:53:54Z" finished-at="2019-12-05T06:53:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterTestClass -->
+      </class> <!-- com.ca.tds.main.TDSVerifyAPI_TC -->
+    </test> <!-- AMEX::Clear Card::Browser::VerifyAPI flow -->
+    <test name="MasterCard::Clear Card::Browser::AReq flow" duration-ms="1940" started-at="2019-12-05T06:53:54Z" finished-at="2019-12-05T06:53:56Z">
+      <class name="com.ca.tds.main.TDSPreAreq_TC">
+        <test-method status="PASS" signature="beforeTestClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@78c03f1f]" name="beforeTestClass" is-config="true" duration-ms="0" started-at="2019-12-05T06:53:54Z" finished-at="2019-12-05T06:53:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTestClass -->
+        <test-method status="PASS" signature="BeforeClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@78c03f1f]" name="BeforeClass" is-config="true" duration-ms="0" started-at="2019-12-05T06:53:54Z" finished-at="2019-12-05T06:53:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeClass -->
+        <test-method status="PASS" signature="testArequestAPI(org.testng.ITestContext, java.util.Map)[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@78c03f1f]" name="testArequestAPI" duration-ms="1847" started-at="2019-12-05T06:53:54Z" data-provider="DataProvider3dsTestData" finished-at="2019-12-05T06:53:56Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@3b9aa236]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[{TestCaseID=_S001, TestCaseName=_SanityChallenge_AReq_MC_For_Verify_TC001, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-cardholderInfo=NA, Expected-creq=G, Expected-transStatusReason=NA, Expected-authenticationValue=NA, Expected-authenticationType=G, Expected-acsURL=G, Expected-acsOperatorID=ACS_OPERATOR_ID, Expected-acsChallengeMandated=G, Expected-callerTxnRefID=G, Expected-threeDSServerTransID=G, Expected-dsTransID=G, Expected-acsTransID=G, Expected-eci=NA, Expected-messageType=ARes, Expected-dsName=mastercard, Expected-messageVersion=2.1.0, Expected-dsReferenceNumber=CADS, Expected-acsReferenceNumber=ABCDEF987654321, Expected-transStatus=C, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #browserJavascriptEnabled#=true, #challengeWindowSize#=04, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #caMerchantID#=CA_EU, #acctID#=ACCTID98X3fw3, #chAccAgeInd#=02, #chAccChange#=20180928, #chAccChangeInd#=02, #chAccDate#=20180928, #chAccPwChange#=20180901, #chAccPwChangeInd#=01, #nbPurchaseAccount#=8, #paymentAccAge#=20180808, #paymentAccInd#=01, #provisionAttemptsDay#=1, #shipAddressUsage#=20180910, #shipAddressUsageInd#=03, #shipNameIndicator#=01, #suspiciousAccActivity#=01, #txnActivityDay#=5, #txnActivityYear#=8, #acctNumber#=5186003100001014, #acctType#=01, #addrMatch#=Y, #billAddrCity#=San Jose, #billAddrCountry#=840, #billAddrLine1#=500 West Maude Ave, #billAddrLine2#=ABC, #billAddrLine3#=HMS, #billAddrPostCode#=95101, #billAddrState#=CA, #browserAcceptHeader#=text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8, #browserColorDepth#=24, #browserIP#=155.35.122.4, #browserJavaEnabled#=true, #browserLanguage#=en-US, #browserScreenHeight#=720, #browserScreenWidth#=1280, #browserTZ#=-330, #browserUserAgent#=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.84 Safari/537.36, #cardExpiryDate#=2008, #cardholderName#=Stephen, #deviceChannel#=02, #email#=harsh08@ca.com, #hcc#=840, #hsubscriber#=1234567899, #messageCategory#=01, #messageType#=AReq, #messageVersion#=2.1.0, #mcc#=840, #msubscriber#=1234567899, #notificationURL#=http://localhost:9090/golfstore2/CreqNotification.jsp, #purchaseAmount#=300, #purchaseCurrency#=840, #purchaseDate#=20180928160450, #purchaseExponent#=2, #recurringExpiry#=#REMOVE#, #recurringFrequency#=#REMOVE#, #shipAddrCity#=San Jose, #shipAddrCountry#=840, #shipAddrLine1#=500 West Maude Ave, #shipAddrLine2#=ABC, #shipAddrLine3#=HMS, #shipAddrPostCode#=95101, #shipAddrState#=CA, #threeDSCompInd#=Y, #threeDSServerTransID#=, #wcc#=840, #wsubscriber#=1234567899, #threeDSRequestorAuthenticationInd#=01, #threeDSReqAuthData#=3DS PA Request, #threeDSReqAuthMethod#=02, #threeDSReqAuthTimestamp#=201809281603, #threeDSRequestorChallengeInd#=01, #threeDSRequestorID#=611, #threeDSRequestorName#=ew0KCSJEViI6ICIxLjAiLA0KCSJERCI6Iaa45, #threeDSReqPriorAuthData#=three DS Request Prior Authentication Data, #threeDSReqPriorAuthMethod#=01, #threeDSReqPriorAuthTimestamp#=201810010323, #threeDSReqPriorRef#=4c6453da-4c56-4980-98cd-d04a064899c4, #threeDSRequestorURL#=http://10.131.94.242:1080/content-server/api/tds2/txn/browser/v1/tds-method, #threeDSServerRefNumber#=AAAAAA123456789, #threeDSServerOperatorID#=serverOperatorID, #threeDSServerURL#=http://10.138.158.51:9608, #acquirerBIN#=12345678912, #acquirerMerchantID#=AcquirerMerchantID222, #payTokenInd#=true, #purchaseInstalData#=#REMOVE#, #mcc1#=0742, #merchantCountryCode#=840, #merchantName#=global, #deliveryEmailAddress#=harsh08@ca.com, #deliveryTimeframe#=01, #giftCardAmount#=500, #giftCardCount#=02, #giftCardCurr#=840, #preOrderDate#=20200803, #preOrderPurchaseInd#=01, #reorderItemsInd#=01, #shipIndicator#=01, #criticalityIndicator#=false, #id#=ID2018SEP282001, #name#=ShashishekharHM, #transType#=01, #threeDSRequestorAuthenticationInfo#=, #threeDSRequestorPriorAuthenticationInfo#=, #broadInfo#=, #broadInfoValue#=broadInfoValue, #acctInfo#=, #homePhone#=, #mobilePhone#=, #workPhone#=, #merchantRiskIndicator#=, #messageExtension#=, #Dvalue#=HMS, #Dvalue1#=HMS, #Dvalue2#=HMS}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testArequestAPI -->
+        <test-method status="PASS" signature="afterMethodProcessing(org.testng.ITestResult)[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@78c03f1f]" name="afterMethodProcessing" is-config="true" duration-ms="25" started-at="2019-12-05T06:53:56Z" finished-at="2019-12-05T06:53:56Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testArequestAPI status=SUCCESS method=TDSPreAreq_TC.testArequestAPI(org.testng.ITestContext, java.util.Map)[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@78c03f1f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethodProcessing -->
+        <test-method status="PASS" signature="AfterClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@78c03f1f]" name="AfterClass" is-config="true" duration-ms="0" started-at="2019-12-05T06:53:56Z" finished-at="2019-12-05T06:53:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterClass -->
+        <test-method status="PASS" signature="AfterTestClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@78c03f1f]" name="AfterTestClass" is-config="true" duration-ms="0" started-at="2019-12-05T06:53:56Z" finished-at="2019-12-05T06:53:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterTestClass -->
+      </class> <!-- com.ca.tds.main.TDSPreAreq_TC -->
+    </test> <!-- MasterCard::Clear Card::Browser::AReq flow -->
+    <test name="MasterCard::Clear Card::Browser::RReq flow" duration-ms="1646" started-at="2019-12-05T06:53:56Z" finished-at="2019-12-05T06:53:58Z">
+      <class name="com.ca.tds.main.TDSRReq_TC">
+        <test-method status="PASS" signature="beforeTestClass()[pri:0, instance:com.ca.tds.main.TDSRReq_TC@6fc6f14e]" name="beforeTestClass" is-config="true" duration-ms="0" started-at="2019-12-05T06:53:56Z" finished-at="2019-12-05T06:53:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTestClass -->
+        <test-method status="PASS" signature="BeforeClass()[pri:0, instance:com.ca.tds.main.TDSRReq_TC@6fc6f14e]" name="BeforeClass" is-config="true" duration-ms="0" started-at="2019-12-05T06:53:56Z" finished-at="2019-12-05T06:53:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeClass -->
+        <test-method status="PASS" signature="testRRequestAPI(org.testng.ITestContext, java.util.Map)[pri:0, instance:com.ca.tds.main.TDSRReq_TC@6fc6f14e]" name="testRRequestAPI" duration-ms="1525" started-at="2019-12-05T06:53:56Z" data-provider="DataProvider3dsTestData" finished-at="2019-12-05T06:53:58Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@e13594a]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[{TestCaseID=_S001, TestCaseName=_SanityChallenge_RReq_For_Verify_TC001, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-dsTransID=G, Expected-acsTransID=G, Expected-messageExtension=G, Expected-messageType=RRes, Expected-messageVersion=2.1.0, Expected-resultsStatus=G, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #acsTransID#=, #authenticationType#=, #challengeCancel#=#REMOVE#, #dsTransID#=, #eci#=#REMOVE#, #interactionCounter#=01, #messageCategory#=01, #messageType#=RReq, #messageVersion#=, #threeDSServerTransID#=, #transStatus#=Y, #transStatusReason#=#REMOVE#, #criticalityIndicator#=false, #Dvalue#=HMS, #Dvalue1#=HMS, #Dvalue2#=HMS, #id#=ID2019JAN240101, #name#=ShashishekharHM, #authenticationValue#=AJkCCBFHJhl3gGhDA0cmAAAAAAA=}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRRequestAPI -->
+        <test-method status="PASS" signature="afterMethodProcessing(org.testng.ITestResult)[pri:0, instance:com.ca.tds.main.TDSRReq_TC@6fc6f14e]" name="afterMethodProcessing" is-config="true" duration-ms="26" started-at="2019-12-05T06:53:58Z" finished-at="2019-12-05T06:53:58Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testRRequestAPI status=SUCCESS method=TDSRReq_TC.testRRequestAPI(org.testng.ITestContext, java.util.Map)[pri:0, instance:com.ca.tds.main.TDSRReq_TC@6fc6f14e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethodProcessing -->
+        <test-method status="PASS" signature="AfterClass()[pri:0, instance:com.ca.tds.main.TDSRReq_TC@6fc6f14e]" name="AfterClass" is-config="true" duration-ms="0" started-at="2019-12-05T06:53:58Z" finished-at="2019-12-05T06:53:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterClass -->
+        <test-method status="PASS" signature="AfterTestClass()[pri:0, instance:com.ca.tds.main.TDSRReq_TC@6fc6f14e]" name="AfterTestClass" is-config="true" duration-ms="0" started-at="2019-12-05T06:53:58Z" finished-at="2019-12-05T06:53:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterTestClass -->
+      </class> <!-- com.ca.tds.main.TDSRReq_TC -->
+    </test> <!-- MasterCard::Clear Card::Browser::RReq flow -->
+    <test name="MasterCard::Clear Card::Browser::VerifyAPI flow" duration-ms="946" started-at="2019-12-05T06:53:58Z" finished-at="2019-12-05T06:53:59Z">
+      <class name="com.ca.tds.main.TDSVerifyAPI_TC">
+        <test-method status="PASS" signature="beforeTestClass()[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@527740a2]" name="beforeTestClass" is-config="true" duration-ms="0" started-at="2019-12-05T06:53:58Z" finished-at="2019-12-05T06:53:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTestClass -->
+        <test-method status="PASS" signature="BeforeClass()[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@527740a2]" name="BeforeClass" is-config="true" duration-ms="0" started-at="2019-12-05T06:53:58Z" finished-at="2019-12-05T06:53:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeClass -->
+        <test-method status="PASS" signature="testArequestAPI(org.testng.ITestContext, java.util.Map)[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@527740a2]" name="testArequestAPI" duration-ms="852" started-at="2019-12-05T06:53:58Z" data-provider="DataProvider3dsTestData" finished-at="2019-12-05T06:53:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@6e57effe]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[{TestCaseID=_S001, TestCaseName=_SanityChallenge_Sample Valid Verify Request, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=G, Expected-eci=G, Expected-authenticationValue=G, Expected-transStatus=G, Expected-transStatusReason=G, Expected-challengeCancel=G, Expected-resultsStatus=G, Expected-authenticationType=G, Expected-interactionCounter=G, Expected-messageType=RSRs, Expected-XID=G, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU, #transStatus#=Y}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testArequestAPI -->
+        <test-method status="PASS" signature="afterMethodProcessing(org.testng.ITestResult)[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@527740a2]" name="afterMethodProcessing" is-config="true" duration-ms="23" started-at="2019-12-05T06:53:59Z" finished-at="2019-12-05T06:53:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testArequestAPI status=SUCCESS method=TDSVerifyAPI_TC.testArequestAPI(org.testng.ITestContext, java.util.Map)[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@527740a2] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethodProcessing -->
+        <test-method status="PASS" signature="AfterTestClass()[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@527740a2]" name="AfterTestClass" is-config="true" duration-ms="0" started-at="2019-12-05T06:53:59Z" finished-at="2019-12-05T06:53:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterTestClass -->
+        <test-method status="PASS" signature="AfterClass()[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@527740a2]" name="AfterClass" is-config="true" duration-ms="0" started-at="2019-12-05T06:53:59Z" finished-at="2019-12-05T06:53:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterClass -->
+      </class> <!-- com.ca.tds.main.TDSVerifyAPI_TC -->
+    </test> <!-- MasterCard::Clear Card::Browser::VerifyAPI flow -->
+    <test name="Visa::Clear Card::Browser::AReq flow" duration-ms="1737" started-at="2019-12-05T06:53:59Z" finished-at="2019-12-05T06:54:00Z">
+      <class name="com.ca.tds.main.TDSPreAreq_TC">
+        <test-method status="PASS" signature="beforeTestClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@6536e911]" name="beforeTestClass" is-config="true" duration-ms="0" started-at="2019-12-05T06:53:59Z" finished-at="2019-12-05T06:53:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTestClass -->
+        <test-method status="PASS" signature="BeforeClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@6536e911]" name="BeforeClass" is-config="true" duration-ms="0" started-at="2019-12-05T06:53:59Z" finished-at="2019-12-05T06:53:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeClass -->
+        <test-method status="PASS" signature="testArequestAPI(org.testng.ITestContext, java.util.Map)[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@6536e911]" name="testArequestAPI" duration-ms="1649" started-at="2019-12-05T06:53:59Z" data-provider="DataProvider3dsTestData" finished-at="2019-12-05T06:54:00Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@6215e636]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[{TestCaseID=_S001, TestCaseName=_SanityChallenge_AReq_VISA_For_Verify_TC001, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-cardholderInfo=NA, Expected-creq=G, Expected-transStatusReason=NA, Expected-authenticationValue=NA, Expected-authenticationType=G, Expected-acsURL=G, Expected-acsOperatorID=ACS_OPERATOR_ID, Expected-acsChallengeMandated=G, Expected-callerTxnRefID=G, Expected-threeDSServerTransID=G, Expected-dsTransID=G, Expected-acsTransID=G, Expected-eci=NA, Expected-messageType=ARes, Expected-dsName=visa, Expected-messageVersion=2.1.0, Expected-dsReferenceNumber=CADS, Expected-acsReferenceNumber=ABCDEF987654321, Expected-transStatus=C, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #browserJavascriptEnabled#=true, #challengeWindowSize#=04, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #caMerchantID#=CA_EU, #acctID#=ACCTID98X3fw3, #chAccAgeInd#=02, #chAccChange#=20180928, #chAccChangeInd#=02, #chAccDate#=20180928, #chAccPwChange#=20180901, #chAccPwChangeInd#=01, #nbPurchaseAccount#=8, #paymentAccAge#=20180808, #paymentAccInd#=01, #provisionAttemptsDay#=1, #shipAddressUsage#=20180910, #shipAddressUsageInd#=03, #shipNameIndicator#=01, #suspiciousAccActivity#=01, #txnActivityDay#=5, #txnActivityYear#=8, #acctNumber#=4000500060000008, #acctType#=01, #addrMatch#=Y, #billAddrCity#=San Jose, #billAddrCountry#=840, #billAddrLine1#=500 West Maude Ave, #billAddrLine2#=ABC, #billAddrLine3#=HMS, #billAddrPostCode#=95101, #billAddrState#=CA, #browserAcceptHeader#=text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8, #browserColorDepth#=24, #browserIP#=155.35.122.4, #browserJavaEnabled#=true, #browserLanguage#=en-US, #browserScreenHeight#=720, #browserScreenWidth#=1280, #browserTZ#=-330, #browserUserAgent#=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.84 Safari/537.36, #cardExpiryDate#=2008, #cardholderName#=Stephen, #deviceChannel#=02, #email#=harsh08@ca.com, #hcc#=840, #hsubscriber#=1234567899, #messageCategory#=01, #messageType#=AReq, #messageVersion#=2.1.0, #mcc#=840, #msubscriber#=1234567899, #notificationURL#=http://localhost:9090/golfstore2/CreqNotification.jsp, #purchaseAmount#=300, #purchaseCurrency#=840, #purchaseDate#=20180928160450, #purchaseExponent#=2, #recurringExpiry#=#REMOVE#, #recurringFrequency#=#REMOVE#, #shipAddrCity#=San Jose, #shipAddrCountry#=840, #shipAddrLine1#=500 West Maude Ave, #shipAddrLine2#=ABC, #shipAddrLine3#=HMS, #shipAddrPostCode#=95101, #shipAddrState#=CA, #threeDSCompInd#=Y, #threeDSServerTransID#=, #wcc#=840, #wsubscriber#=1234567899, #threeDSRequestorAuthenticationInd#=01, #threeDSReqAuthData#=3DS PA Request, #threeDSReqAuthMethod#=02, #threeDSReqAuthTimestamp#=201809281603, #threeDSRequestorChallengeInd#=01, #threeDSRequestorID#=611, #threeDSRequestorName#=ew0KCSJEViI6ICIxLjAiLA0KCSJERCI6Iaa45, #threeDSReqPriorAuthData#=three DS Request Prior Authentication Data, #threeDSReqPriorAuthMethod#=01, #threeDSReqPriorAuthTimestamp#=201810010323, #threeDSReqPriorRef#=4c6453da-4c56-4980-98cd-d04a064899c4, #threeDSRequestorURL#=http://10.131.94.242:1080/content-server/api/tds2/txn/browser/v1/tds-method, #threeDSServerRefNumber#=AAAAAA123456789, #threeDSServerOperatorID#=serverOperatorID, #threeDSServerURL#=http://10.138.158.51:9608, #acquirerBIN#=12345678912, #acquirerMerchantID#=AcquirerMerchantID222, #payTokenInd#=true, #purchaseInstalData#=#REMOVE#, #mcc1#=0742, #merchantCountryCode#=840, #merchantName#=global, #deliveryEmailAddress#=harsh08@ca.com, #deliveryTimeframe#=01, #giftCardAmount#=500, #giftCardCount#=02, #giftCardCurr#=840, #preOrderDate#=20200803, #preOrderPurchaseInd#=01, #reorderItemsInd#=01, #shipIndicator#=01, #criticalityIndicator#=false, #id#=ID2018SEP282001, #name#=ShashishekharHM, #transType#=01, #threeDSRequestorAuthenticationInfo#=, #threeDSRequestorPriorAuthenticationInfo#=, #broadInfo#=, #broadInfoValue#=broadInfoValue, #acctInfo#=, #homePhone#=, #mobilePhone#=, #workPhone#=, #merchantRiskIndicator#=, #messageExtension#=, #Dvalue#=HMS, #Dvalue1#=HMS, #Dvalue2#=HMS}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testArequestAPI -->
+        <test-method status="PASS" signature="afterMethodProcessing(org.testng.ITestResult)[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@6536e911]" name="afterMethodProcessing" is-config="true" duration-ms="28" started-at="2019-12-05T06:54:00Z" finished-at="2019-12-05T06:54:00Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testArequestAPI status=SUCCESS method=TDSPreAreq_TC.testArequestAPI(org.testng.ITestContext, java.util.Map)[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@6536e911] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethodProcessing -->
+        <test-method status="PASS" signature="AfterClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@6536e911]" name="AfterClass" is-config="true" duration-ms="0" started-at="2019-12-05T06:54:00Z" finished-at="2019-12-05T06:54:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterClass -->
+        <test-method status="PASS" signature="AfterTestClass()[pri:0, instance:com.ca.tds.main.TDSPreAreq_TC@6536e911]" name="AfterTestClass" is-config="true" duration-ms="0" started-at="2019-12-05T06:54:00Z" finished-at="2019-12-05T06:54:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterTestClass -->
+      </class> <!-- com.ca.tds.main.TDSPreAreq_TC -->
+    </test> <!-- Visa::Clear Card::Browser::AReq flow -->
+    <test name="VISA::Clear Card::Browser::RReq flow" duration-ms="1895" started-at="2019-12-05T06:54:00Z" finished-at="2019-12-05T06:54:02Z">
+      <class name="com.ca.tds.main.TDSRReq_TC">
+        <test-method status="PASS" signature="beforeTestClass()[pri:0, instance:com.ca.tds.main.TDSRReq_TC@67784306]" name="beforeTestClass" is-config="true" duration-ms="0" started-at="2019-12-05T06:54:00Z" finished-at="2019-12-05T06:54:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTestClass -->
+        <test-method status="PASS" signature="BeforeClass()[pri:0, instance:com.ca.tds.main.TDSRReq_TC@67784306]" name="BeforeClass" is-config="true" duration-ms="0" started-at="2019-12-05T06:54:00Z" finished-at="2019-12-05T06:54:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeClass -->
+        <test-method status="PASS" signature="testRRequestAPI(org.testng.ITestContext, java.util.Map)[pri:0, instance:com.ca.tds.main.TDSRReq_TC@67784306]" name="testRRequestAPI" duration-ms="1816" started-at="2019-12-05T06:54:01Z" data-provider="DataProvider3dsTestData" finished-at="2019-12-05T06:54:02Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@46591df3]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[{TestCaseID=_S001, TestCaseName=_SanityChallenge_RReq_For_Verify_TC001, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-dsTransID=G, Expected-acsTransID=G, Expected-messageExtension=G, Expected-messageType=RRes, Expected-messageVersion=2.1.0, Expected-resultsStatus=G, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #acsTransID#=, #authenticationType#=, #challengeCancel#=#REMOVE#, #dsTransID#=, #eci#=#REMOVE#, #interactionCounter#=01, #messageCategory#=01, #messageType#=RReq, #messageVersion#=, #threeDSServerTransID#=, #transStatus#=Y, #transStatusReason#=#REMOVE#, #criticalityIndicator#=false, #Dvalue#=HMS, #Dvalue1#=HMS, #Dvalue2#=HMS, #id#=ID2019JAN240101, #name#=ShashishekharHM, #authenticationValue#=AJkCCBFHJhl3gGhDA0cmAAAAAAA=}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRRequestAPI -->
+        <test-method status="PASS" signature="afterMethodProcessing(org.testng.ITestResult)[pri:0, instance:com.ca.tds.main.TDSRReq_TC@67784306]" name="afterMethodProcessing" is-config="true" duration-ms="21" started-at="2019-12-05T06:54:02Z" finished-at="2019-12-05T06:54:02Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testRRequestAPI status=SUCCESS method=TDSRReq_TC.testRRequestAPI(org.testng.ITestContext, java.util.Map)[pri:0, instance:com.ca.tds.main.TDSRReq_TC@67784306] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethodProcessing -->
+        <test-method status="PASS" signature="AfterClass()[pri:0, instance:com.ca.tds.main.TDSRReq_TC@67784306]" name="AfterClass" is-config="true" duration-ms="0" started-at="2019-12-05T06:54:02Z" finished-at="2019-12-05T06:54:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterClass -->
+        <test-method status="PASS" signature="AfterTestClass()[pri:0, instance:com.ca.tds.main.TDSRReq_TC@67784306]" name="AfterTestClass" is-config="true" duration-ms="0" started-at="2019-12-05T06:54:02Z" finished-at="2019-12-05T06:54:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterTestClass -->
+      </class> <!-- com.ca.tds.main.TDSRReq_TC -->
+    </test> <!-- VISA::Clear Card::Browser::RReq flow -->
+    <test name="VISA::Clear Card::Browser::VerifyAPI flow" duration-ms="934" started-at="2019-12-05T06:54:02Z" finished-at="2019-12-05T06:54:03Z">
+      <class name="com.ca.tds.main.TDSVerifyAPI_TC">
+        <test-method status="PASS" signature="beforeSuite(org.testng.ITestContext)[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@3b0143d3]" name="beforeSuite" is-config="true" duration-ms="2736" started-at="2019-12-05T06:53:43Z" finished-at="2019-12-05T06:53:46Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@c2ab5c4]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method status="PASS" signature="beforeTestClass()[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@3b0143d3]" name="beforeTestClass" is-config="true" duration-ms="0" started-at="2019-12-05T06:54:02Z" finished-at="2019-12-05T06:54:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTestClass -->
+        <test-method status="PASS" signature="BeforeClass()[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@3b0143d3]" name="BeforeClass" is-config="true" duration-ms="0" started-at="2019-12-05T06:54:02Z" finished-at="2019-12-05T06:54:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeClass -->
+        <test-method status="PASS" signature="testArequestAPI(org.testng.ITestContext, java.util.Map)[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@3b0143d3]" name="testArequestAPI" duration-ms="852" started-at="2019-12-05T06:54:02Z" data-provider="DataProvider3dsTestData" finished-at="2019-12-05T06:54:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@c2ab5c4]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[{TestCaseID=_S001, TestCaseName=_SanityChallenge_Sample Valid Verify Request, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=G, Expected-eci=G, Expected-authenticationValue=G, Expected-transStatus=G, Expected-transStatusReason=G, Expected-challengeCancel=G, Expected-resultsStatus=G, Expected-authenticationType=G, Expected-interactionCounter=G, Expected-messageType=RSRs, Expected-XID=G, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=CA_EU, #transStatus#=Y}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testArequestAPI -->
+        <test-method status="PASS" signature="afterMethodProcessing(org.testng.ITestResult)[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@3b0143d3]" name="afterMethodProcessing" is-config="true" duration-ms="18" started-at="2019-12-05T06:54:03Z" finished-at="2019-12-05T06:54:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testArequestAPI status=SUCCESS method=TDSVerifyAPI_TC.testArequestAPI(org.testng.ITestContext, java.util.Map)[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@3b0143d3] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethodProcessing -->
+        <test-method status="PASS" signature="AfterClass()[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@3b0143d3]" name="AfterClass" is-config="true" duration-ms="0" started-at="2019-12-05T06:54:03Z" finished-at="2019-12-05T06:54:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterClass -->
+        <test-method status="PASS" signature="AfterTestClass()[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@3b0143d3]" name="AfterTestClass" is-config="true" duration-ms="0" started-at="2019-12-05T06:54:03Z" finished-at="2019-12-05T06:54:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterTestClass -->
+        <test-method status="PASS" signature="endSuite()[pri:0, instance:com.ca.tds.main.TDSVerifyAPI_TC@3b0143d3]" name="endSuite" is-config="true" duration-ms="25" started-at="2019-12-05T06:54:03Z" finished-at="2019-12-05T06:54:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endSuite -->
+      </class> <!-- com.ca.tds.main.TDSVerifyAPI_TC -->
+    </test> <!-- VISA::Clear Card::Browser::VerifyAPI flow -->
+  </suite> <!-- SanityChallengeflow -->
+  <suite name="3DSSAllFlowsPreview" duration-ms="0" started-at="2019-12-05T06:54:04Z" finished-at="2019-12-05T06:54:04Z">
+    <groups>
+    </groups>
+  </suite> <!-- 3DSSAllFlowsPreview -->
+</testng-results>
