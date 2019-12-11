@@ -8,16 +8,16 @@ import org.json.JSONObject;
 
 public class AssertionUtility {
 	
-	public static String prepareRequest(Map<String, String> testCaseData, String jsonRequest) {
+	public static JSONObject prepareRequest(Map<String, String> testCaseData, String jsonRequest) {
 		List<String> keysToRemove = new ArrayList<>();
 		for (Map.Entry<String, String> entry  : testCaseData.entrySet()) {
 			
-			if(entry.getValue().equalsIgnoreCase("#REMOVE#"))			
+			if(entry.getValue().equalsIgnoreCase("#REMOVE#")) 
 				keysToRemove.add(entry.getKey().replaceAll("#", ""));
-			else			
+			else	
+
 				jsonRequest = jsonRequest.replaceAll(entry.getKey(), entry.getValue());
 		}
-		
 		
 		JSONObject reqJson = new JSONObject(jsonRequest);
 		for (Map.Entry<String, String> entry : testCaseData.entrySet()) {
@@ -37,7 +37,7 @@ public class AssertionUtility {
 		}
 
 		jsonRequest = reqJson.toString();
-		return jsonRequest;
+		return reqJson;
 	}
 	
 	public static boolean hexEncodingNeeded(String acctNumber){

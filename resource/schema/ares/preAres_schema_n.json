@@ -42,9 +42,7 @@
         },
         "callerTxnRefID":{
             "description":"callerTxnRefID",
-            "type": "string",
-            "maxLength":36,
-              "minLength":0
+            "type": "string"
         },
         "threeDSServerTransID":{
             "description":"threeDSServerTransID",

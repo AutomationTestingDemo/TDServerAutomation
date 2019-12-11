@@ -65,7 +65,7 @@ public class PostHttpRequest {
 	    StringEntity entity = new StringEntity(reqStr);
 	    httpPost.setEntity(entity);
 	    //httpPost.setHeader("Accept", "application/json;");
-	    httpPost.setHeader("Content-type", "application/json;charset=UTF-8");
+	    httpPost.setHeader("Content-Type", "application/json;charset=UTF-8");
 	 
 	    CloseableHttpResponse response = client.execute(httpPost);
 	    HttpEntity resentity = response.getEntity();

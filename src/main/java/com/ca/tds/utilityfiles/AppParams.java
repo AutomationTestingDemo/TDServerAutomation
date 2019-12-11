@@ -16,6 +16,7 @@ public class AppParams {
 	private String dbHost;
 	private String dbUser;
 	private String dbPassword;
+	private String dbPort;
 	private String dbService;
 	private String validateDBParams;
 	
@@ -26,6 +27,8 @@ public class AppParams {
 	private String tDSMethodURL;
 	private String tDSVerifyAPIURL;
 	private String tDSVerifyCacheURL;
+	private static String reportFilePath;
+	private static String reportFileName;
 	
 	private String tdsMetaRanges;
 	private static Map<String, String> caPropMap = null;
@@ -69,6 +72,7 @@ public class AppParams {
 		initDBUser();
 		initDBPassword();
 		initDBService();
+		initDBPort();
 		initValidateDBParams();
 		
 		initARequestAPIURL();
@@ -79,11 +83,33 @@ public class AppParams {
 		initTDSVerifyAPIURL();
 		initTDSVerifyCacheURL();
 		initTDSMetaRanges();
+		initreportFilePath();
+		initreportFileName();
 		
+	}
+	
+	private void initreportFilePath(){
+		reportFilePath = System.getenv("reportFilePath");
+	}
+	
+	public static String getreportFilePath() {
+		return reportFilePath;
+	}
+	
+	private void initreportFileName(){
+		reportFileName = System.getenv("reportFileName");
+	}
+	
+	public static String getreportFileName() {
+		return reportFileName;
 	}
 	
 	private void initDBHost(){
 		dbHost = System.getenv("DB_HOST");
+	}
+	
+	private void initDBPort(){
+		dbPort = System.getenv("DB_PORT");
 	}
 	
 	public String getDBHost(){
@@ -137,6 +163,8 @@ public class AppParams {
 	private void initTDSMethodURL(){
 		tDSMethodURL = System.getenv("TDSMethodURL");
 	}
+	
+	
 	
 	private void initTDSVerifyAPIURL(){
 		tDSVerifyAPIURL = System.getenv("TDSVerifyAPIURL");

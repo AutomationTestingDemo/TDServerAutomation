@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [TestSuite]" parallel="instances">
+  <parameter name="TDSExcelFileE" value="data/3DS_EncryptedCardTestData.xlsx"/>
+  <parameter name="TDSExcelFileC" value="data/3DS_ClearCardTestData.xlsx"/>
+  <test thread-count="5" name="MASTERC::Clear Card::Browser::AReq flow(failed)" parallel="instances">
+    <parameter name="ReportTitle" value="3DSAutomationReportOfBrowser"/>
+    <parameter name="ExcelSheetVerify" value="2_MAREQ"/>
+    <classes>
+      <class name="com.ca.tds.main.TDSPreAreq_TC">
+        <methods>
+          <include name="AfterTestClass"/>
+          <include name="BeforeClass"/>
+          <include name="AfterClass"/>
+          <include name="testArequestAPI" invocation-numbers="90 91 93 137 171 180 181 184 213 219 220 221 270 271 272 273 274 275 286 325 330 331 332 333 334 342 343 344 348 349 350 351 357 358 361 362 363 364 365 368 372 373 374 375 376 377 378 379 380 381 382 383 384 385 386 387 388 389 390 391 392 393 396 398 400 404 405 406 407 408 409 410 411 412 413 414 415 416 417 418 419 420 421 422 423 424 425 426 427 428 429 430 433 434 435 436 440 442 445 447 448 452 453 454 455 456 457 458 459 460 461 462 463 465 466 467 470 471 476 477 482 483 484 485 486 487 488 493 494 498 499 500 501 502 503 504 505 506 507 508 509 510 511 512 513 514 515 516 517 518 519 520 521 523 532 533 534 536 537 538 539 540 542 543 544 545 546 552 553 557 561 562 563 564 565 566 567 568 569 570 572 573 577 581 583 586 587 588 589 590 591"/>
+          <include name="beforeSuite"/>
+          <include name="afterMethodProcessing"/>
+          <include name="endSuite"/>
+          <include name="beforeTestClass"/>
+        </methods>
+      </class> <!-- com.ca.tds.main.TDSPreAreq_TC -->
+    </classes>
+  </test> <!-- MASTERC::Clear Card::Browser::AReq flow(failed) -->
+</suite> <!-- Failed suite [TestSuite] -->

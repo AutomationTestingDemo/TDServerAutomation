@@ -16,8 +16,25 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
-		<suiteFile>xmlfiles/testfactory.xml</suiteFile>
 	</properties>
+	
+	 <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>3.0.0-M3</version>
+          <configuration>
+          <suiteXmlFiles>
+         <!--  <suiteXmlFile>xmlfiles/3DS_AllFlows_Preview.xml</suiteXmlFile> -->
+          <suiteXmlFile>xmlfiles/3DS_AllFlows_Develop.xml</suiteXmlFile>
+          </suiteXmlFiles>
+          </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
 
 	<dependencies>
 		<dependency>
@@ -85,6 +102,12 @@
 			<artifactId>jsch</artifactId>
 			<version>0.1.55</version>
 		</dependency>
+		
+		<dependency>
+			<groupId>commons-dbutils</groupId>
+			<artifactId>commons-dbutils</artifactId>
+			<version>1.6</version>
+		</dependency>
 
 		<dependency>
 			<groupId>com.edb</groupId>
@@ -99,26 +122,6 @@
     <version>1.2.4</version>
 </dependency>
 		
+</dependencies>
 
-	</dependencies>
-
-	<build>
-		<pluginManagement><!-- lock down plugins versions to avoid using Maven 
-				defaults (may be moved to parent pom) -->
-			<plugins>
-				<plugin>
-					<artifactId>maven-clean-plugin</artifactId>
-					<version>3.0.0</version>
-				</plugin>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-surefire-plugin</artifactId>
-					<version>2.19.1</version>
-					<configuration>
-						<suiteXmlFiles>${suiteFile}</suiteXmlFiles>
-					</configuration>
-            </plugin>
-			</plugins>
-		</pluginManagement>
-	</build>
 </project>
