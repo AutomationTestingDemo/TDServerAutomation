@@ -3,9 +3,9 @@
 
 <suite name="3DSSAllFlowsPreview" verbose="1" parallel="instances" group-by-instances="true">
 <suite-files>
-    <!-- <suite-file path="3DS_SanityFrictionlessFlow.xml"></suite-file> -->
+    <suite-file path="3DS_SanityFrictionlessFlow.xml"></suite-file>
     <suite-file path="3DS_SanityChallengeFlow.xml"></suite-file>
-   <!--  <suite-file path="3DS_SanityFrictionlessMethodurl.xml"></suite-file> 
-    <suite-file path="3DS_SanityChallengeMethodurl.xml"></suite-file>   -->  
+    <suite-file path="3DS_SanityFrictionlessMethodurl.xml"></suite-file> 
+    <suite-file path="3DS_SanityChallengeMethodurl.xml"></suite-file>    
 </suite-files>
 </suite>
