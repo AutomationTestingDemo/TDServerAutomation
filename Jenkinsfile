@@ -37,6 +37,7 @@ pipeline{
 		sh label: '', script: "mkdir -p /var/www/html/${gitBranch}"
 		sh label: '', script: "mv /TestResultReport/3DSAutomationTestReport.html /var/www/html/${gitBranch}"
 		sh label: '', script: "chmod 755 /var/www/html/${gitBranch}"
+		sendEmailNotification()
 		sh label: '', script: "exit 1"	
 	  }
 	}
@@ -55,5 +56,5 @@ def sendEmailNotification(){
 	<pre style=\'line-height: 22px; display: block; color: #333; font-family: Monaco,Menlo,Consolas,"Courier New",monospace; padding: 10.5px; margin: 0 0 11px; font-size: 13px; word-break: break-all; word-wrap: break-word; white-space: pre-wrap; background-color: #f5f5f5; border: 1px solid #ccc; border: 1px solid rgba(0,0,0,.15); -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px;\'>
 	${BUILD_LOG, maxLines=50, escapeHtml=true}
 	</pre>
-	--LOG-END--''',  to: Mailto , subject:gitBranch+' branch - Automation Test Summary - ${BUILD_TIMESTAMP}  [$BUILD_STATUS]'
+	--LOG-END--''',  to: Mailto , subject:gitBranch+' branch - Automation Test Summary - ${BUILD_TIMESTAMP}'
 }
