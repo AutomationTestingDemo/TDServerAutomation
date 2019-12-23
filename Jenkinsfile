@@ -21,6 +21,7 @@ pipeline{
 					echo 'Automation Publish report to httpd'		  
 					sh label: '', script: "mkdir -p /var/www/html/${gitBranch}"
 					sh label: '', script: "mv /TestResultReport/3DSAutomationTestReport.html /var/www/html/${gitBranch}"
+					sh label: '', script: "chmod 755 /var/www/html/${gitBranch}"
 					}									
 			}
 	}
