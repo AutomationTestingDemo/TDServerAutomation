@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="3DSSAllFlowsPreview" verbose="1" parallel="instances" group-by-instances="true">
+<suite-files>
+    <suite-file path="3DS_SanityFrictionlessFlow.xml"></suite-file>
+    <suite-file path="3DS_SanityChallengeFlow.xml"></suite-file>
+    <suite-file path="3DS_SanityFrictionlessMethodurl.xml"></suite-file> 
+    <suite-file path="3DS_SanityChallengeMethodurl.xml"></suite-file>    
+</suite-files>
+</suite>
