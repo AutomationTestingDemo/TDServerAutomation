@@ -6,8 +6,7 @@ pipeline{
 		mvnHome = tool name: 'mvn3', type: 'maven'
 		mvnCmd = "${mvnHome}/bin/mvn"	
 		gitBranch = sh(returnStdout: true, script: 'echo ${GIT_BRANCH#*/}')		
-		Mailto = 'payment-security-team-mra.pdl@broadcom.com'			
-				
+		Mailto = 'payment-security-team-mra.pdl@broadcom.com'					
 	}
 	stages{	 
 			stage('Automation mvn build'){
@@ -17,12 +16,17 @@ pipeline{
 				sh label: '', script: "${mvnCmd} clean test -DsuiteXmlFile=xmlfiles/3DS_AllFlows.xml" 
 				}									
 		}
+			stage('Publish report to httpd'){
+				  steps{
+					echo 'Automation Publish report to httpd'		  
+					sh label: '', script: "mkdir -p /var/www/html/${gitBranch}"
+					sh label: '', script: "mv /TestResultReport/3DSAutomationTestReport.html /var/www/html/${gitBranch}"
+					sh label: '', script: "chmod 755 /var/www/html/${gitBranch}"
+					}									
+			}
 	}
 	post{
 	  always {
-            echo 'Automation Publish report to httpd'		  
-	    sh label: '', script: "mkdir -p /var/www/html/${gitBranch}"
-            sh label: '', script: "mv *.html /var/www/html/${gitBranch}"
 			echo 'Deleting the workspace'
 			deleteDir()
 	  }
@@ -43,7 +47,7 @@ def sendEmailNotification(){
 	body: '''Hi All,
 	<p><strong><u>Automation Summary</u></strong></p>
 	<p style="padding-right: 5px;">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<strong>Git Branch : '''+ gitBranch.trim() +'''</strong></p>
-	<p style="padding-right: 5px;">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<strong>Automation Test Report :</strong><u> http://10.74.234.236:80/'''+ gitBranch.trim() +'''/3DSAutomationTestReport.html</u>.</p>
+	<p style="padding-right: 5px;">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<strong>Automation Test Report :</strong><u> http://10.80.89.200:80/'''+ gitBranch.trim() +'''/3DSAutomationTestReport.html</u>.</p>
 	<p style="padding-right: 50px;">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<b><i>${BUILD_LOG_REGEX, regex="^API URL", linesBefore=0, linesAfter=0, maxMatches=1, showTruncatedLines=false}</i></b>.</p>	
 	--<br/>
 	<strong>Following is the last 50 lines of the log</strong>.<br/>
