@@ -40,7 +40,7 @@ public class ThreeDSSdbAPI extends BaseClassTDS {
 		
 		String dstransid=null;
 	
-		String query= "select dstransid from ms_user.mtdauthlog where threedsservertransid='"+threeDStransactionId+"'";
+		String query= "select dstransid from mraqa.mtdauthlog where threedsservertransid='"+threeDStransactionId+"'";
 		try {
 			
 			stmt = dbConn.getConn3DS(caPropMap).createStatement();
@@ -83,7 +83,7 @@ public class ThreeDSSdbAPI extends BaseClassTDS {
 		
 		String responseARes=null;
 	
-		String query= "select responsejson from ms_user.mtdresponsedata where threedsservertransid='"+threeDStransactionId+"'";
+		String query= "select responsejson from mraqa.mtdresponsedata where threedsservertransid='"+threeDStransactionId+"'";
 		try {
 			
 			stmt = dbConn.getConn3DS(caPropMap).createStatement();

@@ -27,8 +27,9 @@
           <version>3.0.0-M3</version>
           <configuration>
           <suiteXmlFiles>
-         <!--  <suiteXmlFile>xmlfiles/3DS_AllFlows_Preview.xml</suiteXmlFile> -->
-          <suiteXmlFile>xmlfiles/3DS_AllFlows_Develop.xml</suiteXmlFile>
+         <!--  <suiteXmlFile>xmlfiles/3DS_AllFlows_preview.xml</suiteXmlFile> -->
+          <suiteXmlFile>xmlfiles/3DS_AllFlows_develop.xml</suiteXmlFile>
+        <!--   <suiteXmlFile>xmlfiles/3DS_AllFlows_QA.xml</suiteXmlFile> -->
           </suiteXmlFiles>
           </configuration>
         </plugin>
