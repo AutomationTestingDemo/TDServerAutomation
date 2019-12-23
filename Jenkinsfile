@@ -6,23 +6,26 @@ pipeline{
 		mvnHome = tool name: 'mvn3', type: 'maven'
 		mvnCmd = "${mvnHome}/bin/mvn"	
 		gitBranch = sh(returnStdout: true, script: 'echo ${GIT_BRANCH#*/}')		
-		Mailto = 'payment-security-team-mra.pdl@broadcom.com'			
-				
+		Mailto = 'payment-security-team-mra.pdl@broadcom.com'					
 	}
 	stages{	 
 			stage('Automation mvn build'){
 			  steps{
 				sh label: '', script: 'chmod 755 envscripts/"${GIT_BRANCH#*/}.sh"'
 				sh label: '', script: './envscripts/"${GIT_BRANCH#*/}.sh"'
-				sh label: '', script: "${mvnCmd} clean test -DsuiteXmlFile=xmlfiles/3DS_AllFlows.xml" 
+				sh label: '', script: "${mvnCmd} clean test -DsuiteXmlFile=xmlfiles/3DS_SanityFrictionlessFlow.xml" 
 				}									
 		}
+			stage('Publish report to httpd'){
+				  steps{
+					echo 'Automation Publish report to httpd'		  
+					sh label: '', script: "mkdir -p /var/www/html/${gitBranch}"
+					sh label: '', script: "mv /TestResultReport/3DSAutomationTestReport.html /var/www/html/${gitBranch}"
+					}									
+			}
 	}
 	post{
 	  always {
-            echo 'Automation Publish report to httpd'		  
-			sh label: '', script: "mkdir -p /var/www/html/${gitBranch}"
-            sh label: '', script: "mv /TestResultReport/3DSAutomationTestReport.html /var/www/html/${gitBranch}"
 			echo 'Deleting the workspace'
 			deleteDir()
 	  }
