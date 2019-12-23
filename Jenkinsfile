@@ -13,7 +13,7 @@ pipeline{
 			  steps{
 				sh label: '', script: 'chmod 755 envscripts/"${GIT_BRANCH#*/}.sh"'
 				sh label: '', script: './envscripts/"${GIT_BRANCH#*/}.sh"'
-				sh label: '', script: "${mvnCmd} clean test -DsuiteXmlFile=xmlfiles/3DS_AllFlows.xml" 
+				sh label: '', script: "${mvnCmd} clean test -DsuiteXmlFile=xmlfiles/3DS_AllFlows_${gitBranch}.xml" 
 				}									
 		}
 			stage('Publish report to httpd'){
@@ -37,7 +37,6 @@ pipeline{
 	  }
 	  failure{
 		echo 'Build failed'
-		sendEmailNotification()
 		sh label: '', script: "exit 1"	
 	  }
 	}
