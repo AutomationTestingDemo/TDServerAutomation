@@ -26,7 +26,7 @@ pipeline{
 	  success{
 		echo 'Automation result are publishing report to httpd'	  
 		sh label: '', script: "mkdir -p /var/www/html/${gitBranch}"
-		sh label: '', script: "mv TestResultReport/3DSAutomationTestReport.html /var/www/html/${gitBranch}"
+		sh label: '', script: "mv TestResultReport/3DSAutomationTestReport.html /var/www/html/${gitBranch}/"
 		sh label: '', script: "sudo chown -R $USER:$USER /var/www/html/${gitBranch}"
 		sh label: '', script: "sudo chmod -R 755 /var/www"
 		sendEmailNotification()
@@ -35,7 +35,7 @@ pipeline{
 	  failure{
 		echo 'Automation result are publishing report to httpd'		  
 		sh label: '', script: "mkdir -p /var/www/html/${gitBranch}"
-		sh label: '', script: "mv TestResultReport/3DSAutomationTestReport.html /var/www/html/${gitBranch}"
+		sh label: '', script: "mv TestResultReport/3DSAutomationTestReport.html /var/www/html/${gitBranch}/"
 		sh label: '', script: "sudo chown -R $USER:$USER /var/www/html/${gitBranch}"
 		sh label: '', script: "sudo chmod -R 755 /var/www"
 		sendEmailNotification()
