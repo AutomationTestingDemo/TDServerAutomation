@@ -7,14 +7,14 @@ pipeline{
 		mvnCmd = "${mvnHome}/bin/mvn"	
 		gitBranch = sh(returnStdout: true, script: 'echo ${GIT_BRANCH#*/}')		
 		Mailto = 'payment-security-team-mra.pdl@broadcom.com'
-		suitFile="xmlfiles/3DS_AllFlows_${gitBranch}.xml"
+		suitFile="3DS_AllFlows_${gitBranch}.xml"
 	}
 	stages{	 
 			stage('Automation mvn build'){
 			  steps{
 				sh label: '', script: 'chmod 755 envscripts/"${GIT_BRANCH#*/}.sh"'
 				sh label: '', script: './envscripts/"${GIT_BRANCH#*/}.sh"'
-				sh label: '', script: "${mvnCmd} clean test -DsuiteXmlFile=${suitFile}" 
+				sh label: '', script: "${mvnCmd} clean test -DsuiteXmlFile=xmlfiles/${suitFile}" 
 				}									
 		}
 	}
@@ -33,13 +33,13 @@ pipeline{
 		sh label: '', script: "exit 0"
 	  }
 	  failure{
-		echo ''Automation result are publishing report to httpd'		  
+		echo 'Automation result are publishing report to httpd'		  
 		sh label: '', script: "mkdir -p /var/www/html/${gitBranch}"
 		sh label: '', script: "mv TestResultReport/3DSAutomationTestReport.html /var/www/html/${gitBranch}"
 		sh label: '', script: "sudo chown -R $USER:$USER /var/www/html/${gitBranch}"
 		sh label: '', script: "sudo chmod -R 755 /var/www"
 		sendEmailNotification()
-		sh label: '', script: "exit 1"	
+		sh label: '', script: "exit 0"	
 	  }
 	}
  }
