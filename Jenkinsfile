@@ -7,14 +7,14 @@ pipeline{
 		mvnCmd = "${mvnHome}/bin/mvn"	
 		gitBranch =sh(returnStdout: true, script: 'echo ${GIT_BRANCH#*/}')		
 		Mailto = 'payment-security-team-mra.pdl@broadcom.com'
-		suitFile=sh(returnStdout: true, script:'echo "3DS_AllFlows_"+${gitBranch}+".xml"')
+		suiteFile="xmlfiles/3DS_AllFlows_${gitBranch}.xml"
 	}
 	stages{	 
 			stage('Automation mvn build'){
 			  steps{
 				sh label: '', script: 'chmod 755 envscripts/"${GIT_BRANCH#*/}.sh"'
 				sh label: '', script: './envscripts/"${GIT_BRANCH#*/}.sh"'
-				sh label: '', script: "${mvnCmd} clean test -DsuiteXmlFile=xmlfiles/${suitFile}" 
+				sh label: '', script: "${mvnCmd} clean test -DsuiteXmlFile=${suiteFile}" 
 				}									
 		}
 	}
