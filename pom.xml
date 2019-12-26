@@ -18,25 +18,6 @@
 		<maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
 	
-	 <build>
-    <pluginManagement>
-      <plugins>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-surefire-plugin</artifactId>
-          <version>3.0.0-M3</version>
-          <configuration>
-          <suiteXmlFiles>
-         <!--  <suiteXmlFile>xmlfiles/3DS_AllFlows_preview.xml</suiteXmlFile> -->
-          <suiteXmlFile>xmlfiles/3DS_AllFlows_develop.xml</suiteXmlFile>
-        <!--   <suiteXmlFile>xmlfiles/3DS_AllFlows_QA.xml</suiteXmlFile> -->
-          </suiteXmlFiles>
-          </configuration>
-        </plugin>
-      </plugins>
-    </pluginManagement>
-  </build>
-
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
