@@ -5,15 +5,16 @@ pipeline{
 	environment {
 		mvnHome = tool name: 'mvn3', type: 'maven'
 		mvnCmd = "${mvnHome}/bin/mvn"	
-		gitBranch = sh(returnStdout: true, script: 'echo ${GIT_BRANCH#*/}')		
-		Mailto = 'payment-security-team-mra.pdl@broadcom.com'					
+		gitBranch =sh(returnStdout: true, script: 'echo ${GIT_BRANCH#*/}')		
+		Mailto = 'payment-security-team-mra.pdl@broadcom.com'
+		suiteFile=sh(returnStdout: true, script: 'echo xmlfiles/3DS_AllFlows_${GIT_BRANCH#*/}.xml')
 	}
 	stages{	 
 			stage('Automation mvn build'){
 			  steps{
 				sh label: '', script: 'chmod 755 envscripts/"${GIT_BRANCH#*/}.sh"'
 				sh label: '', script: './envscripts/"${GIT_BRANCH#*/}.sh"'
-				sh label: '', script: "${mvnCmd} clean test -DsuiteXmlFile=xmlfiles/3DS_AllFlows_${gitBranch}.xml" 
+				sh label: '', script: "${mvnCmd} clean test -DsuiteXmlFile=${suiteFile}" 
 				}									
 		}
 	}
@@ -23,22 +24,22 @@ pipeline{
 			deleteDir()
 	  }
 	  success{
-		echo 'Build success'
-		echo 'Automation Publish report to httpd'		  
+		echo 'Automation result are publishing report to httpd'	  
 		sh label: '', script: "mkdir -p /var/www/html/${gitBranch}"
 		sh label: '', script: "mv TestResultReport/3DSAutomationTestReport.html /var/www/html/${gitBranch}"
-		sh label: '', script: "chmod 755 /var/www/html/${gitBranch}"
+		sh label: '', script: "sudo chown -R $USER:$USER /var/www/html/${gitBranch}"
+		sh label: '', script: "sudo chmod -R 755 /var/www"
 		sendEmailNotification()
 		sh label: '', script: "exit 0"
 	  }
 	  failure{
-		echo 'Build failed'
-		echo 'Automation Publish report to httpd'		  
+		echo 'Automation result are publishing report to httpd'		  
 		sh label: '', script: "mkdir -p /var/www/html/${gitBranch}"
-		sh label: '', script: "mv /TestResultReport/3DSAutomationTestReport.html /var/www/html/${gitBranch}"
-		sh label: '', script: "chmod 755 /var/www/html/${gitBranch}"
+		sh label: '', script: "mv TestResultReport/3DSAutomationTestReport.html /var/www/html/${gitBranch}"
+		sh label: '', script: "sudo chown -R $USER:$USER /var/www/html/${gitBranch}"
+		sh label: '', script: "sudo chmod -R 755 /var/www"
 		sendEmailNotification()
-		sh label: '', script: "exit 1"	
+		sh label: '', script: "exit 0"	
 	  }
 	}
  }
