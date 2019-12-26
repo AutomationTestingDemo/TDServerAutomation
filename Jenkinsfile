@@ -23,20 +23,20 @@ pipeline{
 			deleteDir()
 	  }
 	  success{
-		echo 'Build success'
-		echo 'Automation Publish report to httpd'		  
+		echo 'Automation result are publishing report to httpd'	  
 		sh label: '', script: "mkdir -p /var/www/html/${gitBranch}"
 		sh label: '', script: "mv TestResultReport/3DSAutomationTestReport.html /var/www/html/${gitBranch}"
-		sh label: '', script: "chmod 755 /var/www/html/${gitBranch}"
+		sh label: '', script: "sudo chown -R $USER:$USER /var/www/html/${gitBranch}"
+		sh label: '', script: "sudo chmod -R 755 /var/www"
 		sendEmailNotification()
 		sh label: '', script: "exit 0"
 	  }
 	  failure{
-		echo 'Build failed'
-		echo 'Automation Publish report to httpd'		  
+		echo ''Automation result are publishing report to httpd'		  
 		sh label: '', script: "mkdir -p /var/www/html/${gitBranch}"
 		sh label: '', script: "mv TestResultReport/3DSAutomationTestReport.html /var/www/html/${gitBranch}"
-		sh label: '', script: "chmod 755 /var/www/html/${gitBranch}"
+		sh label: '', script: "sudo chown -R $USER:$USER /var/www/html/${gitBranch}"
+		sh label: '', script: "sudo chmod -R 755 /var/www"
 		sendEmailNotification()
 		sh label: '', script: "exit 1"	
 	  }
