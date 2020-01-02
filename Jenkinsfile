@@ -18,28 +18,25 @@ pipeline{
 				}									
 		}
 	}
-	post{	  
+	post{
+	  always {
+			echo 'Automation result are publishing report to httpd and deleting the workspace'
+			sh label: '', script: "mkdir -p /var/www/html/${gitBranch}"
+			sh label: '', script: "pwd"
+			sh label: '', script: "ls"
+			sh label: '', script: "ls TestResultReport/"
+			sh label: '', script: "mv TestResultReport/3DSAutomationTestReport.html /var/www/html/${gitBranch}/"
+			sh label: '', script: "sudo chown -R $USER:$USER /var/www/html/${gitBranch}"
+			sh label: '', script: "sudo chmod -R 755 /var/www"
+			deleteDir()
+			sendEmailNotification()
+	  }
 	  success{
-		echo 'Automation result are publishing report to httpd'	  
-		sh label: '', script: "mkdir -p /var/www/html/${gitBranch}"
-		sh label: '', script: "mv TestResultReport/3DSAutomationTestReport.html /var/www/html/${gitBranch}/"
-		sh label: '', script: "sudo chown -R $USER:$USER /var/www/html/${gitBranch}"
-		sh label: '', script: "sudo chmod -R 755 /var/www"
-		deleteDir()
-		sendEmailNotification()
+		echo 'All test cases are pass'	  
 		sh label: '', script: "exit 0"
 	  }
 	  failure{
-		echo 'Automation result are publishing report to httpd'		  
-		sh label: '', script: "mkdir -p /var/www/html/${gitBranch}"
-		sh label: '', script: "pwd"
-		sh label: '', script: "ls"
-		sh label: '', script: "ls TestResultReport/"
-		sh label: '', script: "mv TestResultReport/3DSAutomationTestReport.html /var/www/html/${gitBranch}/"
-		sh label: '', script: "sudo chown -R $USER:$USER /var/www/html/${gitBranch}"
-		sh label: '', script: "sudo chmod -R 755 /var/www"
-		deleteDir()
-		sendEmailNotification()
+		echo 'Some test cases are failed'		  
 		sh label: '', script: "exit 0"	
 	  }
 	}
