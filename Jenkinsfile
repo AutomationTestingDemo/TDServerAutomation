@@ -20,24 +20,19 @@ pipeline{
 	}
 	post{
 	  always {
-			echo 'Deleting the workspace'
-			deleteDir()
+			echo 'Automation result are publishing report to httpd'
+			sh label: '', script: "mv TestResultReport/3DSAutomationTestReport.html /var/www/html/${gitBranch}"
+			sh label: '', script: "chmod -R 755 /var/www/html/${gitBranch}"
 	  }
 	  success{
-		echo 'Automation result are publishing report to httpd'	  
-		sh label: '', script: "mkdir -p /var/www/html/${gitBranch}"
-		sh label: '', script: "mv TestResultReport/3DSAutomationTestReport.html /var/www/html/${gitBranch}"
-		sh label: '', script: "sudo chown -R $USER:$USER /var/www/html/${gitBranch}"
-		sh label: '', script: "sudo chmod -R 755 /var/www"
+		echo 'All test cases are pass and deleting the workspace'
+		deleteDir()
 		sendEmailNotification()
 		sh label: '', script: "exit 0"
 	  }
 	  failure{
-		echo 'Automation result are publishing report to httpd'		  
-		sh label: '', script: "mkdir -p /var/www/html/${gitBranch}"
-		sh label: '', script: "mv TestResultReport/3DSAutomationTestReport.html /var/www/html/${gitBranch}"
-		sh label: '', script: "sudo chown -R $USER:$USER /var/www/html/${gitBranch}"
-		sh label: '', script: "sudo chmod -R 755 /var/www"
+		echo 'Some test cases are failed and deleting the workspace'
+		deleteDir()
 		sendEmailNotification()
 		sh label: '', script: "exit 0"	
 	  }
