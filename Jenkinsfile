@@ -21,12 +21,7 @@ pipeline{
 	post{
 	  always {
 			echo 'Automation result are publishing report to httpd and deleting the workspace'
-			sh label: '', script: "mkdir -p /var/www/html/${gitBranch}"
-			sh label: '', script: "pwd"
-			sh label: '', script: "ls"
-			sh label: '', script: "ls TestResultReport/"
 			sh label: '', script: "mv TestResultReport/3DSAutomationTestReport.html /var/www/html/${gitBranch}/"
-			sh label: '', script: "chmod -R 755 /var/www"
 			deleteDir()
 			sendEmailNotification()
 	  }
