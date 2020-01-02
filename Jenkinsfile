@@ -26,8 +26,7 @@ pipeline{
 			sh label: '', script: "ls"
 			sh label: '', script: "ls TestResultReport/"
 			sh label: '', script: "mv TestResultReport/3DSAutomationTestReport.html /var/www/html/${gitBranch}/"
-			sh label: '', script: "sudo chown -R $USER:$USER /var/www/html/${gitBranch}"
-			sh label: '', script: "sudo chmod -R 755 /var/www"
+			sh label: '', script: "chmod -R 755 /var/www"
 			deleteDir()
 			sendEmailNotification()
 	  }
