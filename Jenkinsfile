@@ -12,6 +12,8 @@ pipeline{
 	stages{	 
 			stage('Automation mvn build'){
 			  steps{
+			  
+				sh label: '', script: 'whoami'
 				sh label: '', script: 'chmod 755 envscripts/"${GIT_BRANCH#*/}.sh"'
 				sh label: '', script: './envscripts/"${GIT_BRANCH#*/}.sh"'
 				sh label: '', script: "${mvnCmd} clean test -DsuiteXmlFile=${suiteFile}" 
