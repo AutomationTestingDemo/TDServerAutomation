@@ -12,8 +12,6 @@ pipeline{
 	stages{	 
 			stage('Automation mvn build'){
 			  steps{
-			  
-				sh label: '', script: 'whoami'
 				sh label: '', script: 'chmod 755 envscripts/"${GIT_BRANCH#*/}.sh"'
 				sh label: '', script: './envscripts/"${GIT_BRANCH#*/}.sh"'
 				sh label: '', script: "${mvnCmd} clean test -DsuiteXmlFile=${suiteFile}" 
@@ -22,17 +20,20 @@ pipeline{
 	}
 	post{
 	  always {
-			echo 'Automation result are publishing report to httpd and deleting the workspace'
+			echo 'Automation result are publishing report to httpd'
 			sh label: '', script: "mv TestResultReport/3DSAutomationTestReport.html /var/www/html/${gitBranch}/"
-			deleteDir()
-			sendEmailNotification()
+			sh label: '', script: "chmod -R 755 /var/www/html/${gitBranch}"
 	  }
 	  success{
-		echo 'All test cases are pass'	  
+		echo 'All test cases are pass and deleting the workspace'
+		deleteDir()
+		sendEmailNotification()
 		sh label: '', script: "exit 0"
 	  }
 	  failure{
-		echo 'Some test cases are failed'		  
+		echo 'Some test cases are failed and deleting the workspace'
+		deleteDir()
+		sendEmailNotification()
 		sh label: '', script: "exit 0"	
 	  }
 	}
