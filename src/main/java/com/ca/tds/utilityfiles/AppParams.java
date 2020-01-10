@@ -141,7 +141,12 @@ public class AppParams {
 	}
 	
 	private void initValidateDBParams(){
-		validateDBParams = System.getenv("VALIDATE_DB_PARAMS");
+		validateDBParams = System.getenv("validateDBParams");
+		validateDBParams = caPropMap.get("validateDBParams");
+	}
+	
+	public String getValidateDBParams(){
+		return validateDBParams;
 	}
 	
 	private void initARequestAPIURL(){
@@ -178,9 +183,6 @@ public class AppParams {
 		tdsMetaRanges = System.getenv("TDS_META_RANGES");
 	}
 	
-	public String getValidateDBParams(){
-		return validateDBParams;
-	}
 
 	public String getaRequestAPIURL() {
 		return aRequestAPIURL;
