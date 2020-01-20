@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>MasterCard::Clear Card::Browser::ThreeDSMethodURL flow</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Dec 20 19:40:34 IST 2019</td>
+<td>Started on:</td><td>Mon Jan 20 18:09:02 IST 2020</td>
 </tr>
-<tr><td>Total time:</td><td>0 seconds (926 ms)</td>
+<tr><td>Total time:</td><td>0 seconds (700 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,16 +67,38 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.ca.tds.main.TDSMethodURL_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSMethodURL_TC<br>Parameters: org.testng.TestRunner@8c91427, {TestCaseID=_S001, TestCaseName=_SanityChallenge_MC_For_Verify_TC001, SanityFlag=Y, Test Case type=P, RequirementID=, Expected-messageType=ThreeDSMethodURLRes, Expected-callerTxnRefID=G, Expected-messageVersion=2.1.0, Expected-threeDSServerTransID=G, Expected-threeDSMethodURL=G, #acctNumber#=5200000000001005, #caMerchantID#=CA_EU, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #messageType#=ThreeDSMethodURLReq}</td>
-<td></td>
+<td title='com.ca.tds.main.TDSMethodURL_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSMethodURL_TC<br>Parameters: org.testng.TestRunner@3eeb52e4, {TestCaseID=_S001, TestCaseName=_SanityChallenge_MC_For_Verify_TC001, SanityFlag=Y, Test Case type=P, RequirementID=, Expected-messageType=ThreeDSMethodURLRes, Expected-callerTxnRefID=G, Expected-messageVersion=2.1.0, Expected-threeDSServerTransID=G, Expected-threeDSMethodURL=G, #acctNumber#=nryb12B1oZMhWzpQOpmp5YiPiZgTHXQhpBQnlNs/rJn2NBTOqmdbWZ9tZbyZYCuW3xVrbRzKgCR9AplwU8entf7XQebRssBHlkiFtczzcutAWLlkFC6pp89Ogsf/Heb6zMi1bvjq97ivKDnANWB70tMNwepMnHO1doi+3YIhcrL3RRKQqhqNUMrTStiS+v8eKeXbuq2zdnCQbuaRyyODinCTTFufPIOdyDfCgADlSC4etthZAD7E2t61OKu0EI+uwJ76jn2RAqEhnV8aPCzstaM8DCoV0uXIR50m4Jysmw9H8oR7WvAyLAmxVUsH5N8axwaUHLktu9RUXJi33l57Tw==, #caMerchantID#=CA_EU, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #messageType#=ThreeDSMethodURLReq}</td>
+<td><div><pre>java.lang.AssertionError: errorComponent: S, errorCode: S, errorDescription:No DS configured for this PAN - Not found in Card Range Cache
+	at com.ca.tds.main.TDSMethodURL_TC.testArequestAPI(TDSMethodURL_TC.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 11 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1992051518", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1992051518'><pre>java.lang.AssertionError: errorComponent: S, errorCode: S, errorDescription:No DS configured for this PAN - Not found in Card Range Cache
+	at org.testng.Assert.fail(Assert.java:96)
+	at com.ca.tds.main.TDSMethodURL_TC.testArequestAPI(TDSMethodURL_TC.java:64)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</pre></div></td>
 <td>0</td>
 <td>com.ca.tds.main.TDSMethodURL_TC@74650e52</td></tr>
 </table><p>
