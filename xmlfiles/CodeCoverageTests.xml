@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="3DSSAllFlowsQA2" verbose="1" parallel="instances" group-by-instances="true">
+<suite-files>
+    <suite-file path="AreqCC.xml"></suite-file>
+    <suite-file path="CCVerify.xml"></suite-file>
+    <suite-file path="CCRReq.xml"></suite-file>
+    <suite-file path="DSAReq.xml"></suite-file>
+    <suite-file path="IdempotencyFLV.xml"></suite-file>
+    <suite-file path="IdempotencyNegative.xml"></suite-file>
+    <suite-file path="Nmurl.xml"></suite-file>
+     <suite-file path="FlVerify.xml"></suite-file>
+    
+</suite-files>
+</suite>

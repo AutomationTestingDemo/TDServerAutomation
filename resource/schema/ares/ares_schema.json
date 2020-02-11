@@ -8,7 +8,7 @@
             "description":"acsOperatorID",
             "type": "string",
             "maxLength":32,
-              "minLength":15
+              "minLength":13
         },
         "acsReferenceNumber":{
             "description":"acsReferenceNumber",
