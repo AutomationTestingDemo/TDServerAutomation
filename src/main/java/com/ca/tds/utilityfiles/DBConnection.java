@@ -77,7 +77,7 @@ public class DBConnection {
 		Class.forName("com.edb.Driver");    
 		//step2 create  the connection object  
 		return DriverManager.getConnection(  
-		"jdbc:edb://"+caPropMap.get("DB_HOST")+":5432/"+caPropMap.get("DB_SERVICE")+"",caPropMap.get("DB_USER"),caPropMap.get("DB_PWD"));
+		"jdbc:edb://"+caPropMap.get("DB_HOST")+":"+caPropMap.get("DB_PORT")+"/"+caPropMap.get("DB_SERVICE")+"",caPropMap.get("DB_USER"),caPropMap.get("DB_PWD"));
 		/*return DriverManager.getConnection(  
 				"jdbc:oracle:thin:@10.131.136.47:1521:orcl","ds_user","dost1234"); */
 		  
