@@ -17,10 +17,11 @@ public class TxnInFlight {
 
 	/* public static void main(String[] args) throws InterruptedException { */
 	
-	    @Test
+	    @SuppressWarnings("static-access")
+		@Test
 		public static void txnflight() throws InterruptedException {
 		HttpClient client = HttpClientBuilder.create().build();
-		HttpPost postRq = new HttpPost("http://10.16.0.14:32090/3ds-server/api/v1/authenticate3dsTxn");
+		HttpPost postRq = new HttpPost("http://10.80.120.49:9608/3ds-server/api/v1/authenticate3dsTxn");
 		postRq.addHeader("Content-Type", "application/json;charset=utf-8");
 
 		String threeDSServerTransID = UUID.randomUUID().toString();
@@ -45,7 +46,7 @@ public class TxnInFlight {
 				"	\"purchaseCurrency\": \"840\",\r\n" + 
 				"	\"cardExpiryDate\": \"2008\",\r\n" + 
 				"	\"browserTZ\": \"-330\",\r\n" + 
-				"	\"acctNumber\": \"4000000000001091\",\r\n" + 
+				"	\"acctNumber\": \"4000000000001000\",\r\n" + 
 				"	\"browserScreenHeight\": \"720\",\r\n" + 
 				"	\"billAddrPostCode\": \"95102\",\r\n" + 
 				"	\"billAddrCity\": \"San Jose\",\r\n" + 
@@ -66,13 +67,14 @@ public class TxnInFlight {
 				HttpEntity entity = resp.getEntity();
 				String response = EntityUtils.toString(entity, "UTF-8");
 				System.out.println("Response 1 :: "+response);
+				
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		});
 		
-		//Thread.sleep(1);
+		//Thread.sleep(100);
 		
 		CompletableFuture.runAsync(()->{
 			try {

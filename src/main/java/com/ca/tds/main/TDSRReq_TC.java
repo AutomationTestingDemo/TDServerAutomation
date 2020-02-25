@@ -24,6 +24,7 @@ import com.relevantcodes.extentreports.LogStatus;
 
 import ca.com.tds.restapi.PostHttpRequest;
 
+@SuppressWarnings("unused")
 public class TDSRReq_TC extends BaseClassTDS {
 
 	private String previousTest = "TestCaseName";

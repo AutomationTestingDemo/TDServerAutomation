@@ -24,7 +24,7 @@ public class Verify2 {
 	@SuppressWarnings("null")
 	public static String verify(String response) throws InterruptedException, UnsupportedOperationException, IOException {
 		HttpClient client = HttpClientBuilder.create().build();
-		HttpPost postRq = new HttpPost("http://10.80.89.206:9608/3ds-server/api/v1/getResultsStatus");
+		HttpPost postRq = new HttpPost("http://10.80.120.49:9608/3ds-server/api/v1/getResultsStatus");
 		postRq.addHeader("Content-Type", "application/json;charset=utf-8");
 		
 		//String response="{\"acsOperatorID\":\"acsOperatorID\",\"acsReferenceNumber\":\"acsReferenceNumber\",\"acsTransID\":\"d5d9a21f-9496-4c72-8108-220e1e49ef37\",\"authenticationValue\":\"AJkBAnFlCYgmkEJ1ZWUJAAAAAAA=\",\"callerTxnRefID\":\"341b7153-da86-4543-860f-2ba47f0168a5\",\"dsName\":\"visa\",\"dsReferenceNumber\":\"dsReferenceNumber\",\"dsTransID\":\"0f2e4bf2-bd00-4425-8437-e3aea29fc355\",\"eci\":\"01\",\"messageType\":\"ARes\",\"messageVersion\":\"2.1.0\",\"threeDSServerTransID\":\"69e8a771-a66a-47ea-9f7b-574dccce010e\",\"transStatus\":\"Y\"}\r\n" + 

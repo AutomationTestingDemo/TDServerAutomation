@@ -7,6 +7,7 @@ import java.sql.Statement;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.Properties;
 
 import org.testng.Assert;
 
@@ -24,6 +25,7 @@ public class ThreeDSSdbAPI extends BaseClassTDS {
 	public ThreeDSSdbAPI() {
 		
 		dbConn = new DBConnection();
+		
 	}
 	
 	
@@ -119,5 +121,116 @@ public class ThreeDSSdbAPI extends BaseClassTDS {
 		
 		return responseARes;
 	}
+	
+	public  String updateMtdConfig(Map<String, String> caPropMap, int value) throws Exception {
+		
+		HashMap<String, String> dataMap = new HashMap<String, String>();
+		
+		String responseARes=null;
+		
+		
+	
+		String query= "update mraqa.mtdconfig set paramvalue='"+value+"' where paramname='ReplayExpiryMinutes';";
+		try {
+			
+			dbConn.getConn3DS(caPropMap).createStatement().executeUpdate(query);
+			
+			responseARes = "Success";
+			
+		} catch (Exception e) {
+			
+			System.out.println(e.getMessage());
+			responseARes =null;
+			throw new Exception(e.getMessage());
+			
+		} finally {
+			if (rs != null) {
+				rs.close();
+			}
+			if (stmt != null) {
+				stmt.close();
+			}
+		}
+		return responseARes;
+		
+	}
+	
+	public  String updateMtdMerchants(Map<String, String> caPropMap, String value) throws Exception {
+		
+		HashMap<String, String> dataMap = new HashMap<String, String>();
+		
+		String responseARes=null;
+		
+		
+	
+		String query=null;
+		
+		if(value.equals("07")) {
+				
+			query = "update mraqa.mtdmerchants set challengewindowsize=null where camerchantid='MTD000000';";
+			
+		}else {
+			
+			query = "update mraqa.mtdmerchants set challengewindowsize='"+value+"' where camerchantid='MTD000000';";
+		}
+		try {
+			
+			dbConn.getConn3DS(caPropMap).createStatement().executeUpdate(query);
+			
+			responseARes = "Success";
+			
+		} catch (Exception e) {
+			
+			System.out.println(e.getMessage());
+			responseARes =null;
+			throw new Exception(e.getMessage());
+			
+		} finally {
+			if (rs != null) {
+				rs.close();
+			}
+			if (stmt != null) {
+				stmt.close();
+			}
+		}
+		return responseARes;
+		
+	}
+	
+	public  String updatemtdcardrangedata(Map<String, String> caPropMap, String value) throws Exception {
+		
+		HashMap<String, String> dataMap = new HashMap<String, String>();
+		
+		String responseARes=null;
+		
+		String query= value;
+		
+		System.out.println("Query :"+query);
+		
+		try {
+			
+			dbConn.getConn3DS(caPropMap).createStatement().executeUpdate(query);
+			
+			responseARes = "Success";
+			
+		} catch (Exception e) {
+			
+			System.out.println(e.getMessage());
+			responseARes =null;
+			throw new Exception(e.getMessage());
+			
+		} finally {
+			if (rs != null) {
+				rs.close();
+			}
+			if (stmt != null) {
+				stmt.close();
+			}
+		}
+		return responseARes;
+		
+	}
+
+
 
 } 

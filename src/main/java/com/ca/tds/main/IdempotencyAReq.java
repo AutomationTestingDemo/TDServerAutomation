@@ -16,6 +16,7 @@ import com.ca.tds.utilityfiles.AssertionUtility;
 import com.ca.tds.utilityfiles.CommonUtil;
 import com.ca.tds.utilityfiles.JsonText;
 import com.ca.tds.utilityfiles.JsonUtility;
+import com.ca.tds.utilityfiles.ServiceRestart;
 import com.ca.tds.utilityfiles.ThreeDSSdbAPI;
 import com.relevantcodes.extentreports.LogStatus;
 
@@ -25,6 +26,8 @@ public class IdempotencyAReq extends BaseClassTDS {
 
 	private String previousTest = "TestCaseName";
 	int count=0;
+	
+	int counter=0;
 
 	@SuppressWarnings("unused")
 	@Test(dataProvider = "DataProvider3dsTestData")
@@ -68,12 +71,12 @@ public class IdempotencyAReq extends BaseClassTDS {
 				
 				if(testCaseData.containsKey("DSName")) {
 					
-					if(testCaseData.get("DSName").equals("amex")) {
+					if(testCaseData.get("DSName").contains("amex")) {
 						jsonRequest = jsonRequest.replace(replaceTag, threeDSServerTransIDList.get(0));
 						threeDSServerTransID = threeDSServerTransIDList.get(0).toString();
 						count++;
 					}
-					else if (testCaseData.get("DSName").equals("mc")) {
+					else if (testCaseData.get("DSName").contains("mc")) {
 						
 						jsonRequest = jsonRequest.replace(replaceTag, threeDSServerTransIDList.get(1));
 						threeDSServerTransID = threeDSServerTransIDList.get(1).toString();
@@ -87,11 +90,33 @@ public class IdempotencyAReq extends BaseClassTDS {
 				}
 			}
 			
+				
+			if(counter==0) {
+				
+				ThreeDSSdbAPI dbapi = new ThreeDSSdbAPI();
+				String result = dbapi.updateMtdConfig(BaseClassTDS.caPropMap,1);
+				ServiceRestart.server3DSrestart();
+				System.out.println("Back to Main");
+				System.out.println(result);
+				
+				Thread.sleep(80000);
+			}
+			
 			JSONObject jsonReq = AssertionUtility.prepareRequest(testCaseData, jsonRequest);
 			
 			jsonRequest=jsonReq.toString();
 			
 			parentTest.log(LogStatus.INFO, jsonRequest);
+			
+			counter++;
+			System.out.println("CounterValue "+counter);
+			
+			
+			if(counter==7) {
+				
+				Thread.sleep(120000);
+			}
+			
 
 				 /*ThreeDSSdbAPI db = new ThreeDSSdbAPI();
 	        	  responseAres = db.getAResFromDB(threeDSServerTransID,caPropMap);*/
@@ -172,6 +197,17 @@ public class IdempotencyAReq extends BaseClassTDS {
 			sa.assertAll();
 			
 			}
+					
+			  if(counter==9) {
+			  
+			  ThreeDSSdbAPI dbapi = new ThreeDSSdbAPI(); 
+			  String result = dbapi.updateMtdConfig(BaseClassTDS.caPropMap,60);
+			  ServiceRestart.server3DSrestart(); 
+			  System.out.println(result);
+			  Thread.sleep(90000); 
+			  
+			  }
+			 
 
 		} catch(ValidationException ve){
 			System.out.println(ve.getErrorMessage());

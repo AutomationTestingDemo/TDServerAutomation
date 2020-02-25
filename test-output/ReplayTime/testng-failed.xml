@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="instances" name="Failed suite [ReplayTime]" guice-stage="DEVELOPMENT">
+  <parameter name="TDSExcelFileE" value="data/3DS_EncryptedCardTestData.xlsx"/>
+  <parameter name="TDSExcelFileC" value="data/3DS_ClearCardTestData.xlsx"/>
+  <test thread-count="5" parallel="instances" name="ReplayTime(failed)">
+    <parameter name="ReportTitle" value="3DSAutomationReportOfBrowser"/>
+    <parameter name="ExcelSheetVerify" value="2_AMURL"/>
+    <classes>
+      <class name="com.ca.tds.main.ReplayTimeExpiry">
+        <methods>
+          <include name="AfterTestClass"/>
+          <include name="BeforeClass"/>
+          <include name="AfterClass"/>
+          <include name="beforeSuite"/>
+          <include name="afterMethodProcessing"/>
+          <include name="endSuite"/>
+          <include name="beforeTestClass"/>
+          <include name="replayTime"/>
+        </methods>
+      </class> <!-- com.ca.tds.main.ReplayTimeExpiry -->
+    </classes>
+  </test> <!-- ReplayTime(failed) -->
+</suite> <!-- Failed suite [ReplayTime] -->

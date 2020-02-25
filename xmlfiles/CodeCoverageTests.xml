@@ -10,7 +10,7 @@
     <suite-file path="IdempotencyFLV.xml"></suite-file>
     <suite-file path="IdempotencyNegative.xml"></suite-file>
     <suite-file path="Nmurl.xml"></suite-file>
-     <suite-file path="FlVerify.xml"></suite-file>
+     <suite-file path="StandaloneTests.xml"></suite-file>
     
 </suite-files>
 </suite>

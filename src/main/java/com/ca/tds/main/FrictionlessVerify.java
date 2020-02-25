@@ -31,7 +31,7 @@ public class FrictionlessVerify {
 		 */
 		HttpClient client = HttpClientBuilder.create().build();
 		CloseableHttpClient clients = HttpClients.createDefault();
-		HttpPost postRq = new HttpPost("http://10.80.89.206:9608/3ds-server/api/v1/authenticate3dsTxn");
+		HttpPost postRq = new HttpPost("http://10.80.120.49:9608/3ds-server/api/v1/authenticate3dsTxn");
 		postRq.addHeader("Content-Type", "application/json;charset=utf-8");
 		
 		String response=null;
