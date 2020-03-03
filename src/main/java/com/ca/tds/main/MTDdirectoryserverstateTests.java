@@ -26,12 +26,12 @@ import com.ca.tds.utilityfiles.ServiceRestart;
 import com.ca.tds.utilityfiles.ThreeDSSdbAPI;
 
 @SuppressWarnings("unused")
-public class StartandEndProtocolversion {
+public class MTDdirectoryserverstateTests {
 
 	private static Map<String, String> caPropMap = null;
 	
 	@Test(dataProvider="QueryProvider")
-	public static void startEndProtocolversion(String key, String value) throws Exception {
+	public static void directoryserverstatetest(String key, String value) throws Exception {
 		
 		try {
 			Properties	prop = new Properties(); 
@@ -57,13 +57,6 @@ public class StartandEndProtocolversion {
 			
 			System.out.println("######################################## End of Test ##################################");
 			
-			/*
-			 * result = dbapi.updatemtdcardrangedata(caPropMap,"04");
-			 * ServiceRestart.server3DSrestart(); System.out.println("Back to Main");
-			 * System.out.println(result); Thread.sleep(100000);
-			 * System.out.println("FinalThreadSleepOver"+100000);
-			 */
-			
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 	    } catch (IOException e) {
@@ -75,18 +68,32 @@ public class StartandEndProtocolversion {
     public Object[][] getDataFromDataprovider(){
     return new Object[][] 
     	{
-            { "DSStartHighest", "update mtdcardrangedata set dsstartprotocolversion='2.2.0' where cardtype=4;"},
-            { "DSStartLowest", "update mtdcardrangedata set dsstartprotocolversion='2.0.0' where cardtype=4;"},
-            { "DSStartoriginal", "update mtdcardrangedata set dsstartprotocolversion='2.1.0' where cardtype=4;"},
-            { "DSEndtHighest", "update mtdcardrangedata set dsendprotocolversion='2.2.0' where cardtype=4;"},
-            { "DSEndLowest", "update mtdcardrangedata set dsendprotocolversion='2.0.0' where cardtype=4;"},
-            { "DSENDOriginal", "update mtdcardrangedata set dsendprotocolversion='2.1.0' where cardtype=4;"},
-            { "ACSStartHighest", "update mtdcardrangedata set acsstartprotocolversion='2.2.0' where cardtype=4;"},
-            { "ACSStartLowest", "update mtdcardrangedata set acsstartprotocolversion='2.0.0' where cardtype=4;"},
-            { "ACSStartOriginal", "update mtdcardrangedata set acsstartprotocolversion='2.1.0' where cardtype=4;"},
-            { "ACSSEndtHighest", "update mtdcardrangedata set acsendprotocolversion='2.2.0' where cardtype=4;"},
-            { "ACSSEndLowest", "update mtdcardrangedata set acsendprotocolversion='2.0.0' where cardtype=4;"},
-            { "ACSENdOriginal", "update mtdcardrangedata set acsendprotocolversion='2.1.0' where cardtype=4;"},
+				
+				
+				  { "Query1",
+				  "update mtddirectoryserverstate set status='A', serialnumber='AB' where cardtype=4;"
+				  },
+				 
+			 { "Query8", "update mtddirectoryserverstate set status='0', serialnumber='AB' where cardtype=4;"}, 
+				
+				
+				  {
+				  "Query2","update mtddirectoryserverstate set status=NULL, serialnumber='1' where cardtype=4;"
+				  },
+				  {
+				  "Query9","update mtddirectoryserverstate set status='1', serialnumber='1' where cardtype=4;"
+				}, 
+					  {
+					  "Query3","update mtddirectoryserverstate set status='B' where cardtype=4;"},
+					  {"Query4",
+					  "update mtddirectoryserverstate set cardtype=9 where cardtype=4;"}, {
+					  "Query5", "update mtddirectoryserverstate set cardtype=4 where cardtype=9;"},
+					  
+					  { "Query6", "Delete from mtddirectoryserverstate where cardtype=4;"},
+					 
+				 
+             { "Query7", "INSERT INTO mtddirectoryserverstate (cardtype,dsid,serialnumber,rid,status,lastmodified) VALUES (4,'4','1','4','1','2019-12-23 13:13:27.31752');"},
+          
             
     };
 

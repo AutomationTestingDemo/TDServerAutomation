@@ -88,7 +88,35 @@ public class TxnInFlight {
 			}
 		});
 		
-		Thread.currentThread().sleep(15000);
+		CompletableFuture.runAsync(()->{
+			try {
+				postRq.setEntity(new StringEntity(reqStr));
+				HttpResponse resp = client.execute(postRq);				
+				HttpEntity entity = resp.getEntity();
+				String response = EntityUtils.toString(entity, "UTF-8");
+				System.out.println("Response 1 :: "+response);
+				
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		});
+		
+		//Thread.sleep(100);
+		
+		CompletableFuture.runAsync(()->{
+			try {
+				HttpResponse resp = client.execute(postRq);
+				HttpEntity entity = resp.getEntity();
+				String response = EntityUtils.toString(entity, "UTF-8");
+				System.out.println("Response 2 :: "+response);;
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		});
+		
+		 Thread.currentThread().sleep(15000); 
 
 	}
 

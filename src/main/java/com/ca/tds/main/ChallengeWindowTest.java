@@ -26,6 +26,7 @@ public class ChallengeWindowTest {
 	
 	private static Map<String, String> caPropMap = null;
 
+	
 	/*
 	 * public static void main(String[] args) throws Exception {
 	 * 
@@ -33,6 +34,7 @@ public class ChallengeWindowTest {
 	 * 
 	 * }
 	 */
+	 
 	@Test
 	public static void challengeWindow() throws Exception {
 		
@@ -47,7 +49,7 @@ public class ChallengeWindowTest {
 				caPropMap.put(name, prop.getProperty(name));
 			
 			ThreeDSSdbAPI dbapi = new ThreeDSSdbAPI();
-			String result = dbapi.updateMtdMerchants(caPropMap,"07");
+			String result = dbapi.updateMtdMerchants(caPropMap,"");
 			ServiceRestart.server3DSrestart();
 			System.out.println("Back to Main");
 			System.out.println(result);

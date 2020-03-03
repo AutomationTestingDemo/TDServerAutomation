@@ -1,205 +1,157 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="12" passed="12" failed="0" skipped="0">
+<testng-results ignored="0" total="9" passed="9" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-02-25T16:43:09 IST" name="Suite6" finished-at="2020-02-25T17:05:06 IST" duration-ms="1316586">
+  <suite started-at="2020-03-03T16:19:55 IST" name="Suite6" finished-at="2020-03-03T16:36:09 IST" duration-ms="973696">
     <groups>
     </groups>
-    <test started-at="2020-02-25T16:43:09 IST" name="Test" finished-at="2020-02-25T17:05:06 IST" duration-ms="1316586">
-      <class name="com.ca.tds.main.StartandEndProtocolversion">
-        <test-method signature="startEndProtocolversion(java.lang.String, java.lang.String)[pri:0, instance:com.ca.tds.main.StartandEndProtocolversion@fd07cbb]" started-at="2020-02-25T16:43:09 IST" name="startEndProtocolversion" data-provider="QueryProvider" finished-at="2020-02-25T16:45:00 IST" duration-ms="111285" status="PASS">
+    <test started-at="2020-03-03T16:19:55 IST" name="Test" finished-at="2020-03-03T16:36:09 IST" duration-ms="973696">
+      <class name="com.ca.tds.main.MTDdirectoryserverstateTests">
+        <test-method signature="directoryserverstatetest(java.lang.String, java.lang.String)[pri:0, instance:com.ca.tds.main.MTDdirectoryserverstateTests@fd07cbb]" started-at="2020-03-03T16:19:55 IST" name="directoryserverstatetest" data-provider="QueryProvider" finished-at="2020-03-03T16:21:44 IST" duration-ms="108545" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[DSStartHighest]]>
+                <![CDATA[Query1]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[update mtdcardrangedata set dsstartprotocolversion='2.2.0' where cardtype=4;]]>
+                <![CDATA[update mtddirectoryserverstate set status='A', serialnumber='AB' where cardtype=4;]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- startEndProtocolversion -->
-        <test-method signature="startEndProtocolversion(java.lang.String, java.lang.String)[pri:0, instance:com.ca.tds.main.StartandEndProtocolversion@fd07cbb]" started-at="2020-02-25T16:45:00 IST" name="startEndProtocolversion" data-provider="QueryProvider" finished-at="2020-02-25T16:46:52 IST" duration-ms="111876" status="PASS">
+        </test-method> <!-- directoryserverstatetest -->
+        <test-method signature="directoryserverstatetest(java.lang.String, java.lang.String)[pri:0, instance:com.ca.tds.main.MTDdirectoryserverstateTests@fd07cbb]" started-at="2020-03-03T16:21:44 IST" name="directoryserverstatetest" data-provider="QueryProvider" finished-at="2020-03-03T16:23:32 IST" duration-ms="107890" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[DSStartLowest]]>
+                <![CDATA[Query8]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[update mtdcardrangedata set dsstartprotocolversion='2.0.0' where cardtype=4;]]>
+                <![CDATA[update mtddirectoryserverstate set status='0', serialnumber='AB' where cardtype=4;]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- startEndProtocolversion -->
-        <test-method signature="startEndProtocolversion(java.lang.String, java.lang.String)[pri:0, instance:com.ca.tds.main.StartandEndProtocolversion@fd07cbb]" started-at="2020-02-25T16:46:52 IST" name="startEndProtocolversion" data-provider="QueryProvider" finished-at="2020-02-25T16:48:42 IST" duration-ms="109843" status="PASS">
+        </test-method> <!-- directoryserverstatetest -->
+        <test-method signature="directoryserverstatetest(java.lang.String, java.lang.String)[pri:0, instance:com.ca.tds.main.MTDdirectoryserverstateTests@fd07cbb]" started-at="2020-03-03T16:23:32 IST" name="directoryserverstatetest" data-provider="QueryProvider" finished-at="2020-03-03T16:25:20 IST" duration-ms="108176" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[DSStartoriginal]]>
+                <![CDATA[Query2]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[update mtdcardrangedata set dsstartprotocolversion='2.1.0' where cardtype=4;]]>
+                <![CDATA[update mtddirectoryserverstate set status=NULL, serialnumber='1' where cardtype=4;]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- startEndProtocolversion -->
-        <test-method signature="startEndProtocolversion(java.lang.String, java.lang.String)[pri:0, instance:com.ca.tds.main.StartandEndProtocolversion@fd07cbb]" started-at="2020-02-25T16:48:42 IST" name="startEndProtocolversion" data-provider="QueryProvider" finished-at="2020-02-25T16:50:32 IST" duration-ms="110102" status="PASS">
+        </test-method> <!-- directoryserverstatetest -->
+        <test-method signature="directoryserverstatetest(java.lang.String, java.lang.String)[pri:0, instance:com.ca.tds.main.MTDdirectoryserverstateTests@fd07cbb]" started-at="2020-03-03T16:25:20 IST" name="directoryserverstatetest" data-provider="QueryProvider" finished-at="2020-03-03T16:27:09 IST" duration-ms="108626" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[DSEndtHighest]]>
+                <![CDATA[Query9]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[update mtdcardrangedata set dsendprotocolversion='2.2.0' where cardtype=4;]]>
+                <![CDATA[update mtddirectoryserverstate set status='1', serialnumber='1' where cardtype=4;]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- startEndProtocolversion -->
-        <test-method signature="startEndProtocolversion(java.lang.String, java.lang.String)[pri:0, instance:com.ca.tds.main.StartandEndProtocolversion@fd07cbb]" started-at="2020-02-25T16:50:32 IST" name="startEndProtocolversion" data-provider="QueryProvider" finished-at="2020-02-25T16:52:21 IST" duration-ms="108362" status="PASS">
+        </test-method> <!-- directoryserverstatetest -->
+        <test-method signature="directoryserverstatetest(java.lang.String, java.lang.String)[pri:0, instance:com.ca.tds.main.MTDdirectoryserverstateTests@fd07cbb]" started-at="2020-03-03T16:27:09 IST" name="directoryserverstatetest" data-provider="QueryProvider" finished-at="2020-03-03T16:28:57 IST" duration-ms="108177" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[DSEndLowest]]>
+                <![CDATA[Query3]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[update mtdcardrangedata set dsendprotocolversion='2.0.0' where cardtype=4;]]>
+                <![CDATA[update mtddirectoryserverstate set status='B' where cardtype=4;]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- startEndProtocolversion -->
-        <test-method signature="startEndProtocolversion(java.lang.String, java.lang.String)[pri:0, instance:com.ca.tds.main.StartandEndProtocolversion@fd07cbb]" started-at="2020-02-25T16:52:21 IST" name="startEndProtocolversion" data-provider="QueryProvider" finished-at="2020-02-25T16:54:10 IST" duration-ms="109438" status="PASS">
+        </test-method> <!-- directoryserverstatetest -->
+        <test-method signature="directoryserverstatetest(java.lang.String, java.lang.String)[pri:0, instance:com.ca.tds.main.MTDdirectoryserverstateTests@fd07cbb]" started-at="2020-03-03T16:28:57 IST" name="directoryserverstatetest" data-provider="QueryProvider" finished-at="2020-03-03T16:30:45 IST" duration-ms="107728" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[DSENDOriginal]]>
+                <![CDATA[Query4]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[update mtdcardrangedata set dsendprotocolversion='2.1.0' where cardtype=4;]]>
+                <![CDATA[update mtddirectoryserverstate set cardtype=9 where cardtype=4;]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- startEndProtocolversion -->
-        <test-method signature="startEndProtocolversion(java.lang.String, java.lang.String)[pri:0, instance:com.ca.tds.main.StartandEndProtocolversion@fd07cbb]" started-at="2020-02-25T16:54:10 IST" name="startEndProtocolversion" data-provider="QueryProvider" finished-at="2020-02-25T16:55:59 IST" duration-ms="108770" status="PASS">
+        </test-method> <!-- directoryserverstatetest -->
+        <test-method signature="directoryserverstatetest(java.lang.String, java.lang.String)[pri:0, instance:com.ca.tds.main.MTDdirectoryserverstateTests@fd07cbb]" started-at="2020-03-03T16:30:45 IST" name="directoryserverstatetest" data-provider="QueryProvider" finished-at="2020-03-03T16:32:34 IST" duration-ms="109001" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[ACSStartHighest]]>
+                <![CDATA[Query5]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[update mtdcardrangedata set acsstartprotocolversion='2.2.0' where cardtype=4;]]>
+                <![CDATA[update mtddirectoryserverstate set cardtype=4 where cardtype=9;]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- startEndProtocolversion -->
-        <test-method signature="startEndProtocolversion(java.lang.String, java.lang.String)[pri:0, instance:com.ca.tds.main.StartandEndProtocolversion@fd07cbb]" started-at="2020-02-25T16:55:59 IST" name="startEndProtocolversion" data-provider="QueryProvider" finished-at="2020-02-25T16:57:48 IST" duration-ms="109374" status="PASS">
+        </test-method> <!-- directoryserverstatetest -->
+        <test-method signature="directoryserverstatetest(java.lang.String, java.lang.String)[pri:0, instance:com.ca.tds.main.MTDdirectoryserverstateTests@fd07cbb]" started-at="2020-03-03T16:32:34 IST" name="directoryserverstatetest" data-provider="QueryProvider" finished-at="2020-03-03T16:34:21 IST" duration-ms="107228" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[ACSStartLowest]]>
+                <![CDATA[Query6]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[update mtdcardrangedata set acsstartprotocolversion='2.0.0' where cardtype=4;]]>
+                <![CDATA[Delete from mtddirectoryserverstate where cardtype=4;]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- startEndProtocolversion -->
-        <test-method signature="startEndProtocolversion(java.lang.String, java.lang.String)[pri:0, instance:com.ca.tds.main.StartandEndProtocolversion@fd07cbb]" started-at="2020-02-25T16:57:48 IST" name="startEndProtocolversion" data-provider="QueryProvider" finished-at="2020-02-25T16:59:38 IST" duration-ms="109573" status="PASS">
+        </test-method> <!-- directoryserverstatetest -->
+        <test-method signature="directoryserverstatetest(java.lang.String, java.lang.String)[pri:0, instance:com.ca.tds.main.MTDdirectoryserverstateTests@fd07cbb]" started-at="2020-03-03T16:34:21 IST" name="directoryserverstatetest" data-provider="QueryProvider" finished-at="2020-03-03T16:36:09 IST" duration-ms="108276" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[ACSStartOriginal]]>
+                <![CDATA[Query7]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[update mtdcardrangedata set acsstartprotocolversion='2.1.0' where cardtype=4;]]>
+                <![CDATA[INSERT INTO mtddirectoryserverstate (cardtype,dsid,serialnumber,rid,status,lastmodified) VALUES (4,'4','1','4','1','2019-12-23 13:13:27.31752');]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- startEndProtocolversion -->
-        <test-method signature="startEndProtocolversion(java.lang.String, java.lang.String)[pri:0, instance:com.ca.tds.main.StartandEndProtocolversion@fd07cbb]" started-at="2020-02-25T16:59:38 IST" name="startEndProtocolversion" data-provider="QueryProvider" finished-at="2020-02-25T17:01:28 IST" duration-ms="109751" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[ACSSEndtHighest]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[update mtdcardrangedata set acsendprotocolversion='2.2.0' where cardtype=4;]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startEndProtocolversion -->
-        <test-method signature="startEndProtocolversion(java.lang.String, java.lang.String)[pri:0, instance:com.ca.tds.main.StartandEndProtocolversion@fd07cbb]" started-at="2020-02-25T17:01:28 IST" name="startEndProtocolversion" data-provider="QueryProvider" finished-at="2020-02-25T17:03:16 IST" duration-ms="108592" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[ACSSEndLowest]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[update mtdcardrangedata set acsendprotocolversion='2.0.0' where cardtype=4;]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startEndProtocolversion -->
-        <test-method signature="startEndProtocolversion(java.lang.String, java.lang.String)[pri:0, instance:com.ca.tds.main.StartandEndProtocolversion@fd07cbb]" started-at="2020-02-25T17:03:16 IST" name="startEndProtocolversion" data-provider="QueryProvider" finished-at="2020-02-25T17:05:06 IST" duration-ms="109543" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[ACSENdOriginal]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[update mtdcardrangedata set acsendprotocolversion='2.1.0' where cardtype=4;]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startEndProtocolversion -->
-      </class> <!-- com.ca.tds.main.StartandEndProtocolversion -->
+        </test-method> <!-- directoryserverstatetest -->
+      </class> <!-- com.ca.tds.main.MTDdirectoryserverstateTests -->
     </test> <!-- Test -->
   </suite> <!-- Suite6 -->
 </testng-results>

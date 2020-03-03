@@ -17,6 +17,7 @@ public class ServiceRestart {
 		String user = "root";
 		String password = "interOP@002532";
 		String command = "cd /root/scripts;./startService.sh";
+		String command2= "cd /opt/arcot/logs/msserver-deployment-25-sx7jz; grep -inR "+"Load_Cache:periodic_load_cache: all caches loaded successfully"+" ArcotMPSLog.txt";
 		
 		int counter = 0;
 		try {
@@ -32,7 +33,13 @@ public class ServiceRestart {
 
 			
 			  Channel channel=session.openChannel("exec");
-			  ((ChannelExec)channel).setCommand(command); channel.setInputStream(null);
+			  
+			/* ((ChannelExec)channel).setCommand(command+ "&&" + command2); */
+			  ((ChannelExec)channel).setCommand(command); 
+			/* ((ChannelExec)channel).setCommand(command2); */ 
+			  
+			   channel.setInputStream(null);
+			   
 			  ((ChannelExec)channel).setErrStream(System.err);
 			  
 			  InputStream in=channel.getInputStream();
@@ -62,7 +69,7 @@ public class ServiceRestart {
 				  }
 				  
 				  
-				  if(counter!=0) {
+				  if(counter==1) {
 					  
 					  channel.disconnect();
 					  
@@ -104,9 +111,9 @@ public class ServiceRestart {
 
 	}
 
-	/*
-	 * public static void main(String args[]) { server3DSrestart(); }
-	 */
+	
+	/* public static void main(String args[]) { server3DSrestart(); } */
+	 
 	
  
 

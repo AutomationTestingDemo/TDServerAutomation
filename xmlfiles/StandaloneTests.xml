@@ -4,11 +4,13 @@
   <test thread-count="2" name="Test">
     <classes>
 
-      <class name="com.ca.tds.main.FrictionlessVerify"/>
-      <class name="com.ca.tds.main.TxnInFlight"/>
-       <class name="com.ca.tds.main.InvalidTransid"/>
+    <!--   <class name="com.ca.tds.main.FrictionlessVerify"/> -->
+  <!--     <class name="com.ca.tds.main.TxnInFlight"/> -->
+   <!--     <class name="com.ca.tds.main.InvalidTransid"/>
         <class name="com.ca.tds.main.ChallengeWindowTest"/>
-         <class name="com.ca.tds.main.StartandEndProtocolversion"/>
+         <class name="com.ca.tds.main.StartandEndProtocolversion"/> -->
+         
+         <class name="com.ca.tds.main.MTDdirectoryserverstateTests"/>
 
     </classes>
   </test> <!-- Test -->

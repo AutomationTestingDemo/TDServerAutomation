@@ -159,20 +159,19 @@ public class ThreeDSSdbAPI extends BaseClassTDS {
 		
 		HashMap<String, String> dataMap = new HashMap<String, String>();
 		
-		String responseARes=null;
-		
-		
+		String responseARes=null;	
 	
 		String query=null;
 		
-		if(value.equals("07")) {
+		if(value.isEmpty()) {
 				
 			query = "update mraqa.mtdmerchants set challengewindowsize=null where camerchantid='MTD000000';";
 			
-		}else {
+		} else {
 			
 			query = "update mraqa.mtdmerchants set challengewindowsize='"+value+"' where camerchantid='MTD000000';";
 		}
+		
 		try {
 			
 			dbConn.getConn3DS(caPropMap).createStatement().executeUpdate(query);
@@ -197,7 +196,7 @@ public class ThreeDSSdbAPI extends BaseClassTDS {
 		
 	}
 	
-	public  String updatemtdcardrangedata(Map<String, String> caPropMap, String value) throws Exception {
+	public  String updateDBTable(Map<String, String> caPropMap, String value) throws Exception {
 		
 		HashMap<String, String> dataMap = new HashMap<String, String>();
 		
