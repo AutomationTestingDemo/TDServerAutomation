@@ -1,9 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [SanityFrictionLessMethodurl]" parallel="methods">
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="methods" name="Failed suite [SanityFrictionLessMethodurl]" guice-stage="DEVELOPMENT">
   <parameter name="TDSExcelFileE" value="data/3DS_SanityEncryptedCardTestData.xlsx"/>
   <parameter name="TDSExcelFileC" value="data/3DS_SanityClearCardTestData.xlsx"/>
-  <test thread-count="2" name="AMEX::Clear Card::Browser::AReq flow(failed)" parallel="methods">
+  <test thread-count="2" parallel="methods" name="AMEX::Clear Card::Browser::ThreeDSMethodURL flow(failed)">
+    <parameter name="ReportTitle" value="3DSAutomationReportOfBrowser"/>
+    <parameter name="ExcelSheetVerify" value="2_AMURL"/>
+    <classes>
+      <class name="com.ca.tds.main.TDSMethodURL_TC">
+        <methods>
+          <include name="AfterTestClass"/>
+          <include name="BeforeClass"/>
+          <include name="AfterClass"/>
+          <include name="testArequestAPI" invocation-numbers="0"/>
+          <include name="beforeSuite"/>
+          <include name="afterMethodProcessing"/>
+          <include name="endSuite"/>
+          <include name="beforeTestClass"/>
+        </methods>
+      </class> <!-- com.ca.tds.main.TDSMethodURL_TC -->
+    </classes>
+  </test> <!-- AMEX::Clear Card::Browser::ThreeDSMethodURL flow(failed) -->
+  <test thread-count="2" parallel="methods" name="AMEX::Clear Card::Browser::AReq flow(failed)">
     <parameter name="ReportTitle" value="3DSAutomationReportOfBrowser"/>
     <parameter name="ExcelSheetVerify" value="2_AAREQ"/>
     <classes>
@@ -21,7 +39,7 @@
       </class> <!-- com.ca.tds.main.TDSPreAreq_TC -->
     </classes>
   </test> <!-- AMEX::Clear Card::Browser::AReq flow(failed) -->
-  <test thread-count="2" name="MASTERC::Clear Card::Browser::ThreeDSMethodURL flow(failed)" parallel="methods">
+  <test thread-count="2" parallel="methods" name="MASTERC::Clear Card::Browser::ThreeDSMethodURL flow(failed)">
     <parameter name="ReportTitle" value="3DSAutomationReportOfBrowser"/>
     <parameter name="ExcelSheetVerify" value="2_MMURL"/>
     <classes>
@@ -39,7 +57,7 @@
       </class> <!-- com.ca.tds.main.TDSMethodURL_TC -->
     </classes>
   </test> <!-- MASTERC::Clear Card::Browser::ThreeDSMethodURL flow(failed) -->
-  <test thread-count="2" name="MASTERC::Clear Card::Browser::AReq flow(failed)" parallel="methods">
+  <test thread-count="2" parallel="methods" name="MASTERC::Clear Card::Browser::AReq flow(failed)">
     <parameter name="ReportTitle" value="3DSAutomationReportOfBrowser"/>
     <parameter name="ExcelSheetVerify" value="2_MAREQ"/>
     <classes>
@@ -57,7 +75,25 @@
       </class> <!-- com.ca.tds.main.TDSPreAreq_TC -->
     </classes>
   </test> <!-- MASTERC::Clear Card::Browser::AReq flow(failed) -->
-  <test thread-count="2" name="VISA::Clear Card::Browser::AReq flow(failed)" parallel="methods">
+  <test thread-count="2" parallel="methods" name="VISA::Clear Card::Browser::ThreeDSMethodURL flow(failed)">
+    <parameter name="ReportTitle" value="3DSAutomationReportOfBrowser"/>
+    <parameter name="ExcelSheetVerify" value="2_VMURL"/>
+    <classes>
+      <class name="com.ca.tds.main.TDSMethodURL_TC">
+        <methods>
+          <include name="AfterTestClass"/>
+          <include name="BeforeClass"/>
+          <include name="AfterClass"/>
+          <include name="testArequestAPI" invocation-numbers="0"/>
+          <include name="beforeSuite"/>
+          <include name="afterMethodProcessing"/>
+          <include name="endSuite"/>
+          <include name="beforeTestClass"/>
+        </methods>
+      </class> <!-- com.ca.tds.main.TDSMethodURL_TC -->
+    </classes>
+  </test> <!-- VISA::Clear Card::Browser::ThreeDSMethodURL flow(failed) -->
+  <test thread-count="2" parallel="methods" name="VISA::Clear Card::Browser::AReq flow(failed)">
     <parameter name="ReportTitle" value="3DSAutomationReportOfBrowser"/>
     <parameter name="ExcelSheetVerify" value="2_VAREQ"/>
     <classes>

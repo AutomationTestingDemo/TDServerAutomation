@@ -1,13 +1,114 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite6]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Test(failed)">
+<suite thread-count="4" parallel="methods" name="Failed suite [SanityChallengeflowMethodurl]" guice-stage="DEVELOPMENT">
+  <parameter name="TDSExcelFileE" value="data/3DS_SanityEncryptedCardTestData.xlsx"/>
+  <parameter name="TDSExcelFileC" value="data/3DS_SanityClearCardTestData.xlsx"/>
+  <test thread-count="4" parallel="methods" name="AMEX::Clear Card::Browser::RReq flow(failed)">
+    <parameter name="ReportTitle" value="3DSAutomationReportOfBrowser"/>
+    <parameter name="ExcelSheetVerify" value="4_RREQ"/>
     <classes>
-      <class name="com.ca.tds.main.MTDdirectoryserverstateTests">
+      <class name="com.ca.tds.main.TDSRReq_TC">
         <methods>
-          <include name="directoryserverstatetest" invocation-numbers="2"/>
+          <include name="testRRequestAPI" invocation-numbers="0"/>
+          <include name="AfterTestClass"/>
+          <include name="BeforeClass"/>
+          <include name="AfterClass"/>
+          <include name="beforeSuite"/>
+          <include name="afterMethodProcessing"/>
+          <include name="endSuite"/>
+          <include name="beforeTestClass"/>
         </methods>
-      </class> <!-- com.ca.tds.main.MTDdirectoryserverstateTests -->
+      </class> <!-- com.ca.tds.main.TDSRReq_TC -->
     </classes>
-  </test> <!-- Test(failed) -->
-</suite> <!-- Failed suite [Suite6] -->
+  </test> <!-- AMEX::Clear Card::Browser::RReq flow(failed) -->
+  <test thread-count="4" parallel="methods" name="AMEX::Clear Card::Browser::VerifyAPI flow(failed)">
+    <parameter name="ReportTitle" value="3DSAutomationReportOfBrowser"/>
+    <parameter name="ExcelSheetVerify" value="4_VERIFY"/>
+    <classes>
+      <class name="com.ca.tds.main.TDSVerifyAPI_TC">
+        <methods>
+          <include name="testArequestAPI" invocation-numbers="0"/>
+          <include name="AfterTestClass"/>
+          <include name="BeforeClass"/>
+          <include name="AfterClass"/>
+          <include name="beforeSuite"/>
+          <include name="afterMethodProcessing"/>
+          <include name="endSuite"/>
+          <include name="beforeTestClass"/>
+        </methods>
+      </class> <!-- com.ca.tds.main.TDSVerifyAPI_TC -->
+    </classes>
+  </test> <!-- AMEX::Clear Card::Browser::VerifyAPI flow(failed) -->
+  <test thread-count="4" parallel="methods" name="MASTERCARD::Clear Card::Browser::RReq flow(failed)">
+    <parameter name="ReportTitle" value="3DSAutomationReportOfBrowser"/>
+    <parameter name="ExcelSheetVerify" value="4_RREQ"/>
+    <classes>
+      <class name="com.ca.tds.main.TDSRReq_TC">
+        <methods>
+          <include name="testRRequestAPI" invocation-numbers="0"/>
+          <include name="AfterTestClass"/>
+          <include name="BeforeClass"/>
+          <include name="AfterClass"/>
+          <include name="beforeSuite"/>
+          <include name="afterMethodProcessing"/>
+          <include name="endSuite"/>
+          <include name="beforeTestClass"/>
+        </methods>
+      </class> <!-- com.ca.tds.main.TDSRReq_TC -->
+    </classes>
+  </test> <!-- MASTERCARD::Clear Card::Browser::RReq flow(failed) -->
+  <test thread-count="4" parallel="methods" name="MasterCard::Clear Card::Browser::VerifyAPI flow(failed)">
+    <parameter name="ReportTitle" value="3DSAutomationReportOfBrowser"/>
+    <parameter name="ExcelSheetVerify" value="4_VERIFY"/>
+    <classes>
+      <class name="com.ca.tds.main.TDSVerifyAPI_TC">
+        <methods>
+          <include name="testArequestAPI" invocation-numbers="0"/>
+          <include name="AfterTestClass"/>
+          <include name="BeforeClass"/>
+          <include name="AfterClass"/>
+          <include name="beforeSuite"/>
+          <include name="afterMethodProcessing"/>
+          <include name="endSuite"/>
+          <include name="beforeTestClass"/>
+        </methods>
+      </class> <!-- com.ca.tds.main.TDSVerifyAPI_TC -->
+    </classes>
+  </test> <!-- MasterCard::Clear Card::Browser::VerifyAPI flow(failed) -->
+  <test thread-count="4" parallel="methods" name="VISA::Clear Card::Browser::RReq flow(failed)">
+    <parameter name="ReportTitle" value="3DSAutomationReportOfBrowser"/>
+    <parameter name="ExcelSheetVerify" value="4_RREQ"/>
+    <classes>
+      <class name="com.ca.tds.main.TDSRReq_TC">
+        <methods>
+          <include name="testRRequestAPI" invocation-numbers="0"/>
+          <include name="AfterTestClass"/>
+          <include name="BeforeClass"/>
+          <include name="AfterClass"/>
+          <include name="beforeSuite"/>
+          <include name="afterMethodProcessing"/>
+          <include name="endSuite"/>
+          <include name="beforeTestClass"/>
+        </methods>
+      </class> <!-- com.ca.tds.main.TDSRReq_TC -->
+    </classes>
+  </test> <!-- VISA::Clear Card::Browser::RReq flow(failed) -->
+  <test thread-count="4" parallel="methods" name="VISA::Clear Card::Browser::VerifyAPI flow(failed)">
+    <parameter name="ReportTitle" value="3DSAutomationReportOfBrowser"/>
+    <parameter name="ExcelSheetVerify" value="4_VERIFY"/>
+    <classes>
+      <class name="com.ca.tds.main.TDSVerifyAPI_TC">
+        <methods>
+          <include name="testArequestAPI" invocation-numbers="0"/>
+          <include name="AfterTestClass"/>
+          <include name="BeforeClass"/>
+          <include name="AfterClass"/>
+          <include name="beforeSuite"/>
+          <include name="afterMethodProcessing"/>
+          <include name="endSuite"/>
+          <include name="beforeTestClass"/>
+        </methods>
+      </class> <!-- com.ca.tds.main.TDSVerifyAPI_TC -->
+    </classes>
+  </test> <!-- VISA::Clear Card::Browser::VerifyAPI flow(failed) -->
+</suite> <!-- Failed suite [SanityChallengeflowMethodurl] -->

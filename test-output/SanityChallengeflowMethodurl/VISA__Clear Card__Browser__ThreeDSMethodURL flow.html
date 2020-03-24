@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Jan 22 14:46:24 IST 2020</td>
+<td>Started on:</td><td>Tue Mar 24 14:36:14 IST 2020</td>
 </tr>
-<tr><td>Total time:</td><td>0 seconds (576 ms)</td>
+<tr><td>Total time:</td><td>0 seconds (564 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,130 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@1783bbb3, {TestCaseID=_S001, TestCaseName=_SanityChallenge_Sample Valid Verify Request, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=G, Expected-eci=G, Expected-authenticationValue=G, Expected-transStatus=G, Expected-transStatusReason=G, Expected-challengeCancel=G, Expected-resultsStatus=G, Expected-authenticationType=G, Expected-interactionCounter=G, Expected-messageType=RSRs, Expected-XID=G, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=MTD000000, #transStatus#=Y}</td>
+<td><div><pre>java.lang.AssertionError: errorComponent: S, errorCode: 501, errorDescription:CA Merchant Server:: RReq not recieved due to technical errorerrorDetail : Internal Trasient error occured for this transaction. Temporary Error occured for this transaction, threeDSServerTransID : 6bffbd04-7008-4c0f-ac55-8633a4de44b7
+	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:120)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+... Removed 13 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1630644597", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1630644597'><pre>java.lang.AssertionError: errorComponent: S, errorCode: 501, errorDescription:CA Merchant Server:: RReq not recieved due to technical errorerrorDetail : Internal Trasient error occured for this transaction. Temporary Error occured for this transaction, threeDSServerTransID : 6bffbd04-7008-4c0f-ac55-8633a4de44b7
+	at org.testng.Assert.fail(Assert.java:97)
+	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:120)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+</pre></div></td>
+<td>0</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@35aea049</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSVerifyAPI_TC<br>Parameters: org.testng.TestRunner@9d648d5, {TestCaseID=_S001, TestCaseName=_SanityChallenge_Sample Valid Verify Request, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-callerTxnRefID=G, Expected-eci=G, Expected-authenticationValue=G, Expected-transStatus=G, Expected-transStatusReason=G, Expected-challengeCancel=G, Expected-resultsStatus=G, Expected-authenticationType=G, Expected-interactionCounter=G, Expected-messageType=RSRs, Expected-XID=G, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #threeDSServerTransID#=, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #cres#=, #messageType#=RSRq, #caMerchantID#=MTD000000, #transStatus#=Y}</td>
+<td><div><pre>java.lang.AssertionError: errorComponent: S, errorCode: 501, errorDescription:CA Merchant Server:: RReq not recieved due to technical errorerrorDetail : Internal Trasient error occured for this transaction. Temporary Error occured for this transaction, threeDSServerTransID : 47bad248-276e-4c55-903e-7c53fda82173
+	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:120)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+... Removed 13 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1870903358", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1870903358'><pre>java.lang.AssertionError: errorComponent: S, errorCode: 501, errorDescription:CA Merchant Server:: RReq not recieved due to technical errorerrorDetail : Internal Trasient error occured for this transaction. Temporary Error occured for this transaction, threeDSServerTransID : 47bad248-276e-4c55-903e-7c53fda82173
+	at org.testng.Assert.fail(Assert.java:97)
+	at com.ca.tds.main.TDSVerifyAPI_TC.testArequestAPI(TDSVerifyAPI_TC.java:120)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+</pre></div></td>
+<td>0</td>
+<td>com.ca.tds.main.TDSVerifyAPI_TC@25fb8912</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSRReq_TC.testRRequestAPI()'><b>testRRequestAPI</b><br>Test class: com.ca.tds.main.TDSRReq_TC<br>Parameters: org.testng.TestRunner@5ebf9d3a, {TestCaseID=_S001, TestCaseName=_SanityChallenge_RReq_For_Verify_TC001, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-dsTransID=G, Expected-acsTransID=G, Expected-messageExtension=G, Expected-messageType=RRes, Expected-messageVersion=2.1.0, Expected-resultsStatus=G, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #acsTransID#=, #authenticationType#=, #challengeCancel#=#REMOVE#, #dsTransID#=, #eci#=#REMOVE#, #interactionCounter#=01, #messageCategory#=01, #messageType#=RReq, #messageVersion#=, #threeDSServerTransID#=, #transStatus#=Y, #transStatusReason#=#REMOVE#, #criticalityIndicator#=false, #Dvalue#=HMS, #Dvalue1#=HMS, #Dvalue2#=HMS, #id#=ID2019JAN240101, #name#=ShashishekharHM, #authenticationValue#=AJkCCBFHJhl3gGhDA0cmAAAAAAA=}</td>
+<td><div><pre>java.lang.AssertionError: errorComponent: S, errorCode: 403, errorDescription:CA Merchant Server:: Internal Transient error occured for this transaction  errorDetail : Failed to get DB context, threeDSServerTransID : 6bffbd04-7008-4c0f-ac55-8633a4de44b7
+	at com.ca.tds.main.TDSRReq_TC.testRRequestAPI(TDSRReq_TC.java:111)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+... Removed 13 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1414546600", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1414546600'><pre>java.lang.AssertionError: errorComponent: S, errorCode: 403, errorDescription:CA Merchant Server:: Internal Transient error occured for this transaction  errorDetail : Failed to get DB context, threeDSServerTransID : 6bffbd04-7008-4c0f-ac55-8633a4de44b7
+	at org.testng.Assert.fail(Assert.java:97)
+	at com.ca.tds.main.TDSRReq_TC.testRRequestAPI(TDSRReq_TC.java:111)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+</pre></div></td>
+<td>0</td>
+<td>com.ca.tds.main.TDSRReq_TC@7fee8714</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSRReq_TC.testRRequestAPI()'><b>testRRequestAPI</b><br>Test class: com.ca.tds.main.TDSRReq_TC<br>Parameters: org.testng.TestRunner@56365f82, {TestCaseID=_S001, TestCaseName=_SanityChallenge_RReq_For_Verify_TC001, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-threeDSServerTransID=G, Expected-dsTransID=G, Expected-acsTransID=G, Expected-messageExtension=G, Expected-messageType=RRes, Expected-messageVersion=2.1.0, Expected-resultsStatus=G, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #acsTransID#=, #authenticationType#=, #challengeCancel#=#REMOVE#, #dsTransID#=, #eci#=#REMOVE#, #interactionCounter#=01, #messageCategory#=01, #messageType#=RReq, #messageVersion#=, #threeDSServerTransID#=, #transStatus#=Y, #transStatusReason#=#REMOVE#, #criticalityIndicator#=false, #Dvalue#=HMS, #Dvalue1#=HMS, #Dvalue2#=HMS, #id#=ID2019JAN240101, #name#=ShashishekharHM, #authenticationValue#=AJkCCBFHJhl3gGhDA0cmAAAAAAA=}</td>
+<td><div><pre>java.lang.AssertionError: errorComponent: S, errorCode: 403, errorDescription:CA Merchant Server:: Internal Transient error occured for this transaction  errorDetail : Failed to get DB context, threeDSServerTransID : 47bad248-276e-4c55-903e-7c53fda82173
+	at com.ca.tds.main.TDSRReq_TC.testRRequestAPI(TDSRReq_TC.java:111)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+... Removed 13 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1046369776", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1046369776'><pre>java.lang.AssertionError: errorComponent: S, errorCode: 403, errorDescription:CA Merchant Server:: Internal Transient error occured for this transaction  errorDetail : Failed to get DB context, threeDSServerTransID : 47bad248-276e-4c55-903e-7c53fda82173
+	at org.testng.Assert.fail(Assert.java:97)
+	at com.ca.tds.main.TDSRReq_TC.testRRequestAPI(TDSRReq_TC.java:111)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+</pre></div></td>
+<td>0</td>
+<td>com.ca.tds.main.TDSRReq_TC@18d87d80</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -75,10 +199,30 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.ca.tds.main.TDSMethodURL_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSMethodURL_TC<br>Parameters: org.testng.TestRunner@e7a33f4, {TestCaseID=_S001, TestCaseName=_SanityChallenge_VISA_For_Verify_TC001, SanityFlag=Y, Test Case type=P, RequirementID=, Expected-messageType=ThreeDSMethodURLRes, Expected-callerTxnRefID=G, Expected-messageVersion=2.1.0, Expected-threeDSServerTransID=G, Expected-threeDSMethodURL=G, #acctNumber#=7UpZZndm5dmKnbhUtEVIl30b+B4lVwi6GEN5VUyxoT2QF9+gY5Ar1+tjBZys9AJyUW2vqz902epcr0Rkmr0sT/OlSvUOEc7gOEbVavO6KvHkRQchwOcaB3rwMDwhcZqsumgzyYwPWqBwAAtbIF+L1Lw7NyL9nYLl3O4ZHDyfNbdgBW5ZuNXWS2j+zhNabX1qmOv4NvdzdEV4iAlgc6YSsJ2RiOa3uyOXpLxzLtFSELhmZBO92W88+uSz/J7kMj5F7sAvkgULVYpptMi//3QaRAPLbtWtG7fWWuJuoAXMAuZeSzh2n7nL7COGeuipY7HjUEFov36gYDQL81FX219iew==, #caMerchantID#=CA_EU, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #messageType#=ThreeDSMethodURLReq}</td>
+<td title='com.ca.tds.main.TDSMethodURL_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSMethodURL_TC<br>Parameters: org.testng.TestRunner@38adb8d3, {TestCaseID=_S001, TestCaseName=_SanityChallenge_AMEX_For_Verify_TC001, SanityFlag=Y, Test Case type=P, RequirementID=, Expected-messageType=ThreeDSMethodURLRes, Expected-callerTxnRefID=G, Expected-messageVersion=2.1.0, Expected-threeDSServerTransID=G, Expected-threeDSMethodURL=G, #acctNumber#=4Abuomi9LgxCa7vPYSbXHlv9jX754ALLUd7WxKwnrLZln1vr0ZVO/ahzu6fQh6YLuA3+1M4JoV4oFRd5cPK2lml3yytggURxMETgAx3fb8CMT/YXCYDSzZ+m1ghc+3FtmSFENHIKm3cAoIJBNOGC0VpXdEr5p/3XBdYsXlaODLnQdIZtNAdWIE0ihy6VIcwAlJox+tarG37G0WbEM9lZZcIBH9cXs7IXayzAA5RpynHPOkrs5H5JZ2aIt5B1OuBe1fVcylt66j9OSfQ2apT9bbr0NFgME+Hsn490Z7RhvcGiM7khgaaNkw756VP/1CjKYsTzzhZIt0g31B6vvYdNaw==, #caMerchantID#=MTD000000, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #messageType#=ThreeDSMethodURLReq}</td>
 <td></td>
 <td>0</td>
-<td>com.ca.tds.main.TDSMethodURL_TC@34cd072c</td></tr>
+<td>com.ca.tds.main.TDSMethodURL_TC@16610890</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSPreAreq_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSPreAreq_TC<br>Parameters: org.testng.TestRunner@5df44902, {TestCaseID=_S001, TestCaseName=_SanityChallenge_AReq_AMEX_For_Verify_TC001, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-cardholderInfo=NA, Expected-creq=G, Expected-transStatusReason=NA, Expected-authenticationValue=NA, Expected-authenticationType=G, Expected-acsURL=G, Expected-acsOperatorID=ACS_OPERATOR_ID, Expected-acsChallengeMandated=G, Expected-callerTxnRefID=G, Expected-threeDSServerTransID=G, Expected-dsTransID=G, Expected-acsTransID=G, Expected-eci=NA, Expected-messageType=ARes, Expected-dsName=amex, Expected-messageVersion=2.1.0, Expected-dsReferenceNumber=DsReferenceNumber, Expected-acsReferenceNumber=ABCDEF987654321, Expected-transStatus=C, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #browserJavascriptEnabled#=true, #challengeWindowSize#=04, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #caMerchantID#=MTD000000, #acctID#=ACCTID98X3fw3, #chAccAgeInd#=02, #chAccChange#=20180928, #chAccChangeInd#=02, #chAccDate#=20180928, #chAccPwChange#=20180901, #chAccPwChangeInd#=01, #nbPurchaseAccount#=8, #paymentAccAge#=20180808, #paymentAccInd#=01, #provisionAttemptsDay#=1, #shipAddressUsage#=20180910, #shipAddressUsageInd#=03, #shipNameIndicator#=01, #suspiciousAccActivity#=01, #txnActivityDay#=5, #txnActivityYear#=8, #acctNumber#=4Abuomi9LgxCa7vPYSbXHlv9jX754ALLUd7WxKwnrLZln1vr0ZVO/ahzu6fQh6YLuA3+1M4JoV4oFRd5cPK2lml3yytggURxMETgAx3fb8CMT/YXCYDSzZ+m1ghc+3FtmSFENHIKm3cAoIJBNOGC0VpXdEr5p/3XBdYsXlaODLnQdIZtNAdWIE0ihy6VIcwAlJox+tarG37G0WbEM9lZZcIBH9cXs7IXayzAA5RpynHPOkrs5H5JZ2aIt5B1OuBe1fVcylt66j9OSfQ2apT9bbr0NFgME+Hsn490Z7RhvcGiM7khgaaNkw756VP/1CjKYsTzzhZIt0g31B6vvYdNaw==, #acctType#=01, #addrMatch#=Y, #billAddrCity#=San Jose, #billAddrCountry#=840, #billAddrLine1#=500 West Maude Ave, #billAddrLine2#=ABC, #billAddrLine3#=HMS, #billAddrPostCode#=95101, #billAddrState#=CA, #browserAcceptHeader#=text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8, #browserColorDepth#=24, #browserIP#=155.35.122.4, #browserJavaEnabled#=true, #browserLanguage#=en-US, #browserScreenHeight#=720, #browserScreenWidth#=1280, #browserTZ#=-330, #browserUserAgent#=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.84 Safari/537.36, #cardExpiryDate#=2008, #cardholderName#=Stephen, #deviceChannel#=02, #email#=harsh08@ca.com, #hcc#=1, #hsubscriber#=1234567899, #messageCategory#=01, #messageType#=AReq, #messageVersion#=2.1.0, #mcc#=1, #msubscriber#=1234567899, #notificationURL#=http://localhost:9090/golfstore2/CreqNotification.jsp, #purchaseAmount#=35000, #purchaseCurrency#=840, #purchaseDate#=20180928160450, #purchaseExponent#=2, #recurringExpiry#=#REMOVE#, #recurringFrequency#=#REMOVE#, #shipAddrCity#=San Jose, #shipAddrCountry#=840, #shipAddrLine1#=500 West Maude Ave, #shipAddrLine2#=ABC, #shipAddrLine3#=HMS, #shipAddrPostCode#=95101, #shipAddrState#=CA, #threeDSCompInd#=Y, #threeDSServerTransID#=, #wcc#=1, #wsubscriber#=1234567899, #threeDSRequestorAuthenticationInd#=01, #threeDSReqAuthData#=3DS PA Request, #threeDSReqAuthMethod#=02, #threeDSReqAuthTimestamp#=201809281603, #threeDSRequestorChallengeInd#=01, #threeDSRequestorID#=611, #threeDSRequestorName#=ew0KCSJEViI6ICIxLjAiLA0KCSJERCI6Iaa45, #threeDSReqPriorAuthData#=three DS Request Prior Authentication Data, #threeDSReqPriorAuthMethod#=01, #threeDSReqPriorAuthTimestamp#=201810010323, #threeDSReqPriorRef#=4c6453da-4c56-4980-98cd-d04a064899c4, #threeDSRequestorURL#=http://10.131.94.242:1080/content-server/api/tds2/txn/browser/v1/tds-method, #threeDSServerRefNumber#=AAAAAA123456789, #threeDSServerOperatorID#=serverOperatorID, #threeDSServerURL#=http://10.138.158.51:9608, #acquirerBIN#=123456, #acquirerMerchantID#=AcquirerMerchantID222, #payTokenInd#=true, #purchaseInstalData#=#REMOVE#, #mcc1#=0742, #merchantCountryCode#=840, #merchantName#=global, #deliveryEmailAddress#=harsh08@ca.com, #deliveryTimeframe#=01, #giftCardAmount#=500, #giftCardCount#=02, #giftCardCurr#=840, #preOrderDate#=20200803, #preOrderPurchaseInd#=01, #reorderItemsInd#=01, #shipIndicator#=01, #criticalityIndicator#=false, #id#=ID2018SEP282001, #name#=ShashishekharHM, #transType#=01, #threeDSRequestorAuthenticationInfo#=, #threeDSRequestorPriorAuthenticationInfo#=, #broadInfo#=, #broadInfoValue#=broadInfoValue, #acctInfo#=, #homePhone#=, #mobilePhone#=, #workPhone#=, #merchantRiskIndicator#=, #messageExtension#=, #Dvalue#=HMS, #Dvalue1#=HMS, #Dvalue2#=HMS}</td>
+<td></td>
+<td>0</td>
+<td>com.ca.tds.main.TDSPreAreq_TC@7133da86</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSMethodURL_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSMethodURL_TC<br>Parameters: org.testng.TestRunner@3eb3fb84, {TestCaseID=_S001, TestCaseName=_SanityChallenge_MC_For_Verify_TC001, SanityFlag=Y, Test Case type=P, RequirementID=, Expected-messageType=ThreeDSMethodURLRes, Expected-callerTxnRefID=G, Expected-messageVersion=2.1.0, Expected-threeDSServerTransID=G, Expected-threeDSMethodURL=G, #acctNumber#=JMbbVk4F0nKs0mF3FrPbEgEf+VlyONcTIhvTubOI7xH1J0d1kIdnjMwECYYUQ7DmCgFJYyH8zPh1nLRuWjL98PwvfJiKuzCB5iCs7MRghqdsJWZ0yzYZuE3HunQj+pd+55Hq+y+Svaqqxek41OTNKvr2gw7EeXUD4zRSQ6EVHQ/KezdYJy7sAze7fh4hOW0QdHUpZMPmBRtonkcJNBepEEDhWVqGDWz290xdt8nbNtwt9NNNVBZSGqZA3A8QrFiI3pOGP+8ql9qvcMn/rxFfaQInIFdo8Ig0BuowLINFvfop5uQ4vLSZX0e14VhKlTAdGu5cl/rWU85Ch6eFaidxfw==, #caMerchantID#=MTD000000, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #messageType#=ThreeDSMethodURLReq}</td>
+<td></td>
+<td>0</td>
+<td>com.ca.tds.main.TDSMethodURL_TC@611889f4</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSPreAreq_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSPreAreq_TC<br>Parameters: org.testng.TestRunner@14eb062b, {TestCaseID=_S001, TestCaseName=_SanityChallenge_AReq_MC_For_Verify_TC001, SanityFlag=Y, Test Case type=P, RequirementID=, FieldName=, Expected-cardholderInfo=NA, Expected-creq=G, Expected-transStatusReason=NA, Expected-authenticationValue=NA, Expected-authenticationType=G, Expected-acsURL=G, Expected-acsOperatorID=ACS_OPERATOR_ID, Expected-acsChallengeMandated=G, Expected-callerTxnRefID=G, Expected-threeDSServerTransID=G, Expected-dsTransID=G, Expected-acsTransID=G, Expected-eci=NA, Expected-messageType=ARes, Expected-dsName=mastercard, Expected-messageVersion=2.1.0, Expected-dsReferenceNumber=DsReferenceNumber, Expected-acsReferenceNumber=ABCDEF987654321, Expected-transStatus=C, Expected-errorCode=NA, Expected-errorComponent=NA, Expected-errorDescription=NA, Expected-errorDetail=NA, #browserJavascriptEnabled#=true, #challengeWindowSize#=04, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #caMerchantID#=MTD000000, #acctID#=ACCTID98X3fw3, #chAccAgeInd#=02, #chAccChange#=20180928, #chAccChangeInd#=02, #chAccDate#=20180928, #chAccPwChange#=20180901, #chAccPwChangeInd#=01, #nbPurchaseAccount#=8, #paymentAccAge#=20180808, #paymentAccInd#=01, #provisionAttemptsDay#=1, #shipAddressUsage#=20180910, #shipAddressUsageInd#=03, #shipNameIndicator#=01, #suspiciousAccActivity#=01, #txnActivityDay#=5, #txnActivityYear#=8, #acctNumber#=JMbbVk4F0nKs0mF3FrPbEgEf+VlyONcTIhvTubOI7xH1J0d1kIdnjMwECYYUQ7DmCgFJYyH8zPh1nLRuWjL98PwvfJiKuzCB5iCs7MRghqdsJWZ0yzYZuE3HunQj+pd+55Hq+y+Svaqqxek41OTNKvr2gw7EeXUD4zRSQ6EVHQ/KezdYJy7sAze7fh4hOW0QdHUpZMPmBRtonkcJNBepEEDhWVqGDWz290xdt8nbNtwt9NNNVBZSGqZA3A8QrFiI3pOGP+8ql9qvcMn/rxFfaQInIFdo8Ig0BuowLINFvfop5uQ4vLSZX0e14VhKlTAdGu5cl/rWU85Ch6eFaidxfw==, #acctType#=01, #addrMatch#=Y, #billAddrCity#=San Jose, #billAddrCountry#=840, #billAddrLine1#=500 West Maude Ave, #billAddrLine2#=ABC, #billAddrLine3#=HMS, #billAddrPostCode#=95101, #billAddrState#=CA, #browserAcceptHeader#=text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8, #browserColorDepth#=24, #browserIP#=155.35.122.4, #browserJavaEnabled#=true, #browserLanguage#=en-US, #browserScreenHeight#=720, #browserScreenWidth#=1280, #browserTZ#=-330, #browserUserAgent#=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.84 Safari/537.36, #cardExpiryDate#=2008, #cardholderName#=Stephen, #deviceChannel#=02, #email#=harsh08@ca.com, #hcc#=1, #hsubscriber#=1234567899, #messageCategory#=01, #messageType#=AReq, #messageVersion#=2.1.0, #mcc#=1, #msubscriber#=1234567899, #notificationURL#=http://localhost:9090/golfstore2/CreqNotification.jsp, #purchaseAmount#=35000, #purchaseCurrency#=840, #purchaseDate#=20180928160450, #purchaseExponent#=2, #recurringExpiry#=#REMOVE#, #recurringFrequency#=#REMOVE#, #shipAddrCity#=San Jose, #shipAddrCountry#=840, #shipAddrLine1#=500 West Maude Ave, #shipAddrLine2#=ABC, #shipAddrLine3#=HMS, #shipAddrPostCode#=95101, #shipAddrState#=CA, #threeDSCompInd#=Y, #threeDSServerTransID#=, #wcc#=1, #wsubscriber#=1234567899, #threeDSRequestorAuthenticationInd#=01, #threeDSReqAuthData#=3DS PA Request, #threeDSReqAuthMethod#=02, #threeDSReqAuthTimestamp#=201809281603, #threeDSRequestorChallengeInd#=01, #threeDSRequestorID#=611, #threeDSRequestorName#=ew0KCSJEViI6ICIxLjAiLA0KCSJERCI6Iaa45, #threeDSReqPriorAuthData#=three DS Request Prior Authentication Data, #threeDSReqPriorAuthMethod#=01, #threeDSReqPriorAuthTimestamp#=201810010323, #threeDSReqPriorRef#=4c6453da-4c56-4980-98cd-d04a064899c4, #threeDSRequestorURL#=http://10.131.94.242:1080/content-server/api/tds2/txn/browser/v1/tds-method, #threeDSServerRefNumber#=AAAAAA123456789, #threeDSServerOperatorID#=serverOperatorID, #threeDSServerURL#=http://10.138.158.51:9608, #acquirerBIN#=123456, #acquirerMerchantID#=AcquirerMerchantID222, #payTokenInd#=true, #purchaseInstalData#=#REMOVE#, #mcc1#=0742, #merchantCountryCode#=840, #merchantName#=global, #deliveryEmailAddress#=harsh08@ca.com, #deliveryTimeframe#=01, #giftCardAmount#=500, #giftCardCount#=02, #giftCardCurr#=840, #preOrderDate#=20200803, #preOrderPurchaseInd#=01, #reorderItemsInd#=01, #shipIndicator#=01, #criticalityIndicator#=false, #id#=ID2018SEP282001, #name#=ShashishekharHM, #transType#=01, #threeDSRequestorAuthenticationInfo#=, #threeDSRequestorPriorAuthenticationInfo#=, #broadInfo#=, #broadInfoValue#=broadInfoValue, #acctInfo#=, #homePhone#=, #mobilePhone#=, #workPhone#=, #merchantRiskIndicator#=, #messageExtension#=, #Dvalue#=HMS, #Dvalue1#=HMS, #Dvalue2#=HMS}</td>
+<td></td>
+<td>0</td>
+<td>com.ca.tds.main.TDSPreAreq_TC@7e7be63f</td></tr>
+<tr>
+<td title='com.ca.tds.main.TDSMethodURL_TC.testArequestAPI()'><b>testArequestAPI</b><br>Test class: com.ca.tds.main.TDSMethodURL_TC<br>Parameters: org.testng.TestRunner@6f1007b8, {TestCaseID=_S001, TestCaseName=_SanityChallenge_VISA_For_Verify_TC001, SanityFlag=Y, Test Case type=P, RequirementID=, Expected-messageType=ThreeDSMethodURLRes, Expected-callerTxnRefID=G, Expected-messageVersion=2.1.0, Expected-threeDSServerTransID=G, Expected-threeDSMethodURL=G, #acctNumber#=7UpZZndm5dmKnbhUtEVIl30b+B4lVwi6GEN5VUyxoT2QF9+gY5Ar1+tjBZys9AJyUW2vqz902epcr0Rkmr0sT/OlSvUOEc7gOEbVavO6KvHkRQchwOcaB3rwMDwhcZqsumgzyYwPWqBwAAtbIF+L1Lw7NyL9nYLl3O4ZHDyfNbdgBW5ZuNXWS2j+zhNabX1qmOv4NvdzdEV4iAlgc6YSsJ2RiOa3uyOXpLxzLtFSELhmZBO92W88+uSz/J7kMj5F7sAvkgULVYpptMi//3QaRAPLbtWtG7fWWuJuoAXMAuZeSzh2n7nL7COGeuipY7HjUEFov36gYDQL81FX219iew==, #caMerchantID#=MTD000000, #callerTxnRefID#=341b7153-da86-4543-860f-2ba47f0168a5, #messageType#=ThreeDSMethodURLReq}</td>
+<td></td>
+<td>0</td>
+<td>com.ca.tds.main.TDSMethodURL_TC@74751b3</td></tr>
 </table><p>
 </body>
 </html>
