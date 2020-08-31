@@ -91,16 +91,16 @@ public class IdempotencyAReq extends BaseClassTDS {
 			}
 			
 				
-			if(counter==0) {
-				
-				ThreeDSSdbAPI dbapi = new ThreeDSSdbAPI();
-				String result = dbapi.updateMtdConfig(BaseClassTDS.caPropMap,1);
-				ServiceRestart.server3DSrestart();
-				System.out.println("Back to Main");
-				System.out.println(result);
-				
-				Thread.sleep(80000);
-			}
+			/*
+			 * if(counter==0) {
+			 * 
+			 * ThreeDSSdbAPI dbapi = new ThreeDSSdbAPI(); String result =
+			 * dbapi.updateMtdConfig(BaseClassTDS.caPropMap,1);
+			 * ServiceRestart.server3DSrestart(); System.out.println("Back to Main");
+			 * System.out.println(result);
+			 * 
+			 * Thread.sleep(80000); }
+			 */
 			
 			JSONObject jsonReq = AssertionUtility.prepareRequest(testCaseData, jsonRequest);
 			
@@ -112,10 +112,11 @@ public class IdempotencyAReq extends BaseClassTDS {
 			System.out.println("CounterValue "+counter);
 			
 			
-			if(counter==7) {
-				
-				Thread.sleep(120000);
-			}
+			/*
+			 * if(counter==7) {
+			 * 
+			 * Thread.sleep(120000); }
+			 */
 			
 
 				 /*ThreeDSSdbAPI db = new ThreeDSSdbAPI();
@@ -198,15 +199,16 @@ public class IdempotencyAReq extends BaseClassTDS {
 			
 			}
 					
-			  if(counter==9) {
-			  
-			  ThreeDSSdbAPI dbapi = new ThreeDSSdbAPI(); 
-			  String result = dbapi.updateMtdConfig(BaseClassTDS.caPropMap,60);
-			  ServiceRestart.server3DSrestart(); 
-			  System.out.println(result);
-			  Thread.sleep(90000); 
-			  
-			  }
+			/*
+			 * if(counter==9) {
+			 * 
+			 * ThreeDSSdbAPI dbapi = new ThreeDSSdbAPI(); String result =
+			 * dbapi.updateMtdConfig(BaseClassTDS.caPropMap,60);
+			 * ServiceRestart.server3DSrestart(); System.out.println(result);
+			 * Thread.sleep(90000);
+			 * 
+			 * }
+			 */
 			 
 
 		} catch(ValidationException ve){

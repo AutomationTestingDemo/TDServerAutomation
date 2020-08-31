@@ -3,18 +3,18 @@
 
 <suite name="3DSSAllFlows" verbose="1" parallel="instances" group-by-instances="true">
 <suite-files>
-    <suite-file path="AReq_Bypass_Methodurl.xml"></suite-file>
+  <!--   <suite-file path="AReq_Bypass_Methodurl.xml"></suite-file>
      <suite-file path="AMEX_VerifyAPI.xml"></suite-file>
     <suite-file path="MasterCard_VerifyAPI.xml"></suite-file>
-    <suite-file path="Visa_VerifyAPI.xml"></suite-file>
+    <suite-file path="Visa_VerifyAPI.xml"></suite-file> -->
     <suite-file path="IdempotencyFLV.xml"></suite-file>
     <suite-file path="IdempotencyNegative.xml"></suite-file>
-    <suite-file path="AMEX_RReq.xml"></suite-file>
+ <!--    <suite-file path="AMEX_RReq.xml"></suite-file>
     <suite-file path="MasterCard_RReq.xml"></suite-file>
     <suite-file path="VISA_RReq.xml"></suite-file>
     <suite-file path="AMEX_AReq.xml"></suite-file>
     <suite-file path="MasterCard_AReq.xml"></suite-file>
     <suite-file path="VISA_AReq.xml"></suite-file>
-    <suite-file path="TDSMethodURL.xml"></suite-file>
+    <suite-file path="TDSMethodURL.xml"></suite-file> -->
 </suite-files>
 </suite>
